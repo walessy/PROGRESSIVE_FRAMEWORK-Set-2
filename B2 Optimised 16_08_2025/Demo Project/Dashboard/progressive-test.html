@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Progressive Auto-Discovery Test</title>
+</head>
+<body>
+    <h1>Progressive System Auto-Discovery Test</h1>
+    <div id="systemsGrid" class="systems-grid"></div>
+    <div id="coordinationFeed" class="coordination-feed"></div>
+    
+    <script src="AutoDiscoveryInjector.js"></script>
+    
+    <script>
+        // Test the auto-discovery
+        console.log("🧪 Testing Progressive Auto-Discovery");
+        
+        setTimeout(() => {
+            if (window.truePSO) {
+                console.log("✅ True PSO active");
+                console.log("📊 Current system count:", window.truePSO.getSystemCount());
+                console.log("🔍 All systems:", window.truePSO.getAllSystems());
+            } else {
+                console.log("❌ True PSO not found");
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
