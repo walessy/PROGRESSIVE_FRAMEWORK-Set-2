@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Spec Demo - Framework Set 2 Testing System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        /* SPEC REQUIREMENT: Grid Structure - 4 column layout */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 300px 1fr 400px 350px;
+            grid-template-rows: 80px 1fr;
+            height: 100vh;
+            gap: 16px;
+            padding: 16px;
+        }
+
+        /* SPEC REQUIREMENT: Header Bar - 80px fixed height */
+        .header {
+            grid-column: 1 / -1;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f8fafc;
+        }
+
+        .status-badge {
+            padding: 8px 16px;
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            border-radius: 20px;
+            font-size: 12px;
+            color: #4ade80;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pulse-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #4ade80;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        /* SPEC REQUIREMENT: Panel styling */
+        .panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            overflow: visible;
+        }
+
+        .panel-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #f8fafc;
+        }
+
+        /* SPEC REQUIREMENT: Controls Panel */
+        .controls-section {
+            margin-bottom: 20px;
+        }
+
+        .control-label {
+            font-size: 12px;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 8px;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .speed-slider {
+            flex: 1;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .speed-slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #3b82f6;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .speed-value {
+            color: #3b82f6;
+            font-weight: 500;
+            min-width: 30px;
+        }
+
+        /* SPEC REQUIREMENT: Tree Panel - 400px height, always visible scrollbar */
+        .tree-container {
+            height: 400px;
+            overflow-y: scroll;
+            overflow-x: auto;
+            border: 2px solid #666;
+            background: #1a1a1a;
+            border-radius: 8px;
+            padding: 8px;
+        }
+
+        /* SPEC REQUIREMENT: Scrollbar - 18px width, always visible */
+        .tree-container::-webkit-scrollbar {
+            width: 18px;
+            background: #333;
+        }
+
+        .tree-container::-webkit-scrollbar-track {
+            background: #222;
+        }
+
+        .tree-container::-webkit-scrollbar-thumb {
+            background: #777;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+
+        .tree-container::-webkit-scrollbar-thumb:hover {
+            background: #999;
+        }
+
+        /* SPEC REQUIREMENT: Tree controls */
+        .tree-controls {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tree-btn {
+            padding: 6px 10px;
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 4px;
+            color: #93c5fd;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tree-btn:hover {
+            background: rgba(59, 130, 246, 0.3);
+        }
+
+        /* SPEC REQUIREMENT: Tree Node Structure */
+        .tree-node {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 8px;
+            margin: 2px 0;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tree-node:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .tree-node.current {
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+
+        /* SPEC REQUIREMENT: Visual Hierarchy */
+        .level-0 { margin-left: 0px; font-weight: bold; font-size: 14px; }
+        .level-1 { margin-left: 15px; font-weight: 500; font-size: 13px; }
+        .level-2 { margin-left: 30px; font-size: 12px; }
+        .level-3 { margin-left: 45px; font-size: 12px; }
+        .level-4 { margin-left: 60px; font-size: 11px; }
+        .level-5 { margin-left: 75px; font-size: 10px; }
+        .level-6 { margin-left: 90px; font-size: 10px; }
+
+        .expand-btn {
+            width: 16px;
+            height: 16px;
+            background: none;
+            border: none;
+            color: #cbd5e1;
+            cursor: pointer;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .expand-btn:hover {
+            color: #f8fafc;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+        }
+
+        .status-passed { 
+            background: #22c55e; 
+        }
+        
+        .status-passed::after {
+            content: '✓';
+        }
+
+        .status-failed { 
+            background: #ef4444; 
+        }
+        
+        .status-failed::after {
+            content: '✗';
+        }
+
+        .status-running { 
+            background: #3b82f6; 
+            animation: pulse 1s infinite; 
+        }
+        
+        .status-running::after {
+            content: '▶';
+        }
+
+        .status-pending { 
+            background: #6b7280; 
+            border: 1px solid #9ca3af;
+        }
+        
+        .status-pending::after {
+            content: '⋯';
+        }
+
+        .status-skipped { 
+            background: #f59e0b; 
+        }
+        
+        .status-skipped::after {
+            content: '⊘';
+        }
+
+        /* Enhanced tree node with pass/fail info */
+        .tree-node.test-failed {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 3px solid #ef4444;
+        }
+
+        .tree-node.test-passed {
+            background: rgba(34, 197, 94, 0.05);
+        }
+
+        .node-result {
+            font-size: 10px;
+            color: #94a3b8;
+            margin-left: auto;
+            font-weight: 500;
+        }
+
+        .result-passed {
+            color: #22c55e;
+        }
+
+        .result-failed {
+            color: #ef4444;
+        }
+
+        .result-running {
+            color: #3b82f6;
+        }
+
+        .node-text {
+            flex: 1;
+            color: #e2e8f0;
+        }
+
+        .node-progress {
+            font-size: 10px;
+            color: #94a3b8;
+        }
+
+        .hidden { display: none; }
+
+        /* SPEC REQUIREMENT: Progress Panel */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #22c55e, #4ade80);
+            transition: width 0.3s ease;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #4ade80;
+        }
+
+        .stat-label {
+            font-size: 10px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        .current-test {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+
+        .current-test-label {
+            font-size: 10px;
+            color: #93c5fd;
+            margin-bottom: 4px;
+        }
+
+        .current-test-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #dbeafe;
+        }
+
+        /* SPEC REQUIREMENT: Live Results Panel */
+        .results-container {
+            flex: 1;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .log-entry {
+            padding: 8px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 12px;
+            border-left: 3px solid;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .log-info {
+            border-color: #3b82f6;
+            background: rgba(59, 130, 246, 0.05);
+            color: #93c5fd;
+        }
+
+        .log-success {
+            border-color: #22c55e;
+            background: rgba(34, 197, 94, 0.05);
+            color: #86efac;
+        }
+
+        .log-warning {
+            border-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.05);
+            color: #fcd34d;
+        }
+
+        .log-timestamp {
+            font-size: 10px;
+            opacity: 0.7;
+            margin-right: 8px;
+        }
+
+        /* SPEC REQUIREMENT: Responsive Design */
+        @media (max-width: 1599px) {
+            .dashboard {
+                grid-template-columns: 250px 1fr 350px 300px;
+            }
+        }
+
+        @media (max-width: 1199px) {
+            .dashboard {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 80px 1fr 1fr;
+            }
+            
+            .tree-panel {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px repeat(4, auto);
+            }
+            
+            .panel {
+                margin-bottom: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- SPEC: Header Bar - 80px height -->
+        <header class="header">
+            <h1>🧪 Framework Set 2 Testing System</h1>
+            <div class="status-badge">
+                <div class="pulse-dot"></div>
+                System Active
+            </div>
+        </header>
+
+        <!-- SPEC: Controls Panel - 300px width -->
+        <div class="panel">
+            <h2 class="panel-title">🎛️ Controls</h2>
+            
+            <div class="controls-section">
+                <div class="control-label">Test Execution</div>
+                <button class="btn btn-primary" onclick="startTesting()">▶️ Start Full Automation</button>
+                <button class="btn btn-secondary" onclick="testBranch()">🎯 Test Current Branch</button>
+            </div>
+
+            <div class="controls-section">
+                <div class="control-label">Speed Control</div>
+                <div class="speed-control">
+                    <span>1x</span>
+                    <input type="range" class="speed-slider" id="speedSlider" min="1" max="10" value="6" oninput="updateSpeed(this.value)">
+                    <span class="speed-value" id="speedValue">6x</span>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div class="control-label">Actions</div>
+                <button class="btn btn-warning" onclick="pauseTesting()">⏸️ Pause</button>
+                <button class="btn btn-danger" onclick="stopTesting()">⏹️ Stop</button>
+            </div>
+        </div>
+
+        <!-- SPEC: Tree Panel - Always visible scrollbar -->
+        <div class="panel">
+            <h2 class="panel-title">🌳 Testing Tree</h2>
+            
+            <div class="tree-controls">
+                <button class="tree-btn" onclick="expandAll()">Expand All</button>
+                <button class="tree-btn" onclick="collapseAll()">Collapse All</button>
+                <button class="tree-btn" onclick="generateMore()">Generate More</button>
+            </div>
+
+            <!-- SPEC: 400px height, 18px scrollbar -->
+            <div class="tree-container" id="treeContainer">
+                <!-- Tree nodes populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- SPEC: Progress Panel - 400px width -->
+        <div class="panel">
+            <h2 class="panel-title">📊 Testing Progress</h2>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 45%;">45%</div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-value" id="testsComplete">71</div>
+                    <div class="stat-label">Tests Complete</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">156</div>
+                    <div class="stat-label">Total Tests</div>
+                </div>
+            </div>
+
+            <div class="current-test">
+                <div class="current-test-label">Currently Testing</div>
+                <div class="current-test-name" id="currentTest">SAP Financial Module Integration</div>
+            </div>
+        </div>
+
+        <!-- SPEC: Results Panel - 350px width -->
+        <div class="panel">
+            <h2 class="panel-title">📈 Live Results</h2>
+            
+            <div class="results-container" id="resultsContainer">
+                <!-- Log entries populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // SPEC: Tree data structure with pass/fail results
+        let treeData = [
+            { id: 'D1', name: 'Healthcare Coordination Systems', level: 0, expanded: true, status: 'passed', result: 'PASSED', children: ['D1-1', 'D1-2', 'D1-3'] },
+            { id: 'D1-1', name: 'NICU Critical Care', level: 1, expanded: true, status: 'passed', result: 'PASSED', children: ['D1-1-a', 'D1-1-b'] },
+            { id: 'D1-1-a', name: 'Premature Care Protocols', level: 2, expanded: true, status: 'passed', result: 'PASSED', children: ['D1-1-a-1', 'D1-1-a-2'] },
+            { id: 'D1-1-a-1', name: 'Extreme Premature (22-25 weeks)', level: 3, expanded: true, status: 'passed', result: 'PASSED', children: ['D1-1-a-1-i', 'D1-1-a-1-ii'] },
+            { id: 'D1-1-a-1-i', name: '22 Week Gestation Protocol', level: 4, expanded: true, status: 'passed', result: 'PASSED', children: ['D1-1-a-1-i-A'] },
+            { id: 'D1-1-a-1-i-A', name: 'Micro-Dosing Protocols', level: 5, expanded: false, status: 'passed', result: 'PASSED', children: ['D1-1-a-1-i-A-I'] },
+            { id: 'D1-1-a-1-i-A-I', name: 'Precision Dosing (99.99% accuracy)', level: 6, expanded: false, status: 'passed', result: 'PASSED', children: [] },
+            { id: 'D1-1-a-1-ii', name: '23 Week Gestation Protocol', level: 4, expanded: false, status: 'failed', result: 'FAILED', children: [] },
+            { id: 'D1-1-a-2', name: 'Very Premature (26-28 weeks)', level: 3, expanded: false, status: 'skipped', result: 'SKIPPED', children: [] },
+            { id: 'D1-1-b', name: 'Term Care Protocols', level: 2, expanded: false, status: 'failed', result: 'FAILED', children: [] },
+            { id: 'D1-2', name: 'CVICU Critical Care', level: 1, expanded: false, status: 'passed', result: 'PASSED', children: [] },
+            { id: 'D1-3', name: 'SICU Critical Care', level: 1, expanded: false, status: 'failed', result: 'FAILED', children: [] },
+            
+            { id: 'A2', name: 'Fortune 500 Integration', level: 0, expanded: true, status: 'running', result: 'RUNNING', children: ['A2-1', 'A2-2'] },
+            { id: 'A2-1', name: 'Enterprise Systems Integration', level: 1, expanded: true, status: 'running', result: 'RUNNING', children: ['A2-1-a', 'A2-1-b'] },
+            { id: 'A2-1-a', name: 'ERP Integration', level: 2, expanded: true, status: 'running', result: 'RUNNING', children: ['A2-1-a-i'] },
+            { id: 'A2-1-a-i', name: 'SAP S/4HANA Integration', level: 3, expanded: true, status: 'running', result: 'RUNNING', children: ['A2-1-a-i-α'] },
+            { id: 'A2-1-a-i-α', name: 'Financial Module Integration', level: 4, expanded: true, status: 'running', result: 'RUNNING', children: ['A2-1-a-i-α-1'] },
+            { id: 'A2-1-a-i-α-1', name: 'Real-Time Processing', level: 5, expanded: false, status: 'running', result: 'RUNNING', children: ['A2-1-a-i-α-1-A'] },
+            { id: 'A2-1-a-i-α-1-A', name: 'Micro-Transaction Processing', level: 6, expanded: false, status: 'running', result: 'RUNNING', children: [] },
+            { id: 'A2-1-b', name: 'CRM Integration', level: 2, expanded: false, status: 'pending', result: 'PENDING', children: [] },
+            { id: 'A2-2', name: 'API Integration Testing', level: 1, expanded: false, status: 'pending', result: 'PENDING', children: [] },
+            
+            { id: 'B1', name: 'Performance Metrics Analysis', level: 0, expanded: true, status: 'failed', result: 'FAILED', children: ['B1-1', 'B1-2'] },
+            { id: 'B1-1', name: 'Throughput Analysis', level: 1, expanded: false, status: 'failed', result: 'FAILED', children: [] },
+            { id: 'B1-2', name: 'Latency Optimization', level: 1, expanded: false, status: 'passed', result: 'PASSED', children: [] }
+        ];
+
+        let isRunning = false;
+        let testProgress = 45;
+
+        // SPEC: Tree rendering following visual hierarchy requirements
+        function renderTree() {
+            const container = document.getElementById('treeContainer');
+            container.innerHTML = '';
+            
+            treeData.forEach(node => {
+                if (shouldShowNode(node)) {
+                    const nodeElement = createTreeNode(node);
+                    container.appendChild(nodeElement);
+                }
+            });
+        }
+
+        function shouldShowNode(node) {
+            if (node.level === 0) return true;
+            
+            const parentId = getParentId(node.id);
+            const parent = treeData.find(n => n.id === parentId);
+            return parent && parent.expanded && shouldShowNode(parent);
+        }
+
+        function getParentId(nodeId) {
+            const parts = nodeId.split('-');
+            return parts.slice(0, -1).join('-');
+        }
+
+        function createTreeNode(node) {
+            const div = document.createElement('div');
+            const nodeClass = node.status === 'failed' ? 'test-failed' : (node.status === 'passed' ? 'test-passed' : '');
+            div.className = `tree-node level-${node.level} ${nodeClass}`;
+            
+            const hasChildren = node.children && node.children.length > 0;
+            
+            div.innerHTML = `
+                ${hasChildren ? 
+                    `<button class="expand-btn" onclick="toggleNode('${node.id}')">${node.expanded ? '▼' : '▶'}</button>` : 
+                    '<div style="width: 16px;"></div>'
+                }
+                <div class="status-dot status-${node.status}"></div>
+                <div class="node-text">${node.name}</div>
+                <div class="node-result result-${node.status}">${node.result}</div>
+            `;
+            
+            return div;
+        }
+
+        function getProgress(status) {
+            switch (status) {
+                case 'complete': return '✓ 100%';
+                case 'current': return '⟳ 65%';
+                default: return '⋯ 0%';
+            }
+        }
+
+        // SPEC: Tree interaction following 90s-style behavior
+        function toggleNode(nodeId) {
+            const node = treeData.find(n => n.id === nodeId);
+            if (node && node.children && node.children.length > 0) {
+                node.expanded = !node.expanded;
+                renderTree();
+                addLogEntry(`${node.expanded ? 'Expanded' : 'Collapsed'} ${node.name}`, 'info');
+            }
+        }
+
+        function expandAll() {
+            treeData.forEach(node => {
+                if (node.children && node.children.length > 0) {
+                    node.expanded = true;
+                }
+            });
+            renderTree();
+            addLogEntry('🌳 All branches expanded - showing full hierarchy', 'info');
+        }
+
+        function collapseAll() {
+            treeData.forEach(node => {
+                if (node.children && node.children.length > 0) {
+                    node.expanded = false;
+                }
+            });
+            renderTree();
+            addLogEntry('🌳 All branches collapsed - classic 90s tree style', 'info');
+        }
+
+        function generateMore() {
+            // Add more nodes dynamically
+            const newNodes = [
+                { id: 'C1', name: 'Competitive Advantage Analysis', level: 0, expanded: false, status: 'pending', children: ['C1-1'] },
+                { id: 'C1-1', name: 'Market Position Analysis', level: 1, expanded: false, status: 'pending', children: [] },
+                { id: 'M1', name: 'Manufacturing Operations', level: 0, expanded: false, status: 'pending', children: ['M1-1', 'M1-2'] },
+                { id: 'M1-1', name: 'Quality Control Systems', level: 1, expanded: false, status: 'pending', children: [] },
+                { id: 'M1-2', name: 'Production Line Optimization', level: 1, expanded: false, status: 'pending', children: [] }
+            ];
+            
+            newNodes.forEach(node => {
+                if (!treeData.find(n => n.id === node.id)) {
+                    treeData.push(node);
+                }
+            });
+            
+            renderTree();
+            addLogEntry('🔍 Generated additional test domains', 'success');
+        }
+
+        // SPEC: Control interactions
+        function startTesting() {
+            isRunning = true;
+            addLogEntry('🚀 Starting comprehensive Framework Set 2 testing automation', 'success');
+            addLogEntry('📊 Testing all validation points across complete hierarchy', 'info');
+            
+            // Simulate progress with status updates
+            const interval = setInterval(() => {
+                if (testProgress < 100 && isRunning) {
+                    testProgress += Math.random() * 3;
+                    updateProgress();
+                    
+                    // Update test statuses as we progress
+                    if (testProgress > 90) {
+                        updateTestStatuses();
+                    }
+                } else {
+                    clearInterval(interval);
+                    if (isRunning) {
+                        completeAllTests();
+                    }
+                }
+            }, 1000);
+        }
+
+        function updateTestStatuses() {
+            // Update running tests to completed status
+            treeData.forEach(node => {
+                if (node.status === 'running') {
+                    // Most tests pass, some fail
+                    const shouldFail = Math.random() < 0.15; // 15% failure rate
+                    node.status = shouldFail ? 'failed' : 'passed';
+                    node.result = shouldFail ? 'FAILED' : 'PASSED';
+                }
+            });
+            renderTree();
+        }
+
+        function completeAllTests() {
+            // Ensure all tests are completed
+            treeData.forEach(node => {
+                if (node.status === 'running' || node.status === 'pending') {
+                    const shouldFail = Math.random() < 0.1; // 10% failure rate for remaining
+                    node.status = shouldFail ? 'failed' : 'passed';
+                    node.result = shouldFail ? 'FAILED' : 'PASSED';
+                }
+            });
+            
+            isRunning = false;
+            testProgress = 100;
+            updateProgress();
+            renderTree();
+            
+            addLogEntry('🎉 All tests completed! Final results updated in tree', 'success');
+            
+            // Count final results
+            const passed = treeData.filter(n => n.status === 'passed').length;
+            const failed = treeData.filter(n => n.status === 'failed').length;
+            const skipped = treeData.filter(n => n.status === 'skipped').length;
+            
+            addLogEntry(`📊 Final Results: ${passed} passed, ${failed} failed, ${skipped} skipped`, 'info');
+        }
+
+        function testBranch() {
+            addLogEntry('🎯 Starting current branch testing: Healthcare NICU protocols', 'info');
+        }
+
+        function pauseTesting() {
+            isRunning = false;
+            addLogEntry('⏸️ Testing paused by user', 'warning');
+        }
+
+        function stopTesting() {
+            isRunning = false;
+            addLogEntry('🛑 Testing stopped - generating comprehensive report', 'warning');
+        }
+
+        function updateSpeed(value) {
+            document.getElementById('speedValue').textContent = value + 'x';
+            addLogEntry(`⚡ Testing speed adjusted to ${value}x`, 'info');
+        }
+
+        // SPEC: Progress updates
+        function updateProgress() {
+            const progressFill = document.getElementById('progressFill');
+            const testsComplete = document.getElementById('testsComplete');
+            
+            const progress = Math.min(100, Math.round(testProgress));
+            progressFill.style.width = progress + '%';
+            progressFill.textContent = progress + '%';
+            
+            const completed = Math.round((progress / 100) * 156);
+            testsComplete.textContent = completed;
+        }
+
+        // SPEC: Log entry format with timestamp
+        function addLogEntry(message, type) {
+            const container = document.getElementById('resultsContainer');
+            const entry = document.createElement('div');
+            entry.className = `log-entry log-${type}`;
+            
+            const now = new Date();
+            const timestamp = now.toLocaleTimeString();
+            
+            entry.innerHTML = `
+                <span class="log-timestamp">[${timestamp}]</span>${message}
+            `;
+            
+            container.appendChild(entry);
+            container.scrollTop = container.scrollHeight;
+            
+            // SPEC: Limit entries to prevent memory issues
+            if (container.children.length > 50) {
+                container.removeChild(container.firstChild);
+            }
+        }
+
+        // SPEC: Initialize system
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTree();
+            addLogEntry('🎯 Framework Set 2 Testing System initialized', 'info');
+            addLogEntry('📍 Current position: Level 6 - Enterprise Financial Integration', 'info');
+            addLogEntry('⚡ System ready for testing operations', 'success');
+            
+            // Simulate some test results
+            setTimeout(() => {
+                addLogEntry('🔍 Testing: SAP Financial Module - Real-Time Processing', 'info');
+            }, 2000);
+            
+            setTimeout(() => {
+                addLogEntry('✅ Micro-Transaction Processing - PASSED (ROI: 450:1)', 'success');
+            }, 4000);
+            
+            setTimeout(() => {
+                addLogEntry('❌ 23 Week Gestation Protocol - FAILED (Accuracy: 97.2%)', 'warning');
+            }, 6000);
+            
+            setTimeout(() => {
+                addLogEntry('✅ CVICU Critical Care - PASSED (Performance: +85%)', 'success');
+            }, 8000);
+            
+            setTimeout(() => {
+                addLogEntry('❌ Performance Metrics Analysis - FAILED (Timeout exceeded)', 'warning');
+            }, 10000);
+        });
+    </script>
+</body>
+</html>

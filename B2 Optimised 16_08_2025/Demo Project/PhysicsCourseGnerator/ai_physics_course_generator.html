@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Physics Course Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+
+        .main-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .input-section h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            text-align: center;
+        }
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-label {
+            display: block;
+            font-weight: bold;
+            color: #34495e;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .select-field {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 10px;
+            font-size: 1em;
+            background: white;
+            cursor: pointer;
+        }
+
+        .textarea-field {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .generate-button {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.3em;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin: 30px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .generate-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(231, 76, 60, 0.4);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .spinner {
+            border: 4px solid #ecf0f1;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .ai-output {
+            display: none;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .output-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .output-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ecf0f1;
+            flex-wrap: wrap;
+        }
+
+        .output-tab {
+            background: none;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            margin: 0 5px;
+        }
+
+        .output-tab.active {
+            color: #3498db;
+            border-bottom-color: #3498db;
+        }
+
+        .output-tab:hover {
+            color: #2980b9;
+        }
+
+        .output-content {
+            min-height: 400px;
+            padding: 20px 0;
+        }
+
+        .course-overview {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .overview-main h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .overview-stats {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .lesson-preview {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .diagram-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .diagram-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .diagram-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.6;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .download-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .download-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .download-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .download-button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            width: 100%;
+        }
+
+        .download-button:hover {
+            background: #2980b9;
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .capability-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .capability-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .ai-workflow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .workflow-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .card-icon {
+            font-size: 2.5em;
+            margin-right: 15px;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .ai-feature {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .ai-feature h4 {
+            margin-bottom: 8px;
+            color: #ffd700;
+        }
+
+        @media (max-width: 768px) {
+            .input-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .course-overview {
+                grid-template-columns: 1fr;
+            }
+            
+            .output-tabs {
+                flex-direction: column;
+            }
+            
+            .output-tab {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI-Powered Physics Course Generator</h1>
+            <p>Generate complete physics courses with lessons, diagrams, and interactive elements</p>
+        </div>
+
+        <!-- AI Capabilities Section -->
+        <div class="main-section" style="background: transparent; color: white;">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 30px;">🧠 AI Course Generation Capabilities</h2>
+            
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-icon">📚</div>
+                    <h3>Intelligent Content Creation</h3>
+                    <p>Generates comprehensive lesson plans, explanations with analogies, and real-world applications</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon">🎨</div>
+                    <h3>Visual Diagrams</h3>
+                    <p>Creates SVG physics diagrams, circuit schematics, and interactive visualizations</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon">🎮</div>
+                    <h3>Interactive Simulations</h3>
+                    <p>Builds JavaScript physics simulations and HTML5 interactive elements</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon">🔗</div>
+                    <h3>Course Assembly</h3>
+                    <p>Links lessons together, creates navigation, and builds complete course structure</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon">📊</div>
+                    <h3>Assessment Design</h3>
+                    <p>Creates quizzes, interactive exercises, and progress tracking systems</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon">🎯</div>
+                    <h3>Adaptive Learning</h3>
+                    <p>Adjusts difficulty and pacing based on student progress and understanding</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Workflow -->
+        <div class="main-section" style="background: transparent; color: white;">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 30px;">⚙️ AI Workflow Process</h2>
+            
+            <div class="ai-workflow">
+                <div class="workflow-card">
+                    <div class="card-header">
+                        <div class="card-icon">🎯</div>
+                        <div class="card-title">Curriculum AI</div>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Intelligent Course Planning</h4>
+                        <p>AI analyzes physics curricula from top universities and creates optimal learning sequences with prerequisite mapping and difficulty progression.</p>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Adaptive Content Depth</h4>
+                        <p>Automatically adjusts explanation complexity, mathematical rigor, and example difficulty based on target audience (high school, undergrad, etc.).</p>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Cross-Reference Integration</h4>
+                        <p>Links related concepts across lessons, creates concept maps, and identifies learning dependencies automatically.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="card-header">
+                        <div class="card-icon">🎨</div>
+                        <div class="card-title">Visual AI</div>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Diagram Generation</h4>
+                        <p>Creates physics diagrams from text descriptions: force diagrams, circuit schematics, wave patterns, atomic models, etc.</p>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Interactive Simulations</h4>
+                        <p>Generates JavaScript/HTML5 physics simulations: pendulum motion, wave interference, particle collisions, orbital mechanics.</p>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>3D Visualizations</h4>
+                        <p>Creates three.js models for complex physics concepts: magnetic fields, spacetime curvature, molecular structures.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="card-header">
+                        <div class="card-icon">🧠</div>
+                        <div class="card-title">Content AI</div>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Explanation Generation</h4>
+                        <p>Writes clear, engaging explanations with multiple analogies, builds from simple to complex, includes common misconceptions.</p>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Problem Creation</h4>
+                        <p>Generates practice problems at various difficulty levels, creates worked solutions, designs progressive problem sets.</p>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Assessment Design</h4>
+                        <p>Creates quizzes with distractors based on common errors, designs rubrics, generates alternative versions for practice.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="card-header">
+                        <div class="card-icon">🔧</div>
+                        <div class="card-title">Assembly AI</div>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Course Architecture</h4>
+                        <p>Builds complete HTML structure, creates responsive navigation, implements progress tracking, ensures accessibility compliance.</p>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Style Consistency</h4>
+                        <p>Applies consistent design themes, optimizes for mobile/desktop, creates cohesive visual identity across all lessons.</p>
+                    </div>
+                    <div class="ai-feature">
+                        <h4>Quality Assurance</h4>
+                        <p>Validates links, checks scientific accuracy, ensures pedagogical flow, tests all interactive elements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="main-section input-section">
+            <h2>🚀 Generate Your Physics Course</h2>
+            
+            <div class="input-grid">
+                <div>
+                    <div class="input-group">
+                        <label class="input-label">Course Topic:</label>
+                        <input type="text" class="input-field" id="courseTopic" placeholder="e.g., Quantum Mechanics, Electromagnetism, Thermodynamics" value="Introduction to Quantum Physics">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">Target Audience:</label>
+                        <select class="select-field" id="targetAudience">
+                            <option value="High School Students">High School Students</option>
+                            <option value="Undergraduate Students" selected>Undergraduate Students</option>
+                            <option value="Graduate Students">Graduate Students</option>
+                            <option value="Adult Learners">Adult Learners</option>
+                            <option value="Physics Enthusiasts">Physics Enthusiasts</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">Course Length:</label>
+                        <select class="select-field" id="courseLength">
+                            <option value="5 lessons">5 lessons (1 week)</option>
+                            <option value="10 lessons" selected>10 lessons (2 weeks)</option>
+                            <option value="20 lessons">20 lessons (1 month)</option>
+                            <option value="30 lessons">30 lessons (semester)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="input-group">
+                        <label class="input-label">Special Requirements:</label>
+                        <textarea class="input-field textarea-field" id="requirements" placeholder="e.g., Include calculus-based derivations, focus on experimental applications, add historical context, emphasize modern technology applications...">Include interactive simulations, real-world applications, and hands-on experiments. Focus on building intuition before mathematical formalism.</textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label class="input-label">Learning Objectives:</label>
+                        <textarea class="input-field textarea-field" id="objectives" placeholder="e.g., Students will understand wave-particle duality, be able to solve basic quantum problems, appreciate quantum technology applications...">Students will understand fundamental quantum principles, solve basic quantum mechanical problems, and appreciate applications in modern technology like quantum computing and lasers.</textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="generate-button" onclick="generateCourse()">
+                🤖 Generate Complete Course with AI
+            </button>
+            
+            <div class="loading" id="loadingSection">
+                <div class="spinner"></div>
+                <h3>AI is creating your course...</h3>
+                <p>Generating content, diagrams, and interactive elements. This may take 30-60 seconds.</p>
+            </div>
+        </div>
+
+        <!-- AI Output Section -->
+        <div class="ai-output" id="aiOutput">
+            <div class="output-header">
+                <h2 style="font-size: 2.5em; margin-bottom: 15px;">🎉 Your AI-Generated Physics Course</h2>
+                <p style="font-size: 1.2em; opacity: 0.8;">Complete with lessons, diagrams, and interactive elements!</p>
+            </div>
+            
+            <div class="output-tabs">
+                <button class="output-tab active" onclick="showTab('overview')">📋 Course Overview</button>
+                <button class="output-tab" onclick="showTab('lesson')">📖 Sample Lesson</button>
+                <button class="output-tab" onclick="showTab('diagram')">🎨 AI Diagrams</button>
+                <button class="output-tab" onclick="showTab('code')">💻 Generated Code</button>
+                <button class="output-tab" onclick="showTab('downloads')">💾 Download Files</button>
+            </div>
+            
+            <div class="output-content" id="outputContent">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let generatedCourse = null;
+
+        function generateCourse() {
+            const topic = document.getElementById('courseTopic').value || "Introduction to Physics";
+            const audience = document.getElementById('targetAudience').value;
+            const length = document.getElementById('courseLength').value;
+            const requirements = document.getElementById('requirements').value;
+            const objectives = document.getElementById('objectives').value;
+
+            // Show loading
+            document.getElementById('loadingSection').style.display = 'block';
+            document.getElementById('aiOutput').style.display = 'none';
+
+            // Simulate AI generation (in real implementation, this would call AI APIs)
+            setTimeout(() => {
+                generatedCourse = simulateAICourseGeneration(topic, audience, length, requirements, objectives);
+                
+                document.getElementById('loadingSection').style.display = 'none';
+                document.getElementById('aiOutput').style.display = 'block';
+                showTab('overview');
+                
+                // Scroll to results
+                document.getElementById('aiOutput').scrollIntoView({ behavior: 'smooth' });
+            }, 3000);
+        }
+
+        function simulateAICourseGeneration(topic, audience, length, requirements, objectives) {
+            // This simulates what real AI would generate
+            const lessonCount = parseInt(length.split(' ')[0]);
+            
+            return {
+                title: topic,
+                audience: audience,
+                lessonCount: lessonCount,
+                overview: {
+                    description: `A comprehensive ${lessonCount}-lesson course on ${topic} designed specifically for ${audience.toLowerCase()}. This course integrates cutting-edge pedagogical approaches with interactive elements to maximize learning engagement and retention.`,
+                    features: [
+                        'Interactive Physics Simulations',
+                        'AI-Generated Diagrams and Visualizations',
+                        'Progressive Difficulty Scaling',
+                        'Real-World Application Examples',
+                        'Built-in Assessment Tools',
+                        'Adaptive Learning Pathways'
+                    ],
+                    stats: {
+                        'Total Lessons': lessonCount,
+                        'Interactive Elements': lessonCount * 3,
+                        'Practice Problems': lessonCount * 5,
+                        'Diagrams Created': lessonCount * 2,
+                        'Estimated Duration': `${Math.ceil(lessonCount * 1.5)} hours`,
+                        'Difficulty Level': audience.includes('Graduate') ? 'Advanced' : audience.includes('High School') ? 'Beginner' : 'Intermediate'
+                    }
+                },
+                sampleLesson: {
+                    title: `Lesson 3: Wave-Particle Duality in ${topic}`,
+                    duration: '45 minutes',
+                    objectives: [
+                        'Understand the fundamental concept of wave-particle duality',
+                        'Analyze the double-slit experiment and its implications',
+                        'Apply wave-particle duality to modern quantum technologies',
+                        'Solve basic problems involving de Broglie wavelength'
+                    ],
+                    content: `
+                        <h4>Introduction to Wave-Particle Duality</h4>
+                        <p>One of the most fascinating and counterintuitive concepts in quantum physics is wave-particle duality. This principle suggests that all matter and energy exhibit both wave-like and particle-like properties, depending on how we observe them.</p>
+                        
+                        <h4>The Double-Slit Experiment</h4>
+                        <p>The famous double-slit experiment demonstrates this duality beautifully. When electrons are fired at a barrier with two slits, they create an interference pattern characteristic of waves. However, when we try to detect which slit each electron passes through, the wave pattern disappears and the electrons behave like particles.</p>
+                        
+                        <h4>Mathematical Framework</h4>
+                        <p>The de Broglie wavelength relates the wave and particle aspects: λ = h/p, where h is Planck's constant and p is momentum. This equation shows that all matter has an associated wavelength, though it's only observable for very small particles.</p>
+                    `,
+                    interactive: 'Interactive double-slit experiment simulation allowing students to adjust electron beam intensity and observe wave-particle transition in real-time.',
+                    assessment: 'Quick quiz with 5 conceptual questions about wave-particle duality and 3 calculation problems using de Broglie wavelength formula.'
+                },
+                diagrams: [
+                    {
+                        title: 'Double-Slit Experiment Setup',
+                        description: 'SVG diagram showing electron source, double-slit barrier, and detection screen with interference pattern',
+                        type: 'Interactive SVG'
+                    },
+                    {
+                        title: 'Wave Function Visualization',
+                        description: 'Animated visualization of quantum wave function evolution and collapse',
+                        type: '3D Animation'
+                    },
+                    {
+                        title: 'Energy Level Diagrams',
+                        description: 'Interactive energy level diagrams for hydrogen atom with transition animations',
+                        type: 'Interactive Diagram'
+                    },
+                    {
+                        title: 'Quantum Tunneling Visualization',
+                        description: 'Animation showing quantum tunneling through potential barriers',
+                        type: 'HTML5 Canvas'
+                    }
+                ],
+                codeExamples: [
+                    {
+                        title: 'Wave Function Plotter',
+                        language: 'JavaScript + HTML5 Canvas',
+                        description: 'Interactive tool for plotting and animating quantum wave functions'
+                    },
+                    {
+                        title: 'Double-Slit Simulation',
+                        language: 'JavaScript + Three.js',
+                        description: 'Full 3D simulation of the double-slit experiment with particle detection'
+                    },
+                    {
+                        title: 'Quantum State Calculator',
+                        language: 'JavaScript + Math.js',
+                        description: 'Calculator for quantum state probabilities and measurement outcomes'
+                    }
+                ],
+                files: generateFileList(lessonCount, topic)
+            };
+        }
+
+        function generateFileList(lessonCount, topic) {
+            const files = [`${topic.toLowerCase().replace(/\s+/g, '-')}-course.zip`];
+            for (let i = 1; i <= lessonCount; i++) {
+                files.push(`lesson-${i}.html`);
+            }
+            files.push('course-navigation.html', 'styles.css', 'scripts.js', 'images/', 'simulations/');
+            return files;
+        }
+
+        function showTab(tabName) {
+            // Update active tab
+            document.querySelectorAll('.output-tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const content = document.getElementById('outputContent');
+            
+            switch(tabName) {
+                case 'overview':
+                    showOverview(content);
+                    break;
+                case 'lesson':
+                    showSampleLesson(content);
+                    break;
+                case 'diagram':
+                    showDiagrams(content);
+                    break;
+                case 'code':
+                    showCode(content);
+                    break;
+                case 'downloads':
+                    showDownloads(content);
+                    break;
+            }
+        }
+
+        function showOverview(content) {
+            if (!generatedCourse) return;
+            
+            content.innerHTML = `
+                <div class="course-overview">
+                    <div class="overview-main">
+                        <h3>Course Description</h3>
+                        <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 25px;">${generatedCourse.overview.description}</p>
+                        
+                        <h3>Key Features Generated by AI</h3>
+                        <ul style="margin-bottom: 25px;">
+                            ${generatedCourse.overview.features.map(feature => `<li style="margin-bottom: 8px; font-size: 1.05em;">${feature}</li>`).join('')}
+                        </ul>
+                        
+                        <div style="background: #e8f5e8; padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #27ae60; margin-bottom: 10px;">✅ Course Generation Complete!</h4>
+                            <p style="color: #2c3e50;">All content, diagrams, and interactive elements have been generated and can be customized further.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="overview-stats">
+                        <h3 style="margin-bottom: 20px; color: #2c3e50;">Course Statistics</h3>
+                        ${Object.entries(generatedCourse.overview.stats).map(([key, value]) => `
+                            <div class="stat-item">
+                                <strong>${key}:</strong>
+                                <span style="color: #3498db; font-weight: bold;">${value}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function showSampleLesson(content) {
+            if (!generatedCourse) return;
+            
+            content.innerHTML = `
+                <div class="lesson-preview">
+                    <h3 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px;">${generatedCourse.sampleLesson.title}</h3>
+                    <p style="color: #7f8c8d; margin-bottom: 20px;">Duration: ${generatedCourse.sampleLesson.duration}</p>
+                    
+                    <h4 style="color: #34495e; margin-bottom: 10px;">🎯 Learning Objectives:</h4>
+                    <ul style="margin-bottom: 20px;">
+                        ${generatedCourse.sampleLesson.objectives.map(obj => `<li>${obj}</li>`).join('')}
+                    </ul>
+                    
+                    <h4 style="color: #34495e; margin-bottom: 15px;">📖 Lesson Content:</h4>
+                    <div style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: #f8f9fa;">
+                        ${generatedCourse.sampleLesson.content}
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                        <div style="background: #e8f5e8; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #27ae60; margin-bottom: 10px;">🎮 Interactive Element</h5>
+                            <p style="font-size: 0.9em;">${generatedCourse.sampleLesson.interactive}</p>
+                        </div>
+                        <div style="background: #fff3cd; padding: 15px; border-radius: 8px;">
+                            <h5 style="color: #856404; margin-bottom: 10px;">📝 Assessment</h5>
+                            <p style="font-size: 0.9em;">${generatedCourse.sampleLesson.assessment}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showDiagrams(content) {
+            if (!generatedCourse) return;
+            
+            content.innerHTML = `
+                <h3 style="margin-bottom: 25px; text-align: center;">🎨 AI-Generated Diagrams & Visualizations</h3>
+                <div class="diagram-gallery">
+                    ${generatedCourse.diagrams.map(diagram => `
+                        <div class="diagram-card">
+                            <div class="diagram-placeholder">
+                                ${diagram.type}
+                            </div>
+                            <h4 style="color: #2c3e50; margin-bottom: 10px;">${diagram.title}</h4>
+                            <p style="color: #7f8c8d; font-size: 0.9em;">${diagram.description}</p>
+                            <button class="download-button" style="margin-top: 15px;">View Interactive</button>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function showCode(content) {
+            if (!generatedCourse) return;
+            
+            content.innerHTML = `
+                <h3 style="margin-bottom: 25px; text-align: center;">💻 Generated Interactive Code</h3>
+                ${generatedCourse.codeExamples.map(example => `
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: #2c3e50; margin-bottom: 10px;">${example.title}</h4>
+                        <p style="color: #7f8c8d; margin-bottom: 15px;"><strong>Language:</strong> ${example.language}</p>
+                        <p style="margin-bottom: 15px;">${example.description}</p>
+                        <div class="code-block">
+// ${example.title} - AI Generated Code
+// Language: ${example.language}
+
+${example.title.includes('Wave Function') ? `
+// Interactive Wave Function Plotter
+class QuantumWaveFunction {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = canvas.getContext('2d');
+        this.width = canvas.width;
+        this.height = canvas.height;
+        this.time = 0;
+    }
+    
+    plotWaveFunction(psi, x_range) {
+        this.ctx.clearRect(0, 0, this.width, this.height);
+        this.ctx.strokeStyle = '#3498db';
+        this.ctx.lineWidth = 2;
+        this.ctx.beginPath();
+        
+        for (let i = 0; i < this.width; i++) {
+            const x = (i / this.width) * x_range;
+            const y = psi(x, this.time);
+            const canvasY = this.height/2 - y * this.height/4;
+            
+            if (i === 0) this.ctx.moveTo(i, canvasY);
+            else this.ctx.lineTo(i, canvasY);
+        }
+        this.ctx.stroke();
+        this.time += 0.1;
+    }
+}
+
+// Usage example
+const waveFunction = new QuantumWaveFunction(document.getElementById('canvas'));
+const psi = (x, t) => Math.sin(x - t) * Math.exp(-x*x/10);
+setInterval(() => waveFunction.plotWaveFunction(psi, 20), 50);` : 
+example.title.includes('Double-Slit') ? `
+// Double-Slit Experiment Simulation
+class DoubleSlit {
+    constructor() {
+        this.particles = [];
+        this.detectionScreen = [];
+        this.observing = false;
+    }
+    
+    fireParticle() {
+        const particle = {
+            x: 0,
+            y: Math.random() * 400 + 100,
+            velocity: { x: 2, y: 0 },
+            waveAmplitude: this.observing ? 0 : 1
+        };
+        this.particles.push(particle);
+    }
+    
+    updateParticles() {
+        this.particles.forEach(particle => {
+            particle.x += particle.velocity.x;
+            
+            // Wave interference calculation
+            if (particle.waveAmplitude > 0 && particle.x > 200) {
+                const interference = this.calculateInterference(particle);
+                particle.y += interference * 0.5;
+            }
+            
+            // Detect at screen
+            if (particle.x > 600) {
+                this.recordDetection(particle.y);
+            }
+        });
+    }
+    
+    calculateInterference(particle) {
+        const slit1Distance = Math.sqrt((particle.x-200)**2 + (particle.y-150)**2);
+        const slit2Distance = Math.sqrt((particle.x-200)**2 + (particle.y-250)**2);
+        const phaseDiff = (slit2Distance - slit1Distance) * 2 * Math.PI / 50;
+        return Math.sin(phaseDiff);
+    }
+}` : `
+// Quantum State Calculator
+class QuantumCalculator {
+    constructor() {
+        this.states = [];
+        this.operators = [];
+    }
+    
+    createState(amplitudes) {
+        // Normalize the state
+        const norm = Math.sqrt(amplitudes.reduce((sum, amp) => 
+            sum + amp.real**2 + amp.imag**2, 0));
+        
+        return amplitudes.map(amp => ({
+            real: amp.real / norm,
+            imag: amp.imag / norm
+        }));
+    }
+    
+    measurementProbability(state, eigenstate) {
+        const overlap = this.innerProduct(state, eigenstate);
+        return overlap.real**2 + overlap.imag**2;
+    }
+    
+    innerProduct(state1, state2) {
+        let real = 0, imag = 0;
+        for (let i = 0; i < state1.length; i++) {
+            real += state1[i].real * state2[i].real + state1[i].imag * state2[i].imag;
+            imag += state1[i].real * state2[i].imag - state1[i].imag * state2[i].real;
+        }
+        return { real, imag };
+    }
+}`}
+                        </div>
+                    </div>
+                `).join('')}
+            `;
+        }
+
+        function showDownloads(content) {
+            if (!generatedCourse) return;
+            
+            content.innerHTML = `
+                <h3 style="margin-bottom: 25px; text-align: center;">💾 Download Your Complete Course</h3>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <div class="download-icon">📚</div>
+                        <h4>Complete Course Package</h4>
+                        <p>Full HTML course with all lessons, navigation, and interactive elements</p>
+                        <button class="download-button" onclick="downloadFile('course-package')">Download ZIP (${Math.round(generatedCourse.lessonCount * 2.5)}MB)</button>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">🎨</div>
+                        <h4>Diagrams & Visuals</h4>
+                        <p>All AI-generated diagrams, SVGs, and interactive visualizations</p>
+                        <button class="download-button" onclick="downloadFile('diagrams')">Download Images</button>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">💻</div>
+                        <h4>Source Code</h4>
+                        <p>JavaScript simulations, interactive elements, and customizable templates</p>
+                        <button class="download-button" onclick="downloadFile('source-code')">Download Code</button>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">📝</div>
+                        <h4>Assessment Materials</h4>
+                        <p>Quizzes, problem sets, and grading rubrics for each lesson</p>
+                        <button class="download-button" onclick="downloadFile('assessments')">Download PDFs</button>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">🎯</div>
+                        <h4>Learning Analytics</h4>
+                        <p>Progress tracking scripts and student performance analysis tools</p>
+                        <button class="download-button" onclick="downloadFile('analytics')">Download Tools</button>
+                    </div>
+                    
+                    <div class="download-card">
+                        <div class="download-icon">🔧</div>
+                        <h4>Customization Kit</h4>
+                        <p>Templates, style guides, and tools for modifying the course content</p>
+                        <button class="download-button" onclick="downloadFile('customization')">Download Kit</button>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 15px;">
+                    <h4 style="color: #2c3e50; margin-bottom: 15px;">📋 Generated Files Include:</h4>
+                    <div style="column-count: 2; column-gap: 30px;">
+                        ${generatedCourse.files.map(file => `<p style="margin: 5px 0; break-inside: avoid;">📄 ${file}</p>`).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function downloadFile(type) {
+            // In a real implementation, this would trigger actual file downloads
+            alert(`Downloading ${type} files... This would normally start a real download of the AI-generated course materials.`);
+        }
+
+        // Initialize with overview tab when page loads
+        window.onload = function() {
+            // Pre-populate form for demo
+            document.getElementById('courseTopic').value = "Introduction to Quantum Physics";
+            document.getElementById('requirements').value = "Include interactive simulations, real-world applications, and hands-on experiments. Focus on building intuition before mathematical formalism.";
+            document.getElementById('objectives').value = "Students will understand fundamental quantum principles, solve basic quantum mechanical problems, and appreciate applications in modern technology like quantum computing and lasers.";
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgressiveProject Configuration Editor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            min-height: 80vh;
+        }
+
+        .editor-panel {
+            padding: 30px;
+            border-right: 1px solid #e5e7eb;
+        }
+
+        .risk-panel {
+            background: #f9fafb;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .config-section {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .config-section.risky {
+            border-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .config-section.safe {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+
+        .config-section.warning {
+            border-color: #f59e0b;
+            background: #fffbeb;
+        }
+
+        .section-toggle {
+            padding: 15px 20px;
+            background: #f3f4f6;
+            border-bottom: 1px solid #e5e7eb;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .section-toggle:hover {
+            background: #e5e7eb;
+        }
+
+        .risk-indicator {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .risk-indicator.safe {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .risk-indicator.warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .risk-indicator.risky {
+            background: #fecaca;
+            color: #991b1b;
+        }
+
+        .section-content {
+            padding: 20px;
+            display: none;
+        }
+
+        .section-content.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        .form-input.risky {
+            border-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            accent-color: #4f46e5;
+        }
+
+        .debugging-engines {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .engine-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 15px;
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        .engine-card.enabled {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+
+        .engine-card.disabled {
+            border-color: #6b7280;
+            background: #f9fafb;
+            opacity: 0.7;
+        }
+
+        .engine-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .engine-name {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .engine-toggle {
+            width: 50px;
+            height: 25px;
+            background: #e5e7eb;
+            border-radius: 15px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .engine-toggle.enabled {
+            background: #10b981;
+        }
+
+        .engine-toggle::after {
+            content: '';
+            width: 21px;
+            height: 21px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        .engine-toggle.enabled::after {
+            transform: translateX(25px);
+        }
+
+        .risk-assessment {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4f46e5;
+        }
+
+        .risk-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .risk-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background: #f9fafb;
+        }
+
+        .risk-item.high {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+        }
+
+        .risk-item.medium {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+        }
+
+        .risk-item.low {
+            background: #f0fdf4;
+            border-left: 4px solid #10b981;
+        }
+
+        .restart-notice {
+            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+            border: 2px solid #ef4444;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .restart-notice.hidden {
+            display: none;
+        }
+
+        .restart-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #991b1b;
+            margin-bottom: 10px;
+        }
+
+        .restart-text {
+            color: #7f1d1d;
+            margin-bottom: 15px;
+        }
+
+        .restart-button {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .restart-button:hover {
+            background: #dc2626;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            padding: 30px;
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #4338ca;
+        }
+
+        .btn-secondary {
+            background: #6b7280;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+
+        .btn-danger {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .status-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            z-index: 1000;
+        }
+
+        .status-indicator.success {
+            background: #dcfce7;
+            color: #166534;
+            border: 2px solid #10b981;
+        }
+
+        .status-indicator.error {
+            background: #fecaca;
+            color: #991b1b;
+            border: 2px solid #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 ProgressiveProject Configuration Editor</h1>
+            <p>Manage Framework Set 2 with intelligent risk assessment</p>
+        </div>
+
+        <div class="main-content">
+            <div class="editor-panel">
+                <div class="section-header">
+                    <h2 class="section-title">System Configuration</h2>
+                </div>
+
+                <!-- Framework Metadata -->
+                <div class="config-section safe">
+                    <div class="section-toggle" onclick="toggleSection('metadata')">
+                        <span>📊 Framework Metadata</span>
+                        <span class="risk-indicator safe">Safe</span>
+                    </div>
+                    <div class="section-content" id="metadata">
+                        <div class="form-group">
+                            <label class="form-label">Framework Name</label>
+                            <input type="text" class="form-input" value="ProgressiveProject Enhanced Framework Set 2" onchange="assessRisk(this, 'low')">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Version</label>
+                            <input type="text" class="form-input" value="2.0" onchange="assessRisk(this, 'medium')">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Total Monthly Value</label>
+                            <input type="text" class="form-input" value="$493,000" onchange="assessRisk(this, 'low')">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Debugging Engines -->
+                <div class="config-section warning">
+                    <div class="section-toggle" onclick="toggleSection('debugging')">
+                        <span>🔍 Debugging Engines</span>
+                        <span class="risk-indicator warning">Moderate Risk</span>
+                    </div>
+                    <div class="section-content" id="debugging">
+                        <div class="debugging-engines">
+                            <div class="engine-card enabled" id="atlas-card">
+                                <div class="engine-header">
+                                    <span class="engine-name">ATLAS</span>
+                                    <div class="engine-toggle enabled" onclick="toggleEngine('atlas')" id="atlas-toggle"></div>
+                                </div>
+                                <p>Analytics & Learning Engine</p>
+                            </div>
+                            <div class="engine-card enabled" id="prism-card">
+                                <div class="engine-header">
+                                    <span class="engine-name">PRISM</span>
+                                    <div class="engine-toggle enabled" onclick="toggleEngine('prism')" id="prism-toggle"></div>
+                                </div>
+                                <p>Prevention & Risk Management</p>
+                            </div>
+                            <div class="engine-card enabled" id="nexus-card">
+                                <div class="engine-header">
+                                    <span class="engine-name">NEXUS</span>
+                                    <div class="engine-toggle enabled" onclick="toggleEngine('nexus')" id="nexus-toggle"></div>
+                                </div>
+                                <p>Network & eXecution Control</p>
+                            </div>
+                            <div class="engine-card enabled" id="crud-card">
+                                <div class="engine-header">
+                                    <span class="engine-name">CRUD</span>
+                                    <div class="engine-toggle enabled" onclick="toggleEngine('crud')" id="crud-toggle"></div>
+                                </div>
+                                <p>Correction & Recovery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- System Limits -->
+                <div class="config-section risky">
+                    <div class="section-toggle" onclick="toggleSection('limits')">
+                        <span>⚠️ System Limits</span>
+                        <span class="risk-indicator risky">High Risk</span>
+                    </div>
+                    <div class="section-content" id="limits">
+                        <div class="form-group">
+                            <label class="form-label">Max Errors Tracked</label>
+                            <input type="number" class="form-input risky" value="50000" onchange="assessRisk(this, 'high')">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Max Projects</label>
+                            <input type="number" class="form-input risky" value="100" onchange="assessRisk(this, 'high')">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">API Calls Per Day</label>
+                            <input type="number" class="form-input risky" value="50000" onchange="assessRisk(this, 'high')">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="risk-panel">
+                <div class="risk-assessment">
+                    <h3 class="risk-title">🛡️ Risk Assessment</h3>
+                    <div class="risk-item low">
+                        <span>✅</span>
+                        <span>Framework metadata changes are safe</span>
+                    </div>
+                    <div class="risk-item medium">
+                        <span>⚠️</span>
+                        <span>Debugging engine changes may affect performance</span>
+                    </div>
+                    <div class="risk-item high">
+                        <span>🚨</span>
+                        <span>System limit changes require restart</span>
+                    </div>
+                </div>
+
+                <div class="restart-notice hidden" id="restart-notice">
+                    <h3 class="restart-title">🔄 Restart Required</h3>
+                    <p class="restart-text">Critical changes detected. System restart required for changes to take effect.</p>
+                    <button class="restart-button" onclick="restartSystem()">Restart Framework</button>
+                </div>
+
+                <div class="risk-assessment">
+                    <h3 class="risk-title">📊 Current Status</h3>
+                    <div id="engine-status">
+                        <div class="risk-item low">
+                            <span>🔍</span>
+                            <span>ATLAS: Active - Learning enabled</span>
+                        </div>
+                        <div class="risk-item low">
+                            <span>🛡️</span>
+                            <span>PRISM: Active - Prevention enabled</span>
+                        </div>
+                        <div class="risk-item low">
+                            <span>🌐</span>
+                            <span>NEXUS: Active - Monitoring enabled</span>
+                        </div>
+                        <div class="risk-item low">
+                            <span>🔧</span>
+                            <span>CRUD: Active - Recovery enabled</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn btn-secondary" onclick="loadConfig()">Load Config</button>
+            <button class="btn btn-primary" onclick="saveConfig()">Save Changes</button>
+            <button class="btn btn-danger" onclick="resetConfig()">Reset to Default</button>
+        </div>
+    </div>
+
+    <div class="status-indicator success" id="status-indicator" style="display: none;">
+        Configuration saved successfully!
+    </div>
+
+    <script>
+        let needsRestart = false;
+        let engines = {
+            atlas: true,
+            prism: true,
+            nexus: true,
+            crud: true
+        };
+
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            content.classList.toggle('active');
+        }
+
+        function toggleEngine(engineName) {
+            engines[engineName] = !engines[engineName];
+            const card = document.getElementById(engineName + '-card');
+            const toggle = document.getElementById(engineName + '-toggle');
+            
+            if (engines[engineName]) {
+                card.classList.remove('disabled');
+                card.classList.add('enabled');
+                toggle.classList.add('enabled');
+            } else {
+                card.classList.remove('enabled');
+                card.classList.add('disabled');
+                toggle.classList.remove('enabled');
+            }
+            
+            updateEngineStatus();
+            assessRisk(null, 'medium');
+        }
+
+        function updateEngineStatus() {
+            const statusDiv = document.getElementById('engine-status');
+            statusDiv.innerHTML = '';
+            
+            Object.keys(engines).forEach(engine => {
+                const status = engines[engine] ? 'Active' : 'Disabled';
+                const riskClass = engines[engine] ? 'low' : 'medium';
+                const icon = getEngineIcon(engine);
+                
+                statusDiv.innerHTML += `
+                    <div class="risk-item ${riskClass}">
+                        <span>${icon}</span>
+                        <span>${engine.toUpperCase()}: ${status}</span>
+                    </div>
+                `;
+            });
+        }
+
+        function getEngineIcon(engine) {
+            const icons = {
+                atlas: '🔍',
+                prism: '🛡️',
+                nexus: '🌐',
+                crud: '🔧'
+            };
+            return icons[engine] || '⚙️';
+        }
+
+        function assessRisk(element, riskLevel) {
+            if (riskLevel === 'high') {
+                needsRestart = true;
+                showRestartNotice();
+            }
+            
+            if (element) {
+                element.classList.remove('risky');
+                if (riskLevel === 'high') {
+                    element.classList.add('risky');
+                }
+            }
+        }
+
+        function showRestartNotice() {
+            document.getElementById('restart-notice').classList.remove('hidden');
+        }
+
+        function hideRestartNotice() {
+            document.getElementById('restart-notice').classList.add('hidden');
+            needsRestart = false;
+        }
+
+        function saveConfig() {
+            const config = {
+                framework_metadata: {
+                    name: "ProgressiveProject Enhanced Framework Set 2",
+                    version: "2.0",
+                    total_monthly_value: "$493,000"
+                },
+                debugging_engines: engines,
+                timestamp: new Date().toISOString()
+            };
+            
+            // Simulate saving
+            showStatus('Configuration saved successfully!', 'success');
+            
+            if (needsRestart) {
+                setTimeout(() => {
+                    showRestartNotice();
+                }, 1000);
+            }
+        }
+
+        function loadConfig() {
+            // Simulate loading
+            showStatus('Configuration loaded!', 'success');
+        }
+
+        function resetConfig() {
+            engines = { atlas: true, prism: true, nexus: true, crud: true };
+            Object.keys(engines).forEach(engine => {
+                const card = document.getElementById(engine + '-card');
+                const toggle = document.getElementById(engine + '-toggle');
+                card.classList.remove('disabled');
+                card.classList.add('enabled');
+                toggle.classList.add('enabled');
+            });
+            
+            updateEngineStatus();
+            hideRestartNotice();
+            showStatus('Configuration reset to default!', 'success');
+        }
+
+        function restartSystem() {
+            showStatus('Framework restarting...', 'error');
+            setTimeout(() => {
+                hideRestartNotice();
+                showStatus('Framework restarted successfully!', 'success');
+            }, 3000);
+        }
+
+        function showStatus(message, type) {
+            const indicator = document.getElementById('status-indicator');
+            indicator.textContent = message;
+            indicator.className = `status-indicator ${type}`;
+            indicator.style.display = 'block';
+            
+            setTimeout(() => {
+                indicator.style.display = 'none';
+            }, 3000);
+        }
+
+        // Initialize
+        updateEngineStatus();
+        
+        // Auto-expand first section
+        document.getElementById('metadata').classList.add('active');
+    </script>
+</body>
+</html>

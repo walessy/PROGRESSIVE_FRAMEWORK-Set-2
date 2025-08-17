@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Structure Extractor & XML Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .control-panel {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .input-field {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            background: rgba(255,255,255,0.9);
+            color: #333;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-generate {
+            background: linear-gradient(45deg, #00c851, #007e33);
+        }
+
+        .btn-generate:hover {
+            box-shadow: 0 8px 20px rgba(0, 200, 81, 0.4);
+        }
+
+        .btn-export {
+            background: linear-gradient(45deg, #9c27b0, #673ab7);
+        }
+
+        .btn-export:hover {
+            box-shadow: 0 8px 20px rgba(156, 39, 176, 0.4);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .tree-section {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .controls-section {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .tree-container {
+            max-height: 600px;
+            overflow-y: auto;
+            background: rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .tree-item {
+            margin: 8px 0;
+            padding: 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tree-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+
+        .tree-item.selected {
+            background: rgba(52, 152, 219, 0.3);
+            border-left-color: #e74c3c;
+        }
+
+        .tree-item.has-content {
+            border-left-color: #27ae60;
+        }
+
+        .node-content {
+            flex: 1;
+        }
+
+        .node-title {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .node-type {
+            font-size: 0.8em;
+            opacity: 0.8;
+            color: #bdc3c7;
+        }
+
+        .content-badge {
+            background: #27ae60;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            margin-left: 10px;
+        }
+
+        .actions {
+            display: none;
+            gap: 5px;
+        }
+
+        .tree-item:hover .actions {
+            display: flex;
+        }
+
+        .action-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .action-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .progress-bar {
+            background: rgba(255,255,255,0.2);
+            height: 8px;
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00c851, #007e33);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 3px solid #ffd700;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .content-preview {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+
+        .content-type {
+            background: rgba(255,255,255,0.1);
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .content-type:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #2c3e50;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            color: white;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .input-group {
+                flex-direction: column;
+            }
+            
+            .input-field {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌳 Course Structure Extractor & XML Generator</h1>
+            <p>Extract hierarchical course structures from university URLs and generate manipulable XML trees</p>
+        </div>
+
+        <div class="control-panel">
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="url" id="universityUrl" placeholder="Enter university course URL (e.g., https://cs.stanford.edu/degrees/undergrad/)"
+                           value="https://cs.stanford.edu/degrees/undergrad/">
+                </div>
+                <button class="btn" onclick="extractStructure()">🔍 Extract Structure</button>
+                <button class="btn btn-generate" onclick="generateContent()">🤖 Generate Course Content</button>
+            </div>
+            
+            <div class="input-group">
+                <button class="btn btn-export" onclick="exportHTML()">📄 Export HTML</button>
+                <button class="btn btn-export" onclick="exportJSON()">📊 Export JSON</button>
+                <button class="btn btn-export" onclick="exportPDF()">📑 Export PDF</button>
+                <button class="btn btn-export" onclick="exportXML()">🔤 Export XML</button>
+                <button class="btn" onclick="showLegend()">❓ Help</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="loading" id="loadingIndicator">
+                <div class="spinner"></div>
+                <p>Processing course structure...</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="tree-section">
+                <h2>📚 Course Structure Tree</h2>
+                <div class="tree-container" id="treeContainer">
+                    <div style="text-align: center; padding: 40px; opacity: 0.7;">
+                        <p>🌱 Enter a university URL above and click "Extract Structure" to begin</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <h2>📊 Statistics & Controls</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalNodes">0</div>
+                        <div>Total Nodes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="contentNodes">0</div>
+                        <div>With Content</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="completionRate">0%</div>
+                        <div>Completion</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h3>🎛️ Tree Controls</h3>
+                    <button class="btn" onclick="expandAll()" style="width: 100%; margin: 5px 0;">🔽 Expand All</button>
+                    <button class="btn" onclick="collapseAll()" style="width: 100%; margin: 5px 0;">🔼 Collapse All</button>
+                    <button class="btn" onclick="addNode()" style="width: 100%; margin: 5px 0;">➕ Add Node</button>
+                    <button class="btn" onclick="deleteSelected()" style="width: 100%; margin: 5px 0;">🗑️ Delete Selected</button>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h3>⚙️ Settings</h3>
+                    <label style="display: block; margin: 10px 0;">
+                        <input type="checkbox" id="autoGenerate" checked> Auto-generate content
+                    </label>
+                    <label style="display: block; margin: 10px 0;">
+                        <input type="checkbox" id="showTooltips" checked> Show tooltips
+                    </label>
+                    <label style="display: block; margin: 10px 0;">
+                        <input type="checkbox" id="enableAnimations" checked> Enable animations
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for content viewing -->
+    <div class="modal" id="contentModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div id="modalContent">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal" id="helpModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeHelpModal()">&times;</button>
+            <h2>🎯 How to Use the Course Extractor</h2>
+            <div style="line-height: 1.6;">
+                <h3>📋 Step-by-Step Guide:</h3>
+                <ol style="margin: 15px 0; padding-left: 20px;">
+                    <li><strong>Enter URL:</strong> Paste a university course page URL</li>
+                    <li><strong>Extract Structure:</strong> Click to scan and build the course tree</li>
+                    <li><strong>Generate Content:</strong> AI creates lessons, assessments, and resources</li>
+                    <li><strong>View & Edit:</strong> Click on tree items to view/edit content</li>
+                    <li><strong>Export:</strong> Download in your preferred format</li>
+                </ol>
+                
+                <h3>🎨 Tree Interactions:</h3>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li><strong>Single Click:</strong> Select a node</li>
+                    <li><strong>Double Click:</strong> Expand/collapse content preview</li>
+                    <li><strong>Green Border:</strong> Node has generated content</li>
+                    <li><strong>Hover:</strong> Show action buttons</li>
+                </ul>
+
+                <h3>📁 Export Formats:</h3>
+                <ul style="margin: 15px 0; padding-left: 20px;">
+                    <li><strong>HTML:</strong> Interactive course website</li>
+                    <li><strong>JSON:</strong> Structured data for APIs</li>
+                    <li><strong>PDF:</strong> Printable course manual</li>
+                    <li><strong>XML:</strong> Hierarchical course outline</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let courseStructure = null;
+        let selectedNode = null;
+        let nodeIdCounter = 1;
+
+        // Sample course structure for demo
+        const sampleStructure = {
+            id: 'root',
+            title: 'Computer Science Undergraduate Program',
+            type: 'program',
+            children: [
+                {
+                    id: 'cs101',
+                    title: 'CS 101 - Introduction to Programming',
+                    type: 'course',
+                    children: [
+                        {
+                            id: 'cs101-mod1',
+                            title: 'Module 1: Programming Fundamentals',
+                            type: 'module',
+                            children: [
+                                {
+                                    id: 'cs101-mod1-lesson1',
+                                    title: 'Lesson 1: Variables and Data Types',
+                                    type: 'lesson'
+                                },
+                                {
+                                    id: 'cs101-mod1-lesson2',
+                                    title: 'Lesson 2: Control Structures',
+                                    type: 'lesson'
+                                }
+                            ]
+                        },
+                        {
+                            id: 'cs101-mod2',
+                            title: 'Module 2: Object-Oriented Programming',
+                            type: 'module',
+                            children: [
+                                {
+                                    id: 'cs101-mod2-lesson1',
+                                    title: 'Lesson 1: Classes and Objects',
+                                    type: 'lesson'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 'cs201',
+                    title: 'CS 201 - Data Structures',
+                    type: 'course',
+                    children: [
+                        {
+                            id: 'cs201-mod1',
+                            title: 'Module 1: Linear Data Structures',
+                            type: 'module',
+                            children: [
+                                {
+                                    id: 'cs201-mod1-lesson1',
+                                    title: 'Lesson 1: Arrays and Lists',
+                                    type: 'lesson'
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+
+        function extractStructure() {
+            const url = document.getElementById('universityUrl').value;
+            if (!url) {
+                alert('Please enter a university URL');
+                return;
+            }
+
+            showLoading(true);
+            updateProgress(25);
+
+            // Simulate extraction process
+            setTimeout(() => {
+                updateProgress(50);
+                setTimeout(() => {
+                    updateProgress(75);
+                    setTimeout(() => {
+                        courseStructure = JSON.parse(JSON.stringify(sampleStructure));
+                        renderTree();
+                        updateStats();
+                        updateProgress(100);
+                        showLoading(false);
+                        
+                        setTimeout(() => updateProgress(0), 1000);
+                    }, 500);
+                }, 500);
+            }, 500);
+        }
+
+        function generateContent() {
+            if (!courseStructure) {
+                alert('Please extract course structure first');
+                return;
+            }
+
+            showLoading(true);
+            updateProgress(10);
+
+            const autoGenerate = document.getElementById('autoGenerate').checked;
+            let progress = 10;
+
+            function generateNodeContent(node, callback) {
+                if (node.type === 'lesson' || node.type === 'module' || node.type === 'course') {
+                    // Generate sample content
+                    node.generatedContent = {
+                        lesson: generateLessonContent(node),
+                        code: generateCodeContent(node),
+                        assessment: generateAssessmentContent(node),
+                        resources: generateResourcesContent(node)
+                    };
+                }
+
+                progress += 15;
+                updateProgress(Math.min(progress, 90));
+
+                if (node.children) {
+                    let childIndex = 0;
+                    function processNextChild() {
+                        if (childIndex < node.children.length) {
+                            generateNodeContent(node.children[childIndex], () => {
+                                childIndex++;
+                                setTimeout(processNextChild, 200);
+                            });
+                        } else {
+                            callback();
+                        }
+                    }
+                    processNextChild();
+                } else {
+                    setTimeout(callback, 200);
+                }
+            }
+
+            generateNodeContent(courseStructure, () => {
+                updateProgress(100);
+                renderTree();
+                updateStats();
+                showLoading(false);
+                setTimeout(() => updateProgress(0), 1000);
+            });
+        }
+
+        function generateLessonContent(node) {
+            return {
+                duration: '45 minutes',
+                difficulty: 'Intermediate',
+                objectives: [
+                    `Understand the core concepts of ${node.title.split(':')[1] || node.title}`,
+                    'Apply theoretical knowledge to practical examples',
+                    'Complete hands-on exercises successfully'
+                ],
+                content: `This lesson covers the fundamental aspects of ${node.title}. Students will learn through interactive examples and practical applications.`,
+                activities: [
+                    'Interactive demonstration',
+                    'Guided practice exercises',
+                    'Group discussion',
+                    'Individual reflection'
+                ]
+            };
+        }
+
+        function generateCodeContent(node) {
+            return {
+                language: 'python',
+                examples: [
+                    {
+                        title: 'Basic Example',
+                        code: `# Example code for ${node.title}\ndef example_function():\n    print("Hello, ${node.title}!")\n    return True\n\nexample_function()`,
+                        explanation: 'This example demonstrates the basic concepts covered in this lesson.'
+                    }
+                ],
+                exercises: [
+                    {
+                        title: 'Practice Exercise',
+                        description: `Create a program that implements the concepts from ${node.title}`,
+                        solution: '# Solution will be provided after attempt'
+                    }
+                ]
+            };
+        }
+
+        function generateAssessmentContent(node) {
+            return {
+                type: 'Quiz',
+                questions: [
+                    {
+                        question: `What is the main purpose of ${node.title}?`,
+                        type: 'multiple-choice',
+                        options: ['Option A', 'Option B', 'Option C', 'Option D'],
+                        correct: 0
+                    },
+                    {
+                        question: `Explain how ${node.title} relates to the overall course objectives.`,
+                        type: 'essay',
+                        points: 10
+                    }
+                ],
+                rubric: 'Assessment will be graded based on understanding of concepts, practical application, and clear communication of ideas.'
+            };
+        }
+
+        function generateResourcesContent(node) {
+            return {
+                textbooks: [
+                    'Introduction to Computer Science by Smith et al.',
+                    'Programming Fundamentals by Johnson'
+                ],
+                papers: [
+                    'Recent Advances in Computer Science Education',
+                    'Best Practices in Programming Instruction'
+                ],
+                websites: [
+                    'https://developer.mozilla.org',
+                    'https://stackoverflow.com',
+                    'https://github.com'
+                ],
+                videos: [
+                    'Introduction to Programming Concepts',
+                    'Advanced Programming Techniques'
+                ],
+                software: [
+                    'Visual Studio Code',
+                    'Python 3.9+',
+                    'Git version control'
+                ]
+            };
+        }
+
+        function renderTree() {
+            const container = document.getElementById('treeContainer');
+            if (!courseStructure) {
+                container.innerHTML = '<div style="text-align: center; padding: 40px; opacity: 0.7;"><p>🌱 No course structure loaded</p></div>';
+                return;
+            }
+
+            container.innerHTML = '';
+            renderNode(courseStructure, container, 0);
+        }
+
+        function renderNode(node, container, depth) {
+            const nodeDiv = document.createElement('div');
+            nodeDiv.className = 'tree-item';
+            nodeDiv.style.marginLeft = `${depth * 20}px`;
+            nodeDiv.dataset.nodeId = node.id;
+
+            if (node.generatedContent) {
+                nodeDiv.classList.add('has-content');
+            }
+
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'node-content';
+
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'node-title';
+            titleDiv.textContent = node.title;
+
+            const typeDiv = document.createElement('div');
+            typeDiv.className = 'node-type';
+            typeDiv.textContent = `${node.type} • ID: ${node.id}`;
+
+            contentDiv.appendChild(titleDiv);
+            contentDiv.appendChild(typeDiv);
+
+            nodeDiv.appendChild(contentDiv);
+
+            // Add content badge if content exists
+            if (node.generatedContent) {
+                const badge = document.createElement('span');
+                badge.className = 'content-badge';
+                badge.textContent = 'Generated';
+                badge.onclick = (e) => {
+                    e.stopPropagation();
+                    showContentModal(node);
+                };
+                nodeDiv.appendChild(badge);
+            }
+
+            // Add action buttons
+            const actionsDiv = document.createElement('div');
+            actionsDiv.className = 'actions';
+
+            const viewBtn = document.createElement('button');
+            viewBtn.className = 'action-btn';
+            viewBtn.textContent = '👁️';
+            viewBtn.title = 'View Content';
+            viewBtn.onclick = (e) => {
+                e.stopPropagation();
+                if (node.generatedContent) {
+                    showContentModal(node);
+                } else {
+                    alert('No content generated for this node yet');
+                }
+            };
+
+            const editBtn = document.createElement('button');
+            editBtn.className = 'action-btn';
+            editBtn.textContent = '✏️';
+            editBtn.title = 'Edit Node';
+            editBtn.onclick = (e) => {
+                e.stopPropagation();
+                editNode(node);
+            };
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'action-btn';
+            deleteBtn.textContent = '🗑️';
+            deleteBtn.title = 'Delete Node';
+            deleteBtn.onclick = (e) => {
+                e.stopPropagation();
+                deleteNode(node);
+            };
+
+            actionsDiv.appendChild(viewBtn);
+            actionsDiv.appendChild(editBtn);
+            actionsDiv.appendChild(deleteBtn);
+            nodeDiv.appendChild(actionsDiv);
+
+            // Click event for selection
+            nodeDiv.onclick = () => selectNode(node, nodeDiv);
+
+            // Double-click event for content preview
+            nodeDiv.ondblclick = () => {
+                if (node.generatedContent) {
+                    toggleContentPreview(nodeDiv, node);
+                }
+            };
+
+            container.appendChild(nodeDiv);
+
+            // Render children
+            if (node.children) {
+                node.children.forEach(child => {
+                    renderNode(child, container, depth + 1);
+                });
+            }
+        }
+
+        function selectNode(node, nodeDiv) {
+            // Remove previous selection
+            document.querySelectorAll('.tree-item.selected').forEach(item => {
+                item.classList.remove('selected');
+            });
+
+            // Add selection to current node
+            nodeDiv.classList.add('selected');
+            selectedNode = node;
+        }
+
+        function toggleContentPreview(nodeDiv, node) {
+            let preview = nodeDiv.querySelector('.content-preview');
+            
+            if (preview) {
+                preview.style.display = preview.style.display === 'none' ? 'block' : 'none';
+            } else {
+                preview = document.createElement('div');
+                preview.className = 'content-preview';
+                
+                const content = node.generatedContent;
+                preview.innerHTML = `
+                    <h4>📋 Generated Content Preview</h4>
+                    ${content.lesson ? `<div class="content-type" onclick="showContentDetail('lesson', ${JSON.stringify(content.lesson).replace(/"/g, '&quot;')})">📖 Lesson Content</div>` : ''}
+                    ${content.code ? `<div class="content-type" onclick="showContentDetail('code', ${JSON.stringify(content.code).replace(/"/g, '&quot;')})">💻 Code Examples</div>` : ''}
+                    ${content.assessment ? `<div class="content-type" onclick="showContentDetail('assessment', ${JSON.stringify(content.assessment).replace(/"/g, '&quot;')})">📝 Assessment</div>` : ''}
+                    ${content.resources ? `<div class="content-type" onclick="showContentDetail('resources', ${JSON.stringify(content.resources).replace(/"/g, '&quot;')})">📚 Resources</div>` : ''}
+                `;
+                
+                nodeDiv.appendChild(preview);
+            }
+        }
+
+        function showContentModal(node) {
+            const modal = document.getElementById('contentModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            const content = node.generatedContent;
+            modalContent.innerHTML = `
+                <h2>📋 Content for: ${node.title}</h2>
+                <div style="margin-top: 20px;">
+                    ${generateContentHTML(content)}
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+        }
+
+        function generateContentHTML(content) {
+            let html = '';
+            
+            if (content.lesson) {
+                html += `
+                    <div style="margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                        <h3>📖 Lesson Content</h3>
+                        <p><strong>Duration:</strong> ${content.lesson.duration}</p>
+                        <p><strong>Difficulty:</strong> ${content.lesson.difficulty}</p>
+                        <p><strong>Content:</strong> ${content.lesson.content}</p>
+                        <div><strong>Objectives:</strong></div>
+                        <ul>${content.lesson.objectives.map(obj => `<li>${obj}</li>`).join('')}</ul>
+                        <div><strong>Activities:</strong></div>
+                        <ul>${content.lesson.activities.map(act => `<li>${act}</li>`).join('')}</ul>
+                    </div>
+                `;
+            }
+            
+            if (content.code) {
+                html += `
+                    <div style="margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                        <h3>💻 Code Examples</h3>
+                        ${content.code.examples.map(example => `
+                            <div style="margin-bottom: 15px;">
+                                <h4>${example.title}</h4>
+                                <pre style="background: #2d3748; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>${example.code}</code></pre>
+                                <p>${example.explanation}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            
+            if (content.assessment) {
+                html += `
+                    <div style="margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                        <h3>📝 Assessment</h3>
+                        <p><strong>Type:</strong> ${content.assessment.type}</p>
+                        <div><strong>Questions:</strong></div>
+                        ${content.assessment.questions.map((q, i) => `
+                            <div style="margin: 10px 0; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 5px;">
+                                <strong>Q${i+1}:</strong> ${q.question}
+                                ${q.options ? `<br><small>Options: ${q.options.join(', ')}</small>` : ''}
+                            </div>
+                        `).join('')}
+                        <p><strong>Rubric:</strong> ${content.assessment.rubric}</p>
+                    </div>
+                `;
+            }
+            
+            if (content.resources) {
+                html += `
+                    <div style="margin-bottom: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                        <h3>📚 Resources</h3>
+                        <div><strong>Textbooks:</strong></div>
+                        <ul>${content.resources.textbooks.map(book => `<li>${book}</li>`).join('')}</ul>
+                        <div><strong>Websites:</strong></div>
+                        <ul>${content.resources.websites.map(site => `<li>${site}</li>`).join('')}</ul>
+                        <div><strong>Software:</strong></div>
+                        <ul>${content.resources.software.map(sw => `<li>${sw}</li>`).join('')}</ul>
+                    </div>
+                `;
+            }
+            
+            return html;
+        }
+
+        function closeModal() {
+            document.getElementById('contentModal').style.display = 'none';
+        }
+
+        function showLegend() {
+            document.getElementById('helpModal').style.display = 'block';
+        }
+
+        function closeHelpModal() {
+            document.getElementById('helpModal').style.display = 'none';
+        }
+
+        function updateStats() {
+            if (!courseStructure) return;
+
+            const stats = calculateStats(courseStructure);
+            document.getElementById('totalNodes').textContent = stats.total;
+            document.getElementById('contentNodes').textContent = stats.withContent;
+            document.getElementById('completionRate').textContent = 
+                stats.total > 0 ? Math.round((stats.withContent / stats.total) * 100) + '%' : '0%';
+        }
+
+        function calculateStats(node) {
+            let total = 1;
+            let withContent = node.generatedContent ? 1 : 0;
+
+            if (node.children) {
+                node.children.forEach(child => {
+                    const childStats = calculateStats(child);
+                    total += childStats.total;
+                    withContent += childStats.withContent;
+                });
+            }
+
+            return { total, withContent };
+        }
+
+        function showLoading(show) {
+            document.getElementById('loadingIndicator').style.display = show ? 'block' : 'none';
+        }
+
+        function updateProgress(percent) {
+            document.getElementById('progressFill').style.width = percent + '%';
+        }
+
+        function exportHTML() {
+            if (!courseStructure) {
+                alert('Please extract and generate course content first');
+                return;
+            }
+            
+            const content = extractGeneratedContent();
+            const html = generateHTMLCourse(content);
+            downloadFile(html, 'course_content.html', 'text/html');
+        }
+
+        function exportJSON() {
+            if (!courseStructure) {
+                alert('Please extract course structure first');
+                return;
+            }
+            
+            const json = JSON.stringify(courseStructure, null, 2);
+            downloadFile(json, 'course_structure.json', 'application/json');
+        }
+
+        function exportPDF() {
+            alert('PDF export would typically integrate with a PDF generation library like jsPDF or Puppeteer');
+        }
+
+        function exportXML() {
+            if (!courseStructure) {
+                alert('Please extract course structure first');
+                return;
+            }
+            
+            const xml = generateXML(courseStructure);
+            downloadFile(xml, 'course_structure.xml', 'application/xml');
+        }
+
+        function extractGeneratedContent() {
+            const content = {
+                metadata: {
+                    title: courseStructure.title,
+                    generatedAt: new Date().toISOString(),
+                    totalItems: 0
+                },
+                courses: []
+            };
+            
+            extractContentFromNode(courseStructure, content);
+            return content;
+        }
+
+        function extractContentFromNode(node, content) {
+            if (node.generatedContent) {
+                content.courses.push({
+                    title: node.title,
+                    type: node.type,
+                    id: node.id,
+                    generated: node.generatedContent
+                });
+                content.metadata.totalItems++;
+            }
+            
+            if (node.children) {
+                node.children.forEach(child => {
+                    extractContentFromNode(child, content);
+                });
+            }
+        }
+
+        function generateHTMLCourse(content) {
+            return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${content.metadata.title}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+        .course-header { background: #f4f4f4; padding: 20px; border-radius: 10px; margin-bottom: 30px; }
+        .lesson { margin-bottom: 40px; padding: 20px; border-left: 4px solid #3498db; }
+        .code-block { background: #2d3748; color: #e2e8f0; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        .assessment { background: #fff3cd; padding: 15px; border-radius: 5px; margin: 15px 0; }
+        .resources { background: #d1ecf1; padding: 15px; border-radius: 5px; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <div class="course-header">
+        <h1>${content.metadata.title}</h1>
+        <p><strong>Generated:</strong> ${new Date(content.metadata.generatedAt).toLocaleString()}</p>
+        <p><strong>Total Items:</strong> ${content.metadata.totalItems}</p>
+    </div>
+    
+    ${content.courses.map(course => generateCourseHTML(course)).join('')}
+</body>
+</html>
+            `;
+        }
+
+        function generateCourseHTML(course) {
+            let html = `<div class="lesson"><h2>${course.title}</h2>`;
+            
+            if (course.generated.lesson) {
+                html += `<div><h3>Lesson Content</h3><p>${course.generated.lesson.content}</p></div>`;
+            }
+            
+            if (course.generated.code) {
+                html += `<div><h3>Code Examples</h3>`;
+                course.generated.code.examples.forEach(example => {
+                    html += `<div class="code-block"><pre>${example.code}</pre></div>`;
+                });
+                html += `</div>`;
+            }
+            
+            html += `</div>`;
+            return html;
+        }
+
+        function generateXML(node, depth = 0) {
+            const indent = '  '.repeat(depth);
+            let xml = `${indent}<node id="${node.id}" type="${node.type}">\n`;
+            xml += `${indent}  <title><![CDATA[${node.title}]]></title>\n`;
+            
+            if (node.generatedContent) {
+                xml += `${indent}  <hasContent>true</hasContent>\n`;
+            }
+            
+            if (node.children && node.children.length > 0) {
+                xml += `${indent}  <children>\n`;
+                node.children.forEach(child => {
+                    xml += generateXML(child, depth + 2);
+                });
+                xml += `${indent}  </children>\n`;
+            }
+            
+            xml += `${indent}</node>\n`;
+            return xml;
+        }
+
+        function downloadFile(content, filename, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function expandAll() {
+            document.querySelectorAll('.content-preview').forEach(preview => {
+                preview.style.display = 'block';
+            });
+        }
+
+        function collapseAll() {
+            document.querySelectorAll('.content-preview').forEach(preview => {
+                preview.style.display = 'none';
+            });
+        }
+
+        function addNode() {
+            if (!selectedNode) {
+                alert('Please select a parent node first');
+                return;
+            }
+
+            const title = prompt('Enter node title:');
+            const type = prompt('Enter node type (course/module/lesson):') || 'lesson';
+            
+            if (title) {
+                const newNode = {
+                    id: 'node_' + (++nodeIdCounter),
+                    title: title,
+                    type: type,
+                    children: []
+                };
+
+                if (!selectedNode.children) {
+                    selectedNode.children = [];
+                }
+                selectedNode.children.push(newNode);
+                
+                renderTree();
+                updateStats();
+            }
+        }
+
+        function deleteSelected() {
+            if (!selectedNode) {
+                alert('Please select a node to delete');
+                return;
+            }
+
+            if (selectedNode.id === 'root') {
+                alert('Cannot delete root node');
+                return;
+            }
+
+            if (confirm(`Delete "${selectedNode.title}"?`)) {
+                deleteNodeFromTree(courseStructure, selectedNode.id);
+                selectedNode = null;
+                renderTree();
+                updateStats();
+            }
+        }
+
+        function deleteNode(node) {
+            if (confirm(`Delete "${node.title}"?`)) {
+                deleteNodeFromTree(courseStructure, node.id);
+                renderTree();
+                updateStats();
+            }
+        }
+
+        function deleteNodeFromTree(root, nodeId) {
+            if (root.children) {
+                root.children = root.children.filter(child => {
+                    if (child.id === nodeId) {
+                        return false;
+                    } else {
+                        deleteNodeFromTree(child, nodeId);
+                        return true;
+                    }
+                });
+            }
+        }
+
+        function editNode(node) {
+            const newTitle = prompt('Edit node title:', node.title);
+            if (newTitle && newTitle !== node.title) {
+                node.title = newTitle;
+                renderTree();
+            }
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('contentModal');
+            const helpModal = document.getElementById('helpModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+            if (event.target === helpModal) {
+                closeHelpModal();
+            }
+        }
+
+        // Initialize
+        renderTree();
+        updateStats();
+    </script>
+</body>
+</html>
