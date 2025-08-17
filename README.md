@@ -8,6 +8,7 @@
 [![Efficiency Gain](https://img.shields.io/badge/Efficiency_Gain-73%25-brightgreen)](https://progressive-development.com/metrics)
 
 > **Framework Set 2** - The complete 13-system enhanced architecture with 43% system reduction and 73% efficiency improvement
+> 
 [![B2 Optimised 16_08_2025 SIMPLE USER GUIDE](https://github.com/walessy/PROGRESSIVE_FRAMEWORK-Set-2/blob/main/B2%20Optimised%2016_08_2025/SIMPLE%20USER%20GUIDE/PROGRESSIVE_FRAMEWORK-Set-2%20%20QUICK%20START%20GUIDE.md)
 
 ## 🚀 Overview
