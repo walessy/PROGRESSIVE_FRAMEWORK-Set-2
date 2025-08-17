@@ -1,6 +1,6 @@
 
 [framework_set_2_readme.md](https://github.com/user-attachments/files/21821611/framework_set_2_readme.md)
-# Framework Set 2 - Complete 13 System Enhanced Architecture
+# Progressive Framework Set 2 - Complete 13 System Enhanced Architecture
 
 [![Framework Set 2](https://img.shields.io/badge/Framework_Set_2-Complete_13_Systems-brightgreen)](https://github.com/progressive-development/progressive-development-mvp)
 [![Total Systems](https://img.shields.io/badge/Total_Systems-13_Active-success)](https://github.com/progressive-development/progressive-development-mvp)
