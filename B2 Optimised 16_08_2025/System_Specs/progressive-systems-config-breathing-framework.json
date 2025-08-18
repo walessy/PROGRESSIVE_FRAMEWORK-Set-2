@@ -1,0 +1,147 @@
+{
+  "framework_metadata": {
+    "name": "ProgressiveProject Enhanced Framework Set 2 with Breathing Framework",
+    "version": "3.0",
+    "description": "Complete 15-system framework with breathing framework specification consistency",
+    "total_systems": 15,
+    "total_test_cases": 615,
+    "total_lesson_modules": 615,
+    "total_chat_commands": 15,
+    "breathing_framework_integrated": true,
+    "specification_consistency_triggers": true,
+    "status": "Active Primary Framework with Permanent Breathing Framework Integration"
+  },
+  "breathing_framework_config": {
+    "specification_triggers": {
+      "auto_correction_enabled": true,
+      "real_time_validation": true,
+      "cascade_updates": true,
+      "consistency_monitoring": true
+    },
+    "validation_rules": {
+      "test_count_validation": {
+        "expected_total": 615,
+        "framework_set_2": 560,
+        "dpi_tests": 25,
+        "ptodos_tests": 30
+      },
+      "system_count_validation": {
+        "expected_total": 15,
+        "framework_set_2": 13,
+        "integration_systems": 2
+      },
+      "chat_count_validation": {
+        "expected_total": 15,
+        "one_per_system": true
+      }
+    }
+  },
+  "system_specifications": {
+    "foundation_tier": {
+      "systems": [
+        {
+          "system_id": 1,
+          "name": "PDT-PLUS",
+          "test_cases": 105,
+          "lesson_modules": 105
+        },
+        {
+          "system_id": 2,
+          "name": "PUXT-PLUS",
+          "test_cases": 45,
+          "lesson_modules": 45
+        },
+        {
+          "system_id": 3,
+          "name": "PSO-PRIME",
+          "test_cases": 50,
+          "lesson_modules": 50
+        },
+        {
+          "system_id": 4,
+          "name": "PTT-DOCS-FUSION",
+          "test_cases": 35,
+          "lesson_modules": 35
+        },
+        {
+          "system_id": 5,
+          "name": "REQUIREMENTS-PRIME",
+          "test_cases": 35,
+          "lesson_modules": 35
+        }
+      ]
+    },
+    "professional_tier": {
+      "systems": [
+        {
+          "system_id": 6,
+          "name": "BUSINESS-OPS-FUSION",
+          "test_cases": 40,
+          "lesson_modules": 40
+        },
+        {
+          "system_id": 7,
+          "name": "CONTEXT-EVOLUTION-ENGINE",
+          "test_cases": 35,
+          "lesson_modules": 35
+        },
+        {
+          "system_id": 8,
+          "name": "PERFORMANCE-AI-FUSION",
+          "test_cases": 38,
+          "lesson_modules": 38
+        },
+        {
+          "system_id": 9,
+          "name": "SECURITY-BUILD-FUSION",
+          "test_cases": 42,
+          "lesson_modules": 42
+        }
+      ]
+    },
+    "universal_tier": {
+      "systems": [
+        {
+          "system_id": 10,
+          "name": "KNOWLEDGE-EVOLUTION-ENGINE",
+          "test_cases": 30,
+          "lesson_modules": 30
+        },
+        {
+          "system_id": 11,
+          "name": "UNIVERSAL-ORCHESTRATION-PRIME",
+          "test_cases": 25,
+          "lesson_modules": 25
+        },
+        {
+          "system_id": 12,
+          "name": "PMCS-024",
+          "test_cases": 45,
+          "lesson_modules": 45
+        },
+        {
+          "system_id": 13,
+          "name": "PAES",
+          "test_cases": 35,
+          "lesson_modules": 35
+        }
+      ]
+    },
+    "integration_tier": {
+      "systems": [
+        {
+          "system_id": 14,
+          "name": "Dynamic Pathway Intelligence (DPI)",
+          "test_cases": 25,
+          "lesson_modules": 25
+        },
+        {
+          "system_id": 15,
+          "name": "Progressive TODO System (PTODOS)",
+          "test_cases": 30,
+          "lesson_modules": 30
+        }
+      ]
+    }
+  }
+}

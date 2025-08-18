@@ -12,7 +12,7 @@
 1. [Framework Overview](#framework-overview)
 2. [How Claude AI Uses This Documentation](#how-claude-ai-uses-documentation)
 3. [Why This Technique is Superior](#advantages-over-traditional-prompting)
-4. [The 15 Systems Explained](#the-15 Systems-detailed)
+4. [The 13 Systems Explained](#the-13-systems-detailed)
 5. [Project Knowledge Integration](#project-knowledge-integration)
 6. [Customization Guide](#customization-guide)
 7. [Commands & Configuration](#commands-and-configuration)
@@ -37,7 +37,7 @@ Total Value Generation: $493K/month equivalent productivity
 ### The Protocol vs Systems Distinction
 
 - **PKM 6-Point Protocol (Points 0-5):** Initialization and setup framework
-- **Framework Set 2 (15 Systems):** Operational intelligence layer
+- **Framework Set 2 (13 Systems):** Operational intelligence layer
 - **Integration:** Protocol prepares the environment; systems execute the work
 
 ---
@@ -115,7 +115,7 @@ Week 24: Autonomous knowledge evolution
 
 ---
 
-## 🔧 THE 15 SystemS DETAILED
+## 🔧 THE 13 SYSTEMS DETAILED
 
 ### Core Intelligence Systems
 
@@ -126,7 +126,7 @@ Week 24: Autonomous knowledge evolution
 - **Layman's Terms:** Your strategic thinking partner that never forgets previous solutions
 
 #### 2. **PMCS-024 (Personal Meta-Coordination System)**
-- **Purpose:** Orchestrates all 15 Systems for optimal collaboration
+- **Purpose:** Orchestrates all 13 systems for optimal collaboration
 - **Function:** Ensures systems work together, not in conflict
 - **Interaction:** Central hub connecting all other systems
 - **Layman's Terms:** The conductor of your personal AI orchestra
@@ -238,7 +238,7 @@ This project uses PKM Framework Set 2 with 13 coordinated systems.
 Claude should automatically recognize and implement these systems.
 
 ## Active Systems
-[List all 15 Systems with brief descriptions]
+[List all 13 systems with brief descriptions]
 
 ## Protocol Requirements
 - Always confirm system status at conversation start
