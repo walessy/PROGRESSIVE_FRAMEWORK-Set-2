@@ -1,0 +1,11 @@
+# PKM 5-Point Protocol XML Configuration
+# Version 8.0 - Evolutionary Mapping Integration
+# 
+# This file references the enhanced PKM XML configuration with:
+# - Complete 15-system integration (Framework Set 2 + DPI + PTODOS)
+# - 615+ test-to-lesson evolutionary mapping
+# - Student progress protection and achievement preservation
+# - Cross-system lesson inheritance and intelligent discovery
+# - Never-delete lesson policy with educational archaeology
+#
+# See: PKM-5Point-Protocol-v8.0-EvolutionaryMapping.xml for complete specification
