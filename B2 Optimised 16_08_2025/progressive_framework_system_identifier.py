@@ -174,13 +174,17 @@ class ProgressiveFrameworkSystemIdentifier:
             'files_already_compliant': []
         }
         
-        print("🔍 Scanning all files for Progressive Framework system identification...")
+        print("Scanning all files for Progressive Framework system identification...")
         
         total_files = 0
         system_files = 0
         
         for file_path in self.base_dir.rglob('*'):
             if file_path.is_file() and not file_path.name.startswith('.'):
+                # Skip backup files from analysis
+                if self.is_backup_file(file_path):
+                    continue
+                    
                 total_files += 1
                 
                 analysis = self.analyze_file_content(file_path)
@@ -225,56 +229,64 @@ class ProgressiveFrameworkSystemIdentifier:
         
         return results
     
+    def is_backup_file(self, file_path: Path) -> bool:
+        """Check if file is a backup file that should be excluded"""
+        name = file_path.name.lower()
+        return (name.endswith('.backup') or 
+                '.backup.' in name or
+                name.endswith('.bak') or
+                '.bak.' in name)
+    
     def generate_report(self, results: Dict) -> str:
         """Generate comprehensive system identification report"""
         report = f"""
-# 🔍 PROGRESSIVE FRAMEWORK SYSTEM FILE IDENTIFICATION REPORT
+# PROGRESSIVE FRAMEWORK SYSTEM FILE IDENTIFICATION REPORT
 
 **Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 **Base Directory**: {self.base_dir}
 
-## 📊 SCAN SUMMARY
+## SCAN SUMMARY
 
 - **Total Files Scanned**: {results['summary']['total_files_scanned']}
 - **System Files Identified**: {results['summary']['system_files_identified']}
 - **Non-System Files**: {results['summary']['non_system_files']}
 - **System File Percentage**: {results['summary']['system_file_percentage']:.1f}%
 
-## 🎯 HEADER STATUS
+## HEADER STATUS
 
 - **Files Already Compliant**: {results['summary']['files_already_compliant']}
 - **Files Needing Headers**: {results['summary']['files_needing_headers']}
 - **Potential Header Compliance**: {((results['summary']['files_already_compliant'] + results['summary']['files_needing_headers']) / results['summary']['total_files_scanned'] * 100):.1f}%
 
-## 🌟 CORE SYSTEM FILES ({len(results['core_system_files'])})
+## CORE SYSTEM FILES ({len(results['core_system_files'])})
 
 These are definitely part of the Progressive Framework and MUST have headers:
 
 """
         
         for file_info in results['core_system_files']:
-            status = "✅ HAS HEADER" if file_info['has_header'] else "❌ NEEDS HEADER"
+            status = "HAS HEADER" if file_info['has_header'] else "NEEDS HEADER"
             confidence = file_info['analysis']['confidence_score']
             report += f"- **{file_info['name']}** (Confidence: {confidence}) - {status}\n"
             if file_info['analysis']['indicators_found']:
                 report += f"  - Indicators: {', '.join(file_info['analysis']['indicators_found'][:3])}\n"
         
         report += f"""
-## 🔧 SYSTEM COMPONENT FILES ({len(results['system_component_files'])})
+## SYSTEM COMPONENT FILES ({len(results['system_component_files'])})
 
 These files are system components and should have headers:
 
 """
         
         for file_info in results['system_component_files']:
-            status = "✅ HAS HEADER" if file_info['has_header'] else "❌ NEEDS HEADER"
+            status = "HAS HEADER" if file_info['has_header'] else "NEEDS HEADER"
             confidence = file_info['analysis']['confidence_score']
             report += f"- **{file_info['name']}** (Confidence: {confidence}) - {status}\n"
         
         report += f"""
-## 📋 RECOMMENDED ACTION PLAN
+## RECOMMENDED ACTION PLAN
 
-### 🚀 Priority 1: Core System Files Needing Headers
+### Priority 1: Core System Files Needing Headers
 """
         
         core_needing_headers = [f for f in results['core_system_files'] if f['needs_header']]
@@ -282,7 +294,7 @@ These files are system components and should have headers:
             report += f"- `{file_info['relative_path']}`\n"
         
         report += f"""
-### 🔧 Priority 2: System Component Files Needing Headers
+### Priority 2: System Component Files Needing Headers
 """
         
         component_needing_headers = [f for f in results['system_component_files'] if f['needs_header']]
@@ -290,7 +302,7 @@ These files are system components and should have headers:
             report += f"- `{file_info['relative_path']}`\n"
         
         report += f"""
-## 📝 EXECUTION COMMAND
+## EXECUTION COMMAND
 
 To apply headers to all identified system files:
 
@@ -397,9 +409,9 @@ def main():
     action = sys.argv[2] if len(sys.argv) > 2 else 'scan'
     
     if action != 'pipe_json':  # Don't print headers for pipe_json to keep output clean
-        print("🔍 Progressive Framework System File Identifier", file=sys.stderr)
-        print(f"📂 Base Directory: {base_dir}", file=sys.stderr)
-        print(f"🎬 Action: {action}", file=sys.stderr)
+        print("Progressive Framework System File Identifier", file=sys.stderr)
+        print(f"Base Directory: {base_dir}", file=sys.stderr)
+        print(f"Action: {action}", file=sys.stderr)
         print("=" * 70, file=sys.stderr)
     
     identifier = ProgressiveFrameworkSystemIdentifier(base_dir)
@@ -408,7 +420,7 @@ def main():
         results = identifier.scan_all_files()
         
         if action != 'pipe_json':
-            print(f"\n📊 SCAN COMPLETE", file=sys.stderr)
+            print(f"\nSCAN COMPLETE", file=sys.stderr)
             print(f"Total Files: {results['summary']['total_files_scanned']}", file=sys.stderr)
             print(f"System Files: {results['summary']['system_files_identified']}", file=sys.stderr)
             print(f"Files Needing Headers: {results['summary']['files_needing_headers']}", file=sys.stderr)
@@ -421,16 +433,16 @@ def main():
             report_file = identifier.base_dir / "system_identification_report.md"
             with open(report_file, 'w', encoding='utf-8') as f:
                 f.write(report)
-            print(f"\n📄 Report saved to: {report_file}")
+            print(f"\nReport saved to: {report_file}")
         
         elif action == 'export':
             output_file = identifier.export_system_file_list(results)
-            print(f"\n📋 System file list exported to: {output_file}")
+            print(f"\nSystem file list exported to: {output_file}")
             
         elif action == 'export_json':
             # Export results to JSON file
             json_file = identifier.export_json_results(results)
-            print(f"\n📋 JSON results exported to: {json_file}", file=sys.stderr)
+            print(f"\nJSON results exported to: {json_file}", file=sys.stderr)
             
         elif action == 'pipe_json':
             # Output JSON to stdout for piping (no other output)

@@ -1,0 +1,50 @@
+{
+  "folder_structure": {
+    "signals_folder_exists": true,
+    "subfolders_exist": {
+      "test_cases": true,
+      "systems": true,
+      "debug": true,
+      "coordination": false,
+      "ideas": false,
+      "education": false,
+      "courses": false,
+      "debug/atlas": false,
+      "debug/prism": false,
+      "debug/nexus": false,
+      "debug/crud": false
+    },
+    "folder_permissions": {
+      "test_cases": true,
+      "systems": true,
+      "debug": true,
+      "coordination": false,
+      "ideas": false,
+      "education": false,
+      "courses": false,
+      "debug/atlas": false,
+      "debug/prism": false,
+      "debug/nexus": false,
+      "debug/crud": false
+    }
+  },
+  "manual_signal": {
+    "success": true,
+    "file_path": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\signals\\test_cases\\diagnostic_test_20250819_103553.signal",
+    "file_size": 348
+  },
+  "watchdog": {
+    "available": true,
+    "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\Wales\\\\OneDrive\\\\Desktop\\\\PROGRESSIVE_FRAMEWORK-Set-2\\\\B2 Optimised 16_08_2025\\\\test_monitor'",
+    "working": false
+  },
+  "signal_logic": {
+    "success": true,
+    "signal_path": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\signals\\systems\\logic_test_20250819_103558.signal",
+    "file_size": 387
+  },
+  "file_simulation": {
+    "signals_generated": 2,
+    "success": true
+  }
+}

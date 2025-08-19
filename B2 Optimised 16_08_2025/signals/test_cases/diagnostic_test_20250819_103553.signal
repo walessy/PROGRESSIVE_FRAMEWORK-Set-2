@@ -1,0 +1,13 @@
+{
+  "signal_metadata": {
+    "signal_id": "diagnostic_test_20250819_103553",
+    "timestamp": "2025-08-19T10:35:53.973226",
+    "signal_type": "DIAGNOSTIC_TEST",
+    "source_system": "DiagnosticTool",
+    "version": "1.0"
+  },
+  "test_data": {
+    "purpose": "Manual signal creation test",
+    "created_by": "signal_diagnostic.py"
+  }
+}

@@ -1,0 +1,9 @@
+# Systems Signals
+
+Signals for system changes
+
+## Signal File Format
+Signal files follow the pattern: `systems_{timestamp}_{event_type}.signal`
+
+## Processing
+These signals are processed by the breathing framework monitoring system.

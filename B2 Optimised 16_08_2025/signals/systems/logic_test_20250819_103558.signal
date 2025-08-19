@@ -1,0 +1,15 @@
+{
+  "signal_metadata": {
+    "signal_id": "logic_test_20250819_103558",
+    "timestamp": "2025-08-19T10:35:58.257959",
+    "signal_type": "LOGIC_TEST",
+    "priority": "HIGH",
+    "source_system": "DiagnosticTool",
+    "version": "1.1"
+  },
+  "signal_data": {
+    "test_type": "logic_verification",
+    "file_path": "diagnostic_test.md",
+    "change_type": "MODIFIED"
+  }
+}

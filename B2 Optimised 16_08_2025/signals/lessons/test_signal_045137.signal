@@ -1,8 +1,0 @@
-{
-  "event_type": "lesson_modified",
-  "timestamp": "2025-08-19T04:51:37.896795",
-  "source": "signals_fix_tool",
-  "lesson_file": "test_lesson.md",
-  "modification_type": "directory_fix_test",
-  "details": "Testing signal generation after directory fix"
-}
