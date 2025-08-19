@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 """
+FILE: signal_diagnostic_tool.py
+WORKING_DIRECTORY: .
+PURPOSE: Python automation script
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250819_Header-System-Integration
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Compliance ✅
+"""
+
+#!/usr/bin/env python3
+"""
 Signal Diagnostic Tool
 SAVE AS: signal_diagnostic.py
 REPLACES: No direct replacement - NEW diagnostic script

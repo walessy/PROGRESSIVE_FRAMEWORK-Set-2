@@ -1,3 +1,13 @@
+<!--
+FILE: PKM-5Point-Protocol-v8.0-EvolutionaryMapping.xml
+WORKING_DIRECTORY: System_Specs
+PURPOSE: Core protocol control configuration
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250819_Header-System-Integration
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Compliance ✅
+-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   PKM 5-Point Chat Startup Protocol - Version 8.0 with Evolutionary Mapping Integration

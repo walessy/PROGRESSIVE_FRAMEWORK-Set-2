@@ -1,3 +1,14 @@
+<!--
+FILE: PDT-PLUS_v2.1_SignalBased.md
+WORKING_DIRECTORY: System_Specs
+PURPOSE: Signal processing and trigger system component
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250819_Phase4-Final-Push
+STATUS: COMPLIANT - Universal Header System
+BREATHING_FRAMEWORK: 15 Systems | 615+ Tests | Phase 4 Integration
+PROGRESSIVE_ACADEMY: Foundation | Professional | Universal | Complete Ecosystem
+-->
+
 # 🧪 PDT-PLUS Pdt Plus V2.1 Signalbased Test Case
 
 **FILE**: PDT-PLUS_v2.1_SignalBased.md  

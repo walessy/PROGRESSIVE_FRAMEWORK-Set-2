@@ -1,3 +1,13 @@
+<!--
+FILE: Breathing-Framework-Complete-Architecture.md
+WORKING_DIRECTORY: System_Specs\Breathing_Framework
+PURPOSE: Breathing Framework core engine specification
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250819_Header-System-Integration
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Compliance ✅
+-->
+
 # 🌟🔄 **BREATHING FRAMEWORK - COMPLETE ARCHITECTURE SPECIFICATION**
 
 **FILE**: Breathing-Framework-Complete-Architecture.md  

@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 """
+FILE: 8 breathing_framework_automation.py
+WORKING_DIRECTORY: .
+PURPOSE: Python automation script
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250819_Header-System-Integration
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Compliance ✅
+"""
+
+#!/usr/bin/env python3
+"""
 Breathing Framework Specification Consistency Updater
 Automatically updates local files and deploys configurations to maintain specification consistency
 """

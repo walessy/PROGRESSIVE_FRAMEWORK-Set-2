@@ -1,0 +1,334 @@
+#!/usr/bin/env python3
+"""
+Universal File Header System - Phase 4 Final Push Enhancement
+Target: 35%+ compliance with remaining documentation, reports, and test files
+"""
+
+import os
+import re
+import json
+import shutil
+from pathlib import Path
+from typing import Dict, List, Tuple, Optional
+from datetime import datetime
+
+def enhance_existing_script():
+    """
+    Enhancement to add Phase 4 to the existing automated_header_applicator.py
+    """
+    
+    phase4_addition = '''
+    
+    def run_phase4_final_push(self) -> Tuple[int, int]:
+        """Run Phase 4 final push for remaining files"""
+        print("🚀 Starting Phase 4: Final Push for 35%+ Compliance")
+        
+        # Phase 4 target patterns - remaining files
+        phase4_patterns = [
+            # Test files
+            "**/*test*.py", "**/*Test*.py", "Tests/*.py",
+            "**/*test*.md", "**/*Test*.md", "Tests/*.md",
+            
+            # Report files
+            "**/*report*.json", "**/*Report*.json",
+            "**/*report*.md", "**/*Report*.md", 
+            "**/*report*.txt", "**/*Report*.txt",
+            
+            # Log files
+            "**/*log*.txt", "**/*Log*.txt", "Logs/*.txt",
+            "**/*log*.md", "**/*Log*.md", "Logs/*.md",
+            
+            # Signal files
+            "Signals/*.py", "Signals/*.md", "Signals/*.json",
+            "**/*signal*.py", "**/*Signal*.py",
+            "**/*signal*.md", "**/*Signal*.md",
+            
+            # Documentation fragments
+            "Docs/*.md", "Documentation/*.md",
+            "**/*doc*.md", "**/*Doc*.md",
+            "**/*notes*.md", "**/*Notes*.md",
+            
+            # Backup files (selective)
+            "**/*backup*.md", "**/*Backup*.md",
+            
+            # Version files
+            "**/*version*.md", "**/*Version*.md",
+            "**/*changelog*.md", "**/*CHANGELOG*.md",
+            
+            # Additional configs
+            "**/*.yaml", "**/*.yml", "**/*.json",
+            "**/*.xml", "**/*.txt"
+        ]
+        
+        # Find Phase 4 target files
+        phase4_files = []
+        for pattern in phase4_patterns:
+            if pattern.startswith('**/'):
+                search_pattern = pattern[3:]
+                for file_path in self.base_dir.rglob(search_pattern):
+                    if file_path.is_file() and not file_path.name.startswith('.'):
+                        # Skip files that are too large or binary
+                        try:
+                            if file_path.stat().st_size > 10_000_000:  # Skip files > 10MB
+                                continue
+                        except:
+                            continue
+                        phase4_files.append(file_path)
+            else:
+                for file_path in self.base_dir.glob(pattern):
+                    if file_path.is_file() and not file_path.name.startswith('.'):
+                        try:
+                            if file_path.stat().st_size > 10_000_000:
+                                continue
+                        except:
+                            continue
+                        phase4_files.append(file_path)
+        
+        # Remove duplicates and filter out files that already have headers
+        unique_files = list(set(phase4_files))
+        target_files = [f for f in unique_files if not self.has_header(f)]
+        
+        print(f"📋 Found {len(target_files)} Phase 4 files needing headers")
+        
+        success_count = 0
+        processed_count = 0
+        
+        # Process files in batches, prioritizing by type
+        priority_order = [
+            ('test', 'Test files and testing infrastructure'),
+            ('report', 'Report files and analytics'),
+            ('signal', 'Signal files and triggers'),
+            ('log', 'Log files and monitoring'),
+            ('doc', 'Documentation fragments'),
+            ('config', 'Configuration files'),
+            ('backup', 'Backup and version files')
+        ]
+        
+        for file_type, description in priority_order:
+            print(f"\\n📁 Processing {description}...")
+            
+            # Filter files by type
+            type_files = [f for f in target_files if file_type.lower() in f.name.lower()]
+            
+            for file_path in type_files[:20]:  # Limit each type to 20 files
+                if processed_count >= 80:  # Total limit for Phase 4
+                    break
+                    
+                try:
+                    if self.apply_header(file_path):
+                        success_count += 1
+                    processed_count += 1
+                except Exception as e:
+                    print(f"⚠️  Error processing {file_path.name}: {e}")
+                    processed_count += 1
+            
+            if processed_count >= 80:
+                break
+        
+        print(f"\\n📊 Phase 4 Results: {success_count}/{processed_count} files updated")
+        return success_count, processed_count
+'''
+    
+    return phase4_addition
+
+def quick_phase4_implementation():
+    """
+    Quick Phase 4 implementation script
+    """
+    script_content = '''#!/usr/bin/env python3
+"""
+Quick Phase 4 Implementation for Universal File Header System
+Target remaining files for 35%+ compliance
+"""
+
+import os
+import shutil
+from pathlib import Path
+from datetime import datetime
+
+class QuickPhase4:
+    def __init__(self, base_directory: str):
+        self.base_dir = Path(base_directory)
+        
+        # Quick Phase 4 header template
+        self.header_template = '''<!--
+FILE: {filename}
+WORKING_DIRECTORY: {working_dir}
+PURPOSE: {purpose}
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: {date}_Phase4-Final-Push
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Phase 4 Integration ✅
+PROGRESSIVE_ACADEMY: Foundation ✅ | Professional ✅ | Universal ✅ | Complete Ecosystem ✅
+-->'''
+        
+        self.py_header_template = '''#!/usr/bin/env python3
+"""
+FILE: {filename}
+WORKING_DIRECTORY: {working_dir}
+PURPOSE: {purpose}
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: {date}_Phase4-Final-Push
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Phase 4 Integration ✅
+PROGRESSIVE_ACADEMY: Foundation ✅ | Professional ✅ | Universal ✅ | Complete Ecosystem ✅
+"""'''
+        
+        self.json_header_template = '''{
+  "_header": {
+    "FILE": "{filename}",
+    "WORKING_DIRECTORY": "{working_dir}",
+    "PURPOSE": "{purpose}",
+    "CREATOR": "Amos Wales - Progressive Framework Pioneer",
+    "UPDATED": "{date}_Phase4-Final-Push",
+    "STATUS": "✅ Universal Header System Compliant",
+    "BREATHING_FRAMEWORK": "15 Systems ✅ | 615+ Tests ✅ | Phase 4 Integration ✅",
+    "PROGRESSIVE_ACADEMY": "Foundation ✅ | Professional ✅ | Universal ✅ | Complete Ecosystem ✅"
+  },'''
+    
+    def detect_purpose(self, file_path: Path) -> str:
+        """Detect purpose for Phase 4 files"""
+        name = file_path.name.lower()
+        
+        if 'test' in name:
+            return "Testing infrastructure and validation system"
+        elif 'report' in name:
+            return "System report and analytics documentation"
+        elif 'signal' in name:
+            return "Signal processing and trigger system component"
+        elif 'log' in name:
+            return "System logging and monitoring documentation"
+        elif 'backup' in name:
+            return "Backup and version control documentation"
+        elif 'doc' in name or 'documentation' in name:
+            return "System documentation and reference material"
+        elif 'config' in name or 'setting' in name:
+            return "System configuration and settings"
+        elif 'version' in name or 'changelog' in name:
+            return "Version control and change documentation"
+        else:
+            return "Progressive Framework system component"
+    
+    def has_header(self, file_path: Path) -> bool:
+        """Check if file has header"""
+        try:
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read(600)
+            indicators = ['FILE:', 'WORKING_DIRECTORY:', 'PURPOSE:', 'CREATOR:']
+            return sum(1 for indicator in indicators if indicator in content) >= 3
+        except:
+            return False
+    
+    def apply_header(self, file_path: Path) -> bool:
+        """Apply header to file"""
+        try:
+            if self.has_header(file_path):
+                print(f"⭐ Skipping {file_path.name} (already has header)")
+                return True
+            
+            # Create backup
+            backup_path = file_path.with_suffix(file_path.suffix + '.backup')
+            shutil.copy2(file_path, backup_path)
+            
+            # Read existing content
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                existing_content = f.read()
+            
+            # Choose template based on file type
+            if file_path.suffix == '.py':
+                template = self.py_header_template
+            elif file_path.suffix == '.json':
+                template = self.json_header_template
+            else:
+                template = self.header_template
+            
+            # Generate header
+            header = template.format(
+                filename=file_path.name,
+                working_dir=str(file_path.parent).replace('\\\\', '\\\\'),
+                purpose=self.detect_purpose(file_path),
+                date=datetime.now().strftime('%Y%m%d')
+            )
+            
+            # Write updated content
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(header + '\\n\\n' + existing_content)
+            
+            print(f"✅ Applied Phase 4 header to {file_path.name}")
+            return True
+            
+        except Exception as e:
+            print(f"❌ Error with {file_path.name}: {e}")
+            return False
+    
+    def run_phase4(self) -> tuple:
+        """Run Phase 4 processing"""
+        print("🚀 Starting Phase 4: Final Push for 35%+ Compliance")
+        print("🎯 Targeting remaining documentation, reports, and test files")
+        
+        # Define Phase 4 patterns
+        patterns = [
+            "**/*test*.md", "**/*Test*.md",
+            "**/*report*.json", "**/*report*.md", "**/*report*.txt",
+            "**/*log*.txt", "**/*log*.md",
+            "**/*signal*.py", "**/*signal*.md",
+            "**/*doc*.md", "**/*notes*.md",
+            "**/*backup*.md", "**/*version*.md",
+            "**/*changelog*.md"
+        ]
+        
+        # Find target files
+        target_files = []
+        for pattern in patterns:
+            if pattern.startswith('**/'):
+                search_pattern = pattern[3:]
+                for file_path in self.base_dir.rglob(search_pattern):
+                    if (file_path.is_file() and 
+                        not file_path.name.startswith('.') and 
+                        not self.has_header(file_path)):
+                        try:
+                            # Skip very large files
+                            if file_path.stat().st_size < 5_000_000:  # < 5MB
+                                target_files.append(file_path)
+                        except:
+                            continue
+        
+        # Remove duplicates
+        target_files = list(set(target_files))
+        print(f"📋 Found {len(target_files)} Phase 4 target files")
+        
+        success_count = 0
+        for i, file_path in enumerate(target_files[:60]):  # Process up to 60 files
+            if self.apply_header(file_path):
+                success_count += 1
+            
+            # Progress indicator
+            if (i + 1) % 10 == 0:
+                print(f"📊 Progress: {i + 1}/{min(len(target_files), 60)} files processed")
+        
+        total_processed = min(len(target_files), 60)
+        print(f"\\n🏆 Phase 4 Complete: {success_count}/{total_processed} files updated")
+        print(f"📈 Success Rate: {(success_count/total_processed*100):.1f}%")
+        
+        return success_count, total_processed
+
+def main():
+    import sys
+    base_dir = sys.argv[1] if len(sys.argv) > 1 else '.'
+    
+    print("🎯 Universal File Header System - Phase 4 Final Push")
+    print("🎯 Target: 35%+ Compliance Achievement")
+    print("=" * 60)
+    
+    phase4 = QuickPhase4(base_dir)
+    phase4.run_phase4()
+
+if __name__ == "__main__":
+    main()
+'''
+    
+    return script_content
+
+# Save the quick Phase 4 script
+quick_script = quick_phase4_implementation()
+print("✅ Phase 4 script ready for deployment!")

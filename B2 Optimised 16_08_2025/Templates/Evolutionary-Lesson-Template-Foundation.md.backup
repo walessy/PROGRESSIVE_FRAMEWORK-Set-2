@@ -1,0 +1,85 @@
+# 🔄 **EVOLUTIONARY LESSON TEMPLATE**
+**Template for Creating Evolutionary Mapping Lessons**
+
+## 📋 **LESSON METADATA**
+
+```yaml
+Lesson Information:
+  lesson_id: "[TIER]_[SYSTEM]_[SKILL_LEVEL]_[TOPIC]_[LEARNING_TYPE]_v[VERSION]"
+  title: "Descriptive lesson title"
+  system_origin: "Primary system (1-15)"
+  skill_level: "beginner|intermediate|advanced|expert|master"
+  learning_type: "theory|hands_on|project|case_study|certification"
+  version: "Semantic version (e.g., 1.0)"
+  
+Evolution Tracking:
+  previous_versions: ["List of previous lesson versions"]
+  evolution_reason: "Why this lesson evolved"
+  preserved_elements: ["What valuable content was preserved"]
+  new_elements: ["What new content was added"]
+  
+Cross-System Applicability:
+  applicable_systems: ["Systems where this lesson is relevant"]
+  inheritance_adaptations: ["How lesson adapts to other systems"]
+  cross_references: ["Related lessons in other systems"]
+  
+Student Protection:
+  progress_preservation: "How student progress is maintained"
+  migration_path: "Path for students from previous versions"
+  competency_mapping: "How skills transfer to new version"
+  achievement_continuity: "How achievements remain valid"
+```
+
+## 🎯 **LESSON STRUCTURE**
+
+### **Introduction Section**
+- Learning objectives derived from test validation criteria
+- Prerequisites with version compatibility
+- Real-world context from business scenarios
+- Connection to previous lesson versions
+
+### **Theory Foundation**
+- Core concepts with evolutionary perspective
+- Principles that remain constant across versions
+- New theoretical developments
+- Cross-system theoretical connections
+
+### **Hands-On Practice**
+- Interactive scenarios from test execution workflows
+- Code exercises with version evolution examples
+- Troubleshooting scenarios including legacy content
+- Cross-system application exercises
+
+### **Assessment & Validation**
+- Knowledge checks covering both new and preserved content
+- Practical exercises spanning lesson evolution
+- Competency validation for version progression
+- Cross-system application assessment
+
+### **Evolution & Progression**
+- Connections to related lesson versions
+- Cross-system learning opportunities
+- Advanced topics building on this lesson
+- Career progression pathways
+
+## 🔄 **EVOLUTIONARY FEATURES**
+
+### **Version Tracking**
+- Complete history of lesson evolution
+- Rationale for each version change
+- Preserved vs. updated content mapping
+- Student migration guidance
+
+### **Cross-System Inheritance**
+- System adaptation guidelines
+- Inheritance chain documentation
+- Cross-reference maintenance
+- Relevance scoring criteria
+
+### **Student Protection**
+- Progress preservation protocols
+- Achievement mapping strategies
+- Competency bridging plans
+- Certification continuity measures
+
+**Use this template for all new evolutionary mapping lessons to ensure consistency and educational archaeology principles.**

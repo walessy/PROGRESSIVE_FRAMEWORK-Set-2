@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 """
+FILE: evolutionary_mapping_engine.py
+WORKING_DIRECTORY: Scripts
+PURPOSE: Progressive Framework automation script
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250819_Educational-Phase3-Integration
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Educational Integration ✅
+PROGRESSIVE_ACADEMY: Foundation ✅ | Professional ✅ | Universal ✅ | Automation Ready ✅
+"""
+
+#!/usr/bin/env python3
+"""
 Evolutionary Mapping Engine
 Core engine for managing lesson evolution and mapping across the breathing framework
 """

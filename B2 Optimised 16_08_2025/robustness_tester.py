@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 """
+FILE: robustness_tester.py
+WORKING_DIRECTORY: .
+PURPOSE: Python automation script
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250819_Header-System-Integration
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Compliance ✅
+"""
+
+#!/usr/bin/env python3
+"""
 Breathing Framework Robustness Testing Tool
 SAVE AS: robustness_tester.py
 PURPOSE: Test breathing framework response to lesson file modifications
