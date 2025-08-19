@@ -1,9 +1,0 @@
-# Test_Cases Signals
-
-Signals for test case modifications
-
-## Signal File Format
-Signal files follow the pattern: `test_cases_{timestamp}_{event_type}.signal`
-
-## Processing
-These signals are processed by the breathing framework monitoring system.
