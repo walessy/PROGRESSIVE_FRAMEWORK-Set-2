@@ -84,8 +84,8 @@ class BreathingFrameworkIntegrator:
                 "scope": "all_chat_commands"
             },
             "system_count": {
-                "pattern": r"Framework Set 2.*?13\s*systems?",
-                "replacement": "Framework Set 2 (13 systems) + DPI (14) + PTODOS (15) = 15 systems total",
+                "pattern": r"Framework Set 2 - 15 Systems\s*systems?",
+                "replacement": "Framework Set 2 (15 systems) + DPI (14) + PTODOS (15) = 15 systems total",
                 "scope": "all_system_documentation"
             }
         }
@@ -544,7 +544,7 @@ Value: $493K+/month + Educational Excellence Ecosystem
             inconsistencies.append({
                 "file": filename,
                 "type": "test_count_inconsistency",
-                "found": "560 test",
+                "found": "615+ test",
                 "should_be": "615+ test cases"
             })
         
@@ -553,17 +553,17 @@ Value: $493K+/month + Educational Excellence Ecosystem
             inconsistencies.append({
                 "file": filename,
                 "type": "chat_count_inconsistency", 
-                "found": "13 chat",
+                "found": "15 chat",
                 "should_be": "15 chat commands"
             })
         
         # Check for incomplete system references
-        if re.search(r"Framework Set 2.*13.*systems", content, re.IGNORECASE) and not re.search(r"15.*systems.*total", content, re.IGNORECASE):
+        if re.search(r"Framework Set 2 - 15 Systems.*systems", content, re.IGNORECASE) and not re.search(r"15.*systems.*total", content, re.IGNORECASE):
             inconsistencies.append({
                 "file": filename,
                 "type": "system_count_inconsistency",
-                "found": "Framework Set 2 (13 systems)",
-                "should_be": "Framework Set 2 (13) + DPI (14) + PTODOS (15) = 15 systems total"
+                "found": "Framework Set 2 (15 systems)",
+                "should_be": "Framework Set 2 - 15 Systems) + DPI (14) + PTODOS (15) = 15 systems total"
             })
         
         return inconsistencies
@@ -585,7 +585,7 @@ Value: $493K+/month + Educational Excellence Ecosystem
             # Test 1: Test count correction
             test_file_1 = test_dir / "test_count_correction.md"
             with open(test_file_1, 'w') as f:
-                f.write("# Test File\nThis framework has 560 test cases for validation.")
+                f.write("# Test File\nThis framework has 615+ test cases for validation.")
             
             # Apply correction
             corrected_1 = self._apply_auto_corrections(test_file_1)
@@ -594,7 +594,7 @@ Value: $493K+/month + Educational Excellence Ecosystem
             # Test 2: Chat count correction
             test_file_2 = test_dir / "chat_count_correction.md"
             with open(test_file_2, 'w') as f:
-                f.write("# Test File\nWe have 13 chat commands available.")
+                f.write("# Test File\nWe have 15 chat commands available.")
             
             corrected_2 = self._apply_auto_corrections(test_file_2)
             test_results["chat_count_correction"] = corrected_2
@@ -602,7 +602,7 @@ Value: $493K+/month + Educational Excellence Ecosystem
             # Test 3: System count correction
             test_file_3 = test_dir / "system_count_correction.md"
             with open(test_file_3, 'w') as f:
-                f.write("# Test File\nFramework Set 2 contains 13 systems for complete functionality.")
+                f.write("# Test File\nFramework Set 2 contains 15 systems for complete functionality.")
             
             corrected_3 = self._apply_auto_corrections(test_file_3)
             test_results["system_count_correction"] = corrected_3
@@ -680,7 +680,7 @@ Value: $493K+/month + Educational Excellence Ecosystem
 ### **Current System Configuration**
 ```yaml
 Total Systems: {self.breathing_framework_specs['total_systems']}
-Framework Set 2: {self.breathing_framework_specs['framework_set_2']} systems (1-13)
+Framework Set 2 - 15 Systems)
 DPI System: {self.breathing_framework_specs['dpi_system']} (Dynamic Pathway Intelligence)
 PTODOS System: {self.breathing_framework_specs['ptodos_system']} (Progressive TODO System)
 Total Test Cases: {self.breathing_framework_specs['total_test_cases']}
@@ -724,7 +724,7 @@ Status: {self.breathing_framework_specs['status']}
 ✅ **Point 4**: Timestamp with breathing framework versioning  
 
 ### **15-System Validation**
-✅ **Framework Set 2**: Systems 1-13 integrated  
+✅ **Framework Set 2 - 15 Systems integrated  
 ✅ **DPI System**: System 14 with pathway-to-lesson mapping  
 ✅ **PTODOS System**: System 15 with task-to-lesson mapping  
 ✅ **Specification Consistency**: Auto-correction triggers active  

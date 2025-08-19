@@ -35,7 +35,7 @@ The evolutionary mapping engine transforms the breathing framework into an intel
 ## 🏗️ **CORE ARCHITECTURE**
 
 ### **📊 Complete Framework Coverage**
-- **Total Systems**: 15 (Framework Set 2: 1-13 + DPI: 14 + PTODOS: 15)
+- **Total Systems**: 15 (Framework Set 2 - 15 Systems + DPI: 14 + PTODOS: 15)
 - **Total Test Cases**: 615+ (560 Framework Set 2 + 25 DPI + 30 PTODOS + 53 Cross-System)
 - **Total Lesson Modules**: 615+ (1:1 test-to-lesson mapping with evolutionary variants)
 - **Chat Commands**: 15 (one per system for focused implementation)

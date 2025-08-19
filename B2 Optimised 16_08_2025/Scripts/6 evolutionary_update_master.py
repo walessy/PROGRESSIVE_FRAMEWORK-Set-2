@@ -193,12 +193,12 @@ class EvolutionaryUpdateManager:
     <!-- Original specification consistency triggers -->
     <auto_correction_triggers>
       <trigger name="test_count_inconsistency">
-        <detection>Any reference to "560 test" instead of "615+ test"</detection>
+        <detection>Any reference to "615+ test" instead of "615+ test"</detection>
         <action>Auto-correct to "615+ test cases"</action>
         <scope>All specifications and documentation</scope>
       </trigger>
       <trigger name="chat_count_inconsistency">
-        <detection>Any reference to "13 chat" instead of "15 chat"</detection>
+        <detection>Any reference to "15 chat" instead of "15 chat"</detection>
         <action>Auto-correct to "15 chat commands"</action>
         <scope>All chat startup commands and implementation docs</scope>
       </trigger>
@@ -442,7 +442,7 @@ class EvolutionaryUpdateManager:
                         },
                         "system_count_validation": {
                             "expected_value": "15",
-                            "required_systems": ["Framework Set 2 (1-13)", "DPI (14)", "PTODOS (15)"],
+                            "required_systems": ["Framework Set 2 - 15 Systems)", "DPI (14)", "PTODOS (15)"],
                             "scope": "all_system_documentation"
                         }
                     },
@@ -524,7 +524,7 @@ class EvolutionaryUpdateManager:
     
     def update_breathing_framework_engine(self):
         """Update main breathing framework engine file to evolutionary mapping"""
-        old_file = self.project_directory / "560 Test-to-Lesson Breathing Framework Auto-Generation Engine.md"
+        old_file = self.project_directory / "615+ test-to-Lesson Breathing Framework Auto-Generation Engine.md"
         new_file = self.project_directory / "615+ Test-to-Lesson Evolutionary Mapping Engine.md"
         
         backup_created = self.create_backup(old_file)
@@ -592,7 +592,7 @@ class EvolutionaryUpdateManager:
     
     def update_chat_commands(self):
         """Update chat commands file"""
-        old_file = self.project_directory / "13 Chat Startup Commands - 560 Test-to-Lesson Breathing Framework.md"
+        old_file = self.project_directory / "15 chat Startup Commands - 615+ test-to-Lesson Breathing Framework.md"
         new_file = self.project_directory / "15 Chat Startup Commands - 615+ Test-to-Lesson Evolutionary Mapping.md"
         
         backup_created = self.create_backup(old_file)
@@ -637,7 +637,7 @@ class EvolutionaryUpdateManager:
         # File-specific transformations
         if file_type == "engine":
             content = content.replace(
-                "560 TEST-TO-LESSON BREATHING FRAMEWORK AUTO-GENERATION ENGINE",
+                "615+ test-TO-LESSON BREATHING FRAMEWORK AUTO-GENERATION ENGINE",
                 "615+ TEST-TO-LESSON EVOLUTIONARY MAPPING ENGINE"
             )
             content = content.replace(
@@ -653,11 +653,11 @@ class EvolutionaryUpdateManager:
             
         elif file_type == "chat_commands":
             content = content.replace(
-                "13 CHAT STARTUP COMMANDS",
+                "15 chat STARTUP COMMANDS",
                 "15 CHAT STARTUP COMMANDS"
             )
             content = content.replace(
-                "560 Test-to-Lesson Breathing Framework",
+                "615+ test-to-Lesson Breathing Framework",
                 "615+ Test-to-Lesson Evolutionary Mapping"
             )
         
@@ -687,7 +687,7 @@ class EvolutionaryUpdateManager:
         """Update all system specification files"""
         system_specs_dir = self.project_directory / "System_Specs"
         
-        # Framework Set 2 systems (1-13)
+        # Framework Set 2 - 15 Systems)
         for i in range(1, 14):
             system_file = system_specs_dir / f"PROGRESSIVEPROJECT-SYSTEM-{i:02d}-*.md"
             matching_files = list(system_specs_dir.glob(f"PROGRESSIVEPROJECT-SYSTEM-{i:02d}-*.md"))

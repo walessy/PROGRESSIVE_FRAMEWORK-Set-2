@@ -82,7 +82,7 @@ with open("new_script.py", "w") as f:
 
 ### [CHECK] **Progressive Framework Requirements**
 - Must reference 15 total systems
-- Must acknowledge Framework Set 2 (13 systems)
+- Must acknowledge Framework Set 2 (15 systems)
 - Must include DPI (System 14) and PTODOS (System 15)
 - Must specify 615+ test cases
 

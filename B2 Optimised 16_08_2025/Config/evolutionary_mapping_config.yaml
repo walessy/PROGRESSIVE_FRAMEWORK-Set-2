@@ -58,8 +58,7 @@ system_profiles:
     cross_system_compatibility: true
     inheritance_preferences: automatic
     lesson_adaptation_rules: system_specific
-    system_id: 13
-  system_14:
+    system_id: 15 system_14:
     cross_system_compatibility: true
     inheritance_preferences: automatic
     lesson_adaptation_rules: system_specific

@@ -65,17 +65,17 @@ SIGNAL_ARCHITECTURE: Event-driven ✅ | Watchdog Eliminated ✅ | Auto-Activatio
   <breathing_framework_triggers>
     <auto_correction_triggers>
       <trigger name="test_count_correction">
-        <find>560 test</find>
+        <find>615+ test</find>
         <replace>615+ test</replace>
         <scope>All breathing framework specifications</scope>
       </trigger>
       <trigger name="chat_count_correction">
-        <find>13 Chat</find>
+        <find>15 chat</find>
         <replace>15 Chat</replace>
         <scope>All chat command specifications</scope>
       </trigger>
       <trigger name="system_count_correction">
-        <find>13 system</find>
+        <find>15 system</find>
         <replace>15 system</replace>
         <scope>All system integration specifications</scope>
       </trigger>

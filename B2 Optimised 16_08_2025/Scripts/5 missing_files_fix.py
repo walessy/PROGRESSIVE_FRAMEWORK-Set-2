@@ -39,7 +39,7 @@ def create_evolutionary_mapping_engine_file(project_dir: Path):
     """Create the main evolutionary mapping engine documentation file"""
     
     # Check if old file exists and rename it
-    old_file = project_dir / "560 Test-to-Lesson Breathing Framework Auto-Generation Engine.md"
+    old_file = project_dir / "615+ test-to-Lesson Breathing Framework Auto-Generation Engine.md"
     new_file = project_dir / "615+ Test-to-Lesson Evolutionary Mapping Engine.md"
     
     if old_file.exists() and not new_file.exists():
@@ -75,7 +75,7 @@ The evolutionary mapping engine transforms the breathing framework into an intel
 ## 🏗️ **CORE ARCHITECTURE**
 
 ### **📊 Complete Framework Coverage**
-- **Total Systems**: 15 (Framework Set 2: 1-13 + DPI: 14 + PTODOS: 15)
+- **Total Systems**: 15 (Framework Set 2 - 15 Systems + DPI: 14 + PTODOS: 15)
 - **Total Test Cases**: 615+ (560 Framework Set 2 + 25 DPI + 30 PTODOS + 53 Cross-System)
 - **Total Lesson Modules**: 615+ (1:1 test-to-lesson mapping with evolutionary variants)
 - **Chat Commands**: 15 (one per system for focused implementation)
@@ -385,13 +385,13 @@ async function handleEvolutionaryMapping(change: FrameworkChange): Promise<Evolu
         print(f"    ✅ Created new file: {new_file.name}")
     
     # Update any existing old file references
-    update_file_references(project_dir, "560 Test-to-Lesson", "615+ Test-to-Lesson")
+    update_file_references(project_dir, "615+ test-to-Lesson", "615+ Test-to-Lesson")
 
 def create_chat_startup_commands_file(project_dir: Path):
     """Create the 15 chat startup commands file"""
     
     # Check if old file exists and rename it
-    old_file = project_dir / "13 Chat Startup Commands - 560 Test-to-Lesson Breathing Framework.md"
+    old_file = project_dir / "15 chat Startup Commands - 615+ test-to-Lesson Breathing Framework.md"
     new_file = project_dir / "15 Chat Startup Commands - 615+ Test-to-Lesson Evolutionary Mapping.md"
     
     if old_file.exists() and not new_file.exists():
@@ -755,7 +755,7 @@ Let's complete the revolutionary evolutionary mapping with perfect task manageme
         print(f"    ✅ Created new file: {new_file.name}")
     
     # Update any existing old file references
-    update_file_references(project_dir, "13 Chat Startup Commands", "15 Chat Startup Commands")
+    update_file_references(project_dir, "15 chat Startup Commands", "15 Chat Startup Commands")
 
 def update_file_references(project_dir: Path, old_text: str, new_text: str):
     """Update references to old files in other documents"""

@@ -73,11 +73,11 @@ class BreathingFrameworkUpdater:
                 'replace_with': '615+ lesson'
             },
             'system_counts_specific': {
-                'find_patterns': [r'Framework Set 2 \(13 Systems?\)', r'13 Systems Total'],
+                'find_patterns': [r'Framework Set 2 \(15 systems?\)', r'15 systems Total'],
                 'replace_with': '15 Systems Total (Framework Set 2 + DPI + PTODOS)'
             },
             'breathing_framework_references': {
-                'find_patterns': [r'560 Test-to-Lesson', r'560-Test-to-Lesson'],
+                'find_patterns': [r'615+ test-to-Lesson', r'560-Test-to-Lesson'],
                 'replace_with': '615+ Test-to-Lesson'
             }
         }
@@ -278,17 +278,17 @@ class BreathingFrameworkConfigDeployer:
   <breathing_framework_triggers>
     <auto_correction_triggers>
       <trigger name="test_count_correction">
-        <find>560 test</find>
+        <find>615+ test</find>
         <replace>615+ test</replace>
         <scope>All breathing framework specifications</scope>
       </trigger>
       <trigger name="chat_count_correction">
-        <find>13 Chat</find>
+        <find>15 chat</find>
         <replace>15 Chat</replace>
         <scope>All chat command specifications</scope>
       </trigger>
       <trigger name="system_count_correction">
-        <find>13 system</find>
+        <find>15 system</find>
         <replace>15 system</replace>
         <scope>All system integration specifications</scope>
       </trigger>

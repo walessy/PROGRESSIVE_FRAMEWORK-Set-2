@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKM Framework Command Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #4facfe;
+        }
+        
+        .question h3 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 1.3em;
+        }
+        
+        .options {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .option {
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .option:hover {
+            border-color: #4facfe;
+            background: #f0f8ff;
+            transform: translateY(-2px);
+        }
+        
+        .option.selected {
+            border-color: #4facfe;
+            background: #4facfe;
+            color: white;
+        }
+        
+        .option-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .option-desc {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .generate-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .generate-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .generate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .result {
+            margin-top: 30px;
+            padding: 25px;
+            background: #e8f5e8;
+            border-radius: 10px;
+            border-left: 5px solid #28a745;
+            display: none;
+        }
+        
+        .result h3 {
+            margin: 0 0 15px 0;
+            color: #155724;
+        }
+        
+        .command-box {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8em;
+        }
+        
+        .system-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 PKM Framework Command Generator</h1>
+            <p>Answer a few questions to get your perfect startup command</p>
+        </div>
+        
+        <div class="content">
+            <!-- Question 1: Experience Level -->
+            <div class="question">
+                <h3>1. What's your experience level with the Progressive Framework?</h3>
+                <div class="options">
+                    <div class="option" data-question="experience" data-value="beginner">
+                        <div class="option-title">🎯 Complete Beginner</div>
+                        <div class="option-desc">New to the framework, want to learn systematically</div>
+                    </div>
+                    <div class="option" data-question="experience" data-value="some">
+                        <div class="option-title">🔧 Some Experience</div>
+                        <div class="option-desc">Know basics, want to go deeper in specific areas</div>
+                    </div>
+                    <div class="option" data-question="experience" data-value="advanced">
+                        <div class="option-title">🚀 Advanced User</div>
+                        <div class="option-desc">Experienced, want master-level capabilities</div>
+                    </div>
+                    <div class="option" data-question="experience" data-value="expert">
+                        <div class="option-title">🌟 Expert/Corporate</div>
+                        <div class="option-desc">Need everything for organization-wide deployment</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2: Primary Goal -->
+            <div class="question">
+                <h3>2. What's your primary goal right now?</h3>
+                <div class="options">
+                    <div class="option" data-question="goal" data-value="learn">
+                        <div class="option-title">📚 Learning & Education</div>
+                        <div class="option-desc">Want to understand and master the framework</div>
+                    </div>
+                    <div class="option" data-question="goal" data-value="solve">
+                        <div class="option-title">🔧 Solve Specific Problem</div>
+                        <div class="option-desc">Need one system to fix immediate issues</div>
+                    </div>
+                    <div class="option" data-question="goal" data-value="implement">
+                        <div class="option-title">🏗️ Implementation Project</div>
+                        <div class="option-desc">Building/deploying framework in production</div>
+                    </div>
+                    <div class="option" data-question="goal" data-value="train">
+                        <div class="option-title">🎓 Corporate Training</div>
+                        <div class="option-desc">Training team/organization on framework</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3: Specific Focus -->
+            <div class="question">
+                <h3>3. Any specific area of focus?</h3>
+                <div class="options">
+                    <div class="option" data-question="focus" data-value="none">
+                        <div class="option-title">🌐 No Specific Focus</div>
+                        <div class="option-desc">Want comprehensive coverage</div>
+                    </div>
+                    <div class="option" data-question="focus" data-value="debug">
+                        <div class="option-title">🐛 Debugging & Testing</div>
+                        <div class="option-desc">Focus on PDT-PLUS debugging systems</div>
+                    </div>
+                    <div class="option" data-question="focus" data-value="business">
+                        <div class="option-title">💼 Business Operations</div>
+                        <div class="option-desc">Focus on business and revenue systems</div>
+                    </div>
+                    <div class="option" data-question="focus" data-value="ai">
+                        <div class="option-title">🤖 AI & Performance</div>
+                        <div class="option-desc">Focus on AI and performance optimization</div>
+                    </div>
+                    <div class="option" data-question="focus" data-value="integration">
+                        <div class="option-title">🔗 Integration & Coordination</div>
+                        <div class="option-desc">Focus on system coordination and pathways</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4: Timeline -->
+            <div class="question">
+                <h3>4. What's your timeline?</h3>
+                <div class="options">
+                    <div class="option" data-question="timeline" data-value="immediate">
+                        <div class="option-title">⚡ Immediate (Today)</div>
+                        <div class="option-desc">Need results right now</div>
+                    </div>
+                    <div class="option" data-question="timeline" data-value="week">
+                        <div class="option-title">📅 This Week</div>
+                        <div class="option-desc">Can dedicate focused time this week</div>
+                    </div>
+                    <div class="option" data-question="timeline" data-value="month">
+                        <div class="option-title">📆 This Month</div>
+                        <div class="option-desc">Building over several weeks</div>
+                    </div>
+                    <div class="option" data-question="timeline" data-value="project">
+                        <div class="option-title">🎯 Long-term Project</div>
+                        <div class="option-desc">Multi-month implementation</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="generate-btn" onclick="generateCommand()" disabled>
+                Generate My Perfect Command
+            </button>
+
+            <div class="result" id="result">
+                <h3>🎉 Your Perfect PKM Command</h3>
+                <div class="command-box" id="commandBox">
+                    <button class="copy-btn" onclick="copyCommand()">Copy</button>
+                    <span id="commandText"></span>
+                </div>
+                <div class="system-info" id="systemInfo"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const answers = {};
+        
+        // Handle option selection
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const question = this.dataset.question;
+                const value = this.dataset.value;
+                
+                // Remove selected class from other options in same question
+                document.querySelectorAll(`[data-question="${question}"]`).forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                
+                // Store answer
+                answers[question] = value;
+                
+                // Check if all questions answered
+                checkAllAnswered();
+            });
+        });
+        
+        function checkAllAnswered() {
+            const requiredQuestions = ['experience', 'goal', 'focus', 'timeline'];
+            const allAnswered = requiredQuestions.every(q => answers[q]);
+            
+            document.querySelector('.generate-btn').disabled = !allAnswered;
+        }
+        
+        function generateCommand() {
+            const { experience, goal, focus, timeline } = answers;
+            
+            let command = '';
+            let systemInfo = '';
+            
+            // Determine command based on answers
+            if (focus === 'debug') {
+                command = `Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\
+PDT-PLUS Breathing Framework Implementation
+Primary Objectives: Master debugging with ATLAS, PRISM, NEXUS, CRUD engines (105 lessons)
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> System 1 (PDT-PLUS) with 105 debugging lessons<br>🔧 <strong>Focus:</strong> ATLAS, PRISM, NEXUS, CRUD debugging engines<br>⏱️ <strong>Time needed:</strong> 2-3 days for deep debugging mastery';
+                
+            } else if (focus === 'business') {
+                command = `Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\
+BUSINESS-OPS-FUSION + PUXT-PLUS Implementation
+Primary Objectives: Business operations and revenue optimization (85 lessons)
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> Systems 2 & 6 with 85 business-focused lessons<br>💼 <strong>Focus:</strong> UX-Revenue optimization and business operations<br>⏱️ <strong>Time needed:</strong> 3-4 days for business mastery';
+                
+            } else if (experience === 'beginner') {
+                command = `Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\
+Foundation Tier Breathing Framework Implementation
+Primary Objectives: Learn framework fundamentals through 5 foundation systems (270+ lessons)
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> Systems 1-5 with 270+ foundational lessons<br>📚 <strong>Focus:</strong> Systematic learning from ground up<br>⏱️ <strong>Time needed:</strong> 1-2 weeks for solid foundation';
+                
+            } else if (experience === 'advanced' || goal === 'implement') {
+                command = `Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\
+Professional + Universal Tier Breathing Framework Implementation
+Primary Objectives: Advanced implementation skills (290+ lessons)
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> Systems 6-13 with 290+ advanced lessons<br>🚀 <strong>Focus:</strong> Professional and master-level capabilities<br>⏱️ <strong>Time needed:</strong> 2-3 weeks for advanced mastery';
+                
+            } else if (experience === 'expert' || goal === 'train') {
+                command = `Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\
+Complete 15-System Breathing Framework Implementation
+Primary Objectives: Full enterprise deployment (615+ lessons)
+Tier Override: FORCE_ALL_TIERS_ACTIVE
+Scope: CORPORATE_TRAINING
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> ALL 15 systems with 615+ comprehensive lessons<br>🏢 <strong>Focus:</strong> Complete organizational deployment<br>⏱️ <strong>Time needed:</strong> 4-6 weeks for full implementation';
+                
+            } else {
+                // Default comprehensive option
+                command = `Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\
+Foundation + Professional Tier Breathing Framework Implementation
+Primary Objectives: Comprehensive learning path (425+ lessons)
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> Systems 1-9 with 425+ comprehensive lessons<br>⚖️ <strong>Focus:</strong> Balanced foundation + professional development<br>⏱️ <strong>Time needed:</strong> 2-4 weeks for comprehensive coverage';
+            }
+            
+            // Add timeline-specific modifications
+            if (timeline === 'immediate') {
+                if (!command.includes('PDT-PLUS Breathing Framework Implementation')) {
+                    command = `Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\
+PDT-PLUS Breathing Framework Implementation
+Primary Objectives: Quick start with debugging system (105 lessons)
+Priority: IMMEDIATE_START
+20250819_Signal_Based_Activation`;
+                    systemInfo = '🎯 <strong>You\'ll get:</strong> System 1 (PDT-PLUS) for immediate results<br>⚡ <strong>Focus:</strong> Quick debugging mastery<br>⏱️ <strong>Time needed:</strong> Start today, results in hours';
+                }
+            }
+            
+            // Display result
+            document.getElementById('commandText').textContent = command;
+            document.getElementById('systemInfo').innerHTML = systemInfo;
+            document.getElementById('result').style.display = 'block';
+            
+            // Scroll to result
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function copyCommand() {
+            const commandText = document.getElementById('commandText').textContent;
+            navigator.clipboard.writeText(commandText).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = '#28a745';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '#4facfe';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
