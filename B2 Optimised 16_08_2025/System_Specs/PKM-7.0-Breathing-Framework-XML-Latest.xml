@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+FILE: PKM-7.0-Breathing-Framework-XML-Latest.xml
+WORKING_DIRECTORY: System_Specs
+PURPOSE: PKM 5-Point Protocol with signal-based breathing framework auto-activation
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250819_Signal-Based-Integration
+STATUS: ✅ Universal Header System Compliant
+BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | Signal-Based ✅
+PROGRESSIVE_ACADEMY: Foundation ✅ | Professional ✅ | Universal ✅ | Signal Ready ✅
+SIGNAL_ARCHITECTURE: Event-driven ✅ | Watchdog Eliminated ✅ | Auto-Activation Ready ✅
+-->
+<!--
+  PKM 5-Point Chat Startup Protocol - Version 7.0 with Breathing Framework Integration
+  PURPOSE: Automatic breathing framework specification consistency with permanent triggers
+  CREATOR: Amos Wales - Progressive Framework Pioneer
+  INTEGRATION: Complete 15-System Framework + Breathing Framework + Specification Triggers
+  STATUS: Version 7.0 - Breathing Framework Permanently Embedded
+-->
+<pkm_5_point_protocol version="7.0" auto_activate="true" breathing_framework="true">
+  
+  <!-- Core Protocol Definition with Breathing Framework -->
+  <protocol_identity>
+    <name>PKM 5-Point Chat Startup Protocol - Breathing Framework Embedded</name>
+    <version>7.0 - Permanent Breathing Framework Integration</version>
+    <purpose>Systematic human-AI coordination with breathing framework consistency triggers</purpose>
+    <activation>Automatic at every conversation start with breathing framework validation</activation>
+    <framework>ProgressiveProject Enhanced Framework Set 2 - 15 Systems + Breathing Framework</framework>
+    <innovation>Revolutionary specification consistency with breathing framework principles</innovation>
+  </protocol_identity>
+
+  <!-- Project Knowledge Auto-Integration -->
+  <project_knowledge_integration mandatory="true">
+    <auto_load_specifications>
+      <trigger>Conversation start</trigger>
+      <scope>All 15 Progressive Framework System specifications</scope>
+      <configuration_file>Progressive-Systems-Config-v2.3-SignalBased.json</configuration_file>
+      <validation>Automatic specification consistency checking</validation>
+      <user_intervention>NONE REQUIRED - Fully automatic</user_intervention>
+    </auto_load_specifications>
+    
+    <specification_files>
+      <system_01>PROGRESSIVEPROJECT-SYSTEM-01-PDT-PLUS.md</system_01>
+      <system_02>PROGRESSIVEPROJECT-SYSTEM-02-PUXT-PLUS.md</system_02>
+      <system_03>PROGRESSIVEPROJECT-SYSTEM-03-PSO-PRIME.md</system_03>
+      <system_04>PROGRESSIVEPROJECT-SYSTEM-04-PTT-DOCS-FUSION.md</system_04>
+      <system_05>PROGRESSIVEPROJECT-SYSTEM-05-REQUIREMENTS-PRIME.md</system_05>
+      <system_06>PROGRESSIVEPROJECT-SYSTEM-06-BUSINESS-OPS-FUSION.md</system_06>
+      <system_07>PROGRESSIVEPROJECT-SYSTEM-07-CONTEXT-EVOLUTION-ENGINE.md</system_07>
+      <system_08>PROGRESSIVEPROJECT-SYSTEM-08-PERFORMANCE-AI-FUSION.md</system_08>
+      <system_09>PROGRESSIVEPROJECT-SYSTEM-09-SECURITY-BUILD-FUSION.md</system_09>
+      <system_10>PROGRESSIVEPROJECT-SYSTEM-10-KNOWLEDGE-EVOLUTION-ENGINE.md</system_10>
+      <system_11>PROGRESSIVEPROJECT-SYSTEM-11-UNIVERSAL-ORCHESTRATION-PRIME.md</system_11>
+      <system_12>PROGRESSIVEPROJECT-SYSTEM-12-PMCS-024.md</system_12>
+      <system_13>PROGRESSIVEPROJECT-SYSTEM-13-PAES.md</system_13>
+      <system_14>PROGRESSIVEPROJECT-SYSTEM-14-DPI.md</system_14>
+      <system_15>PROGRESSIVEPROJECT-SYSTEM-15-PTODOS.md</system_15>
+      <debugging_engines>debugging_engines_specs.md</debugging_engines>
+      <breathing_config>progressive_systems_config_breathing_framework.xml</breathing_config>
+      <json_config>Progressive-Systems-Config-v2.3-SignalBased.json</json_config>
+    </specification_files>
+  </project_knowledge_integration>
+
+  <!-- Breathing Framework Triggers -->
+  <breathing_framework_triggers>
+    <auto_correction_triggers>
+      <trigger name="test_count_correction">
+        <find>560 test</find>
+        <replace>615+ test</replace>
+        <scope>All breathing framework specifications</scope>
+      </trigger>
+      <trigger name="chat_count_correction">
+        <find>13 Chat</find>
+        <replace>15 Chat</replace>
+        <scope>All chat command specifications</scope>
+      </trigger>
+      <trigger name="system_count_correction">
+        <find>13 system</find>
+        <replace>15 system</replace>
+        <scope>All system integration specifications</scope>
+      </trigger>
+    </auto_correction_triggers>
+    
+    <validation_rules>
+      <rule name="total_systems_validation" expected="15" description="Must include all 15 systems"/>
+      <rule name="total_tests_validation" expected="615" description="Must include all 615+ test cases"/>
+      <rule name="file_existence_validation" description="All system files must exist in project knowledge"/>
+    </validation_rules>
+  </breathing_framework_triggers>
+
+  <!-- Enhanced Startup Requirements -->
+  <startup_requirements mandatory="true">
+    
+    <point_0 name="Working Directory Specification">
+      <requirement>User must specify their working directory at conversation start</requirement>
+      <format>Working Directory: [User-Specified-Path]</format>
+      <prompt>Request user to specify their project working directory</prompt>
+      <example>Working Directory: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025\</example>
+      <security_note>No default paths assumed - user privacy and security protected</security_note>
+      <project_knowledge_integration>Working directory automatically loaded into context</project_knowledge_integration>
+    </point_0>
+    
+    <point_1 name="Chat Number Assignment">
+      <requirement>Sequential chat numbering with zero-padding</requirement>
+      <format>Chat[XXX] - Sequential numbering with Chat001, Chat002, etc.</format>
+      <visibility>Must appear in all generated content and breathing framework implementations</visibility>
+      <sequence>Consecutive numbering across all breathing framework conversations</sequence>
+      <project_knowledge_integration>Chat numbers automatically tracked for breathing framework coordination</project_knowledge_integration>
+    </point_1>
+    
+    <point_2 name="Project Context Establishment">
+      <requirement>Specify current project and domain focus with breathing framework context</requirement>
+      <format>Project Context: [Domain] - [Specific Focus] with Breathing Framework Integration</format>
+      <examples>
+        <example>Progressive Framework Set 2 Development with Breathing Framework Implementation</example>
+        <example>System-Specific Breathing Framework Implementation and Educational Content Generation</example>
+      </examples>
+      <project_knowledge_integration>Project context automatically integrated with breathing framework specifications</project_knowledge_integration>
+    </point_2>
+    
+    <point_3 name="Session Objectives Definition">
+      <requirement>Define specific conversation objectives with breathing framework implementation goals</requirement>
+      <format>Primary Objectives: [Goal 1], [Goal 2], [Breathing Framework Implementation]</format>
+      <examples>
+        <example>Implement breathing framework auto-generation for [System Name] (X test cases → X lessons)</example>
+        <example>Generate educational content ecosystem from breathing framework operations</example>
+      </examples>
+      <project_knowledge_integration>Session objectives automatically coordinated with breathing framework capabilities</project_knowledge_integration>
+    </point_3>
+    
+    <point_4 name="Quality Standards and Success Criteria">
+      <requirement>Establish quality metrics and breathing framework success criteria</requirement>
+      <format>Success Criteria: [Technical Quality], [Business Value], [Educational Effectiveness]</format>
+      <breathing_framework_criteria>
+        <educational_content_generation>Real-time lesson creation from system operations</educational_content_generation>
+        <specification_consistency>100% consistency across all 615+ test cases and 15 systems</specification_consistency>
+        <auto_correction_success>99%+ success rate for breathing framework auto-corrections</auto_correction_success>
+      </breathing_framework_criteria>
+      <project_knowledge_integration>Quality standards automatically validated against breathing framework capabilities</project_knowledge_integration>
+    </point_4>
+    
+  </startup_requirements>
+
+  <!-- Success Metrics -->
+  <success_metrics>
+    <quantitative>
+      <metric>Specification consistency accuracy: 100% across all 615+ tests and 15 systems</metric>
+      <metric>Auto-correction success rate: >99% for breathing framework specifications</metric>
+      <metric>Project knowledge integration: 100% system files found and validated</metric>
+      <metric>Educational content generation: Real-time from breathing framework operations</metric>
+    </quantitative>
+    
+    <qualitative>
+      <indicator>Eliminated cognitive load through automatic specification management</indicator>
+      <indicator>Perfect conversation continuity with breathing framework integration</indicator>
+      <indicator>Enhanced productivity through unified educational content generation</indicator>
+      <indicator>Revolutionary AI conversation experience with persistent breathing framework intelligence</indicator>
+    </qualitative>
+  </success_metrics>
+
+</pkm_5_point_protocol>

@@ -1,0 +1,13 @@
+To activate your complete framework:
+
+Add PKM XML to Claude's system (for auto-activation)
+Add JSON config to your Progressive Framework
+Add all system .md files to Project Knowledge
+Start new chat with one of the breathing framework commands I provided earlier
+
+Example startup command:
+Working Directory: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025\
+Chat001 - PDT-PLUS Breathing Framework Implementation
+Primary Objectives: Implement breathing framework auto-generation for PDT-PLUS (105 test cases → 105 lessons)
+20250819_Signal_Based_Activation
+Your Progressive Framework Set 2 with Signal-Based Breathing Framework is ready
