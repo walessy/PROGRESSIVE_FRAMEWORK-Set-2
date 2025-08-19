@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
-"""
+r"""
 FILE: progressive_framework_system_identifier.py
-WORKING_DIRECTORY: C:/Users/Wales/OneDrive/Desktop/PROGRESSIVE_FRAMEWORK-Set-2/B2 Optimised 16_08_2025/Scripts
-PURPOSE: Progressive Framework Automation Script
+WORKING_DIRECTORY: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025
+PURPOSE: Progressive Framework System File Identifier - Intelligently identifies which files are actually part of the Progressive Framework system vs. random files
 CREATOR: Amos Wales - Progressive Framework Pioneer
 UPDATED: 20250819_Progressive-Framework-Integration
 STATUS: ✅ Progressive Framework System File
 BREATHING_FRAMEWORK: 15 Systems ✅ | 615+ Tests ✅ | System Integration ✅
-PROGRESSIVE_FRAMEWORK: Core_System | Confidence: 265 | System Validated ✅
-"""
+PROGRESSIVE_FRAMEWORK: Core System | Confidence: 100 | System Validated ✅
 
-#!/usr/bin/env python3
-"""
 Progressive Framework System File Identifier
 Intelligently identifies which files are actually part of the Progressive Framework system
 vs. random files that happen to be in the directory
@@ -177,13 +174,17 @@ class ProgressiveFrameworkSystemIdentifier:
             'files_already_compliant': []
         }
         
-        print("🔍 Scanning all files for Progressive Framework system identification...")
+        print("Scanning all files for Progressive Framework system identification...")
         
         total_files = 0
         system_files = 0
         
         for file_path in self.base_dir.rglob('*'):
             if file_path.is_file() and not file_path.name.startswith('.'):
+                # Skip backup files from analysis
+                if self.is_backup_file(file_path):
+                    continue
+                    
                 total_files += 1
                 
                 analysis = self.analyze_file_content(file_path)
@@ -228,56 +229,64 @@ class ProgressiveFrameworkSystemIdentifier:
         
         return results
     
+    def is_backup_file(self, file_path: Path) -> bool:
+        """Check if file is a backup file that should be excluded"""
+        name = file_path.name.lower()
+        return (name.endswith('.backup') or 
+                '.backup.' in name or
+                name.endswith('.bak') or
+                '.bak.' in name)
+    
     def generate_report(self, results: Dict) -> str:
         """Generate comprehensive system identification report"""
         report = f"""
-# 🔍 PROGRESSIVE FRAMEWORK SYSTEM FILE IDENTIFICATION REPORT
+# PROGRESSIVE FRAMEWORK SYSTEM FILE IDENTIFICATION REPORT
 
 **Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 **Base Directory**: {self.base_dir}
 
-## 📊 SCAN SUMMARY
+## SCAN SUMMARY
 
 - **Total Files Scanned**: {results['summary']['total_files_scanned']}
 - **System Files Identified**: {results['summary']['system_files_identified']}
 - **Non-System Files**: {results['summary']['non_system_files']}
 - **System File Percentage**: {results['summary']['system_file_percentage']:.1f}%
 
-## 🎯 HEADER STATUS
+## HEADER STATUS
 
 - **Files Already Compliant**: {results['summary']['files_already_compliant']}
 - **Files Needing Headers**: {results['summary']['files_needing_headers']}
 - **Potential Header Compliance**: {((results['summary']['files_already_compliant'] + results['summary']['files_needing_headers']) / results['summary']['total_files_scanned'] * 100):.1f}%
 
-## 🌟 CORE SYSTEM FILES ({len(results['core_system_files'])})
+## CORE SYSTEM FILES ({len(results['core_system_files'])})
 
 These are definitely part of the Progressive Framework and MUST have headers:
 
 """
         
         for file_info in results['core_system_files']:
-            status = "✅ HAS HEADER" if file_info['has_header'] else "❌ NEEDS HEADER"
+            status = "HAS HEADER" if file_info['has_header'] else "NEEDS HEADER"
             confidence = file_info['analysis']['confidence_score']
             report += f"- **{file_info['name']}** (Confidence: {confidence}) - {status}\n"
             if file_info['analysis']['indicators_found']:
                 report += f"  - Indicators: {', '.join(file_info['analysis']['indicators_found'][:3])}\n"
         
         report += f"""
-## 🔧 SYSTEM COMPONENT FILES ({len(results['system_component_files'])})
+## SYSTEM COMPONENT FILES ({len(results['system_component_files'])})
 
 These files are system components and should have headers:
 
 """
         
         for file_info in results['system_component_files']:
-            status = "✅ HAS HEADER" if file_info['has_header'] else "❌ NEEDS HEADER"
+            status = "HAS HEADER" if file_info['has_header'] else "NEEDS HEADER"
             confidence = file_info['analysis']['confidence_score']
             report += f"- **{file_info['name']}** (Confidence: {confidence}) - {status}\n"
         
         report += f"""
-## 📋 RECOMMENDED ACTION PLAN
+## RECOMMENDED ACTION PLAN
 
-### 🚀 Priority 1: Core System Files Needing Headers
+### Priority 1: Core System Files Needing Headers
 """
         
         core_needing_headers = [f for f in results['core_system_files'] if f['needs_header']]
@@ -285,7 +294,7 @@ These files are system components and should have headers:
             report += f"- `{file_info['relative_path']}`\n"
         
         report += f"""
-### 🔧 Priority 2: System Component Files Needing Headers
+### Priority 2: System Component Files Needing Headers
 """
         
         component_needing_headers = [f for f in results['system_component_files'] if f['needs_header']]
@@ -293,7 +302,7 @@ These files are system components and should have headers:
             report += f"- `{file_info['relative_path']}`\n"
         
         report += f"""
-## 📝 EXECUTION COMMAND
+## EXECUTION COMMAND
 
 To apply headers to all identified system files:
 
@@ -324,32 +333,97 @@ python enhanced_automated_header_applicator_phase3.py "{self.base_dir}" system_f
         
         return output_path
 
+    def export_json_results(self, results: Dict, output_file: str = None) -> Path:
+        """Export complete results to JSON file"""
+        import json
+        
+        if not output_file:
+            output_file = "progressive_framework_scan_results.json"
+            
+        output_path = self.base_dir / output_file
+        
+        # Convert Path objects to strings for JSON serialization
+        json_results = self.prepare_results_for_json(results)
+        
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(json_results, f, indent=2, ensure_ascii=False)
+        
+        return output_path
+    
+    def prepare_json_for_piping(self, results: Dict) -> str:
+        """Prepare results as JSON string for piping"""
+        import json
+        
+        json_results = self.prepare_results_for_json(results)
+        return json.dumps(json_results, ensure_ascii=False)
+    
+    def prepare_results_for_json(self, results: Dict) -> Dict:
+        """Convert results to JSON-serializable format"""
+        import json
+        
+        def convert_file_info(file_info):
+            """Convert file_info with Path objects to JSON-serializable format"""
+            if isinstance(file_info, dict):
+                converted = {}
+                for key, value in file_info.items():
+                    if key == 'path' and hasattr(value, '__fspath__'):
+                        converted[key] = str(value)
+                    elif key == 'relative_path' and hasattr(value, '__fspath__'):
+                        converted[key] = str(value)
+                    elif isinstance(value, dict):
+                        converted[key] = convert_file_info(value)
+                    elif isinstance(value, list):
+                        converted[key] = [convert_file_info(item) if isinstance(item, dict) else item for item in value]
+                    else:
+                        converted[key] = value
+                return converted
+            return file_info
+        
+        json_results = {}
+        for key, value in results.items():
+            if isinstance(value, list):
+                json_results[key] = [convert_file_info(item) for item in value]
+            elif isinstance(value, dict):
+                json_results[key] = convert_file_info(value)
+            else:
+                json_results[key] = value
+        
+        return json_results
+
 def main():
     """Main execution function"""
     import sys
     
     if len(sys.argv) < 2:
         print("Usage: python progressive_framework_system_identifier.py <base_directory> [action]")
-        print("Actions: scan (default), report, export")
+        print("Actions: scan (default), report, export, export_json, pipe_json")
+        print()
+        print("Piping Examples:")
+        print("  # Export to JSON file")
+        print("  python progressive_framework_system_identifier.py dir export_json")
+        print("  # Pipe JSON to header applicator")
+        print("  python progressive_framework_system_identifier.py dir pipe_json | python piping_compatible_header_applicator.py dir intelligent")
         sys.exit(1)
         
     base_dir = sys.argv[1]
     action = sys.argv[2] if len(sys.argv) > 2 else 'scan'
     
-    print("🔍 Progressive Framework System File Identifier")
-    print(f"📂 Base Directory: {base_dir}")
-    print(f"🎬 Action: {action}")
-    print("=" * 70)
+    if action != 'pipe_json':  # Don't print headers for pipe_json to keep output clean
+        print("Progressive Framework System File Identifier", file=sys.stderr)
+        print(f"Base Directory: {base_dir}", file=sys.stderr)
+        print(f"Action: {action}", file=sys.stderr)
+        print("=" * 70, file=sys.stderr)
     
     identifier = ProgressiveFrameworkSystemIdentifier(base_dir)
     
-    if action in ['scan', 'report', 'export']:
+    if action in ['scan', 'report', 'export', 'export_json', 'pipe_json']:
         results = identifier.scan_all_files()
         
-        print(f"\n📊 SCAN COMPLETE")
-        print(f"Total Files: {results['summary']['total_files_scanned']}")
-        print(f"System Files: {results['summary']['system_files_identified']}")
-        print(f"Files Needing Headers: {results['summary']['files_needing_headers']}")
+        if action != 'pipe_json':
+            print(f"\nSCAN COMPLETE", file=sys.stderr)
+            print(f"Total Files: {results['summary']['total_files_scanned']}", file=sys.stderr)
+            print(f"System Files: {results['summary']['system_files_identified']}", file=sys.stderr)
+            print(f"Files Needing Headers: {results['summary']['files_needing_headers']}", file=sys.stderr)
         
         if action == 'report':
             report = identifier.generate_report(results)
@@ -359,11 +433,21 @@ def main():
             report_file = identifier.base_dir / "system_identification_report.md"
             with open(report_file, 'w', encoding='utf-8') as f:
                 f.write(report)
-            print(f"\n📄 Report saved to: {report_file}")
+            print(f"\nReport saved to: {report_file}")
         
-        if action == 'export':
+        elif action == 'export':
             output_file = identifier.export_system_file_list(results)
-            print(f"\n📋 System file list exported to: {output_file}")
+            print(f"\nSystem file list exported to: {output_file}")
+            
+        elif action == 'export_json':
+            # Export results to JSON file
+            json_file = identifier.export_json_results(results)
+            print(f"\nJSON results exported to: {json_file}", file=sys.stderr)
+            
+        elif action == 'pipe_json':
+            # Output JSON to stdout for piping (no other output)
+            json_output = identifier.prepare_json_for_piping(results)
+            print(json_output)  # This goes to stdout for piping
     
     else:
         print(f"❌ Unknown action: {action}")
