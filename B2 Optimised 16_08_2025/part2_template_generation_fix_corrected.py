@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-🔧 PART 2: FIX FUTURE FILE GENERATION TEMPLATES (CORRECTED)
+PART 2: FIX FUTURE FILE GENERATION TEMPLATES (CLEAN CORRECTED)
 Breathing Framework Template Update - Ensure Future Files Have Headers
-
-PURPOSE: Update all templates and generators to include headers in new files
-SCOPE: All template files, generation scripts, and auto-generation systems
-TARGET: Templates that generate new files without proper headers
 """
 
 import os
@@ -126,13 +122,8 @@ class TemplateGenerationFixer:
         """Create the header injection system for templates"""
         
         return f'''
-# ===================================================================
 # BREATHING FRAMEWORK HEADER INJECTION SYSTEM
 # Auto-generated: {self.timestamp}
-# 
-# This system ensures all generated files automatically include
-# proper breathing framework headers with complete specifications
-# ===================================================================
 
 import datetime
 from typing import Dict, Optional
@@ -144,21 +135,21 @@ def get_breathing_framework_timestamp() -> str:
 def get_system_configurations() -> Dict:
     """Get complete 15-system configuration mapping"""
     return {{
-        "PDT-PLUS": {{"system_id": 1, "tier": "Enhanced Foundation", "business_value": 89000, "test_count": 105}},
-        "PUXT-PLUS": {{"system_id": 2, "tier": "Enhanced Foundation", "business_value": 34000, "test_count": 45}},
-        "PSO-PRIME": {{"system_id": 3, "tier": "Enhanced Foundation", "business_value": 42000, "test_count": 50}},
-        "PTT-DOCS-FUSION": {{"system_id": 4, "tier": "Enhanced Foundation", "business_value": 26700, "test_count": 35}},
-        "REQUIREMENTS-PRIME": {{"system_id": 5, "tier": "Enhanced Foundation", "business_value": 25000, "test_count": 35}},
-        "BUSINESS-OPS-FUSION": {{"system_id": 6, "tier": "Enhanced Professional", "business_value": 45000, "test_count": 40}},
-        "CONTEXT-EVOLUTION-ENGINE": {{"system_id": 7, "tier": "Enhanced Professional", "business_value": 38000, "test_count": 35}},
-        "PERFORMANCE-AI-FUSION": {{"system_id": 8, "tier": "Enhanced Professional", "business_value": 52000, "test_count": 38}},
-        "SECURITY-BUILD-FUSION": {{"system_id": 9, "tier": "Enhanced Professional", "business_value": 48000, "test_count": 42}},
-        "UNIVERSAL-LESSON-ENGINE": {{"system_id": 10, "tier": "Enhanced Universal", "business_value": 35000, "test_count": 45}},
-        "META-PROJECT-ENGINE": {{"system_id": 11, "tier": "Enhanced Universal", "business_value": 28000, "test_count": 50}},
-        "AUTOMATION-INTELLIGENCE-FUSION": {{"system_id": 12, "tier": "Enhanced Universal", "business_value": 25000, "test_count": 35}},
-        "PROGRESSIVE-ENHANCEMENT-ENGINE": {{"system_id": 13, "tier": "Enhanced Universal", "business_value": 15000, "test_count": 45}},
-        "DPI": {{"system_id": 14, "tier": "Intelligence Tier", "business_value": 18000, "test_count": 25}},
-        "PTODOS": {{"system_id": 15, "tier": "Organization Tier", "business_value": 12000, "test_count": 30}}
+        "PDT-PLUS": {{"system_id": 1, "tier": "Enhanced Foundation", "business_value": 89000}},
+        "PUXT-PLUS": {{"system_id": 2, "tier": "Enhanced Foundation", "business_value": 34000}},
+        "PSO-PRIME": {{"system_id": 3, "tier": "Enhanced Foundation", "business_value": 42000}},
+        "PTT-DOCS-FUSION": {{"system_id": 4, "tier": "Enhanced Foundation", "business_value": 26700}},
+        "REQUIREMENTS-PRIME": {{"system_id": 5, "tier": "Enhanced Foundation", "business_value": 25000}},
+        "BUSINESS-OPS-FUSION": {{"system_id": 6, "tier": "Enhanced Professional", "business_value": 45000}},
+        "CONTEXT-EVOLUTION-ENGINE": {{"system_id": 7, "tier": "Enhanced Professional", "business_value": 38000}},
+        "PERFORMANCE-AI-FUSION": {{"system_id": 8, "tier": "Enhanced Professional", "business_value": 52000}},
+        "SECURITY-BUILD-FUSION": {{"system_id": 9, "tier": "Enhanced Professional", "business_value": 48000}},
+        "UNIVERSAL-LESSON-ENGINE": {{"system_id": 10, "tier": "Enhanced Universal", "business_value": 35000}},
+        "META-PROJECT-ENGINE": {{"system_id": 11, "tier": "Enhanced Universal", "business_value": 28000}},
+        "AUTOMATION-INTELLIGENCE-FUSION": {{"system_id": 12, "tier": "Enhanced Universal", "business_value": 25000}},
+        "PROGRESSIVE-ENHANCEMENT-ENGINE": {{"system_id": 13, "tier": "Enhanced Universal", "business_value": 15000}},
+        "DPI": {{"system_id": 14, "tier": "Intelligence Tier", "business_value": 18000}},
+        "PTODOS": {{"system_id": 15, "tier": "Organization Tier", "business_value": 12000}}
     }}
 
 def generate_breathing_framework_header(
@@ -169,33 +160,17 @@ def generate_breathing_framework_header(
     purpose: str = "Auto-generated breathing framework content",
     version: str = "2.1"
 ) -> str:
-    """
-    Generate proper breathing framework header for any generated file
-    
-    Args:
-        filename: Name of the file being generated
-        file_type: Type of file (markdown, python, javascript)
-        content_type: Type of content (lesson, test, config, documentation)
-        system_name: Name of the system (PDT-PLUS, PUXT-PLUS, etc.)
-        purpose: Purpose description
-        version: Framework version
-    
-    Returns:
-        Formatted header string ready for file inclusion
-    """
+    """Generate proper breathing framework header for any generated file"""
     
     timestamp = get_breathing_framework_timestamp()
     system_configs = get_system_configurations()
     
-    # Get system configuration
     config = system_configs.get(system_name, {{
         "system_id": 0, 
         "tier": "Unassigned", 
-        "business_value": 0,
-        "test_count": 0
+        "business_value": 0
     }})
     
-    # Generate title
     title = filename.replace('_', ' ').replace('-', ' ')
     if '.' in title:
         title = title.split('.')[0]
@@ -222,7 +197,6 @@ def generate_breathing_framework_header(
         creator = "PTT-DOCS-FUSION Auto-Generation Engine"
         status = "ACTIVE Auto-Generated Living Documentation"
     
-    # Generate headers by file type
     if file_type.lower() == "markdown":
         return f"""# {{icon}} {{title}}
 
@@ -273,46 +247,11 @@ BREATHING FRAMEWORK INTEGRATION:
 - Test Coverage: Part of 615+ test case framework
 - System Integration: 15-system breathing framework
 - Auto-Generation: ACTIVE
-
-Specifications:
-- Framework Version: 615+ Test-to-Lesson v{{version}}
-- System Count: 15 Systems Integrated
-- Specification Consistency: ENABLED
-- Educational Integration: ACTIVE
 """
 
 '''
     
-    elif file_type.lower() in ["javascript", "typescript"]:
-        return f'''/**
- * {{icon}} {{title}}
- * 
- * FILE: {{filename}}
- * VERSION: v{{version}} - Breathing Framework Auto-Generated
- * PURPOSE: {{purpose}}
- * SYSTEM: {{system_name}} ({{config['system_id']}} of 15)
- * CREATOR: {{creator}}
- * CREATED: {{timestamp}}
- * STATUS: {{status}}
- * 
- * BREATHING FRAMEWORK INTEGRATION:
- * - Educational Tier: {{config['tier']}}
- * - Business Value: ${{config['business_value']:,}}/month
- * - Test Coverage: Part of 615+ test case framework
- * - System Integration: 15-system breathing framework
- * - Auto-Generation: ACTIVE
- * 
- * Specifications:
- * - Framework Version: 615+ Test-to-Lesson v{{version}}
- * - System Count: 15 Systems Integrated
- * - Specification Consistency: ENABLED
- * - Educational Integration: ACTIVE
- */
-
-'''
-    
     else:
-        # Default to markdown format
         return f"""# {{icon}} {{title}}
 
 **FILE**: {{filename}}  
@@ -326,7 +265,6 @@ Specifications:
 ## BREATHING FRAMEWORK INTEGRATION
 
 This file is part of the 615+ Test-to-Lesson Breathing Framework.
-Auto-generated content with specification consistency enabled.
 
 ---
 
@@ -340,25 +278,8 @@ def auto_add_breathing_framework_header(
     system_name: str = "UNASSIGNED",
     purpose: str = "Auto-generated content"
 ) -> str:
-    """
-    Automatically add breathing framework header to generated content
+    """Automatically add breathing framework header to generated content"""
     
-    This function should be called by all generation functions to ensure
-    proper headers are included in all generated files.
-    
-    Args:
-        generated_content: The content that was generated
-        filename: Name of the file being created
-        file_type: Type of file being created
-        content_type: Type of content being generated
-        system_name: System generating the content
-        purpose: Purpose of the generated content
-    
-    Returns:
-        Complete content with breathing framework header prepended
-    """
-    
-    # Generate header
     header = generate_breathing_framework_header(
         filename=filename,
         file_type=file_type,
@@ -367,175 +288,31 @@ def auto_add_breathing_framework_header(
         purpose=purpose
     )
     
-    # Combine header with content
-    complete_content = header + generated_content
-    
-    return complete_content
-
-# ===================================================================
-# TEMPLATE INTEGRATION EXAMPLES
-# ===================================================================
-
-def example_lesson_generation_with_header():
-    """Example: How to integrate breathing framework headers in lesson generation"""
-    
-    # Step 1: Generate your lesson content (existing logic)
-    lesson_content = "Your existing lesson generation logic here"
-    
-    # Step 2: Add breathing framework header automatically
-    complete_lesson = auto_add_breathing_framework_header(
-        generated_content=lesson_content,
-        filename="example_lesson.md",
-        file_type="markdown",
-        content_type="lesson",
-        system_name="PDT-PLUS",
-        purpose="Auto-generated lesson from test case validation"
-    )
-    
-    # Step 3: Save or return the complete content
-    return complete_lesson
-
-def example_test_generation_with_header():
-    """Example: How to integrate breathing framework headers in test generation"""
-    
-    # Step 1: Generate your test content (existing logic)
-    test_content = "Your existing test generation logic here"
-    
-    # Step 2: Add breathing framework header automatically
-    complete_test = auto_add_breathing_framework_header(
-        generated_content=test_content,
-        filename="example_test.py",
-        file_type="python",
-        content_type="test",
-        system_name="PUXT-PLUS",
-        purpose="Auto-generated test case for user experience validation"
-    )
-    
-    # Step 3: Save or return the complete content
-    return complete_test
-
-def example_config_generation_with_header():
-    """Example: How to integrate breathing framework headers in config generation"""
-    
-    # Step 1: Generate your config content (existing logic)
-    config_content = "Your existing config generation logic here"
-    
-    # Step 2: Add breathing framework header automatically
-    complete_config = auto_add_breathing_framework_header(
-        generated_content=config_content,
-        filename="example_config.py",
-        file_type="python",
-        content_type="config",
-        system_name="PSO-PRIME",
-        purpose="Auto-generated configuration for system orchestration"
-    )
-    
-    # Step 3: Save or return the complete content
-    return complete_config
-
-# ===================================================================
-# TEMPLATE UPDATE HELPER FUNCTIONS
-# ===================================================================
-
-def wrap_existing_generation_function(original_function, system_name: str, content_type: str = "lesson"):
-    """
-    Wrapper to add breathing framework headers to existing generation functions
-    
-    Use this to quickly update existing generation functions without rewriting them.
-    """
-    
-    def wrapped_function(*args, **kwargs):
-        # Call original function
-        original_content = original_function(*args, **kwargs)
-        
-        # Determine file info from function or arguments
-        filename = kwargs.get('filename', 'generated_file.md')
-        file_type = kwargs.get('file_type', 'markdown')
-        purpose = kwargs.get('purpose', f'Auto-generated {{content_type}} content')
-        
-        # Add breathing framework header
-        complete_content = auto_add_breathing_framework_header(
-            generated_content=original_content,
-            filename=filename,
-            file_type=file_type,
-            content_type=content_type,
-            system_name=system_name,
-            purpose=purpose
-        )
-        
-        return complete_content
-    
-    return wrapped_function
-
-# ===================================================================
-# BREATHING FRAMEWORK COMPLIANCE VALIDATION
-# ===================================================================
-
-def validate_breathing_framework_compliance(generated_content: str) -> bool:
-    """
-    Validate that generated content includes proper breathing framework headers
-    
-    Returns True if content has breathing framework compliance, False otherwise
-    """
-    
-    required_elements = [
-        "FILE:",
-        "VERSION:",
-        "SYSTEM:",
-        "CREATOR:",
-        "CREATED:",
-        "STATUS:",
-        "BREATHING FRAMEWORK INTEGRATION",
-        "615+ test",
-        "15 system"
-    ]
-    
-    content_lower = generated_content.lower()
-    
-    return all(element.lower() in content_lower for element in required_elements)
-
-def ensure_breathing_framework_compliance(generated_content: str, **header_params) -> str:
-    """
-    Ensure generated content has breathing framework compliance
-    
-    If content doesn't have proper headers, adds them automatically.
-    """
-    
-    if validate_breathing_framework_compliance(generated_content):
-        return generated_content
-    else:
-        # Content doesn't have proper headers, add them
-        return auto_add_breathing_framework_header(generated_content, **header_params)
+    return header + generated_content
 
 print("BREATHING FRAMEWORK HEADER INJECTION SYSTEM LOADED")
-print("All generation functions can now use: auto_add_breathing_framework_header()")
-print("Compliance validation available: validate_breathing_framework_compliance()")
-print("Automatic compliance: ensure_breathing_framework_compliance()")
 '''
-    
+
     def check_template_needs_update(self, template_path: Path) -> bool:
         """Check if template file needs breathing framework updates"""
         try:
             content = template_path.read_text(encoding='utf-8', errors='ignore')
             
-            # Check if already has breathing framework header system
             breathing_framework_indicators = [
                 "generate_breathing_framework_header",
                 "auto_add_breathing_framework_header",
                 "BREATHING FRAMEWORK HEADER INJECTION SYSTEM",
-                "615+ test case framework",
-                "breathing framework compliance"
+                "615+ test case framework"
             ]
             
             return not any(indicator in content for indicator in breathing_framework_indicators)
             
         except:
             return True
-    
+
     def update_template_file(self, template_path: Path) -> Dict:
         """Update a template file to include breathing framework header system"""
         try:
-            # Check if update needed
             if not self.check_template_needs_update(template_path):
                 return {
                     "file_path": str(template_path),
@@ -543,15 +320,12 @@ print("Automatic compliance: ensure_breathing_framework_compliance()")
                     "reason": "already_has_breathing_framework_integration"
                 }
             
-            # Read original content
             original_content = template_path.read_text(encoding='utf-8', errors='ignore')
             original_size = len(original_content)
             
-            # Create updated content
             header_system = self.create_header_injection_system()
             updated_content = self._inject_header_system(original_content, header_system, template_path)
             
-            # Write updated content
             template_path.write_text(updated_content, encoding='utf-8')
             
             self.updated_templates.append(template_path)
@@ -561,12 +335,7 @@ print("Automatic compliance: ensure_breathing_framework_compliance()")
                 "status": "success",
                 "original_size": original_size,
                 "updated_size": len(updated_content),
-                "breathing_framework_integrated": True,
-                "functions_added": [
-                    "generate_breathing_framework_header",
-                    "auto_add_breathing_framework_header", 
-                    "validate_breathing_framework_compliance"
-                ]
+                "breathing_framework_integrated": True
             }
             
         except Exception as e:
@@ -575,26 +344,19 @@ print("Automatic compliance: ensure_breathing_framework_compliance()")
                 "status": "error",
                 "error": str(e)
             }
-    
+
     def _inject_header_system(self, original_content: str, header_system: str, template_path: Path) -> str:
         """Inject breathing framework header system into template file"""
         
         injection_notice = f'''
-# ===================================================================
 # BREATHING FRAMEWORK INTEGRATION - ADDED {self.timestamp}
-# 
-# This template has been automatically enhanced to include breathing
-# framework header generation for all created files. All generation
-# functions should now use auto_add_breathing_framework_header().
-# ===================================================================
+# This template has been enhanced to include breathing framework header generation
 '''
         
-        # If it's a Python file, add after imports
         if template_path.suffix.lower() == '.py':
             lines = original_content.split('\n')
             import_section_end = 0
             
-            # Find end of import section
             for i, line in enumerate(lines):
                 if (line.strip().startswith('import ') or 
                     line.strip().startswith('from ') or
@@ -604,7 +366,6 @@ print("Automatic compliance: ensure_breathing_framework_compliance()")
                 else:
                     break
             
-            # Insert header system after imports
             new_lines = (
                 lines[:import_section_end] + 
                 [injection_notice] +
@@ -616,57 +377,10 @@ print("Automatic compliance: ensure_breathing_framework_compliance()")
             updated_content = '\n'.join(new_lines)
             
         else:
-            # For other files, prepend header system
             updated_content = injection_notice + '\n' + header_system + '\n\n' + original_content
         
-        # Update existing generation functions
-        updated_content = self._update_existing_generation_functions(updated_content)
-        
         return updated_content
-    
-    def _update_existing_generation_functions(self, content: str) -> str:
-        """Update existing generation functions to use breathing framework headers"""
-        
-        # Find and update generation functions
-        function_patterns = [
-            (r'(def generate_lesson.*?)(return [^\n]*)', 'lesson'),
-            (r'(def create_lesson.*?)(return [^\n]*)', 'lesson'),
-            (r'(def generate_test.*?)(return [^\n]*)', 'test'),
-            (r'(def create_test.*?)(return [^\n]*)', 'test'),
-            (r'(def auto_generate.*?)(return [^\n]*)', 'lesson'),
-            (r'(def build_.*?)(return [^\n]*)', 'documentation')
-        ]
-        
-        for pattern, content_type in function_patterns:
-            def replace_function(match):
-                function_body = match.group(1)
-                return_statement = match.group(2)
-                
-                # Check if already has breathing framework integration
-                if "auto_add_breathing_framework_header" in function_body:
-                    return match.group(0)  # Return unchanged
-                
-                # Add breathing framework integration before return
-                breathing_framework_integration = f'''
-    # BREATHING FRAMEWORK: Auto-add header to generated content
-    if 'generated_content' in locals():
-        generated_content = auto_add_breathing_framework_header(
-            generated_content=generated_content,
-            filename=locals().get('filename', 'generated_file.md'),
-            file_type=locals().get('file_type', 'markdown'),
-            content_type='{content_type}',
-            system_name=locals().get('system_name', 'UNASSIGNED'),
-            purpose=locals().get('purpose', 'Auto-generated {content_type} content')
-        )
-    
-    '''
-                
-                return function_body + breathing_framework_integration + return_statement
-            
-            content = re.sub(pattern, replace_function, content, flags=re.DOTALL)
-        
-        return content
-    
+
     def create_breathing_framework_config(self) -> str:
         """Create breathing framework configuration for template compliance"""
         
@@ -677,30 +391,6 @@ BREATHING_FRAMEWORK_TEMPLATE_CONFIG = {{
     "version": "2.1",
     "auto_header_generation": True,
     "template_compliance_required": True,
-    "timestamp_format": "YYYYMMDD_HHMMSS_BreathingFramework_v[VERSION]",
-    
-    "compliance_requirements": {{
-        "all_generated_files_must_have_headers": True,
-        "headers_must_include_system_identification": True,
-        "headers_must_include_breathing_framework_status": True,
-        "headers_must_include_educational_metadata": True,
-        "headers_must_include_business_value": True
-    }},
-    
-    "template_integration_status": {{
-        "header_injection_system_deployed": True,
-        "auto_generation_functions_available": True,
-        "compliance_validation_enabled": True,
-        "test_framework_integration": True,
-        "system_support_active": True
-    }},
-    
-    "required_functions_in_templates": [
-        "generate_breathing_framework_header",
-        "auto_add_breathing_framework_header",
-        "validate_breathing_framework_compliance",
-        "ensure_breathing_framework_compliance"
-    ],
     
     "system_specifications": {{
         "total_systems": 15,
@@ -712,78 +402,23 @@ BREATHING_FRAMEWORK_TEMPLATE_CONFIG = {{
     }}
 }}
 
-# Instructions for developers:
-# 1. All template files now include breathing framework header generation
-# 2. Use auto_add_breathing_framework_header() in all generation functions
-# 3. Validate compliance with validate_breathing_framework_compliance()
-# 4. System identification (1-15) is automatically included
-# 5. Educational metadata is automatically generated
-
-def validate_template_compliance(template_directory: str) -> dict:
-    """Validate that all templates include breathing framework compliance"""
-    
-    from pathlib import Path
-    
-    template_path = Path(template_directory)
-    results = {{
-        "compliant_templates": 0,
-        "non_compliant_templates": 0,
-        "total_templates": 0,
-        "compliance_rate": 0.0,
-        "details": []
-    }}
-    
-    for template_file in template_path.rglob("*.py"):
-        if "template" in str(template_file).lower() or "generator" in str(template_file).lower():
-            results["total_templates"] += 1
-            
-            try:
-                content = template_file.read_text(encoding='utf-8')
-                
-                required_functions = [
-                    "generate_breathing_framework_header",
-                    "auto_add_breathing_framework_header"
-                ]
-                
-                is_compliant = all(func in content for func in required_functions)
-                
-                if is_compliant:
-                    results["compliant_templates"] += 1
-                    results["details"].append({{"file": str(template_file), "status": "compliant"}})
-                else:
-                    results["non_compliant_templates"] += 1
-                    results["details"].append({{"file": str(template_file), "status": "needs_update"}})
-                    
-            except Exception as e:
-                results["non_compliant_templates"] += 1
-                results["details"].append({{"file": str(template_file), "status": "error", "error": str(e)}})
-    
-    if results["total_templates"] > 0:
-        results["compliance_rate"] = (results["compliant_templates"] / results["total_templates"]) * 100
-    
-    return results
-
 print("BREATHING FRAMEWORK TEMPLATE COMPLIANCE CONFIGURATION LOADED")
-print("Template compliance validation available")
-print("Use validate_template_compliance() to check all templates")
 '''
         
         config_path = self.base_directory / f"breathing_framework_template_config_{self.timestamp}.py"
         config_path.write_text(config_content, encoding='utf-8')
         
         return str(config_path)
-    
+
     def process_all_templates(self) -> Dict:
         """Process all template files to include breathing framework header generation"""
         print("🔧 PART 2: FIXING TEMPLATE GENERATION FOR FUTURE FILES")
         print("🔄 Updating Templates to Auto-Generate Headers")
         print("=" * 70)
         
-        # Find template files
         template_files = self.find_template_and_generation_files()
         
         print(f"📁 Found {len(template_files)} template/generation files to update")
-        print("🎯 These templates will be enhanced with breathing framework headers")
         print()
         
         if len(template_files) == 0:
@@ -799,7 +434,6 @@ print("Use validate_template_compliance() to check all templates")
                 }
             }
         
-        # Process templates
         results = []
         
         for i, template_file in enumerate(template_files, 1):
@@ -809,11 +443,10 @@ print("Use validate_template_compliance() to check all templates")
             result = self.update_template_file(template_file)
             results.append(result)
         
-        # Generate summary
         summary = self._generate_template_summary(results)
         
         return summary
-    
+
     def _generate_template_summary(self, results: List[Dict]) -> Dict:
         """Generate template update summary"""
         total_files = len(results)
@@ -833,21 +466,18 @@ print("Use validate_template_compliance() to check all templates")
             "breathing_framework_status": {
                 "template_standardization": "COMPLETE" if successful > 0 else "NO_TEMPLATES_FOUND",
                 "auto_header_generation": "ENABLED" if successful > 0 else "NO_TEMPLATES_TO_ENABLE",
-                "future_file_compliance": "GUARANTEED" if successful > 0 else "NO_TEMPLATES_UPDATED",
-                "test_integration": "ACTIVE",
-                "system_support": "READY"
+                "future_file_compliance": "GUARANTEED" if successful > 0 else "NO_TEMPLATES_UPDATED"
             },
             "updated_templates": [str(t) for t in self.updated_templates],
             "results_detail": results,
             "next_steps": [
                 f"SUCCESS: {successful} templates now auto-generate breathing framework headers" if successful > 0 else "WARNING: No templates were updated - check template locations",
                 "SUCCESS: All new generated files will automatically include proper headers" if successful > 0 else "INFO: Verify template file locations and naming conventions",
-                "ACTION: Test template updates by generating sample files" if successful > 0 else "ACTION: Check if templates are in different directories",
-                "VERIFY: Validate all generated files now include headers" if successful > 0 else "MANUAL: Manual header addition may be needed for templates"
+                "ACTION: Test template updates by generating sample files" if successful > 0 else "ACTION: Check if templates are in different directories"
             ],
             "timestamp": datetime.now().isoformat()
         }
-    
+
     def save_template_report(self, report: Dict) -> str:
         """Save template update report"""
         output_file = f"part2_template_generation_fix_report_{self.timestamp}.json"
@@ -865,31 +495,25 @@ def main():
     if len(sys.argv) != 2:
         print("PART 2: FIX TEMPLATE GENERATION FOR FUTURE FILES")
         print("Usage: python part2_template_generation_fix_corrected.py <base_directory>")
-        print("Example: python part2_template_generation_fix_corrected.py 'C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025'")
         sys.exit(1)
     
     base_directory = sys.argv[1]
     
-    print("🔧 BREATHING FRAMEWORK - PART 2 (CORRECTED)")
+    print("🔧 BREATHING FRAMEWORK - PART 2 (CLEAN CORRECTED)")
     print("🔄 FIXING TEMPLATE GENERATION FOR FUTURE FILES")
     print("=" * 70)
     print(f"📂 Target Directory: {base_directory}")
     print("🎯 Goal: Update templates to auto-generate headers in new files")
     print()
     
-    # Initialize fixer
     fixer = TemplateGenerationFixer(base_directory)
     
-    # Process all templates
     report = fixer.process_all_templates()
     
-    # Create configuration
     config_file = fixer.create_breathing_framework_config()
     
-    # Save report
     report_file = fixer.save_template_report(report)
     
-    # Print summary
     print("\n" + "=" * 70)
     print("📊 PART 2 COMPLETION SUMMARY")
     print("=" * 70)

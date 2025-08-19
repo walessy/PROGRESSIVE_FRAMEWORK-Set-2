@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  [ROCKET][CYCLE] Sample Xml File
+  
+  FILE: sample_xml_file.xml
+  WORKING_DIRECTORY: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025
+  PURPOSE: Template demonstration for xml files
+  CREATOR: Amos Wales - Progressive Framework Pioneer
+  CREATED: 20250819_062709
+  FRAMEWORK: Progressive Framework + Breathing Framework Integration
+  STATUS: [CHECK] READY
+  
+  PROGRESSIVE + BREATHING FRAMEWORK COMPLIANCE:
+  - Full Directory Path: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025
+  - Complete File Name: sample_xml_file.xml
+  - Framework Integration: 15 Systems + 615+ Test-to-Lesson Mapping
+  - Educational Auto-Generation: [CHECK] Ready
+  - Specification Consistency: [CHECK] Active
+-->
+
+<configuration version="1.0" 
+    progressive_framework="15_systems" 
+    breathing_framework="615_test_to_lesson"
+    auto_generation="true"
+    specification_consistency="true">
+    
+  <!-- Framework Integration Metadata -->
+  <framework_metadata>
+    <file>sample_xml_file.xml</file>
+    <working_directory>C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025</working_directory>
+    <progressive_framework_systems>15</progressive_framework_systems>
+    <breathing_framework_tests>615+</breathing_framework_tests>
+    <educational_auto_generation>true</educational_auto_generation>
+    <specification_consistency>true</specification_consistency>
+  </framework_metadata>
+  

@@ -1,3 +1,33 @@
+
+# BREATHING FRAMEWORK HEADER INJECTION SYSTEM
+# Generated: 20250819_055926
+
+def generate_breathing_framework_header(filename, system_name="UNASSIGNED"):
+    timestamp = "20250819_055926"
+    return f"""# BREATHING FRAMEWORK FILE
+
+**FILE**: {filename}
+**SYSTEM**: {system_name}
+**CREATED**: {timestamp}
+**STATUS**: ACTIVE
+
+---
+
+## BREATHING FRAMEWORK INTEGRATION
+
+This file is part of the 615+ Test-to-Lesson Breathing Framework.
+
+---
+
+"""
+
+def auto_add_breathing_framework_header(content, filename, system_name="UNASSIGNED"):
+    header = generate_breathing_framework_header(filename, system_name)
+    return header + content
+
+print("BREATHING FRAMEWORK HEADER SYSTEM LOADED")
+
+
 #!/usr/bin/env python3
 """
 🔄 BREATHING FRAMEWORK HEADER MANAGEMENT SYSTEM

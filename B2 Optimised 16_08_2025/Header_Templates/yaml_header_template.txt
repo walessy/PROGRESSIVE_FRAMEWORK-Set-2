@@ -1,0 +1,27 @@
+#
+# [ROCKET][CYCLE] Sample Yaml File
+#
+# FILE: sample_yaml_file.yaml
+# WORKING_DIRECTORY: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025
+# PURPOSE: Template demonstration for yaml files
+# CREATOR: Amos Wales - Progressive Framework Pioneer
+# CREATED: 20250819_062709
+# FRAMEWORK: Progressive Framework + Breathing Framework Integration
+# STATUS: [CHECK] READY
+#
+
+# Progressive + Breathing Framework Compliance
+framework_metadata:
+  file: "sample_yaml_file.yaml"
+  working_directory: "C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025"
+  progressive_framework:
+    total_systems: 15
+    framework_set_2: 13
+    dpi_system: 14
+    ptodos_system: 15
+  breathing_framework:
+    test_to_lesson_mapping: "615+"
+    educational_auto_generation: true
+    specification_consistency: true
+    auto_correction_triggers: true
+

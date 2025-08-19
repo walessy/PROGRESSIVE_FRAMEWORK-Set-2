@@ -1,0 +1,13 @@
+@echo off
+REM ================================================================================
+REM [ROCKET][CYCLE] Sample Batch File
+REM 
+REM FILE: sample_batch_file.bat
+REM WORKING_DIRECTORY: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025
+REM PURPOSE: Template demonstration for batch files
+REM CREATOR: Amos Wales - Progressive Framework Pioneer
+REM CREATED: 20250819_062709
+REM FRAMEWORK: Progressive Framework + Breathing Framework Integration
+REM STATUS: [CHECK] READY
+REM ================================================================================
+
