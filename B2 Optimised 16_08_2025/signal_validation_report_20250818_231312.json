@@ -1,0 +1,99 @@
+{
+  "test_metadata": {
+    "test_date": "2025-08-18T23:13:12.425495",
+    "test_duration_seconds": 1.603724,
+    "working_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025",
+    "validator_version": "1.1"
+  },
+  "overall_results": {
+    "success_rate": 100.0,
+    "tests_passed": 6,
+    "total_tests": 6,
+    "status": "PASS"
+  },
+  "detailed_results": {
+    "Signal Generation Performance": {
+      "status": "PASS",
+      "message": "Average: 0.005s, Max: 0.009s",
+      "metrics": {
+        "average_time": 0.004993891716003418,
+        "max_time": 0.00873422622680664,
+        "target": 5.0,
+        "samples": 10
+      }
+    },
+    "Signal Processing Speed": {
+      "status": "PASS",
+      "message": "Average: 0.107s, Max: 0.110s",
+      "metrics": {
+        "average_time": 0.10715432167053222,
+        "max_time": 0.10951709747314453,
+        "target": 30.0,
+        "samples": 5
+      }
+    },
+    "Coordination Success Rate": {
+      "status": "PASS",
+      "message": "Success Rate: 100.0% (20/20)",
+      "metrics": {
+        "success_rate": 100.0,
+        "successful": 20,
+        "total": 20,
+        "target": 95.0
+      }
+    },
+    "Watchdog Elimination": {
+      "status": "PASS",
+      "message": "Watchdog Issues Found: 0",
+      "metrics": {
+        "issues_found": 0,
+        "target": 0,
+        "indicators_checked": 4
+      }
+    },
+    "System Integration": {
+      "status": "PASS",
+      "message": "Integration Rate: 100.0% (5/5)",
+      "metrics": {
+        "integration_rate": 100.0,
+        "successful": 5,
+        "total": 5,
+        "target": 90.0
+      }
+    },
+    "Performance Targets": {
+      "status": "PASS",
+      "message": "Targets Met: 4/4 (100.0%)",
+      "metrics": {
+        "targets_met": 4,
+        "total_targets": 4,
+        "success_rate": 100.0
+      }
+    }
+  },
+  "performance_metrics": {
+    "signal_generation_times": [
+      0.00873422622680664,
+      0.004415750503540039,
+      0.005046367645263672,
+      0.0033702850341796875,
+      0.005165576934814453,
+      0.004334926605224609,
+      0.004643678665161133,
+      0.005181312561035156,
+      0.0053558349609375,
+      0.003690958023071289
+    ],
+    "signal_processing_times": [
+      0.10951709747314453,
+      0.10680437088012695,
+      0.10752034187316895,
+      0.1050877571105957,
+      0.106842041015625
+    ],
+    "coordination_attempts": 20,
+    "coordination_successes": 20,
+    "watchdog_crashes": 0,
+    "test_start_time": "2025-08-18 23:13:10.821780"
+  }
+}

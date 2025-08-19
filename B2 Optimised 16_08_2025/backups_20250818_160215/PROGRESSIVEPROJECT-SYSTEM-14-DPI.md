@@ -52,6 +52,12 @@ Student Progress Protection:
 
 ## 🔧 **CORE CAPABILITIES**
 
+### **🧠 Ideas Evolution Integration**
+- Monitor system concept changes for educational impact
+- Generate signals when ideas evolve or sophisticate
+- Coordinate with course generation events
+- Maintain educational alignment with system evolution
+
 ### **Primary Function**
 Intelligent pathway exploration system that provides dynamic exploration guidance, option management, and cross-domain pathway optimization, enhanced with automated educational exploration content generation.
 
@@ -353,3 +359,4 @@ Integration Options:
 **Innovation**: First intelligent exploration system with automated educational content generation  
 **Revolutionary Addition**: Breathing framework that automatically generates exploration education ecosystem from DPI operations  
 **Next System**: PTODOS (System 15) with enhanced educational integration
+<!-- Signal Trigger: 2025-08-18 23:34:39 -->

@@ -1,0 +1,457 @@
+#!/usr/bin/env python3
+"""
+Breathing Framework Diagnostic & Activation Tool
+SAVE AS: breathing_framework_diagnostic.py
+PURPOSE: Diagnose and activate the breathing framework signal monitoring
+"""
+
+import os
+import json
+import time
+import shutil
+import subprocess
+from pathlib import Path
+from datetime import datetime
+from typing import Dict, List, Optional
+
+class BreathingFrameworkDiagnostic:
+    """Diagnose and activate breathing framework signal monitoring"""
+    
+    def __init__(self, base_directory: str):
+        self.base_dir = Path(base_directory)
+        self.signals_dir = self.base_dir / "signals"
+        self.lessons_dir = self.base_dir / "Lessons"
+        self.config_files = []
+        
+        print("🔧 BREATHING FRAMEWORK DIAGNOSTIC TOOL")
+        print(f"📁 Base Directory: {self.base_dir}")
+        print(f"📡 Signals Directory: {self.signals_dir}")
+        print(f"📚 Lessons Directory: {self.lessons_dir}")
+        
+    def check_directory_structure(self) -> Dict:
+        """Check the current directory structure"""
+        print("\n🔍 CHECKING DIRECTORY STRUCTURE...")
+        
+        structure = {
+            "base_exists": self.base_dir.exists(),
+            "lessons_exists": self.lessons_dir.exists(),
+            "signals_exists": self.signals_dir.exists(),
+            "signals_subfolders": {},
+            "config_files": [],
+            "lesson_count": 0,
+            "signal_count": 0
+        }
+        
+        # Check lessons
+        if structure["lessons_exists"]:
+            structure["lesson_count"] = len(list(self.lessons_dir.rglob("*.md")))
+            print(f"✅ Lessons directory found with {structure['lesson_count']} lessons")
+        else:
+            print("❌ Lessons directory not found")
+            
+        # Check signals
+        if structure["signals_exists"]:
+            structure["signal_count"] = len(list(self.signals_dir.rglob("*.signal")))
+            print(f"✅ Signals directory found with {structure['signal_count']} signals")
+            
+            # Check signal subfolders
+            expected_subfolders = ["test_cases", "systems", "debug", "todos"]
+            for subfolder in expected_subfolders:
+                subfolder_path = self.signals_dir / subfolder
+                structure["signals_subfolders"][subfolder] = subfolder_path.exists()
+                status = "✅" if subfolder_path.exists() else "❌"
+                print(f"  {status} {subfolder}/ subfolder")
+        else:
+            print("❌ Signals directory not found")
+            
+        # Check for config files
+        config_patterns = [
+            "*.json",
+            "*.xml", 
+            "*config*",
+            "*breathing*",
+            "*PKM*"
+        ]
+        
+        for pattern in config_patterns:
+            for config_file in self.base_dir.rglob(pattern):
+                if config_file.is_file():
+                    structure["config_files"].append(str(config_file))
+                    print(f"📄 Found config: {config_file.name}")
+                    
+        return structure
+        
+    def create_signals_infrastructure(self):
+        """Create the signals directory infrastructure"""
+        print("\n🏗️ CREATING SIGNALS INFRASTRUCTURE...")
+        
+        # Create main signals directory
+        self.signals_dir.mkdir(exist_ok=True)
+        print(f"✅ Created signals directory: {self.signals_dir}")
+        
+        # Create signal subfolders
+        subfolders = {
+            "test_cases": "Signals for test case modifications",
+            "systems": "Signals for system changes", 
+            "debug": "Signals for debugging events",
+            "todos": "Signals for TODO changes",
+            "lessons": "Signals for lesson modifications"
+        }
+        
+        for subfolder, description in subfolders.items():
+            subfolder_path = self.signals_dir / subfolder
+            subfolder_path.mkdir(exist_ok=True)
+            
+            # Create README in each subfolder
+            readme_path = subfolder_path / "README.md"
+            readme_content = f"""# {subfolder.title()} Signals
+
+{description}
+
+## Signal File Format
+Signal files follow the pattern: `{subfolder}_{{timestamp}}_{{event_type}}.signal`
+
+## Processing
+These signals are processed by the breathing framework monitoring system.
+"""
+            readme_path.write_text(readme_content)
+            print(f"  ✅ Created {subfolder}/ with README")
+            
+        # Create signal processing log
+        log_file = self.signals_dir / "processing.log"
+        log_content = f"""# Breathing Framework Signal Processing Log
+Started: {datetime.now()}
+Infrastructure created by diagnostic tool.
+"""
+        log_file.write_text(log_content)
+        print(f"✅ Created processing log: {log_file}")
+        
+    def test_signal_generation(self) -> bool:
+        """Test manual signal generation"""
+        print("\n🧪 TESTING SIGNAL GENERATION...")
+        
+        # Generate a test signal
+        test_signal_path = self.signals_dir / "lessons" / f"test_signal_{datetime.now().strftime('%H%M%S')}.signal"
+        
+        signal_content = {
+            "event_type": "lesson_modified",
+            "timestamp": datetime.now().isoformat(),
+            "source": "diagnostic_tool",
+            "lesson_file": "test_lesson.md",
+            "modification_type": "diagnostic_test",
+            "details": "Manual signal generation test"
+        }
+        
+        try:
+            test_signal_path.write_text(json.dumps(signal_content, indent=2))
+            print(f"✅ Test signal created: {test_signal_path.name}")
+            
+            # Verify signal exists
+            if test_signal_path.exists():
+                print(f"✅ Signal file verified: {test_signal_path.stat().st_size} bytes")
+                return True
+            else:
+                print("❌ Signal file verification failed")
+                return False
+                
+        except Exception as e:
+            print(f"❌ Signal generation failed: {e}")
+            return False
+            
+    def create_lesson_monitor_script(self):
+        """Create a lesson monitoring script"""
+        print("\n📝 CREATING LESSON MONITOR SCRIPT...")
+        
+        monitor_script = """#!/usr/bin/env python3
+import time
+import json
+import os
+from pathlib import Path
+from datetime import datetime
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+class LessonFileHandler(FileSystemEventHandler):
+    def __init__(self, signals_dir):
+        self.signals_dir = Path(signals_dir)
+        
+    def on_modified(self, event):
+        if event.is_directory:
+            return
+            
+        if event.src_path.endswith('.md') and 'LESSON' in event.src_path:
+            self.generate_signal('lesson_modified', event.src_path)
+            
+    def on_created(self, event):
+        if event.is_directory:
+            return
+            
+        if event.src_path.endswith('.md') and 'LESSON' in event.src_path:
+            self.generate_signal('lesson_created', event.src_path)
+            
+    def generate_signal(self, event_type, file_path):
+        timestamp = datetime.now().strftime('%H%M%S')
+        signal_file = self.signals_dir / "lessons" / f"lesson_{event_type}_{timestamp}.signal"
+        
+        signal_data = {
+            "event_type": event_type,
+            "timestamp": datetime.now().isoformat(),
+            "lesson_file": str(file_path),
+            "source": "lesson_monitor"
+        }
+        
+        try:
+            signal_file.write_text(json.dumps(signal_data, indent=2))
+            print(f"🔔 Signal generated: {signal_file.name}")
+        except Exception as e:
+            print(f"❌ Signal generation failed: {e}")
+
+def main():
+    import sys
+    if len(sys.argv) != 2:
+        print("Usage: python lesson_monitor.py <lessons_directory>")
+        sys.exit(1)
+        
+    lessons_dir = sys.argv[1]
+    signals_dir = Path(lessons_dir).parent / "signals"
+    
+    print(f"🔄 Starting lesson monitor...")
+    print(f"📁 Monitoring: {lessons_dir}")
+    print(f"📡 Signals: {signals_dir}")
+    
+    event_handler = LessonFileHandler(signals_dir)
+    observer = Observer()
+    observer.schedule(event_handler, lessons_dir, recursive=True)
+    observer.start()
+    
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+
+if __name__ == "__main__":
+    main()
+"""
+        
+        script_path = self.base_dir / "lesson_monitor.py"
+        script_path.write_text(monitor_script)
+        print(f"✅ Lesson monitor script created: {script_path}")
+        
+        # Create a batch file to run it easily
+        batch_content = f"""@echo off
+echo Starting Breathing Framework Lesson Monitor...
+cd /d "{self.base_dir}"
+python lesson_monitor.py "{self.lessons_dir}"
+pause
+"""
+        batch_path = self.base_dir / "start_lesson_monitor.bat"
+        batch_path.write_text(batch_content)
+        print(f"✅ Batch launcher created: {batch_path}")
+        
+        return script_path, batch_path
+        
+    def create_signal_processor_script(self):
+        """Create a signal processing script"""
+        print("\n⚙️ CREATING SIGNAL PROCESSOR SCRIPT...")
+        
+        processor_script = """#!/usr/bin/env python3
+import time
+import json
+import os
+from pathlib import Path
+from datetime import datetime
+
+class SignalProcessor:
+    def __init__(self, signals_dir):
+        self.signals_dir = Path(signals_dir)
+        self.processed_dir = self.signals_dir / "processed"
+        self.processed_dir.mkdir(exist_ok=True)
+        
+    def process_signals(self):
+        print("🔄 Processing signals...")
+        
+        # Process all signal files
+        signal_files = list(self.signals_dir.rglob("*.signal"))
+        if not signal_files:
+            print("📭 No signals to process")
+            return
+            
+        for signal_file in signal_files:
+            if signal_file.parent.name == "processed":
+                continue
+                
+            try:
+                self.process_single_signal(signal_file)
+            except Exception as e:
+                print(f"❌ Error processing {signal_file.name}: {e}")
+                
+    def process_single_signal(self, signal_file):
+        # Read signal data
+        signal_data = json.loads(signal_file.read_text())
+        
+        # Process based on event type
+        event_type = signal_data.get("event_type", "unknown")
+        
+        if event_type == "lesson_modified":
+            self.handle_lesson_modified(signal_data)
+        elif event_type == "lesson_created":
+            self.handle_lesson_created(signal_data)
+        else:
+            print(f"🔔 Unknown signal type: {event_type}")
+            
+        # Archive the signal
+        processed_path = self.processed_dir / signal_file.name
+        signal_file.rename(processed_path)
+        print(f"📦 Archived signal: {signal_file.name}")
+        
+    def handle_lesson_modified(self, signal_data):
+        lesson_file = signal_data.get("lesson_file", "unknown")
+        timestamp = signal_data.get("timestamp", "unknown")
+        
+        print(f"📝 LESSON MODIFIED: {Path(lesson_file).name}")
+        print(f"   Timestamp: {timestamp}")
+        
+        # Here you would trigger lesson regeneration, validation, etc.
+        # For now, just log the event
+        
+    def handle_lesson_created(self, signal_data):
+        lesson_file = signal_data.get("lesson_file", "unknown")
+        timestamp = signal_data.get("timestamp", "unknown")
+        
+        print(f"🆕 LESSON CREATED: {Path(lesson_file).name}")
+        print(f"   Timestamp: {timestamp}")
+        
+        # Here you would trigger curriculum updates, dependencies, etc.
+
+def main():
+    import sys
+    if len(sys.argv) != 2:
+        signals_dir = Path.cwd() / "signals"
+    else:
+        signals_dir = Path(sys.argv[1])
+        
+    print(f"⚙️ Starting signal processor...")
+    print(f"📡 Signals directory: {signals_dir}")
+    
+    processor = SignalProcessor(signals_dir)
+    
+    try:
+        while True:
+            processor.process_signals()
+            time.sleep(5)  # Check every 5 seconds
+    except KeyboardInterrupt:
+        print("\\n👋 Signal processor stopped")
+
+if __name__ == "__main__":
+    main()
+"""
+        
+        script_path = self.base_dir / "signal_processor.py"
+        script_path.write_text(processor_script)
+        print(f"✅ Signal processor script created: {script_path}")
+        
+        # Create batch file for processor
+        batch_content = f"""@echo off
+echo Starting Breathing Framework Signal Processor...
+cd /d "{self.base_dir}"
+python signal_processor.py "{self.signals_dir}"
+pause
+"""
+        batch_path = self.base_dir / "start_signal_processor.bat"
+        batch_path.write_text(batch_content)
+        print(f"✅ Processor batch launcher created: {batch_path}")
+        
+        return script_path, batch_path
+        
+    def install_dependencies(self):
+        """Install required Python dependencies"""
+        print("\n📦 INSTALLING DEPENDENCIES...")
+        
+        try:
+            import watchdog
+            print("✅ watchdog already installed")
+        except ImportError:
+            print("📦 Installing watchdog...")
+            subprocess.run(["pip", "install", "watchdog"], check=True)
+            print("✅ watchdog installed successfully")
+            
+    def run_comprehensive_diagnostic(self):
+        """Run complete diagnostic and setup"""
+        print("\n" + "="*60)
+        print("🚀 COMPREHENSIVE BREATHING FRAMEWORK DIAGNOSTIC")
+        print("="*60)
+        
+        # Step 1: Check structure
+        structure = self.check_directory_structure()
+        
+        # Step 2: Create signals infrastructure if needed
+        if not structure["signals_exists"]:
+            self.create_signals_infrastructure()
+        else:
+            print("✅ Signals infrastructure already exists")
+            
+        # Step 3: Test signal generation
+        signal_test = self.test_signal_generation()
+        
+        # Step 4: Install dependencies
+        self.install_dependencies()
+        
+        # Step 5: Create monitoring scripts
+        monitor_script, monitor_batch = self.create_lesson_monitor_script()
+        processor_script, processor_batch = self.create_signal_processor_script()
+        
+        # Step 6: Generate activation report
+        self.generate_activation_report(structure, signal_test, monitor_batch, processor_batch)
+        
+    def generate_activation_report(self, structure, signal_test, monitor_batch, processor_batch):
+        """Generate activation instructions"""
+        print("\n" + "="*60)
+        print("📋 BREATHING FRAMEWORK ACTIVATION REPORT")
+        print("="*60)
+        
+        print(f"\n📊 CURRENT STATUS:")
+        print(f"  Lessons: {structure['lesson_count']} lessons found")
+        print(f"  Signals: {structure['signal_count']} existing signals")
+        print(f"  Signal Test: {'✅ PASSED' if signal_test else '❌ FAILED'}")
+        
+        print(f"\n🚀 TO ACTIVATE BREATHING FRAMEWORK:")
+        print(f"  1. Open TWO command prompts in: {self.base_dir}")
+        print(f"  2. In first prompt, run: start_lesson_monitor.bat")
+        print(f"  3. In second prompt, run: start_signal_processor.bat")
+        print(f"  4. Both should run continuously in background")
+        
+        print(f"\n🧪 TO TEST ACTIVATION:")
+        print(f"  1. Modify any lesson file in: {self.lessons_dir}")
+        print(f"  2. Check signals/lessons/ for new .signal files")
+        print(f"  3. Watch signal processor console for processing messages")
+        
+        print(f"\n📁 FILES CREATED:")
+        print(f"  📝 lesson_monitor.py - Monitors lesson file changes")
+        print(f"  ⚙️ signal_processor.py - Processes generated signals")
+        print(f"  🚀 start_lesson_monitor.bat - Easy launcher for monitor")
+        print(f"  🚀 start_signal_processor.bat - Easy launcher for processor")
+        
+        print(f"\n✨ NEXT STEPS:")
+        print(f"  1. Activate the monitoring system (run both batch files)")
+        print(f"  2. Re-run your robustness tester: python robustness_tester.py")
+        print(f"  3. You should now see signals being generated and processed!")
+
+
+def main():
+    """Main diagnostic function"""
+    print("🔧 BREATHING FRAMEWORK DIAGNOSTIC & ACTIVATION")
+    print("="*50)
+    
+    # Get working directory
+    working_dir = input("📁 Enter working directory (or press Enter for current): ").strip()
+    if not working_dir:
+        working_dir = os.getcwd()
+        
+    diagnostic = BreathingFrameworkDiagnostic(working_dir)
+    diagnostic.run_comprehensive_diagnostic()
+
+
+if __name__ == "__main__":
+    main()
