@@ -5,7 +5,7 @@
     <name>Progressive Knowledge Management Protocol Enhanced</name>
     <version>7.2-BreathingFramework-FileUpload-Required</version>
     <description>Autonomous PKM system with mandatory file upload validation and automatic command generator integration</description>
-    <total_systems>15</total_systems>
+    <total_systems>16</total_systems>
     <total_lessons>615</total_lessons>
     <auto_integration>true</auto_integration>
     <command_generator_auto_load>true</command_generator_auto_load>
@@ -18,25 +18,32 @@
     <educational_integration>true</educational_integration>
     <signal_based_activation>true</signal_based_activation>
     <command_generator_integration>automatic</command_generator_integration>
-    <file_dependency>mandatory</file_dependency>
+    <file_dependency>compulsory</file_dependency>
+    <required_files_count>2</required_files_count>
+    <activation_blocked_without_all_files>true</activation_blocked_without_all_files>
+    <unified_xml_file>true</unified_xml_file>
   </breathing_framework>
 
   <file_management_protocol>
     <upload_requirements>
-      <mandatory_files>
+      <compulsory_files>
         <file name="PKM-7.2-Breathing-Framework-XML-Latest.xml" 
-              description="Core breathing framework engine" 
-              status="critical" 
-              blocks_activation="true" />
+              description="PKM Foundation Setup and Breathing Framework - COMPULSORY (Latest unified version)" 
+              status="compulsory" 
+              blocks_activation="true"
+              system_id="00"
+              lessons="Setup"
+              cannot_proceed_without="true"
+              pkm_core_component="true"
+              alternate_name="Chat000 - PKM-FOUNDATION-SETUP.xml"
+              unified_file="true" />
         <file name="Progressive-Systems-Config-v2.3-SignalBased.json" 
-              description="System configuration and coordination" 
-              status="critical" 
-              blocks_activation="true" />
-        <file name="Chat000 - PKM-FOUNDATION-SETUP.xml" 
-              description="Foundation setup protocols" 
-              status="critical" 
-              blocks_activation="true" />
-      </mandatory_files>
+              description="System configuration and coordination - COMPULSORY" 
+              status="compulsory" 
+              blocks_activation="true"
+              cannot_proceed_without="true"
+              pkm_core_component="true" />
+      </compulsory_files>
       
       <system_tier_files>
         <foundation_tier status="highly_recommended" minimum="1">
@@ -79,39 +86,54 @@
       <breathing_framework_compatibility>true</breathing_framework_compatibility>
       <lesson_count_verification>true</lesson_count_verification>
       <system_dependency_check>true</system_dependency_check>
+      <compulsory_file_validation>true</compulsory_file_validation>
+      <all_three_files_required>true</all_three_files_required>
     </validation_process>
     
     <error_handling>
-      <missing_mandatory_files>block_activation_with_detailed_guidance</missing_mandatory_files>
-      <corrupted_files>request_reupload_with_specific_details</corrupted_files>
+      <missing_compulsory_files>absolute_block_activation_with_compulsory_file_list</missing_compulsory_files>
+      <missing_system_00>absolute_block_cannot_proceed_show_compulsory_warning</missing_system_00>
+      <missing_breathing_framework_xml>absolute_block_cannot_proceed_show_compulsory_warning</missing_breathing_framework_xml>
+      <missing_systems_config_json>absolute_block_cannot_proceed_show_compulsory_warning</missing_systems_config_json>
+      <partial_compulsory_upload>absolute_block_require_all_three_compulsory_files</partial_compulsory_upload>
+      <corrupted_compulsory_files>request_reupload_with_specific_details_critical_priority</corrupted_compulsory_files>
       <partial_system_upload>continue_with_available_systems_notification</partial_system_upload>
       <zero_system_files>block_activation_require_minimum_one_system</zero_system_files>
+      <compulsory_file_validation_failed>critical_error_block_all_operations</compulsory_file_validation_failed>
+      <missing_project_knowledge_articles>block_activation_instruct_article_generation_for_project_scope</missing_project_knowledge_articles>
+      <chat_scope_only_detected>require_project_knowledge_integration_for_cross_chat_persistence</chat_scope_only_detected>
+      <project_scope_validation_failed>block_activation_guide_proper_article_generation</project_scope_validation_failed>
     </error_handling>
   </file_management_protocol>
 
   <auto_integration_protocol>
     <trigger_phrase>Working Directory:</trigger_phrase>
     <file_upload_requirements>
-      <mandatory_validation>true</mandatory_validation>
-      <minimum_files_required>3</minimum_files_required>
-      <activation_blocked_without_files>true</activation_blocked_without_files>
+      <compulsory_validation>true</compulsory_validation>
+      <compulsory_files_required>2</compulsory_files_required>
+      <activation_blocked_without_all_compulsory_files>true</activation_blocked_without_all_compulsory_files>
       <system_files_minimum>1</system_files_minimum>
+      <pkm_core_components_required>true</pkm_core_components_required>
+      <unified_xml_foundation>true</unified_xml_foundation>
     </file_upload_requirements>
     
     <auto_behaviors>
       <validate_uploaded_files>true</validate_uploaded_files>
+      <verify_project_knowledge_scope>true</verify_project_knowledge_scope>
+      <instruct_article_generation>true</instruct_article_generation>
       <load_command_generator>true</load_command_generator>
       <validate_generator_functionality>true</validate_generator_functionality>
       <make_generator_available>true</make_generator_available>
       <integrate_with_chat_session>true</integrate_with_chat_session>
       <auto_system_recognition>true</auto_system_recognition>
       <breathing_framework_activation>true</breathing_framework_activation>
+      <ensure_project_scope_persistence>true</ensure_project_scope_persistence>
     </auto_behaviors>
     
     <user_input_requirements>
       <working_directory>required</working_directory>
       <chat_number>required</chat_number>
-      <file_uploads>required_foundation_minimum</file_uploads>
+      <compulsory_file_uploads>required_all_three_pkm_core_files</compulsory_file_uploads>
       <primary_objectives>optional</primary_objectives>
       <command_generator_mention>not_required</command_generator_mention>
     </user_input_requirements>
@@ -153,6 +175,12 @@
         <recommended_systems>foundation_tier_systems_1_to_5</recommended_systems>
         <total_lessons>270</total_lessons>
         <learning_time>2-4_weeks</learning_time>
+        <explicit_steps>
+          <step_1>Upload 2 compulsory files + 5 foundation system files using 📎 button</step_1>
+          <step_2>MANUALLY generate Project Knowledge article for EACH file individually (7 articles total)</step_2>
+          <step_3>Verify you have 7 separate articles in Project Knowledge section</step_3>
+          <step_4>Confirm project scope before requesting activation command</step_4>
+        </explicit_steps>
       </beginner>
       
       <professional>
@@ -161,6 +189,12 @@
         <recommended_systems>foundation_plus_professional_tiers_systems_1_to_9</recommended_systems>
         <total_lessons>425</total_lessons>
         <learning_time>4-8_weeks</learning_time>
+        <explicit_steps>
+          <step_1>Upload 2 compulsory files + 9 foundation+professional system files using 📎 button</step_1>
+          <step_2>MANUALLY generate Project Knowledge article for EACH file individually (11 articles total)</step_2>
+          <step_3>Verify you have 11 separate articles in Project Knowledge section</step_3>
+          <step_4>Confirm project scope before requesting activation command</step_4>
+        </explicit_steps>
       </professional>
       
       <expert>
@@ -169,6 +203,12 @@
         <recommended_systems>complete_15_system_upload</recommended_systems>
         <total_lessons>615</total_lessons>
         <learning_time>8-12_weeks</learning_time>
+        <explicit_steps>
+          <step_1>Upload 2 compulsory files + ALL 15 system files using 📎 button</step_1>
+          <step_2>MANUALLY generate Project Knowledge article for EACH file individually (17 articles total)</step_2>
+          <step_3>Verify you have 17 separate articles in Project Knowledge section</step_3>
+          <step_4>Confirm project scope before requesting activation command</step_4>
+        </explicit_steps>
       </expert>
       
       <targeted>
@@ -177,11 +217,32 @@
         <recommended_systems>foundation_plus_targeted_systems</recommended_systems>
         <total_lessons>variable</total_lessons>
         <learning_time>1-6_weeks</learning_time>
+        <explicit_steps>
+          <step_1>Upload 2 compulsory files + selected target system files using 📎 button</step_1>
+          <step_2>MANUALLY generate Project Knowledge article for EACH file individually (varies by selection)</step_2>
+          <step_3>Verify you have separate articles for each uploaded file in Project Knowledge section</step_3>
+          <step_4>Confirm project scope before requesting activation command</step_4>
+        </explicit_steps>
       </targeted>
     </upload_recommendations>
   </user_guidance_protocol>
 
   <system_specifications>
+    <system_00>
+      <n>PKM-7.2-Breathing-Framework-XML-Latest.xml</n>
+      <chat>Chat000</chat>
+      <lessons>Setup</lessons>
+      <tier>foundation_core</tier>
+      <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>compulsory</upload_required>
+      <description>PKM Foundation Setup and Breathing Framework unified - COMPULSORY</description>
+      <breathing_framework_integration>core_activation</breathing_framework_integration>
+      <status>compulsory_foundation</status>
+      <cannot_proceed_without>true</cannot_proceed_without>
+      <blocking_priority>highest</blocking_priority>
+      <alternate_name>Chat000 - PKM-FOUNDATION-SETUP.xml</alternate_name>
+      <unified_file>true</unified_file>
+    </system_00>
     <system_01>
       <name>PROGRESSIVEPROJECT-SYSTEM-01-PDT-PLUS.md</name>
       <chat>Chat001</chat>
@@ -310,6 +371,9 @@
     <command_generator_availability>always</command_generator_availability>
     <cross_chat_persistence>true</cross_chat_persistence>
     <file_dependency>validated_uploads_only</file_dependency>
+    <scope>project_scope_required</scope>
+    <article_generation_mandatory>true</article_generation_mandatory>
+    <chat_scope_insufficient>true</chat_scope_insufficient>
   </project_knowledge_integration>
 
   <command_generator_auto_integration>
@@ -327,50 +391,46 @@
     <auto_detect_working_directory>true</auto_detect_working_directory>
     <auto_recognize_chat_system>true</auto_recognize_chat_system>
     <auto_validate_uploaded_files>true</auto_validate_uploaded_files>
+    <auto_verify_project_knowledge_scope>true</auto_verify_project_knowledge_scope>
+    <auto_instruct_article_generation>true</auto_instruct_article_generation>
     <auto_load_system_specifications>true</auto_load_system_specifications>
     <auto_activate_breathing_framework>true</auto_activate_breathing_framework>
     <auto_integrate_command_generator>true</auto_integrate_command_generator>
     <auto_validate_system_health>true</auto_validate_system_health>
     <auto_generate_system_articles>true</auto_generate_system_articles>
     <auto_block_activation_without_files>true</auto_block_activation_without_files>
+    <auto_block_activation_without_project_scope>true</auto_block_activation_without_project_scope>
+    <auto_ensure_cross_chat_persistence>true</auto_ensure_cross_chat_persistence>
   </autonomous_behaviors>
 
-  <dynamic_command_generation>
-    <generator_interface>pkm_generator_enhanced.html</generator_interface>
-    <command_generation_flow>
-      <step_1>Load command generator interface after file validation</step_1>
-      <step_2>Present user questionnaire based on uploaded systems</step_2>
-      <step_3>Collect user preferences and working directory securely</step_3>
-      <step_4>Generate personalized command dynamically</step_4>
-      <step_5>Validate command parameters before execution</step_5>
-    </command_generation_flow>
-    
-    <security_measures>
-      <no_hardcoded_paths>true</no_hardcoded_paths>
-      <user_input_validation>true</user_input_validation>
-      <secure_directory_handling>true</secure_directory_handling>
-      <command_parameter_sanitization>true</command_parameter_sanitization>
-    </security_measures>
-    
-    <dynamic_parameters>
-      <working_directory>user_provided_via_generator</working_directory>
-      <experience_level>collected_via_questionnaire</experience_level>
-      <primary_goals>user_selected_options</primary_goals>
-      <focus_areas>based_on_uploaded_systems</focus_areas>
-      <timeline>user_preference_selection</timeline>
-      <system_selection>automatic_from_uploads</system_selection>
-    </dynamic_parameters>
+  <enhanced_command_structure>
+    <required_format>
+      Working Directory: [PATH]
+      PKM 7.2 Protocol Activation
+      Chat000 - PKM-FOUNDATION-SETUP.xml
+      Primary Objectives: [OBJECTIVES]
+      Component Validation: FORCE_CHECK_ALL
+      Breathing Framework: FORCE_ALL_TIERS_ACTIVE
+      File Upload Status: VALIDATED
+      [DATE]_Signal_Based_Activation
+    </required_format>
     
     <prerequisites>
-      <mandatory_uploads>
-        <foundation_files>3</foundation_files>
+      <compulsory_uploads>
+        <pkm_core_files>3</pkm_core_files>
         <minimum_systems>1</minimum_systems>
         <validation_required>true</validation_required>
-      </mandatory_uploads>
-      <generator_interface_load>required</generator_interface_load>
-      <user_questionnaire_completion>required</user_questionnaire_completion>
+        <all_compulsory_files_uploaded>true</all_compulsory_files_uploaded>
+      </compulsory_uploads>
     </prerequisites>
-  </dynamic_command_generation>
+    
+    <new_flags>
+      <component_validation>FORCE_CHECK_ALL</component_validation>
+      <intelligent_loading>AUTO_DETECT_AND_ADAPT</intelligent_loading>
+      <error_reporting>DETAILED_WITH_GUIDANCE</error_reporting>
+      <file_upload_status>VALIDATED</file_upload_status>
+    </new_flags>
+  </enhanced_command_structure>
 
   <startup_validation_sequence>
     <step_0>
