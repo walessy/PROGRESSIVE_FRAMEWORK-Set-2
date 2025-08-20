@@ -1,5 +1,7 @@
 <div align="center">
   <img src="./assets/breath-it-logo.svg" alt="Breath IT - Living Systems Technology" width="300"/>
+  <br>
+  <a href="./assets/breath-it-animated.svg">🎬 View Animated Version</a>
 </div>
 
 # Progressive Framework Set 2 - Complete 15 System Breathing Architecture
