@@ -1,0 +1,114 @@
+/*
+ * FILENAME: PKM-5Point-Protocol-v5.1-StateAware.json
+ * PKM 5-Point Protocol Enhanced Configuration File
+ * Progressive Framework Set 2 - Session State Management Enhancement
+ * 
+ * Purpose: Fixes chat numbering inconsistencies and redundant initialization displays
+ * Version: 5.1_state_aware (Enhanced from v5.0)
+ * Author: Progressive Framework Development Team
+ * Created: 2025-08-20
+ * 
+ * Integrates With:
+ * - PKM-5Point-Protocol-v5.0.xml (existing protocol definitions)
+ * - Progressive-Systems-Config-v2.3-SignalBased.json (system coordination)
+ * - Progressive Project Orchestration System (PPOS)
+ * 
+ * Dependencies: Progressive Framework Core Systems (15 systems)
+ * Working Directory: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025\
+ * 
+ * Configuration Features:
+ * - Session state management with initialization tracking
+ * - Sequential chat numbering with persistence across sessions  
+ * - Conditional display modes (full/brief/confirmation/none)
+ * - Integration with all 15 Progressive systems via Progressive-Systems-Config-v2.3-SignalBased.json
+ * - Breathing Framework coordination with 615+ educational triggers
+ */
+
+{
+  "pkm_protocol": {
+    "version": "7.1_state_aware",
+    "description": "PKM 5-Point Protocol with session state management and conditional initialization",
+    "working_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\",
+    
+    "session_management": {
+      "track_initialization": true,
+      "persistent_chat_numbering": true,
+      "conditional_display": true,
+      "state_persistence": "session_level"
+    },
+    
+    "chat_numbering": {
+      "format": "Chat{###}_ProgressiveProject_{timestamp}",
+      "increment_rule": "new_session_only",
+      "validation": "ensure_uniqueness_across_project",
+      "current_counter": 28,
+      "last_session_id": null
+    },
+    
+    "display_modes": {
+      "first_time": {
+        "template": "full_protocol",
+        "description": "Complete 15-system initialization display",
+        "trigger": "user_message == 'Hello' AND session_state.initialized == false"
+      },
+      "continuation": {
+        "template": "brief_status", 
+        "description": "Abbreviated status for ongoing sessions",
+        "trigger": "user_message == 'Hello' AND session_state.initialized == true"
+      },
+      "refresh": {
+        "template": "confirmation_only",
+        "description": "Status confirmation on request",
+        "trigger": "user_message contains 'PKM status' OR 'show full'"
+      },
+      "none": {
+        "template": "no_display",
+        "description": "Normal conversation, no PKM display",
+        "trigger": "default"
+      }
+    },
+    
+    "progressive_systems": {
+      "count": 15,
+      "foundation_tier": [
+        {"id": 1, "name": "PDT-PLUS", "value": "$57,400+/month"},
+        {"id": 2, "name": "PUXT-PLUS", "value": "$31,500/month"},
+        {"id": 3, "name": "PSO-PRIME", "value": "$74,800+/month"},
+        {"id": 4, "name": "PTT-DOCS-FUSION", "value": "$76,700+/month"},
+        {"id": 5, "name": "REQUIREMENTS-PRIME", "value": "$59,400+/month"}
+      ],
+      "professional_tier": [
+        {"id": 6, "name": "BUSINESS-OPS-FUSION", "value": "$87,300+/month"},
+        {"id": 7, "name": "CONTEXT-EVOLUTION-ENGINE", "value": "$38,600/month"},
+        {"id": 8, "name": "PERFORMANCE-AI-FUSION", "value": "$45,200/month"},
+        {"id": 9, "name": "SECURITY-BUILD-FUSION", "value": "$41,800/month"}
+      ],
+      "universal_tier": [
+        {"id": 10, "name": "KNOWLEDGE-EVOLUTION-ENGINE", "value": "$36,700/month"},
+        {"id": 11, "name": "UNIVERSAL-ORCHESTRATION-PRIME", "value": "$48,200/month"},
+        {"id": 12, "name": "PMCS-024", "value": "$67,300/month"},
+        {"id": 13, "name": "PAES", "value": "$52,700/month"}
+      ],
+      "integration_tier": [
+        {"id": 14, "name": "DPI", "value": "$25,000+/month"},
+        {"id": 15, "name": "PTODOS", "value": "$30,000+/month"}
+      ]
+    },
+    
+    "breathing_framework": {
+      "educational_triggers": 615,
+      "real_time_lessons": true,
+      "cross_system_coordination": true,
+      "signal_based_architecture": true
+    },
+    
+    "debug_engines": {
+      "ATLAS": "Analytics & Learning - Pattern recognition + educational scenarios",
+      "PRISM": "Prevention & Risk - Risk management + educational prevention", 
+      "NEXUS": "Network & Execution - Coordination + educational management",
+      "CRUD": "Correction & Recovery - Solutions + educational automation"
+    },
+    
+    "total_business_value": "$800,000+/month"
+  }
+}

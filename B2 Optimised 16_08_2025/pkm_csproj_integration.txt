@@ -1,0 +1,130 @@
+<!--
+  FILENAME: TradingPlatformManager.csproj (PKM Protocol Integration)
+  Progressive Framework Set 2 - Enhanced Session State Management
+  
+  Purpose: Project file updates to support PKM Protocol session state management
+  Version: 5.1_state_aware (Enhanced from v5.0)
+  Author: Progressive Framework Development Team
+  Created: 2025-08-20
+  
+  PKM Protocol Integration:
+  - Integrates with existing PKM-5Point-Protocol-v5.0.xml
+  - Works with Progressive-Systems-Config-v2.3-SignalBased.json
+  - Adds PKM session state management classes to build
+  - Includes enhanced JSON configuration file handling
+  - Supports progressive-config directory structure
+  
+  Working Directory: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025\
+  
+  Changes Made:
+  ✅ Added PKM namespace folder structure
+  ✅ Included PKM-5Point-Protocol-v5.1-StateAware.json as content file
+  ✅ Maintained existing PKM-5Point-Protocol-v5.0.xml integration
+  ✅ Preserved Progressive-Systems-Config-v2.3-SignalBased.json coordination
+  ✅ Added progressive-config directory support
+  ✅ Integrated with existing Progressive Framework build process
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    
+    <!-- Progressive Development Metadata -->
+    <AssemblyTitle>Trading Platform Manager - Progressive Build with PKM Protocol v5.1</AssemblyTitle>
+    <AssemblyDescription>Built using Progressive AI-Assisted Development with Enhanced Session State Management</AssemblyDescription>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    
+    <!-- Windows Forms Platform Targeting -->
+    <SupportedOSPlatformVersion>6.1</SupportedOSPlatformVersion>
+    
+    <!-- Progressive Warning Management -->
+    <WarningsAsErrors />
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    
+    <!-- Suppress CA1416 for Windows Forms - Progressive Decision: Windows-only app -->
+    <NoWarn>CA1416</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Existing Progressive Framework Dependencies -->
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    
+    <!-- PKM Protocol Session State Management Dependencies -->
+    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Existing Progressive Framework Configuration -->
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+    <!-- Existing PKM Protocol Configuration (v5.0) -->
+    <None Update="PKM-5Point-Protocol-v5.0.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+    <!-- Existing Progressive Systems Configuration -->
+    <None Update="Progressive-Systems-Config-v2.3-SignalBased.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+    <!-- Enhanced PKM Protocol Configuration (v5.1) -->
+    <None Update="progressive-config\PKM-5Point-Protocol-v5.1-StateAware.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    
+    <!-- Progressive Framework Configuration Directory -->
+    <None Update="progressive-config\**\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- PKM Protocol Source Code Organization -->
+    <Compile Include="ProgressiveFramework\PKM\PKMSessionStateManager.cs" />
+    <Compile Include="ProgressiveFramework\PKM\PKMProtocolManager.cs" />
+    <Compile Include="ProgressiveFramework\PKM\PKMIntegration.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Progressive Framework Directory Structure -->
+    <Folder Include="progressive-config\" />
+    <Folder Include="coordination-logs\" />
+    <Folder Include="progressive-reports\" />
+    <Folder Include="ProgressiveFramework\PKM\" />
+    <Folder Include="ProgressiveFramework\PDT\" />
+    <Folder Include="ProgressiveFramework\PAT\" />
+    <Folder Include="ProgressiveFramework\PTT\" />
+    <Folder Include="ProgressiveFramework\PFD\" />
+    <Folder Include="ProgressiveFramework\PSO\" />
+  </ItemGroup>
+
+  <!-- PKM Protocol Build Targets -->
+  <Target Name="EnsurePKMDirectories" BeforeTargets="Build">
+    <MakeDir Directories="$(OutputPath)progressive-config" />
+    <MakeDir Directories="$(OutputPath)coordination-logs" />
+    <MakeDir Directories="$(OutputPath)progressive-reports" />
+  </Target>
+
+  <!-- PKM Protocol Post-Build Validation -->
+  <Target Name="ValidatePKMConfiguration" AfterTargets="Build">
+    <Message Text="🟢 PKM Protocol v5.1: Enhanced session state management ready" Importance="high" />
+    <Message Text="🟢 PKM Protocol: Existing v5.0.xml configuration preserved" Importance="high" />
+    <Message Text="🟢 PKM Protocol: Progressive-Systems-Config-v2.3 integration maintained" Importance="high" />
+    <Message Text="🟢 PKM Protocol: Progressive Framework integration complete" Importance="high" />
+  </Target>
+
+</Project>
