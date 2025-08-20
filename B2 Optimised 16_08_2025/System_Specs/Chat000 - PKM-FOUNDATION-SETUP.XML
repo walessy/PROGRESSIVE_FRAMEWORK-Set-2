@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pkm_protocol version="7.1">
-  <!-- PKM 7.1 Enhanced with Auto-Integration -->
+<pkm_protocol version="7.2">
+  <!-- PKM 7.2 Enhanced with Mandatory File Upload Protocol -->
   <meta>
-    <name>Progressive Knowledge Management Protocol</name>
-    <version>7.1-BreathingFramework-AutoIntegration</version>
-    <description>Autonomous PKM system with automatic command generator integration</description>
+    <name>Progressive Knowledge Management Protocol Enhanced</name>
+    <version>7.2-BreathingFramework-FileUpload-Required</version>
+    <description>Autonomous PKM system with mandatory file upload validation and automatic command generator integration</description>
     <total_systems>15</total_systems>
     <total_lessons>615</total_lessons>
     <auto_integration>true</auto_integration>
     <command_generator_auto_load>true</command_generator_auto_load>
+    <file_upload_required>true</file_upload_required>
   </meta>
 
   <breathing_framework>
@@ -17,100 +18,289 @@
     <educational_integration>true</educational_integration>
     <signal_based_activation>true</signal_based_activation>
     <command_generator_integration>automatic</command_generator_integration>
+    <file_dependency>mandatory</file_dependency>
   </breathing_framework>
+
+  <file_management_protocol>
+    <upload_requirements>
+      <mandatory_files>
+        <file name="PKM-7.2-Breathing-Framework-XML-Latest.xml" 
+              description="Core breathing framework engine" 
+              status="critical" 
+              blocks_activation="true" />
+        <file name="Progressive-Systems-Config-v2.3-SignalBased.json" 
+              description="System configuration and coordination" 
+              status="critical" 
+              blocks_activation="true" />
+        <file name="Chat000 - PKM-FOUNDATION-SETUP.xml" 
+              description="Foundation setup protocols" 
+              status="critical" 
+              blocks_activation="true" />
+      </mandatory_files>
+      
+      <system_tier_files>
+        <foundation_tier status="highly_recommended" minimum="1">
+          <file name="PROGRESSIVEPROJECT-SYSTEM-01-PDT-PLUS.md" lessons="105" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-02-PUXT-PLUS.md" lessons="45" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-03-PSO-PRIME.md" lessons="50" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-04-PTT-DOCS-FUSION.md" lessons="35" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-05-REQUIREMENTS-PRIME.md" lessons="35" />
+        </foundation_tier>
+        
+        <professional_tier status="recommended" minimum="0">
+          <file name="PROGRESSIVEPROJECT-SYSTEM-06-BUSINESS-OPS-FUSION.md" lessons="40" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-07-CONTEXT-EVOLUTION-ENGINE.md" lessons="35" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-08-PERFORMANCE-AI-FUSION.md" lessons="38" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-09-SECURITY-BUILD-FUSION.md" lessons="42" />
+        </professional_tier>
+        
+        <universal_tier status="optional" minimum="0">
+          <file name="PROGRESSIVEPROJECT-SYSTEM-10-KNOWLEDGE-EVOLUTION-ENGINE.md" lessons="30" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-11-UNIVERSAL-ORCHESTRATION-PRIME.md" lessons="25" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-12-PMCS-024.md" lessons="45" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-13-PAES.md" lessons="35" />
+        </universal_tier>
+        
+        <integration_tier status="optional" minimum="0">
+          <file name="PROGRESSIVEPROJECT-SYSTEM-14-DPI.md" lessons="25" />
+          <file name="PROGRESSIVEPROJECT-SYSTEM-15-PTODOS.md" lessons="30" />
+        </integration_tier>
+      </system_tier_files>
+      
+      <enhancement_files status="optional">
+        <file name="debugging_engines_specs.md" description="ATLAS, PRISM, NEXUS, CRUD specifications" />
+        <file name="pkm_generator_enhanced.html" description="Command generator interface" />
+      </enhancement_files>
+    </upload_requirements>
+    
+    <validation_process>
+      <file_integrity_check>true</file_integrity_check>
+      <cross_reference_validation>true</cross_reference_validation>
+      <breathing_framework_compatibility>true</breathing_framework_compatibility>
+      <lesson_count_verification>true</lesson_count_verification>
+      <system_dependency_check>true</system_dependency_check>
+    </validation_process>
+    
+    <error_handling>
+      <missing_mandatory_files>block_activation_with_detailed_guidance</missing_mandatory_files>
+      <corrupted_files>request_reupload_with_specific_details</corrupted_files>
+      <partial_system_upload>continue_with_available_systems_notification</partial_system_upload>
+      <zero_system_files>block_activation_require_minimum_one_system</zero_system_files>
+    </error_handling>
+  </file_management_protocol>
 
   <auto_integration_protocol>
     <trigger_phrase>Working Directory:</trigger_phrase>
+    <file_upload_requirements>
+      <mandatory_validation>true</mandatory_validation>
+      <minimum_files_required>3</minimum_files_required>
+      <activation_blocked_without_files>true</activation_blocked_without_files>
+      <system_files_minimum>1</system_files_minimum>
+    </file_upload_requirements>
+    
     <auto_behaviors>
+      <validate_uploaded_files>true</validate_uploaded_files>
       <load_command_generator>true</load_command_generator>
       <validate_generator_functionality>true</validate_generator_functionality>
       <make_generator_available>true</make_generator_available>
       <integrate_with_chat_session>true</integrate_with_chat_session>
       <auto_system_recognition>true</auto_system_recognition>
+      <breathing_framework_activation>true</breathing_framework_activation>
     </auto_behaviors>
+    
     <user_input_requirements>
       <working_directory>required</working_directory>
       <chat_number>required</chat_number>
+      <file_uploads>required_foundation_minimum</file_uploads>
       <primary_objectives>optional</primary_objectives>
       <command_generator_mention>not_required</command_generator_mention>
     </user_input_requirements>
   </auto_integration_protocol>
 
+  <user_guidance_protocol>
+    <activation_flow>
+      <step_1>
+        <name>Display Upload Requirements</name>
+        <action>Show clear file upload requirements with tier recommendations</action>
+        <user_message>Present organized file list with upload instructions</user_message>
+      </step_1>
+      <step_2>
+        <name>Guide Upload Process</name>
+        <action>Provide step-by-step upload guidance with file descriptions</action>
+        <user_message>Explain what each file does and why it's needed</user_message>
+      </step_2>
+      <step_3>
+        <name>Validate Files</name>
+        <action>Automatically validate uploaded files and report status</action>
+        <user_message>Confirm successful uploads and identify any issues</user_message>
+      </step_3>
+      <step_4>
+        <name>Provide Activation Command</name>
+        <action>Generate personalized activation command based on uploaded files</action>
+        <user_message>Present ready-to-use activation command</user_message>
+      </step_4>
+      <step_5>
+        <name>Execute Activation</name>
+        <action>Execute breathing framework activation with validated components</action>
+        <user_message>Confirm successful activation and available capabilities</user_message>
+      </step_5>
+    </activation_flow>
+    
+    <upload_recommendations>
+      <beginner>
+        <description>New to Progressive Framework</description>
+        <required_files>3</required_files>
+        <recommended_systems>foundation_tier_systems_1_to_5</recommended_systems>
+        <total_lessons>270</total_lessons>
+        <learning_time>2-4_weeks</learning_time>
+      </beginner>
+      
+      <professional>
+        <description>Some experience with frameworks</description>
+        <required_files>3</required_files>
+        <recommended_systems>foundation_plus_professional_tiers_systems_1_to_9</recommended_systems>
+        <total_lessons>425</total_lessons>
+        <learning_time>4-8_weeks</learning_time>
+      </professional>
+      
+      <expert>
+        <description>Advanced user or corporate deployment</description>
+        <required_files>3</required_files>
+        <recommended_systems>complete_15_system_upload</recommended_systems>
+        <total_lessons>615</total_lessons>
+        <learning_time>8-12_weeks</learning_time>
+      </expert>
+      
+      <targeted>
+        <description>Specific system focus</description>
+        <required_files>3</required_files>
+        <recommended_systems>foundation_plus_targeted_systems</recommended_systems>
+        <total_lessons>variable</total_lessons>
+        <learning_time>1-6_weeks</learning_time>
+      </targeted>
+    </upload_recommendations>
+  </user_guidance_protocol>
+
   <system_specifications>
     <system_01>
       <name>PROGRESSIVEPROJECT-SYSTEM-01-PDT-PLUS.md</name>
       <chat>Chat001</chat>
+      <lessons>105</lessons>
+      <tier>foundation</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>recommended</upload_required>
     </system_01>
     <system_02>
       <name>PROGRESSIVEPROJECT-SYSTEM-02-PUXT-PLUS.md</name>
       <chat>Chat002</chat>
+      <lessons>45</lessons>
+      <tier>foundation</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>recommended</upload_required>
     </system_02>
     <system_03>
-      <name>PROGRESSIVEPROJECT-SYSTEM-03-BUSINESS-OPS-FUSION.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-03-PSO-PRIME.md</name>
       <chat>Chat003</chat>
+      <lessons>50</lessons>
+      <tier>foundation</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>recommended</upload_required>
     </system_03>
     <system_04>
-      <name>PROGRESSIVEPROJECT-SYSTEM-04-DATA-INSIGHTS-ENGINE.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-04-PTT-DOCS-FUSION.md</name>
       <chat>Chat004</chat>
+      <lessons>35</lessons>
+      <tier>foundation</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>recommended</upload_required>
     </system_04>
     <system_05>
-      <name>PROGRESSIVEPROJECT-SYSTEM-05-ATLAS-PRISM-NEXUS-CRUD.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-05-REQUIREMENTS-PRIME.md</name>
       <chat>Chat005</chat>
+      <lessons>35</lessons>
+      <tier>foundation</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>recommended</upload_required>
     </system_05>
     <system_06>
-      <name>PROGRESSIVEPROJECT-SYSTEM-06-COMPREHENSIVE-INTEGRATION.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-06-BUSINESS-OPS-FUSION.md</name>
       <chat>Chat006</chat>
+      <lessons>40</lessons>
+      <tier>professional</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_06>
     <system_07>
       <name>PROGRESSIVEPROJECT-SYSTEM-07-CONTEXT-EVOLUTION-ENGINE.md</name>
       <chat>Chat007</chat>
+      <lessons>35</lessons>
+      <tier>professional</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_07>
     <system_08>
-      <name>PROGRESSIVEPROJECT-SYSTEM-08-ENHANCED-PROJECT-ORCHESTRATION.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-08-PERFORMANCE-AI-FUSION.md</name>
       <chat>Chat008</chat>
+      <lessons>38</lessons>
+      <tier>professional</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_08>
     <system_09>
-      <name>PROGRESSIVEPROJECT-SYSTEM-09-ADVANCED-AUTOMATION-SUITE.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-09-SECURITY-BUILD-FUSION.md</name>
       <chat>Chat009</chat>
+      <lessons>42</lessons>
+      <tier>professional</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_09>
     <system_10>
-      <name>PROGRESSIVEPROJECT-SYSTEM-10-ENTERPRISE-SCALABILITY-ENGINE.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-10-KNOWLEDGE-EVOLUTION-ENGINE.md</name>
       <chat>Chat010</chat>
+      <lessons>30</lessons>
+      <tier>universal</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_10>
     <system_11>
-      <name>PROGRESSIVEPROJECT-SYSTEM-11-COGNITIVE-ENHANCEMENT-FRAMEWORK.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-11-UNIVERSAL-ORCHESTRATION-PRIME.md</name>
       <chat>Chat011</chat>
+      <lessons>25</lessons>
+      <tier>universal</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_11>
     <system_12>
       <name>PROGRESSIVEPROJECT-SYSTEM-12-PMCS-024.md</name>
       <chat>Chat012</chat>
+      <lessons>45</lessons>
+      <tier>universal</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_12>
     <system_13>
-      <name>PROGRESSIVEPROJECT-SYSTEM-13-STRATEGIC-DECISION-MATRIX.md</name>
+      <name>PROGRESSIVEPROJECT-SYSTEM-13-PAES.md</name>
       <chat>Chat013</chat>
+      <lessons>35</lessons>
+      <tier>universal</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_13>
     <system_14>
       <name>PROGRESSIVEPROJECT-SYSTEM-14-DPI.md</name>
       <chat>Chat014</chat>
+      <lessons>25</lessons>
+      <tier>integration</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_14>
     <system_15>
       <name>PROGRESSIVEPROJECT-SYSTEM-15-PTODOS.md</name>
       <chat>Chat015</chat>
+      <lessons>30</lessons>
+      <tier>integration</tier>
       <auto_generator_integration>true</auto_generator_integration>
+      <upload_required>optional</upload_required>
     </system_15>
   </system_specifications>
 
@@ -119,6 +309,7 @@
     <system_articles_generation>automatic</system_articles_generation>
     <command_generator_availability>always</command_generator_availability>
     <cross_chat_persistence>true</cross_chat_persistence>
+    <file_dependency>validated_uploads_only</file_dependency>
   </project_knowledge_integration>
 
   <command_generator_auto_integration>
@@ -129,61 +320,141 @@
     <make_accessible>true</make_accessible>
     <no_user_mention_required>true</no_user_mention_required>
     <seamless_integration>true</seamless_integration>
+    <file_upload_dependent>true</file_upload_dependent>
   </command_generator_auto_integration>
 
   <autonomous_behaviors>
     <auto_detect_working_directory>true</auto_detect_working_directory>
     <auto_recognize_chat_system>true</auto_recognize_chat_system>
+    <auto_validate_uploaded_files>true</auto_validate_uploaded_files>
     <auto_load_system_specifications>true</auto_load_system_specifications>
     <auto_activate_breathing_framework>true</auto_activate_breathing_framework>
     <auto_integrate_command_generator>true</auto_integrate_command_generator>
     <auto_validate_system_health>true</auto_validate_system_health>
     <auto_generate_system_articles>true</auto_generate_system_articles>
+    <auto_block_activation_without_files>true</auto_block_activation_without_files>
   </autonomous_behaviors>
 
-  <enhanced_command_structure>
-    <required_format>
-      Working Directory: [PATH]
-      PKM 7.2 Protocol Activation
-      Chat000 - PKM-FOUNDATION-SETUP.xml
-      Primary Objectives: [OBJECTIVES]
-      Component Validation: FORCE_CHECK_ALL
-      Breathing Framework: FORCE_ALL_TIERS_ACTIVE
-      [DATE]_Signal_Based_Activation
-    </required_format>
-    <new_flags>
-      <component_validation>FORCE_CHECK_ALL</component_validation>
-      <intelligent_loading>AUTO_DETECT_AND_ADAPT</intelligent_loading>
-      <error_reporting>DETAILED_WITH_GUIDANCE</error_reporting>
-    </new_flags>
-  </enhanced_command_structure>
+  <dynamic_command_generation>
+    <generator_interface>pkm_generator_enhanced.html</generator_interface>
+    <command_generation_flow>
+      <step_1>Load command generator interface after file validation</step_1>
+      <step_2>Present user questionnaire based on uploaded systems</step_2>
+      <step_3>Collect user preferences and working directory securely</step_3>
+      <step_4>Generate personalized command dynamically</step_4>
+      <step_5>Validate command parameters before execution</step_5>
+    </command_generation_flow>
+    
+    <security_measures>
+      <no_hardcoded_paths>true</no_hardcoded_paths>
+      <user_input_validation>true</user_input_validation>
+      <secure_directory_handling>true</secure_directory_handling>
+      <command_parameter_sanitization>true</command_parameter_sanitization>
+    </security_measures>
+    
+    <dynamic_parameters>
+      <working_directory>user_provided_via_generator</working_directory>
+      <experience_level>collected_via_questionnaire</experience_level>
+      <primary_goals>user_selected_options</primary_goals>
+      <focus_areas>based_on_uploaded_systems</focus_areas>
+      <timeline>user_preference_selection</timeline>
+      <system_selection>automatic_from_uploads</system_selection>
+    </dynamic_parameters>
+    
+    <prerequisites>
+      <mandatory_uploads>
+        <foundation_files>3</foundation_files>
+        <minimum_systems>1</minimum_systems>
+        <validation_required>true</validation_required>
+      </mandatory_uploads>
+      <generator_interface_load>required</generator_interface_load>
+      <user_questionnaire_completion>required</user_questionnaire_completion>
+    </prerequisites>
+  </dynamic_command_generation>
 
   <startup_validation_sequence>
-    <step_1>
-      <n>Component Availability Check</n>
-      <action>Check if PKM XML, JSON, and optional components are accessible in chat</action>
+    <step_0>
+      <name>File Upload Validation</name>
+      <action>Verify required files are uploaded before any activation</action>
       <required>true</required>
+      <blocking>true</blocking>
+      <failure_action>display_upload_requirements_and_block</failure_action>
+    </step_0>
+    <step_1>
+      <name>Component Availability Check</name>
+      <action>Check if PKM XML, JSON, and uploaded components are accessible in chat</action>
+      <required>true</required>
+      <depends_on>step_0</depends_on>
     </step_1>
     <step_2>
-      <n>System Specification Validation</n>
-      <action>Verify all 15 system specifications are available or can be generated</action>
+      <name>System Specification Validation</name>
+      <action>Verify uploaded system specifications are valid and can be processed</action>
       <required>true</required>
+      <depends_on>step_1</depends_on>
     </step_2>
     <step_3>
-      <n>Breathing Framework Activation</n>
+      <name>Breathing Framework Activation</name>
       <action>Activate breathing framework with validated components</action>
       <required>true</required>
+      <depends_on>step_2</depends_on>
     </step_3>
     <step_4>
-      <n>Command Generator Integration</n>
+      <name>Command Generator Integration</name>
       <action>Load or create command generator functionality</action>
       <required>false</required>
+      <depends_on>step_3</depends_on>
     </step_4>
     <step_5>
-      <n>Status Report Generation</n>
+      <name>Status Report Generation</name>
       <action>Provide detailed status of all components and capabilities</action>
       <required>true</required>
+      <depends_on>step_4</depends_on>
     </step_5>
   </startup_validation_sequence>
+
+  <signal_based_architecture>
+    <signal_system>Event-driven file signals replace continuous monitoring</signal_system>
+    <signal_folder>signals/</signal_folder>
+    <signal_subfolders>
+      <test_case_signals>signals/test_cases/</test_case_signals>
+      <system_signals>signals/systems/</system_signals> 
+      <debug_signals>signals/debug/</debug_signals>
+      <todo_signals>signals/todos/</todo_signals>
+      <pathway_signals>signals/pathways/</pathway_signals>
+      <performance_signals>signals/performance/</performance_signals>
+      <coordination_signals>signals/coordination/</coordination_signals>
+      <educational_event_signals>signals/education/</educational_event_signals>
+      <course_generation_signals>signals/courses/</course_generation_signals>
+      <file_upload_signals>signals/uploads/</file_upload_signals>
+    </signal_subfolders>
+    <trigger_events>
+      <file_uploaded>Create signal file on successful file upload</file_uploaded>
+      <validation_completed>Generate validation completion signal</validation_completed>
+      <test_case_saved>Create signal file on test case save event</test_case_saved>
+      <system_modified>Generate system change signal</system_modified>
+      <debug_event>Create debug event signal</debug_event>
+      <todo_completed>Signal TODO state changes</todo_completed>
+      <pathway_explored>Generate pathway exploration signal</pathway_explored>
+      <idea_concept_evolved>Generate course update signal when concepts evolve</idea_concept_evolved>
+      <idea_complexity_increased>Generate advanced module signal for sophisticated concepts</idea_complexity_increased>
+      <course_generation_required>Trigger automated course generation event</course_generation_required>
+      <performance_threshold>Create performance alert signal</performance_threshold>
+    </trigger_events>
+    <performance_targets>
+      <signal_processing_time>&lt; 30 seconds</signal_processing_time>
+      <coordination_success_rate>&gt; 95%</coordination_success_rate>
+      <signal_generation_latency>&lt; 5 seconds</signal_generation_latency>
+      <file_upload_processing>&lt; 10 seconds</file_upload_processing>
+      <watchdog_crashes>0 (eliminated)</watchdog_crashes>
+    </performance_targets>
+    <advantages>
+      <no_continuous_monitoring>No continuous monitoring overhead</no_continuous_monitoring>
+      <event_driven_efficiency>Event-driven efficiency</event_driven_efficiency>
+      <eliminates_watchdog_crashes>Eliminates watchdog crashes</eliminates_watchdog_crashes>
+      <clean_separation>Clean separation of concerns</clean_separation>
+      <scalable_signal_processing>Scalable signal processing</scalable_signal_processing>
+      <file_upload_integration>Integrated file upload processing</file_upload_integration>
+    </advantages>
+  </signal_based_architecture>
 
 </pkm_protocol>
