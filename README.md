@@ -1,4 +1,9 @@
+<div align="center">
+  <img src="./assets/breath-it-logo.svg" alt="Breath IT - Living Systems Technology" width="300"/>
+</div>
+
 # Progressive Framework Set 2 - Complete 15 System Breathing Architecture
+*Powered by Breath IT - Living Systems Technology*
 
 [![Framework Set 2](https://img.shields.io/badge/Framework_Set_2-Complete_15_Systems-brightgreen)](https://github.com/progressive-development/progressive-development-mvp)
 [![Total Systems](https://img.shields.io/badge/Total_Systems-15_Active-success)](https://github.com/progressive-development/progressive-development-mvp)
@@ -6,6 +11,7 @@
 [![Breathing Framework](https://img.shields.io/badge/Breathing_Framework-615+_Lessons_Active-brightgreen)](https://progressive-development.com/academy)
 [![Legendary Status](https://img.shields.io/badge/Status-Legendary_Compliance-gold)](https://progressive-development.com/status)
 [![Tested Platform](https://img.shields.io/badge/Tested_on-Claude_Web_UI_2025/08/20-blue)](https://claude.ai)
+[![Powered by Breath IT](https://img.shields.io/badge/Powered_by-Breath_IT-4ECDC4?style=flat&logo=data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAwIDEyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjYwIiByPSIzOCIgZmlsbD0iIzRFQ0RDNCIgb3BhY2l0eT0iMC40Ii8+CiAgPGNpcmNsZSBjeD0iNjAiIGN5PSI2MCIgcj0iMTAiIGZpbGw9IiM2NjdlZWEiLz4KICA8dGV4dCB4PSIxMzAiIHk9IjQ1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM0RUNEU0MiPkJyZWF0aDwvdGV4dD4KICA8dGV4dCB4PSIxMzAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiM2NjdlZWEiPklUPC90ZXh0Pgo8L3N2Zz4K)](https://github.com/your-repo)
 
 > **Framework Set 2** - The revolutionary 15-system breathing architecture with automated educational content generation and legendary system compliance
 > 
