@@ -1,132 +1,193 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  PKM 5-Point Chat Startup Protocol - FIXED for 15 Systems
-  PURPOSE: Automatic conversation startup protocol with complete framework activation
-  CREATOR: Amos Wales - Progressive Framework Pioneer
-  INTEGRATION: Claude UI Instructions - Automatic Processing with ALL 15 Systems
-  STATUS: CORRECTED - 15 System Support Ready for Implementation
--->
-
-<pkm_5_point_protocol version="5.0" auto_activate="true">
-  
-  <!-- Core Protocol Definition -->
-  <protocol_identity>
-    <name>PKM 5-Point Chat Startup Protocol - 15 System Integration</name>
-    <version>5.0 - CORRECTED for Complete 15-System Framework</version>
-    <purpose>Systematic human-AI knowledge coordination with complete framework activation</purpose>
-    <activation>Automatic at every conversation start with ALL 15 systems</activation>
-    <framework>ProgressiveProject Enhanced Framework Set 2 - 15 Systems COMPLETE</framework>
-  </protocol_identity>
-
-  <!-- Startup Requirements - Execute at Every Conversation Start -->
-  <startup_requirements mandatory="true">
-    
-    <point_0 name="Working Directory Specification">
-      <requirement>User must specify their working directory at conversation start</requirement>
-      <format>Working Directory: [User-Specified-Path]</format>
-      <prompt>Request user to specify their project working directory</prompt>
-      <example>Working Directory: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025\</example>
-      <security_note>No default paths assumed - user privacy and security protected</security_note>
-      <project_knowledge_integration>Working directory automatically added to project knowledge base</project_knowledge_integration>
-    </point_0>
-    
-    <point_1 name="Chat Number Assignment">
-      <requirement>Sequential chat numbering for conversation tracking</requirement>
-      <format>Chat[XXX] - [Context Description]</format>
-      <auto_increment>true</auto_increment>
-      <context_awareness>Chat purpose automatically detected and integrated</context_awareness>
-      <project_knowledge_integration>Chat context automatically logged to project knowledge</project_knowledge_integration>
-    </point_1>
-    
-    <point_2 name="Primary Objectives Definition">
-      <requirement>Clear project objectives and immediate goals specification</requirement>
-      <format>Primary Objectives: [Goal 1, Goal 2, Goal 3]</format>
-      <scope>Both immediate session goals and overall project direction</scope>
-      <project_knowledge_integration>Objectives automatically tracked and correlated across conversations</project_knowledge_integration>
-    </point_2>
-    
-    <point_3 name="Timestamp Generation">
-      <requirement>Standardized timestamp for project tracking</requirement>
-      <format>YYYYMMDD_HHMMSS</format>
-      <timezone>User local time with UTC correlation</timezone>
-      <project_knowledge_integration>Timestamps enable chronological project knowledge organization</project_knowledge_integration>
-    </point_3>
-    
-    <point_4 name="Framework Integration Check">
-      <requirement>Verify all 15 systems are loaded and operational</requirement>
-      <systems_count>15 Systems COMPLETE</systems_count>
-      <validation>All systems must report active status before conversation proceeds</validation>
-      <project_knowledge_integration>System status automatically logged and monitored</project_knowledge_integration>
-    </point_4>
-    
-    <point_5 name="Project Knowledge Integration">
-      <requirement>Automatic integration of all project specifications and knowledge</requirement>
-      <scope>Complete Framework Set 2 specifications with all 15 systems</scope>
-      <activation>Immediate project knowledge loading at conversation start</activation>
-      <all_systems_integration>All 15 systems specifications must be available</all_systems_integration>
-      <framework_integration>COMPLETE 15-system framework activation required</framework_integration>
-    </point_5>
-    
-  </startup_requirements>
-
-  <!-- Complete 15-System Framework Definition -->
-  <complete_framework_systems>
-    <foundation_tier systems="5">
-      <system id="1" name="PDT-PLUS" lessons="105" status="enhanced"/>
-      <system id="2" name="PUXT-PLUS" lessons="45" status="enhanced"/>
-      <system id="3" name="PSO-PRIME" lessons="50" status="enhanced"/>
-      <system id="4" name="PTT-DOCS-FUSION" lessons="35" status="enhanced"/>
-      <system id="5" name="REQUIREMENTS-PRIME" lessons="35" status="enhanced"/>
-    </foundation_tier>
-    
-    <professional_tier systems="4">
-      <system id="6" name="BUSINESS-OPS-FUSION" lessons="40" status="enhanced"/>
-      <system id="7" name="CONTEXT-EVOLUTION-ENGINE" lessons="35" status="enhanced"/>
-      <system id="8" name="PERFORMANCE-AI-FUSION" lessons="38" status="enhanced"/>
-      <system id="9" name="SECURITY-BUILD-FUSION" lessons="42" status="enhanced"/>
-    </professional_tier>
-    
-    <universal_tier systems="4">
-      <system id="10" name="KNOWLEDGE-EVOLUTION-ENGINE" lessons="30" status="enhanced"/>
-      <system id="11" name="UNIVERSAL-ORCHESTRATION-PRIME" lessons="25" status="enhanced"/>
-      <system id="12" name="PMCS-024" lessons="45" status="enhanced"/>
-      <system id="13" name="PAES" lessons="35" status="enhanced"/>
-    </universal_tier>
-    
-    <integration_tier systems="2">
-      <system id="14" name="DPI" lessons="25" status="enhanced"/>
-      <system id="15" name="PTODOS" lessons="30" status="enhanced"/>
-    </integration_tier>
-    
-    <total_systems>15</total_systems>
-    <total_lessons>615+</total_lessons>
-    <breathing_framework>ACTIVE</breathing_framework>
-    <signal_based_architecture>OPERATIONAL</signal_based_architecture>
-  </complete_framework_systems>
-
-  <!-- Auto-Activation Rules -->
-  <auto_activation_rules>
-    <trigger>Every new conversation start</trigger>
-    <detection>Automatic user input analysis</detection>
-    <response>Immediate PKM protocol execution</response>
-    <fallback>Manual activation prompt if auto-detection fails</fallback>
-    <validation>Confirm all 15 systems loaded before proceeding</validation>
-    <project_knowledge_loading>Automatic specification integration</project_knowledge_loading>
-  </auto_activation_rules>
-
-  <!-- Deployment Instructions -->
-  <deployment_instructions>
-    <target>Claude UI Instructions Section with Complete 15-System Integration</target>
-    <activation>Automatic processing at conversation start with immediate complete system activation</activation>
-    <priority>CRITICAL - Execute before other conversation processing and activate ALL 15 systems</priority>
-    <integration_requirement>Complete 15-system Framework Set 2 integration must be operational</integration_requirement>
-    <security_clearance>PSec approved - safe for deployment with complete integrated intelligence</security_clearance>
-    <privacy_compliance>User data protected - GDPR compliant with secure system management</privacy_compliance>
-    <fallback>If complete 15-system integration not detected, notify user and offer manual activation</fallback>
-    <compatibility>Works with all conversation types while maintaining complete 15-system intelligence</compatibility>
-    <user_control>All paths and directories user-specified with automatic 15-system enhancement</user_control>
-    <complete_intelligence>All 15 systems automatically activate to provide complete framework intelligence</complete_intelligence>
-    <breathing_framework_activation>Real-time educational content generation from all 15 systems</breathing_framework_activation>
-  </deployment_instructions>
-
-</pkm_5_point_protocol>
+{
+  "pkm_5_point_protocol": {
+    "version": "5.0",
+    "auto_activate": true,
+    "protocol_identity": {
+      "name": "PKM 5-Point Chat Startup Protocol - 15 System Integration",
+      "version": "5.0 - CORRECTED for Complete 15-System Framework",
+      "purpose": "Systematic human-AI knowledge coordination with complete framework activation",
+      "activation": "Automatic at every conversation start with ALL 15 systems",
+      "framework": "ProgressiveProject Enhanced Framework Set 2 - 15 Systems COMPLETE"
+    },
+    "startup_requirements": {
+      "mandatory": true,
+      "point_0": {
+        "name": "Working Directory Specification",
+        "requirement": "User must specify their working directory at conversation start",
+        "format": "Working Directory: [User-Specified-Path]",
+        "prompt": "Request user to specify their project working directory",
+        "example": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\",
+        "security_note": "No default paths assumed - user privacy and security protected",
+        "project_knowledge_integration": "Working directory automatically added to project knowledge base"
+      },
+      "point_1": {
+        "name": "Chat Number Assignment",
+        "requirement": "Sequential chat numbering for conversation tracking",
+        "format": "Chat[XXX] - [Context Description]",
+        "auto_increment": true,
+        "context_awareness": "Chat purpose automatically detected and integrated",
+        "project_knowledge_integration": "Chat context automatically logged to project knowledge"
+      },
+      "point_2": {
+        "name": "Primary Objectives Definition",
+        "requirement": "Clear project objectives and immediate goals specification",
+        "format": "Primary Objectives: [Goal 1, Goal 2, Goal 3]",
+        "scope": "Both immediate session goals and overall project direction",
+        "project_knowledge_integration": "Objectives automatically tracked and correlated across conversations"
+      },
+      "point_3": {
+        "name": "Timestamp Generation",
+        "requirement": "Standardized timestamp for project tracking",
+        "format": "YYYYMMDD_HHMMSS",
+        "timezone": "User local time with UTC correlation",
+        "project_knowledge_integration": "Timestamps enable chronological project knowledge organization"
+      },
+      "point_4": {
+        "name": "Framework Integration Check",
+        "requirement": "Verify all 15 systems are loaded and operational",
+        "systems_count": "15 Systems COMPLETE",
+        "validation": "All systems must report active status before conversation proceeds",
+        "project_knowledge_integration": "System status automatically logged and monitored"
+      },
+      "point_5": {
+        "name": "Project Knowledge Integration",
+        "requirement": "Automatic integration of all project specifications and knowledge",
+        "scope": "Complete Framework Set 2 specifications with all 15 systems",
+        "activation": "Immediate project knowledge loading at conversation start",
+        "all_systems_integration": "All 15 systems specifications must be available",
+        "framework_integration": "COMPLETE 15-system framework activation required"
+      }
+    },
+    "complete_framework_systems": {
+      "foundation_tier": {
+        "systems": 5,
+        "system_1": {
+          "id": 1,
+          "name": "PDT-PLUS",
+          "lessons": 105,
+          "status": "enhanced"
+        },
+        "system_2": {
+          "id": 2,
+          "name": "PUXT-PLUS",
+          "lessons": 45,
+          "status": "enhanced"
+        },
+        "system_3": {
+          "id": 3,
+          "name": "PSO-PRIME",
+          "lessons": 50,
+          "status": "enhanced"
+        },
+        "system_4": {
+          "id": 4,
+          "name": "PTT-DOCS-FUSION",
+          "lessons": 35,
+          "status": "enhanced"
+        },
+        "system_5": {
+          "id": 5,
+          "name": "REQUIREMENTS-PRIME",
+          "lessons": 35,
+          "status": "enhanced"
+        }
+      },
+      "professional_tier": {
+        "systems": 4,
+        "system_6": {
+          "id": 6,
+          "name": "BUSINESS-OPS-FUSION",
+          "lessons": 40,
+          "status": "enhanced"
+        },
+        "system_7": {
+          "id": 7,
+          "name": "CONTEXT-EVOLUTION-ENGINE",
+          "lessons": 35,
+          "status": "enhanced"
+        },
+        "system_8": {
+          "id": 8,
+          "name": "PERFORMANCE-AI-FUSION",
+          "lessons": 38,
+          "status": "enhanced"
+        },
+        "system_9": {
+          "id": 9,
+          "name": "SECURITY-BUILD-FUSION",
+          "lessons": 42,
+          "status": "enhanced"
+        }
+      },
+      "universal_tier": {
+        "systems": 4,
+        "system_10": {
+          "id": 10,
+          "name": "KNOWLEDGE-EVOLUTION-ENGINE",
+          "lessons": 30,
+          "status": "enhanced"
+        },
+        "system_11": {
+          "id": 11,
+          "name": "UNIVERSAL-ORCHESTRATION-PRIME",
+          "lessons": 25,
+          "status": "enhanced"
+        },
+        "system_12": {
+          "id": 12,
+          "name": "PMCS-024",
+          "lessons": 45,
+          "status": "enhanced"
+        },
+        "system_13": {
+          "id": 13,
+          "name": "PAES",
+          "lessons": 35,
+          "status": "enhanced"
+        }
+      },
+      "integration_tier": {
+        "systems": 2,
+        "system_14": {
+          "id": 14,
+          "name": "DPI",
+          "lessons": 25,
+          "status": "enhanced"
+        },
+        "system_15": {
+          "id": 15,
+          "name": "PTODOS",
+          "lessons": 30,
+          "status": "enhanced"
+        }
+      },
+      "totals": {
+        "total_systems": 15,
+        "total_lessons": "615+",
+        "breathing_framework": "ACTIVE",
+        "signal_based_architecture": "OPERATIONAL"
+      }
+    },
+    "auto_activation_rules": {
+      "trigger": "Every new conversation start",
+      "detection": "Automatic user input analysis",
+      "response": "Immediate PKM protocol execution",
+      "fallback": "Manual activation prompt if auto-detection fails",
+      "validation": "Confirm all 15 systems loaded before proceeding",
+      "project_knowledge_loading": "Automatic specification integration"
+    },
+    "deployment_instructions": {
+      "target": "Claude UI Instructions Section with Complete 15-System Integration",
+      "activation": "Automatic processing at conversation start with immediate complete system activation",
+      "priority": "CRITICAL - Execute before other conversation processing and activate ALL 15 systems",
+      "integration_requirement": "Complete 15-system Framework Set 2 integration must be operational",
+      "security_clearance": "PSec approved - safe for deployment with complete integrated intelligence",
+      "privacy_compliance": "User data protected - GDPR compliant with secure system management",
+      "fallback": "If complete 15-system integration not detected, notify user and offer manual activation",
+      "compatibility": "Works with all conversation types while maintaining complete 15-system intelligence",
+      "user_control": "All paths and directories user-specified with automatic 15-system enhancement",
+      "complete_intelligence": "All 15 systems automatically activate to provide complete framework intelligence",
+      "breathing_framework_activation": "Real-time educational content generation from all 15 systems"
+    }
+  }
+}
