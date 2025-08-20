@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKM Framework Command Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .status-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-top: 10px;
+            display: inline-block;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #4facfe;
+        }
+        
+        .question h3 {
+            margin: 0 0 15px 0;
+            color: #333;
+            font-size: 1.3em;
+        }
+        
+        .options {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .option {
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .option:hover {
+            border-color: #4facfe;
+            background: #f0f8ff;
+            transform: translateY(-2px);
+        }
+        
+        .option.selected {
+            border-color: #4facfe;
+            background: #4facfe;
+            color: white;
+        }
+        
+        .option-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .option-desc {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        .generate-btn {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-top: 30px;
+        }
+        
+        .generate-btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        .generate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .result {
+            margin-top: 30px;
+            padding: 25px;
+            background: #e8f5e8;
+            border-radius: 10px;
+            border-left: 5px solid #28a745;
+            display: none;
+        }
+        
+        .result h3 {
+            margin: 0 0 15px 0;
+            color: #155724;
+        }
+        
+        .command-box {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-line;
+            margin: 15px 0;
+            position: relative;
+        }
+        
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.8em;
+        }
+        
+        .system-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+        
+        .pkm-features {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .working-dir-section {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .working-dir-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        
+        .preset-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .preset-btn {
+            padding: 8px 16px;
+            background: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .preset-btn:hover {
+            background: #e67e22;
+            transform: translateY(-1px);
+        }
+        
+        .system-preview {
+            background: #f0f8ff;
+            border: 1px solid #4facfe;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .system-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .system-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 11px;
+        }
+        
+        .system-item strong {
+            color: #4facfe;
+        }
+        
+        .validation-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #856404;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 PKM Framework Command Generator</h1>
+            <p>Answer a few questions to get your perfect startup command</p>
+            <div class="status-badge">✅ PKM 7.2 Enhanced | Component Validation Active</div>
+        </div>
+        
+        <div class="content">
+            <!-- Working Directory Section -->
+            <div class="working-dir-section">
+                <h3>📁 Working Directory</h3>
+                <p>Your framework files location (can be customized):</p>
+                <input type="text" class="working-dir-input" id="workingDir" 
+                       value="C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025\">
+                <div class="validation-warning" id="dirWarning" style="display: none;">
+                    ⚠️ Directory path looks unusual. Make sure this is correct before using the command.
+                </div>
+            </div>
+
+            <!-- Preset Buttons -->
+            <div class="preset-buttons">
+                <button class="preset-btn" onclick="loadPreset('beginner')">👶 Beginner Setup</button>
+                <button class="preset-btn" onclick="loadPreset('corporate')">🏢 Corporate Training</button>
+                <button class="preset-btn" onclick="loadPreset('debug')">🐛 Debug Focus</button>
+                <button class="preset-btn" onclick="loadPreset('business')">💼 Business Ops</button>
+                <button class="preset-btn" onclick="loadPreset('custom')" id="customPresetBtn" style="display:none;">⭐ My Preset</button>
+            </div>
+            <!-- Question 1: Experience Level -->
+            <div class="question">
+                <h3>1. What's your experience level with the Progressive Framework?</h3>
+                <div class="options">
+                    <div class="option" data-question="experience" data-value="beginner">
+                        <div class="option-title">🎯 Complete Beginner</div>
+                        <div class="option-desc">New to the framework, want to learn systematically</div>
+                    </div>
+                    <div class="option" data-question="experience" data-value="some">
+                        <div class="option-title">🔧 Some Experience</div>
+                        <div class="option-desc">Know basics, want to go deeper in specific areas</div>
+                    </div>
+                    <div class="option" data-question="experience" data-value="advanced">
+                        <div class="option-title">🚀 Advanced User</div>
+                        <div class="option-desc">Experienced, want master-level capabilities</div>
+                    </div>
+                    <div class="option" data-question="experience" data-value="expert">
+                        <div class="option-title">🌟 Expert/Corporate</div>
+                        <div class="option-desc">Need everything for organization-wide deployment</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2: Primary Goal -->
+            <div class="question">
+                <h3>2. What's your primary goal right now?</h3>
+                <div class="options">
+                    <div class="option" data-question="goal" data-value="learn">
+                        <div class="option-title">📚 Learning & Education</div>
+                        <div class="option-desc">Want to understand and master the framework</div>
+                    </div>
+                    <div class="option" data-question="goal" data-value="solve">
+                        <div class="option-title">🔧 Solve Specific Problem</div>
+                        <div class="option-desc">Need one system to fix immediate issues</div>
+                    </div>
+                    <div class="option" data-question="goal" data-value="implement">
+                        <div class="option-title">🏗️ Implementation Project</div>
+                        <div class="option-desc">Building/deploying framework in production</div>
+                    </div>
+                    <div class="option" data-question="goal" data-value="train">
+                        <div class="option-title">🎓 Corporate Training</div>
+                        <div class="option-desc">Training team/organization on framework</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3: Specific Focus -->
+            <div class="question">
+                <h3>3. Any specific area of focus?</h3>
+                <div class="options">
+                    <div class="option" data-question="focus" data-value="none">
+                        <div class="option-title">🌍 No Specific Focus</div>
+                        <div class="option-desc">Want comprehensive coverage</div>
+                    </div>
+                    <div class="option" data-question="focus" data-value="debug">
+                        <div class="option-title">🐛 Debugging & Testing</div>
+                        <div class="option-desc">Focus on PDT-PLUS debugging systems</div>
+                    </div>
+                    <div class="option" data-question="focus" data-value="business">
+                        <div class="option-title">💼 Business Operations</div>
+                        <div class="option-desc">Focus on business and revenue systems</div>
+                    </div>
+                    <div class="option" data-question="focus" data-value="ai">
+                        <div class="option-title">🤖 AI & Performance</div>
+                        <div class="option-desc">Focus on AI and performance optimization</div>
+                    </div>
+                    <div class="option" data-question="focus" data-value="integration">
+                        <div class="option-title">🔗 Integration & Coordination</div>
+                        <div class="option-desc">Focus on system coordination and pathways</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4: Timeline -->
+            <div class="question">
+                <h3>4. What's your timeline?</h3>
+                <div class="options">
+                    <div class="option" data-question="timeline" data-value="immediate">
+                        <div class="option-title">⚡ Immediate (Today)</div>
+                        <div class="option-desc">Need results right now</div>
+                    </div>
+                    <div class="option" data-question="timeline" data-value="week">
+                        <div class="option-title">📅 This Week</div>
+                        <div class="option-desc">Can dedicate focused time this week</div>
+                    </div>
+                    <div class="option" data-question="timeline" data-value="month">
+                        <div class="option-title">📆 This Month</div>
+                        <div class="option-desc">Building over several weeks</div>
+                    </div>
+                    <div class="option" data-question="timeline" data-value="project">
+                        <div class="option-title">🎯 Long-term Project</div>
+                        <div class="option-desc">Multi-month implementation</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="generate-btn" onclick="generateCommand()" disabled>
+                Generate My Perfect Command
+            </button>
+
+            <div class="result" id="result">
+                <h3>🎉 Your Perfect PKM Command</h3>
+                <div class="command-box" id="commandBox">
+                    <button class="copy-btn" onclick="copyCommand()">Copy</button>
+                    <span id="commandText"></span>
+                </div>
+                <div class="system-info" id="systemInfo"></div>
+                <div class="system-preview" id="systemPreview" style="display: none;">
+                    <strong>🎯 Systems That Will Activate:</strong>
+                    <div class="system-list" id="systemList"></div>
+                </div>
+                <div class="pkm-features" id="pkmFeatures">
+                    <strong>🔧 PKM 7.2 Features Active:</strong><br>
+                    ✅ Component Validation: FORCE_CHECK_ALL<br>
+                    ✅ Breathing Framework: All Tiers Active<br>
+                    ✅ Auto-Integration: Command Generator Loaded<br>
+                    ✅ Signal-Based Activation: Monitoring<br>
+                    <button class="preset-btn" onclick="saveCurrentAsPreset()" style="margin-top: 10px;">💾 Save as My Preset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const answers = {};
+        
+        // System descriptions for preview
+        const systemDescriptions = {
+            'Chat000': { name: 'PKM-FOUNDATION-SETUP.xml', desc: 'Foundation setup and validation', lessons: 'Setup' },
+            'Chat001': { name: 'PDT-PLUS', desc: 'Debugging with ATLAS, PRISM, NEXUS, CRUD', lessons: '105 lessons' },
+            'Chat002': { name: 'PUXT-PLUS', desc: 'User experience optimization', lessons: '40 lessons' },
+            'Chat003': { name: 'BUSINESS-OPS-FUSION', desc: 'Business operations integration', lessons: '50 lessons' },
+            'Chat004': { name: 'DATA-INSIGHTS-ENGINE', desc: 'Data analytics and insights', lessons: '45 lessons' },
+            'Chat005': { name: 'ATLAS-PRISM-NEXUS-CRUD', desc: 'Advanced debugging suite', lessons: '35 lessons' },
+            'Chat006': { name: 'COMPREHENSIVE-INTEGRATION', desc: 'System integration hub', lessons: '55 lessons' },
+            'Chat007': { name: 'CONTEXT-EVOLUTION-ENGINE', desc: 'Context and evolution management', lessons: '40 lessons' },
+            'Chat008': { name: 'ENHANCED-PROJECT-ORCHESTRATION', desc: 'Project orchestration tools', lessons: '45 lessons' },
+            'Chat009': { name: 'ADVANCED-AUTOMATION-SUITE', desc: 'Automation and workflows', lessons: '50 lessons' },
+            'Chat010': { name: 'ENTERPRISE-SCALABILITY-ENGINE', desc: 'Enterprise scaling solutions', lessons: '35 lessons' },
+            'Chat011': { name: 'COGNITIVE-ENHANCEMENT-FRAMEWORK', desc: 'Cognitive enhancement tools', lessons: '40 lessons' },
+            'Chat012': { name: 'PMCS-024', desc: 'Project management control system', lessons: '30 lessons' },
+            'Chat013': { name: 'STRATEGIC-DECISION-MATRIX', desc: 'Strategic decision support', lessons: '25 lessons' },
+            'Chat014': { name: 'DPI', desc: 'Data processing interface', lessons: '35 lessons' },
+            'Chat015': { name: 'PTODOS', desc: 'Task and workflow management', lessons: '45 lessons' }
+        };
+
+        // Preset configurations
+        const presets = {
+            beginner: {
+                experience: 'beginner',
+                goal: 'learn',
+                focus: 'none',
+                timeline: 'week'
+            },
+            corporate: {
+                experience: 'expert',
+                goal: 'train',
+                focus: 'none',
+                timeline: 'project'
+            },
+            debug: {
+                experience: 'some',
+                goal: 'solve',
+                focus: 'debug',
+                timeline: 'immediate'
+            },
+            business: {
+                experience: 'advanced',
+                goal: 'implement',
+                focus: 'business',
+                timeline: 'month'
+            }
+        };
+
+        // Load preset configuration
+        function loadPreset(presetName) {
+            if (presetName === 'custom') {
+                const saved = localStorage.getItem('pkm_custom_preset');
+                if (saved) {
+                    const config = JSON.parse(saved);
+                    applyPresetConfig(config);
+                }
+                return;
+            }
+
+            const config = presets[presetName];
+            if (config) {
+                applyPresetConfig(config);
+            }
+        }
+
+        function applyPresetConfig(config) {
+            // Clear current selections
+            document.querySelectorAll('.option.selected').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Apply new selections
+            Object.keys(config).forEach(question => {
+                const value = config[question];
+                const option = document.querySelector(`[data-question="${question}"][data-value="${value}"]`);
+                if (option) {
+                    option.classList.add('selected');
+                    answers[question] = value;
+                }
+            });
+            
+            checkAllAnswered();
+        }
+
+        function saveCurrentAsPreset() {
+            if (Object.keys(answers).length === 4) {
+                localStorage.setItem('pkm_custom_preset', JSON.stringify(answers));
+                document.getElementById('customPresetBtn').style.display = 'inline-block';
+                alert('✅ Current configuration saved as "My Preset"!');
+            } else {
+                alert('⚠️ Please answer all questions first before saving.');
+            }
+        }
+
+        // Validate working directory
+        function validateWorkingDirectory() {
+            const dir = document.getElementById('workingDir').value;
+            const warning = document.getElementById('dirWarning');
+            
+            // Basic validation - check if it looks like a Windows path
+            const isValidPath = /^[A-Za-z]:\\/.test(dir) && dir.includes('PROGRESSIVE_FRAMEWORK');
+            
+            if (!isValidPath) {
+                warning.style.display = 'block';
+            } else {
+                warning.style.display = 'none';
+            }
+        }
+
+        // Add event listener for directory validation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('workingDir').addEventListener('input', validateWorkingDirectory);
+            
+            // Check if custom preset exists
+            if (localStorage.getItem('pkm_custom_preset')) {
+                document.getElementById('customPresetBtn').style.display = 'inline-block';
+            }
+        });
+
+        // Handle option selection
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const question = this.dataset.question;
+                const value = this.dataset.value;
+                
+                // Remove selected class from other options in same question
+                document.querySelectorAll(`[data-question="${question}"]`).forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                
+                // Store answer
+                answers[question] = value;
+                
+                // Check if all questions answered
+                checkAllAnswered();
+            });
+        });
+        
+        function checkAllAnswered() {
+            const requiredQuestions = ['experience', 'goal', 'focus', 'timeline'];
+            const allAnswered = requiredQuestions.every(q => answers[q]);
+            
+            document.querySelector('.generate-btn').disabled = !allAnswered;
+        }
+
+        function showSystemPreview(chatNumbers) {
+            const preview = document.getElementById('systemPreview');
+            const list = document.getElementById('systemList');
+            
+            list.innerHTML = '';
+            
+            chatNumbers.forEach(chatNum => {
+                const system = systemDescriptions[chatNum];
+                if (system) {
+                    const item = document.createElement('div');
+                    item.className = 'system-item';
+                    item.innerHTML = `<strong>${chatNum}</strong><br>${system.name}<br><small>${system.desc}</small><br><em>${system.lessons}</em>`;
+                    list.appendChild(item);
+                }
+            });
+            
+            preview.style.display = 'block';
+        }
+        
+        function generateCommand() {
+            const { experience, goal, focus, timeline } = answers;
+            const workingDir = document.getElementById('workingDir').value;
+            
+            let command = '';
+            let systemInfo = '';
+            let chatNumber = '';
+            let activatedSystems = [];
+            
+            // Determine command based on answers - Updated for PKM 7.2
+            if (focus === 'debug') {
+                chatNumber = 'Chat001';
+                activatedSystems = ['Chat001'];
+                command = `Working Directory: ${workingDir}
+PKM 7.2 Protocol Activation
+Chat001 - PDT-PLUS
+Primary Objectives: Master debugging with ATLAS, PRISM, NEXUS, CRUD engines (105 lessons)
+Component Validation: FORCE_CHECK_ALL
+Breathing Framework: FORCE_ALL_TIERS_ACTIVE
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> System 1 (PDT-PLUS) with 105 debugging lessons<br>🔧 <strong>Focus:</strong> ATLAS, PRISM, NEXUS, CRUD debugging engines<br>⏱️ <strong>Time needed:</strong> 2-3 days for deep debugging mastery';
+                
+            } else if (focus === 'business') {
+                chatNumber = 'Chat003';
+                activatedSystems = ['Chat003'];
+                command = `Working Directory: ${workingDir}
+PKM 7.2 Protocol Activation
+Chat003 - BUSINESS-OPS-FUSION
+Primary Objectives: Business operations and revenue optimization (50 lessons)
+Component Validation: FORCE_CHECK_ALL
+Breathing Framework: FORCE_ALL_TIERS_ACTIVE
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> System 3 (BUSINESS-OPS-FUSION) with 50 business-focused lessons<br>💼 <strong>Focus:</strong> Business operations and revenue optimization<br>⏱️ <strong>Time needed:</strong> 2-3 days for business mastery';
+                
+            } else if (experience === 'beginner') {
+                chatNumber = 'Chat000';
+                activatedSystems = ['Chat000', 'Chat001', 'Chat002', 'Chat003', 'Chat004', 'Chat005'];
+                command = `Working Directory: ${workingDir}
+PKM 7.2 Protocol Activation
+Chat000 - PKM-FOUNDATION-SETUP.xml
+Primary Objectives: Learn framework fundamentals through foundation systems (270+ lessons)
+Component Validation: FORCE_CHECK_ALL
+Breathing Framework: FORCE_ALL_TIERS_ACTIVE
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> Foundation setup + Systems 1-5 with 270+ foundational lessons<br>📚 <strong>Focus:</strong> Systematic learning from ground up<br>⏱️ <strong>Time needed:</strong> 1-2 weeks for solid foundation';
+                
+            } else if (experience === 'advanced' || goal === 'implement') {
+                chatNumber = 'Chat007';
+                activatedSystems = ['Chat007'];
+                command = `Working Directory: ${workingDir}
+PKM 7.2 Protocol Activation
+Chat007 - CONTEXT-EVOLUTION-ENGINE
+Primary Objectives: Advanced implementation and context evolution (40 lessons)
+Component Validation: FORCE_CHECK_ALL
+Breathing Framework: FORCE_ALL_TIERS_ACTIVE
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> System 7 (CONTEXT-EVOLUTION-ENGINE) with 40 advanced lessons<br>🚀 <strong>Focus:</strong> Professional and master-level capabilities<br>⏱️ <strong>Time needed:</strong> 1-2 weeks for advanced mastery';
+                
+            } else if (experience === 'expert' || goal === 'train') {
+                chatNumber = 'Chat000';
+                activatedSystems = Object.keys(systemDescriptions); // All systems
+                command = `Working Directory: ${workingDir}
+PKM 7.2 Protocol Activation
+Chat000 - PKM-FOUNDATION-SETUP.xml
+Primary Objectives: Full enterprise deployment (615+ lessons), corporate training implementation
+Component Validation: FORCE_CHECK_ALL
+Breathing Framework: FORCE_ALL_TIERS_ACTIVE
+Scope: CORPORATE_TRAINING
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> ALL 15 systems with 615+ comprehensive lessons<br>🏢 <strong>Focus:</strong> Complete organizational deployment<br>⏱️ <strong>Time needed:</strong> 4-6 weeks for full implementation';
+                
+            } else {
+                // Default comprehensive option
+                chatNumber = 'Chat006';
+                activatedSystems = ['Chat006'];
+                command = `Working Directory: ${workingDir}
+PKM 7.2 Protocol Activation
+Chat006 - COMPREHENSIVE-INTEGRATION
+Primary Objectives: Comprehensive learning path (55 lessons)
+Component Validation: FORCE_CHECK_ALL
+Breathing Framework: FORCE_ALL_TIERS_ACTIVE
+20250819_Signal_Based_Activation`;
+                systemInfo = '🎯 <strong>You\'ll get:</strong> System 6 (COMPREHENSIVE-INTEGRATION) with 55 comprehensive lessons<br>⚖️ <strong>Focus:</strong> Balanced foundation + professional development<br>⏱️ <strong>Time needed:</strong> 2-3 weeks for comprehensive coverage';
+            }
+            
+            // Add timeline-specific modifications
+            if (timeline === 'immediate') {
+                if (chatNumber !== 'Chat001') {
+                    chatNumber = 'Chat001';
+                    activatedSystems = ['Chat001'];
+                    command = `Working Directory: ${workingDir}
+PKM 7.2 Protocol Activation
+Chat001 - PDT-PLUS
+Primary Objectives: Quick start with debugging system (105 lessons)
+Component Validation: FORCE_CHECK_ALL
+Breathing Framework: FORCE_ALL_TIERS_ACTIVE
+Priority: IMMEDIATE_START
+20250819_Signal_Based_Activation`;
+                    systemInfo = '🎯 <strong>You\'ll get:</strong> System 1 (PDT-PLUS) for immediate results<br>⚡ <strong>Focus:</strong> Quick debugging mastery<br>⏱️ <strong>Time needed:</strong> Start today, results in hours';
+                }
+            }
+            
+            // Display result
+            document.getElementById('commandText').textContent = command;
+            document.getElementById('systemInfo').innerHTML = systemInfo;
+            document.getElementById('result').style.display = 'block';
+            
+            // Show system preview
+            showSystemPreview(activatedSystems);
+            
+            // Scroll to result
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function copyCommand() {
+            const commandText = document.getElementById('commandText').textContent;
+            navigator.clipboard.writeText(commandText).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = '#28a745';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '#4facfe';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
