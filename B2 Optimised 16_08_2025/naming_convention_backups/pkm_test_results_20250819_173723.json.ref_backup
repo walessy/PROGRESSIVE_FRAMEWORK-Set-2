@@ -1,0 +1,339 @@
+{
+  "metadata": {
+    "working_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025",
+    "total_tests": 12,
+    "timestamp": "2025-08-19T17:37:23.299137"
+  },
+  "results": [
+    {
+      "test_id": "01",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nPDT-PLUS Breathing Framework Implementation\nPrimary Objectives: Master debugging with ATLAS, PRISM, NEXUS, CRUD engines (105 lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "PDT-PLUS"
+      ],
+      "expected_lessons": 105,
+      "actual_systems": [
+        "PDT-PLUS"
+      ],
+      "actual_lessons": 105,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test01_Single_System_-_Debug_Focus_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.293253"
+    },
+    {
+      "test_id": "02",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nBUSINESS-OPS-FUSION Breathing Framework Implementation\nPrimary Objectives: Business operations mastery (40 lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "BUSINESS-OPS-FUSION"
+      ],
+      "expected_lessons": 40,
+      "actual_systems": [
+        "BUSINESS-OPS-FUSION"
+      ],
+      "actual_lessons": 40,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test02_Single_System_-_Business_Focus_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.293532"
+    },
+    {
+      "test_id": "03",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nBUSINESS-OPS-FUSION + PUXT-PLUS Implementation\nPrimary Objectives: Business operations and revenue optimization (85 lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "BUSINESS-OPS-FUSION",
+        "PUXT-PLUS"
+      ],
+      "expected_lessons": 85,
+      "actual_systems": [
+        "BUSINESS-OPS-FUSION",
+        "PUXT-PLUS"
+      ],
+      "actual_lessons": 85,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test03_Dual_System_-_Business_Combo_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.293771"
+    },
+    {
+      "test_id": "04",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nFoundation Tier Breathing Framework Implementation\nPrimary Objectives: Learn framework fundamentals through 5 foundation systems (270+ lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME"
+      ],
+      "expected_lessons": 270,
+      "actual_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME"
+      ],
+      "actual_lessons": 270,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test04_Foundation_Tier_Complete_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.294014"
+    },
+    {
+      "test_id": "05",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nProfessional Tier Breathing Framework Implementation\nPrimary Objectives: Advanced professional systems (155+ lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION"
+      ],
+      "expected_lessons": 155,
+      "actual_systems": [
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION"
+      ],
+      "actual_lessons": 155,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test05_Professional_Tier_Complete_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.294439"
+    },
+    {
+      "test_id": "06",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nUniversal Tier Breathing Framework Implementation\nPrimary Objectives: Master-level universal systems (135+ lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES"
+      ],
+      "expected_lessons": 135,
+      "actual_systems": [
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES"
+      ],
+      "actual_lessons": 135,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test06_Universal_Tier_Complete_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.294927"
+    },
+    {
+      "test_id": "07",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nIntegration Tier Breathing Framework Implementation\nPrimary Objectives: Meta-integration systems (55+ lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "DPI",
+        "PTODOS"
+      ],
+      "expected_lessons": 55,
+      "actual_systems": [
+        "DPI",
+        "PTODOS"
+      ],
+      "actual_lessons": 55,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test07_Integration_Tier_Complete_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.295429"
+    },
+    {
+      "test_id": "08",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nFoundation + Professional Tier Breathing Framework Implementation\nPrimary Objectives: Comprehensive learning path (425+ lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME",
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION"
+      ],
+      "expected_lessons": 425,
+      "actual_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME",
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION"
+      ],
+      "actual_lessons": 425,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test08_Foundation_+_Professional_Tiers_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.295902"
+    },
+    {
+      "test_id": "09",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nProfessional + Universal Tier Breathing Framework Implementation\nPrimary Objectives: Advanced implementation skills (290+ lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION",
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES"
+      ],
+      "expected_lessons": 290,
+      "actual_systems": [
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION",
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES"
+      ],
+      "actual_lessons": 290,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test09_Professional_+_Universal_Tiers_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.296282"
+    },
+    {
+      "test_id": "10",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nFoundation + Universal Tier Breathing Framework Implementation\nPrimary Objectives: Strategic learning path (405+ lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME",
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES"
+      ],
+      "expected_lessons": 405,
+      "actual_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME",
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES"
+      ],
+      "actual_lessons": 405,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test10_Foundation_+_Universal_Tiers_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.296705"
+    },
+    {
+      "test_id": "11",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nComplete 15-System Breathing Framework Implementation\nPrimary Objectives: Full framework deployment (615+ lessons)\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME",
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION",
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES",
+        "DPI",
+        "PTODOS"
+      ],
+      "expected_lessons": 615,
+      "actual_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME",
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION",
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES",
+        "DPI",
+        "PTODOS"
+      ],
+      "actual_lessons": 615,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test11_Complete_Framework_Standard_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.297156"
+    },
+    {
+      "test_id": "12",
+      "command": "Working Directory: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\nComplete 15-System Breathing Framework Implementation\nPrimary Objectives: Full enterprise deployment (615+ lessons)\nTier Override: FORCE_ALL_TIERS_ACTIVE\nScope: CORPORATE_TRAINING\n20250819_Signal_Based_Activation",
+      "expected_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME",
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION",
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES",
+        "DPI",
+        "PTODOS"
+      ],
+      "expected_lessons": 615,
+      "actual_systems": [
+        "PDT-PLUS",
+        "PUXT-PLUS",
+        "PSO-PRIME",
+        "PTT-DOCS-FUSION",
+        "REQUIREMENTS-PRIME",
+        "BUSINESS-OPS-FUSION",
+        "CONTEXT-EVOLUTION-ENGINE",
+        "PERFORMANCE-AI-FUSION",
+        "SECURITY-BUILD-FUSION",
+        "KNOWLEDGE-EVOLUTION-ENGINE",
+        "UNIVERSAL-ORCHESTRATION-PRIME",
+        "PMCS-024",
+        "PAES",
+        "DPI",
+        "PTODOS"
+      ],
+      "actual_lessons": 615,
+      "status": "PASS",
+      "processing_time": 45.0,
+      "output_file": "Chat_Test12_Complete_Framework_with_Corporate_Override_20250819.md",
+      "issues": [],
+      "timestamp": "2025-08-19T17:37:23.297609"
+    }
+  ]
+}

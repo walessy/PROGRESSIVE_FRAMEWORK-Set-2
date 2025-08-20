@@ -1,0 +1,4464 @@
+{
+  "analysis_timestamp": "2025-08-20T16:31:38.479766",
+  "base_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025",
+  "summary": {
+    "total_folders": 52,
+    "total_files": 460,
+    "total_size_bytes": 7866884,
+    "total_size_readable": "7.5 MB"
+  },
+  "all_items": [
+    {
+      "type": "folder",
+      "name": "__pycache__",
+      "path": "__pycache__",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "progressive_framework_system_identifier.cpython-313.pyc",
+      "path": "__pycache__\\progressive_framework_system_identifier.cpython-313.pyc",
+      "size": 20537,
+      "size_readable": "20.1 KB",
+      "extension": ".pyc",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "Config",
+      "path": "Config",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "evolutionary_mapping_config.yaml",
+      "path": "Config\\evolutionary_mapping_config.yaml",
+      "size": 3608,
+      "size_readable": "3.5 KB",
+      "extension": ".yaml",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "lesson_triggers.yaml",
+      "path": "Config\\lesson_triggers.yaml",
+      "size": 1521,
+      "size_readable": "1.5 KB",
+      "extension": ".yaml",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "Demo Project",
+      "path": "Demo Project",
+      "level": 0
+    },
+    {
+      "type": "folder",
+      "name": "Course Etractor",
+      "path": "Demo Project\\Course Etractor",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "course_extractor_app.html",
+      "path": "Demo Project\\Course Etractor\\course_extractor_app.html",
+      "size": 43644,
+      "size_readable": "42.6 KB",
+      "extension": ".html",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "Showcase.bmp",
+      "path": "Demo Project\\Course Etractor\\Showcase.bmp",
+      "size": 420898,
+      "size_readable": "411.0 KB",
+      "extension": ".bmp",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "Showcase.jpg",
+      "path": "Demo Project\\Course Etractor\\Showcase.jpg",
+      "size": 145083,
+      "size_readable": "141.7 KB",
+      "extension": ".jpg",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "Dashboard",
+      "path": "Demo Project\\Dashboard",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "progressive-test.html",
+      "path": "Demo Project\\Dashboard\\progressive-test.html",
+      "size": 879,
+      "size_readable": "879.0 B",
+      "extension": ".html",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "Screenshot 2025-08-17 102923.png",
+      "path": "Demo Project\\Dashboard\\Screenshot 2025-08-17 102923.png",
+      "size": 231741,
+      "size_readable": "226.3 KB",
+      "extension": ".png",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "PhysicsCourseGnerator",
+      "path": "Demo Project\\PhysicsCourseGnerator",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "ai_physics_course_generator.html",
+      "path": "Demo Project\\PhysicsCourseGnerator\\ai_physics_course_generator.html",
+      "size": 43133,
+      "size_readable": "42.1 KB",
+      "extension": ".html",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "SjowVase.bmp",
+      "path": "Demo Project\\PhysicsCourseGnerator\\SjowVase.bmp",
+      "size": 351570,
+      "size_readable": "343.3 KB",
+      "extension": ".bmp",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "SjowVase.jpg",
+      "path": "Demo Project\\PhysicsCourseGnerator\\SjowVase.jpg",
+      "size": 99811,
+      "size_readable": "97.5 KB",
+      "extension": ".jpg",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "TestingSystem",
+      "path": "Demo Project\\TestingSystem",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "ShowCase.bmp",
+      "path": "Demo Project\\TestingSystem\\ShowCase.bmp",
+      "size": 408950,
+      "size_readable": "399.4 KB",
+      "extension": ".bmp",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "ShowCase.jpg",
+      "path": "Demo Project\\TestingSystem\\ShowCase.jpg",
+      "size": 195082,
+      "size_readable": "190.5 KB",
+      "extension": ".jpg",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "spec_demo.html",
+      "path": "Demo Project\\TestingSystem\\spec_demo.html",
+      "size": 30931,
+      "size_readable": "30.2 KB",
+      "extension": ".html",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "Header_Templates",
+      "path": "Header_Templates",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "batch_header_template.txt",
+      "path": "Header_Templates\\batch_header_template.txt",
+      "size": 610,
+      "size_readable": "610.0 B",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "configuration_header_template.txt",
+      "path": "Header_Templates\\configuration_header_template.txt",
+      "size": 602,
+      "size_readable": "602.0 B",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "HEADER_TEMPLATES_USAGE_GUIDE.md",
+      "path": "Header_Templates\\HEADER_TEMPLATES_USAGE_GUIDE.md",
+      "size": 5727,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "json_header_template.txt",
+      "path": "Header_Templates\\json_header_template.txt",
+      "size": 913,
+      "size_readable": "913.0 B",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "markdown_header_template.txt",
+      "path": "Header_Templates\\markdown_header_template.txt",
+      "size": 2159,
+      "size_readable": "2.1 KB",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "powershell_header_template.txt",
+      "path": "Header_Templates\\powershell_header_template.txt",
+      "size": 578,
+      "size_readable": "578.0 B",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "python_header_template.txt",
+      "path": "Header_Templates\\python_header_template.txt",
+      "size": 1373,
+      "size_readable": "1.3 KB",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "shell_header_template.txt",
+      "path": "Header_Templates\\shell_header_template.txt",
+      "size": 589,
+      "size_readable": "589.0 B",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "text_header_template.txt",
+      "path": "Header_Templates\\text_header_template.txt",
+      "size": 911,
+      "size_readable": "911.0 B",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "xml_header_template.txt",
+      "path": "Header_Templates\\xml_header_template.txt",
+      "size": 1549,
+      "size_readable": "1.5 KB",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "yaml_header_template.txt",
+      "path": "Header_Templates\\yaml_header_template.txt",
+      "size": 913,
+      "size_readable": "913.0 B",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "Lessons",
+      "path": "Lessons",
+      "level": 0
+    },
+    {
+      "type": "folder",
+      "name": "Active",
+      "path": "Lessons\\Active",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "BUSINESS-OPS-FUSION",
+      "path": "Lessons\\Active\\BUSINESS-OPS-FUSION",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_165624.md",
+      "path": "Lessons\\Active\\BUSINESS-OPS-FUSION\\BUSINESS-OPS-FUSION_LESSON_20250818_165624.md",
+      "size": 5655,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_165800.md",
+      "path": "Lessons\\Active\\BUSINESS-OPS-FUSION\\BUSINESS-OPS-FUSION_LESSON_20250818_165800.md",
+      "size": 5655,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_170634.md",
+      "path": "Lessons\\Active\\BUSINESS-OPS-FUSION\\BUSINESS-OPS-FUSION_LESSON_20250818_170634.md",
+      "size": 5655,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_172439.md",
+      "path": "Lessons\\Active\\BUSINESS-OPS-FUSION\\BUSINESS-OPS-FUSION_LESSON_20250818_172439.md",
+      "size": 5611,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_182735.md",
+      "path": "Lessons\\Active\\BUSINESS-OPS-FUSION\\BUSINESS-OPS-FUSION_LESSON_20250818_182735.md",
+      "size": 5655,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\BUSINESS-OPS-FUSION\\BUSINESS-OPS-FUSION_LESSON_20250818_200836.md",
+      "size": 5724,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "CONTEXT-EVOLUTION-ENGINE",
+      "path": "Lessons\\Active\\CONTEXT-EVOLUTION-ENGINE",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_162938.md",
+      "path": "Lessons\\Active\\CONTEXT-EVOLUTION-ENGINE\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_162938.md",
+      "size": 5611,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_165624.md",
+      "path": "Lessons\\Active\\CONTEXT-EVOLUTION-ENGINE\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_165624.md",
+      "size": 5637,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_165739.md",
+      "path": "Lessons\\Active\\CONTEXT-EVOLUTION-ENGINE\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_165739.md",
+      "size": 5681,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_170636.md",
+      "path": "Lessons\\Active\\CONTEXT-EVOLUTION-ENGINE\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_170636.md",
+      "size": 5681,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_172549.md",
+      "path": "Lessons\\Active\\CONTEXT-EVOLUTION-ENGINE\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_172549.md",
+      "size": 5750,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_182810.md",
+      "path": "Lessons\\Active\\CONTEXT-EVOLUTION-ENGINE\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_182810.md",
+      "size": 5637,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\CONTEXT-EVOLUTION-ENGINE\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_200836.md",
+      "size": 5681,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "DPI",
+      "path": "Lessons\\Active\\DPI",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_170351.md",
+      "path": "Lessons\\Active\\DPI\\DPI_LESSON_20250818_170351.md",
+      "size": 5565,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_170356.md",
+      "path": "Lessons\\Active\\DPI\\DPI_LESSON_20250818_170356.md",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_170452.md",
+      "path": "Lessons\\Active\\DPI\\DPI_LESSON_20250818_170452.md",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_170650.md",
+      "path": "Lessons\\Active\\DPI\\DPI_LESSON_20250818_170650.md",
+      "size": 5565,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_173355.md",
+      "path": "Lessons\\Active\\DPI\\DPI_LESSON_20250818_173355.md",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_183217.md",
+      "path": "Lessons\\Active\\DPI\\DPI_LESSON_20250818_183217.md",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\DPI\\DPI_LESSON_20250818_200836.md",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_162938.md",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_162938.md",
+      "size": 5758,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_165955.md",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_165955.md",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170203.md",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170203.md",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170303.md",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170303.md",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170641.md",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170641.md",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_172932.md",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_172932.md",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_182955.md",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_182955.md",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\KNOWLEDGE-EVOLUTION-ENGINE\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_200836.md",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PAES",
+      "path": "Lessons\\Active\\PAES",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_165957.md",
+      "path": "Lessons\\Active\\PAES\\PAES_LESSON_20250818_165957.md",
+      "size": 5523,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_170113.md",
+      "path": "Lessons\\Active\\PAES\\PAES_LESSON_20250818_170113.md",
+      "size": 5567,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_170647.md",
+      "path": "Lessons\\Active\\PAES\\PAES_LESSON_20250818_170647.md",
+      "size": 5523,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_173304.md",
+      "path": "Lessons\\Active\\PAES\\PAES_LESSON_20250818_173304.md",
+      "size": 5567,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_183141.md",
+      "path": "Lessons\\Active\\PAES\\PAES_LESSON_20250818_183141.md",
+      "size": 5567,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\PAES\\PAES_LESSON_20250818_200836.md",
+      "size": 5567,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PDT-PLUS",
+      "path": "Lessons\\Active\\PDT-PLUS",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_162938.md",
+      "path": "Lessons\\Active\\PDT-PLUS\\PDT-PLUS_LESSON_20250818_162938.md",
+      "size": 5674,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_163347.md",
+      "path": "Lessons\\Active\\PDT-PLUS\\PDT-PLUS_LESSON_20250818_163347.md",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_163426.md",
+      "path": "Lessons\\Active\\PDT-PLUS\\PDT-PLUS_LESSON_20250818_163426.md",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_170623.md",
+      "path": "Lessons\\Active\\PDT-PLUS\\PDT-PLUS_LESSON_20250818_170623.md",
+      "size": 5530,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_171743.md",
+      "path": "Lessons\\Active\\PDT-PLUS\\PDT-PLUS_LESSON_20250818_171743.md",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_182440.md",
+      "path": "Lessons\\Active\\PDT-PLUS\\PDT-PLUS_LESSON_20250818_182440.md",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\PDT-PLUS\\PDT-PLUS_LESSON_20250818_200836.md",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_201302.md",
+      "path": "Lessons\\Active\\PDT-PLUS\\PDT-PLUS_LESSON_20250818_201302.md",
+      "size": 5598,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PERFORMANCE-AI-FUSION",
+      "path": "Lessons\\Active\\PERFORMANCE-AI-FUSION",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_165624.md",
+      "path": "Lessons\\Active\\PERFORMANCE-AI-FUSION\\PERFORMANCE-AI-FUSION_LESSON_20250818_165624.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_165725.md",
+      "path": "Lessons\\Active\\PERFORMANCE-AI-FUSION\\PERFORMANCE-AI-FUSION_LESSON_20250818_165725.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_170637.md",
+      "path": "Lessons\\Active\\PERFORMANCE-AI-FUSION\\PERFORMANCE-AI-FUSION_LESSON_20250818_170637.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_172706.md",
+      "path": "Lessons\\Active\\PERFORMANCE-AI-FUSION\\PERFORMANCE-AI-FUSION_LESSON_20250818_172706.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_182845.md",
+      "path": "Lessons\\Active\\PERFORMANCE-AI-FUSION\\PERFORMANCE-AI-FUSION_LESSON_20250818_182845.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\PERFORMANCE-AI-FUSION\\PERFORMANCE-AI-FUSION_LESSON_20250818_200836.md",
+      "size": 5619,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PMCS-024",
+      "path": "Lessons\\Active\\PMCS-024",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_165955.md",
+      "path": "Lessons\\Active\\PMCS-024\\PMCS-024_LESSON_20250818_165955.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_170126.md",
+      "path": "Lessons\\Active\\PMCS-024\\PMCS-024_LESSON_20250818_170126.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_170226.md",
+      "path": "Lessons\\Active\\PMCS-024\\PMCS-024_LESSON_20250818_170226.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_170646.md",
+      "path": "Lessons\\Active\\PMCS-024\\PMCS-024_LESSON_20250818_170646.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_173153.md",
+      "path": "Lessons\\Active\\PMCS-024\\PMCS-024_LESSON_20250818_173153.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_183106.md",
+      "path": "Lessons\\Active\\PMCS-024\\PMCS-024_LESSON_20250818_183106.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\PMCS-024\\PMCS-024_LESSON_20250818_200836.md",
+      "size": 5547,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PSO-PRIME",
+      "path": "Lessons\\Active\\PSO-PRIME",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_165333.md",
+      "path": "Lessons\\Active\\PSO-PRIME\\PSO-PRIME_LESSON_20250818_165333.md",
+      "size": 5595,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_165514.md",
+      "path": "Lessons\\Active\\PSO-PRIME\\PSO-PRIME_LESSON_20250818_165514.md",
+      "size": 5595,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_170627.md",
+      "path": "Lessons\\Active\\PSO-PRIME\\PSO-PRIME_LESSON_20250818_170627.md",
+      "size": 5595,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_172055.md",
+      "path": "Lessons\\Active\\PSO-PRIME\\PSO-PRIME_LESSON_20250818_172055.md",
+      "size": 5551,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_182550.md",
+      "path": "Lessons\\Active\\PSO-PRIME\\PSO-PRIME_LESSON_20250818_182550.md",
+      "size": 5595,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\PSO-PRIME\\PSO-PRIME_LESSON_20250818_200836.md",
+      "size": 5551,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PTODOS",
+      "path": "Lessons\\Active\\PTODOS",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_170351.md",
+      "path": "Lessons\\Active\\PTODOS\\PTODOS_LESSON_20250818_170351.md",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_170356.md",
+      "path": "Lessons\\Active\\PTODOS\\PTODOS_LESSON_20250818_170356.md",
+      "size": 5539,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_170434.md",
+      "path": "Lessons\\Active\\PTODOS\\PTODOS_LESSON_20250818_170434.md",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_170651.md",
+      "path": "Lessons\\Active\\PTODOS\\PTODOS_LESSON_20250818_170651.md",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_173456.md",
+      "path": "Lessons\\Active\\PTODOS\\PTODOS_LESSON_20250818_173456.md",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_183252.md",
+      "path": "Lessons\\Active\\PTODOS\\PTODOS_LESSON_20250818_183252.md",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\PTODOS\\PTODOS_LESSON_20250818_200836.md",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PTT-DOCS-FUSION",
+      "path": "Lessons\\Active\\PTT-DOCS-FUSION",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_162938.md",
+      "path": "Lessons\\Active\\PTT-DOCS-FUSION\\PTT-DOCS-FUSION_LESSON_20250818_162938.md",
+      "size": 5544,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_165333.md",
+      "path": "Lessons\\Active\\PTT-DOCS-FUSION\\PTT-DOCS-FUSION_LESSON_20250818_165333.md",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_165455.md",
+      "path": "Lessons\\Active\\PTT-DOCS-FUSION\\PTT-DOCS-FUSION_LESSON_20250818_165455.md",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_170629.md",
+      "path": "Lessons\\Active\\PTT-DOCS-FUSION\\PTT-DOCS-FUSION_LESSON_20250818_170629.md",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_172207.md",
+      "path": "Lessons\\Active\\PTT-DOCS-FUSION\\PTT-DOCS-FUSION_LESSON_20250818_172207.md",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_182625.md",
+      "path": "Lessons\\Active\\PTT-DOCS-FUSION\\PTT-DOCS-FUSION_LESSON_20250818_182625.md",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\PTT-DOCS-FUSION\\PTT-DOCS-FUSION_LESSON_20250818_200836.md",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PUXT-PLUS",
+      "path": "Lessons\\Active\\PUXT-PLUS",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_165333.md",
+      "path": "Lessons\\Active\\PUXT-PLUS\\PUXT-PLUS_LESSON_20250818_165333.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_165532.md",
+      "path": "Lessons\\Active\\PUXT-PLUS\\PUXT-PLUS_LESSON_20250818_165532.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_165826.md",
+      "path": "Lessons\\Active\\PUXT-PLUS\\PUXT-PLUS_LESSON_20250818_165826.md",
+      "size": 5547,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_170625.md",
+      "path": "Lessons\\Active\\PUXT-PLUS\\PUXT-PLUS_LESSON_20250818_170625.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_171914.md",
+      "path": "Lessons\\Active\\PUXT-PLUS\\PUXT-PLUS_LESSON_20250818_171914.md",
+      "size": 5547,
+      "size_readable": "5.4 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_182515.md",
+      "path": "Lessons\\Active\\PUXT-PLUS\\PUXT-PLUS_LESSON_20250818_182515.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\PUXT-PLUS\\PUXT-PLUS_LESSON_20250818_200836.md",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "REQUIREMENTS-PRIME",
+      "path": "Lessons\\Active\\REQUIREMENTS-PRIME",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_165333.md",
+      "path": "Lessons\\Active\\REQUIREMENTS-PRIME\\REQUIREMENTS-PRIME_LESSON_20250818_165333.md",
+      "size": 5649,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_165411.md",
+      "path": "Lessons\\Active\\REQUIREMENTS-PRIME\\REQUIREMENTS-PRIME_LESSON_20250818_165411.md",
+      "size": 5605,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_170632.md",
+      "path": "Lessons\\Active\\REQUIREMENTS-PRIME\\REQUIREMENTS-PRIME_LESSON_20250818_170632.md",
+      "size": 5649,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_172318.md",
+      "path": "Lessons\\Active\\REQUIREMENTS-PRIME\\REQUIREMENTS-PRIME_LESSON_20250818_172318.md",
+      "size": 5718,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_182700.md",
+      "path": "Lessons\\Active\\REQUIREMENTS-PRIME\\REQUIREMENTS-PRIME_LESSON_20250818_182700.md",
+      "size": 5649,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\REQUIREMENTS-PRIME\\REQUIREMENTS-PRIME_LESSON_20250818_200836.md",
+      "size": 5605,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "SECURITY-BUILD-FUSION",
+      "path": "Lessons\\Active\\SECURITY-BUILD-FUSION",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_165624.md",
+      "path": "Lessons\\Active\\SECURITY-BUILD-FUSION\\SECURITY-BUILD-FUSION_LESSON_20250818_165624.md",
+      "size": 5619,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_165709.md",
+      "path": "Lessons\\Active\\SECURITY-BUILD-FUSION\\SECURITY-BUILD-FUSION_LESSON_20250818_165709.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_170639.md",
+      "path": "Lessons\\Active\\SECURITY-BUILD-FUSION\\SECURITY-BUILD-FUSION_LESSON_20250818_170639.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_172833.md",
+      "path": "Lessons\\Active\\SECURITY-BUILD-FUSION\\SECURITY-BUILD-FUSION_LESSON_20250818_172833.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_182920.md",
+      "path": "Lessons\\Active\\SECURITY-BUILD-FUSION\\SECURITY-BUILD-FUSION_LESSON_20250818_182920.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\SECURITY-BUILD-FUSION\\SECURITY-BUILD-FUSION_LESSON_20250818_200836.md",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME",
+      "path": "Lessons\\Active\\UNIVERSAL-ORCHESTRATION-PRIME",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_165955.md",
+      "path": "Lessons\\Active\\UNIVERSAL-ORCHESTRATION-PRIME\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_165955.md",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170142.md",
+      "path": "Lessons\\Active\\UNIVERSAL-ORCHESTRATION-PRIME\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170142.md",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170242.md",
+      "path": "Lessons\\Active\\UNIVERSAL-ORCHESTRATION-PRIME\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170242.md",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170643.md",
+      "path": "Lessons\\Active\\UNIVERSAL-ORCHESTRATION-PRIME\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170643.md",
+      "size": 5678,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_173022.md",
+      "path": "Lessons\\Active\\UNIVERSAL-ORCHESTRATION-PRIME\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_173022.md",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_183030.md",
+      "path": "Lessons\\Active\\UNIVERSAL-ORCHESTRATION-PRIME\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_183030.md",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_200836.md",
+      "path": "Lessons\\Active\\UNIVERSAL-ORCHESTRATION-PRIME\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_200836.md",
+      "size": 5678,
+      "size_readable": "5.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "PDT-PLUS",
+      "path": "Lessons\\PDT-PLUS",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "First-5-PDT-PLUS-Evolutionary-Lessons-Proof-of-Concept.md",
+      "path": "Lessons\\PDT-PLUS\\First-5-PDT-PLUS-Evolutionary-Lessons-Proof-of-Concept.md",
+      "size": 24961,
+      "size_readable": "24.4 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "Templates",
+      "path": "Lessons\\Templates",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Lessons-Index.md",
+      "path": "Lessons\\Lessons-Index.md",
+      "size": 18061,
+      "size_readable": "17.6 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "Logs",
+      "path": "Logs",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_integration_20250819_061054.log",
+      "path": "Logs\\breathing_framework_integration_20250819_061054.log",
+      "size": 551,
+      "size_readable": "551.0 B",
+      "extension": ".log",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_integration_20250819_061743.log",
+      "path": "Logs\\breathing_framework_integration_20250819_061743.log",
+      "size": 1941,
+      "size_readable": "1.9 KB",
+      "extension": ".log",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "universal_header_verification_20250819_062332.log",
+      "path": "Logs\\universal_header_verification_20250819_062332.log",
+      "size": 1413,
+      "size_readable": "1.4 KB",
+      "extension": ".log",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "universal_header_verification_20250819_062709.log",
+      "path": "Logs\\universal_header_verification_20250819_062709.log",
+      "size": 2356,
+      "size_readable": "2.3 KB",
+      "extension": ".log",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "naming_convention_backups",
+      "path": "naming_convention_backups",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "1 PROGRESSIVE_FRAMEWORK-Set-2  QUICK START GUIDE.md.ref_backup",
+      "path": "naming_convention_backups\\1 PROGRESSIVE_FRAMEWORK-Set-2  QUICK START GUIDE.md.ref_backup",
+      "size": 7508,
+      "size_readable": "7.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "10 15 Chat Startup Commands - 615+ Test-to-Lesson Evolutionary Mapping.md.ref_backup",
+      "path": "naming_convention_backups\\10 15 Chat Startup Commands - 615+ Test-to-Lesson Evolutionary Mapping.md.ref_backup",
+      "size": 18147,
+      "size_readable": "17.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "11 615+ Test-to-Lesson Evolutionary Mapping Engine.md.ref_backup",
+      "path": "naming_convention_backups\\11 615+ Test-to-Lesson Evolutionary Mapping Engine.md.ref_backup",
+      "size": 13476,
+      "size_readable": "13.2 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "2 PKM PROGRESSIVE.md.ref_backup",
+      "path": "naming_convention_backups\\2 PKM PROGRESSIVE.md.ref_backup",
+      "size": 17881,
+      "size_readable": "17.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "2 pmcs_024_filename_correction_report_20250818_142338.md.ref_backup",
+      "path": "naming_convention_backups\\2 pmcs_024_filename_correction_report_20250818_142338.md.ref_backup",
+      "size": 2381,
+      "size_readable": "2.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "3 PKM 5-Point Protocol XML Configuration.txt.ref_backup",
+      "path": "naming_convention_backups\\3 PKM 5-Point Protocol XML Configuration.txt.ref_backup",
+      "size": 905,
+      "size_readable": "905.0 B",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "4 Optimized Progressive Systems Configuration JSON v4.0.txt.ref_backup",
+      "path": "naming_convention_backups\\4 Optimized Progressive Systems Configuration JSON v4.0.txt.ref_backup",
+      "size": 1706,
+      "size_readable": "1.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "7 evolutionary_mapping_update_report_20250818_160215.md.ref_backup",
+      "path": "naming_convention_backups\\7 evolutionary_mapping_update_report_20250818_160215.md.ref_backup",
+      "size": 6711,
+      "size_readable": "6.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "batch_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\batch_header_template.txt.ref_backup",
+      "size": 610,
+      "size_readable": "610.0 B",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "batch_test_processing_report_20250818_232525.json.ref_backup",
+      "path": "naming_convention_backups\\batch_test_processing_report_20250818_232525.json.ref_backup",
+      "size": 1590,
+      "size_readable": "1.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Breathing-Framework-Complete-Architecture.md.ref_backup",
+      "path": "naming_convention_backups\\Breathing-Framework-Complete-Architecture.md.ref_backup",
+      "size": 42997,
+      "size_readable": "42.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_integration_report_20250819_061054.md.ref_backup",
+      "path": "naming_convention_backups\\breathing_framework_integration_report_20250819_061054.md.ref_backup",
+      "size": 5122,
+      "size_readable": "5.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_integration_report_20250819_061743.md.ref_backup",
+      "path": "naming_convention_backups\\breathing_framework_integration_report_20250819_061743.md.ref_backup",
+      "size": 5262,
+      "size_readable": "5.1 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_165624.md.ref_backup",
+      "path": "naming_convention_backups\\BUSINESS-OPS-FUSION_LESSON_20250818_165624.md.ref_backup",
+      "size": 5655,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_165800.md.ref_backup",
+      "path": "naming_convention_backups\\BUSINESS-OPS-FUSION_LESSON_20250818_165800.md.ref_backup",
+      "size": 5655,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_170634.md.ref_backup",
+      "path": "naming_convention_backups\\BUSINESS-OPS-FUSION_LESSON_20250818_170634.md.ref_backup",
+      "size": 5655,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_172439.md.ref_backup",
+      "path": "naming_convention_backups\\BUSINESS-OPS-FUSION_LESSON_20250818_172439.md.ref_backup",
+      "size": 5611,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_182735.md.ref_backup",
+      "path": "naming_convention_backups\\BUSINESS-OPS-FUSION_LESSON_20250818_182735.md.ref_backup",
+      "size": 5655,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "BUSINESS-OPS-FUSION_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\BUSINESS-OPS-FUSION_LESSON_20250818_200836.md.ref_backup",
+      "size": 5724,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Chat004_Dynamic-Pathway-Tracker-System_20250818_143500.md.backup",
+      "path": "naming_convention_backups\\Chat004_Dynamic-Pathway-Tracker-System_20250818_143500.md.backup",
+      "size": 15070,
+      "size_readable": "14.7 KB",
+      "extension": ".backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Chat004_Framework-Set-2-Implementation-Roadmap_20250818_143500.md.ref_backup",
+      "path": "naming_convention_backups\\Chat004_Framework-Set-2-Implementation-Roadmap_20250818_143500.md.ref_backup",
+      "size": 18455,
+      "size_readable": "18.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Chat004_TODO-System-Definition-Framework-Set-2_20250818_143500.md.backup",
+      "path": "naming_convention_backups\\Chat004_TODO-System-Definition-Framework-Set-2_20250818_143500.md.backup",
+      "size": 22054,
+      "size_readable": "21.5 KB",
+      "extension": ".backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Chat004_Unified-Testing-Strategy-Framework-Set-2_20250818_143500.md.ref_backup",
+      "path": "naming_convention_backups\\Chat004_Unified-Testing-Strategy-Framework-Set-2_20250818_143500.md.ref_backup",
+      "size": 18349,
+      "size_readable": "17.9 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Chat_nspecified Document Upload.md.ref_backup",
+      "path": "naming_convention_backups\\Chat_nspecified Document Upload.md.ref_backup",
+      "size": 143612,
+      "size_readable": "140.2 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Coherent-Naming-Convention-Report.md.ref_backup",
+      "path": "naming_convention_backups\\Coherent-Naming-Convention-Report.md.ref_backup",
+      "size": 2197,
+      "size_readable": "2.1 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "complete_script_inventory_20250819_112404.md.ref_backup",
+      "path": "naming_convention_backups\\complete_script_inventory_20250819_112404.md.ref_backup",
+      "size": 39908,
+      "size_readable": "39.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "configuration_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\configuration_header_template.txt.ref_backup",
+      "size": 602,
+      "size_readable": "602.0 B",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "consistency_report_20250819_163922.txt.ref_backup",
+      "path": "naming_convention_backups\\consistency_report_20250819_163922.txt.ref_backup",
+      "size": 615570,
+      "size_readable": "601.1 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_162938.md.ref_backup",
+      "path": "naming_convention_backups\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_162938.md.ref_backup",
+      "size": 5611,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_165624.md.ref_backup",
+      "path": "naming_convention_backups\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_165624.md.ref_backup",
+      "size": 5637,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_165739.md.ref_backup",
+      "path": "naming_convention_backups\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_165739.md.ref_backup",
+      "size": 5681,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_170636.md.ref_backup",
+      "path": "naming_convention_backups\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_170636.md.ref_backup",
+      "size": 5681,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_172549.md.ref_backup",
+      "path": "naming_convention_backups\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_172549.md.ref_backup",
+      "size": 5750,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_182810.md.ref_backup",
+      "path": "naming_convention_backups\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_182810.md.ref_backup",
+      "size": 5637,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\CONTEXT-EVOLUTION-ENGINE_LESSON_20250818_200836.md.ref_backup",
+      "size": 5681,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Cross-System-Inheritance-Template.md.ref_backup",
+      "path": "naming_convention_backups\\Cross-System-Inheritance-Template.md.ref_backup",
+      "size": 3233,
+      "size_readable": "3.2 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "debugging_engines_specs.md.ref_backup",
+      "path": "naming_convention_backups\\debugging_engines_specs.md.ref_backup",
+      "size": 20127,
+      "size_readable": "19.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "deployment_validation_checklist.md.ref_backup",
+      "path": "naming_convention_backups\\deployment_validation_checklist.md.ref_backup",
+      "size": 11884,
+      "size_readable": "11.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_170351.md.ref_backup",
+      "path": "naming_convention_backups\\DPI_LESSON_20250818_170351.md.ref_backup",
+      "size": 5565,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_170356.md.ref_backup",
+      "path": "naming_convention_backups\\DPI_LESSON_20250818_170356.md.ref_backup",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_170452.md.ref_backup",
+      "path": "naming_convention_backups\\DPI_LESSON_20250818_170452.md.ref_backup",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_170650.md.ref_backup",
+      "path": "naming_convention_backups\\DPI_LESSON_20250818_170650.md.ref_backup",
+      "size": 5565,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_173355.md.ref_backup",
+      "path": "naming_convention_backups\\DPI_LESSON_20250818_173355.md.ref_backup",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_183217.md.ref_backup",
+      "path": "naming_convention_backups\\DPI_LESSON_20250818_183217.md.ref_backup",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "DPI_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\DPI_LESSON_20250818_200836.md.ref_backup",
+      "size": 5521,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Evolutionary-Lesson-Template-Foundation.md.ref_backup",
+      "path": "naming_convention_backups\\Evolutionary-Lesson-Template-Foundation.md.ref_backup",
+      "size": 3563,
+      "size_readable": "3.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "FIE-7.2-Breathing-Framework-XML-Latest.xml.ref_backup",
+      "path": "naming_convention_backups\\FIE-7.2-Breathing-Framework-XML-Latest.xml.ref_backup",
+      "size": 8177,
+      "size_readable": "8.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "fie_specification.md.ref_backup",
+      "path": "naming_convention_backups\\fie_specification.md.ref_backup",
+      "size": 3803,
+      "size_readable": "3.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "File_Header_Specification_v2.1_SignalBased.md.ref_backup",
+      "path": "naming_convention_backups\\File_Header_Specification_v2.1_SignalBased.md.ref_backup",
+      "size": 9996,
+      "size_readable": "9.8 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "First-5-PDT-PLUS-Evolutionary-Lessons-Proof-of-Concept.md.ref_backup",
+      "path": "naming_convention_backups\\First-5-PDT-PLUS-Evolutionary-Lessons-Proof-of-Concept.md.ref_backup",
+      "size": 24961,
+      "size_readable": "24.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "framework_set_2_readme.md.ref_backup",
+      "path": "naming_convention_backups\\framework_set_2_readme.md.ref_backup",
+      "size": 23912,
+      "size_readable": "23.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "framework_set_2_readme1To6.md.ref_backup",
+      "path": "naming_convention_backups\\framework_set_2_readme1To6.md.ref_backup",
+      "size": 18184,
+      "size_readable": "17.8 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "framework_set_2_readme7 to12.md.ref_backup",
+      "path": "naming_convention_backups\\framework_set_2_readme7 to12.md.ref_backup",
+      "size": 14543,
+      "size_readable": "14.2 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "HEADER_TEMPLATES_USAGE_GUIDE.md.ref_backup",
+      "path": "naming_convention_backups\\HEADER_TEMPLATES_USAGE_GUIDE.md.ref_backup",
+      "size": 5727,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "json_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\json_header_template.txt.ref_backup",
+      "size": 913,
+      "size_readable": "913.0 B",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_162938.md.ref_backup",
+      "path": "naming_convention_backups\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_162938.md.ref_backup",
+      "size": 5758,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_165955.md.ref_backup",
+      "path": "naming_convention_backups\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_165955.md.ref_backup",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170203.md.ref_backup",
+      "path": "naming_convention_backups\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170203.md.ref_backup",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170303.md.ref_backup",
+      "path": "naming_convention_backups\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170303.md.ref_backup",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170641.md.ref_backup",
+      "path": "naming_convention_backups\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_170641.md.ref_backup",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_172932.md.ref_backup",
+      "path": "naming_convention_backups\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_172932.md.ref_backup",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_182955.md.ref_backup",
+      "path": "naming_convention_backups\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_182955.md.ref_backup",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\KNOWLEDGE-EVOLUTION-ENGINE_LESSON_20250818_200836.md.ref_backup",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Lessons-Index.md.ref_backup",
+      "path": "naming_convention_backups\\Lessons-Index.md.ref_backup",
+      "size": 18061,
+      "size_readable": "17.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "markdown_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\markdown_header_template.txt.ref_backup",
+      "size": 2159,
+      "size_readable": "2.1 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "NEXUS_Engine_v2.1_SignalDetection.md.ref_backup",
+      "path": "naming_convention_backups\\NEXUS_Engine_v2.1_SignalDetection.md.ref_backup",
+      "size": 22484,
+      "size_readable": "22.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_165957.md.ref_backup",
+      "path": "naming_convention_backups\\PAES_LESSON_20250818_165957.md.ref_backup",
+      "size": 5523,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_170113.md.ref_backup",
+      "path": "naming_convention_backups\\PAES_LESSON_20250818_170113.md.ref_backup",
+      "size": 5567,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_170647.md.ref_backup",
+      "path": "naming_convention_backups\\PAES_LESSON_20250818_170647.md.ref_backup",
+      "size": 5523,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_173304.md.ref_backup",
+      "path": "naming_convention_backups\\PAES_LESSON_20250818_173304.md.ref_backup",
+      "size": 5567,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_183141.md.ref_backup",
+      "path": "naming_convention_backups\\PAES_LESSON_20250818_183141.md.ref_backup",
+      "size": 5567,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PAES_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\PAES_LESSON_20250818_200836.md.ref_backup",
+      "size": 5567,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "part1_existing_files_header_report_20250819_053049.json.ref_backup",
+      "path": "naming_convention_backups\\part1_existing_files_header_report_20250819_053049.json.ref_backup",
+      "size": 20130,
+      "size_readable": "19.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_162938.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_LESSON_20250818_162938.md.ref_backup",
+      "size": 5674,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_163347.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_LESSON_20250818_163347.md.ref_backup",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_163426.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_LESSON_20250818_163426.md.ref_backup",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_170623.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_LESSON_20250818_170623.md.ref_backup",
+      "size": 5530,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_171743.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_LESSON_20250818_171743.md.ref_backup",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_182440.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_LESSON_20250818_182440.md.ref_backup",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_LESSON_20250818_200836.md.ref_backup",
+      "size": 5574,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_LESSON_20250818_201302.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_LESSON_20250818_201302.md.ref_backup",
+      "size": 5598,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_v2.1_SignalBased.md.ref_backup",
+      "path": "naming_convention_backups\\PDT-PLUS_v2.1_SignalBased.md.ref_backup",
+      "size": 17422,
+      "size_readable": "17.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_165624.md.ref_backup",
+      "path": "naming_convention_backups\\PERFORMANCE-AI-FUSION_LESSON_20250818_165624.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_165725.md.ref_backup",
+      "path": "naming_convention_backups\\PERFORMANCE-AI-FUSION_LESSON_20250818_165725.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_170637.md.ref_backup",
+      "path": "naming_convention_backups\\PERFORMANCE-AI-FUSION_LESSON_20250818_170637.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_172706.md.ref_backup",
+      "path": "naming_convention_backups\\PERFORMANCE-AI-FUSION_LESSON_20250818_172706.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_182845.md.ref_backup",
+      "path": "naming_convention_backups\\PERFORMANCE-AI-FUSION_LESSON_20250818_182845.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PERFORMANCE-AI-FUSION_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\PERFORMANCE-AI-FUSION_LESSON_20250818_200836.md.ref_backup",
+      "size": 5619,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKM 5-Point Protocol XML Configuration.txt.ref_backup",
+      "path": "naming_convention_backups\\PKM 5-Point Protocol XML Configuration.txt.ref_backup",
+      "size": 16086,
+      "size_readable": "15.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKM-5Point-Protocol-v5.0.xml.ref_backup",
+      "path": "naming_convention_backups\\PKM-5Point-Protocol-v5.0.xml.ref_backup",
+      "size": 7660,
+      "size_readable": "7.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "pkm_system_spec_generator.md.ref_backup",
+      "path": "naming_convention_backups\\pkm_system_spec_generator.md.ref_backup",
+      "size": 6175,
+      "size_readable": "6.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "pkm_test_results_20250819_173723.json.ref_backup",
+      "path": "naming_convention_backups\\pkm_test_results_20250819_173723.json.ref_backup",
+      "size": 12555,
+      "size_readable": "12.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_165955.md.ref_backup",
+      "path": "naming_convention_backups\\PMCS-024_LESSON_20250818_165955.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_170126.md.ref_backup",
+      "path": "naming_convention_backups\\PMCS-024_LESSON_20250818_170126.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_170226.md.ref_backup",
+      "path": "naming_convention_backups\\PMCS-024_LESSON_20250818_170226.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_170646.md.ref_backup",
+      "path": "naming_convention_backups\\PMCS-024_LESSON_20250818_170646.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_173153.md.ref_backup",
+      "path": "naming_convention_backups\\PMCS-024_LESSON_20250818_173153.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_183106.md.ref_backup",
+      "path": "naming_convention_backups\\PMCS-024_LESSON_20250818_183106.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PMCS-024_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\PMCS-024_LESSON_20250818_200836.md.ref_backup",
+      "size": 5547,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "powershell_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\powershell_header_template.txt.ref_backup",
+      "size": 578,
+      "size_readable": "578.0 B",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Progressive-Framework-Academy-Complete-Specification.md.ref_backup",
+      "path": "naming_convention_backups\\Progressive-Framework-Academy-Complete-Specification.md.ref_backup",
+      "size": 18155,
+      "size_readable": "17.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Progressive-Systems-Config-v2.3-SignalBased.json.ref_backup",
+      "path": "naming_convention_backups\\Progressive-Systems-Config-v2.3-SignalBased.json.ref_backup",
+      "size": 7660,
+      "size_readable": "7.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-01-PDT-PLUS.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-01-PDT-PLUS.md.ref_backup",
+      "size": 25644,
+      "size_readable": "25.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-02-PUXT-PLUS.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-02-PUXT-PLUS.md.ref_backup",
+      "size": 12668,
+      "size_readable": "12.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-03-PSO-PRIME.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-03-PSO-PRIME.md.ref_backup",
+      "size": 23084,
+      "size_readable": "22.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-04-PTT-DOCS-FUSION.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-04-PTT-DOCS-FUSION.md.ref_backup",
+      "size": 20774,
+      "size_readable": "20.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-05-REQUIREMENTS-PRIME.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-05-REQUIREMENTS-PRIME.md.ref_backup",
+      "size": 22449,
+      "size_readable": "21.9 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-06-BUSINESS-OPS-FUSION.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-06-BUSINESS-OPS-FUSION.md.ref_backup",
+      "size": 22615,
+      "size_readable": "22.1 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-07-CONTEXT-EVOLUTION-ENGINE.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-07-CONTEXT-EVOLUTION-ENGINE.md.ref_backup",
+      "size": 13049,
+      "size_readable": "12.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-08-PERFORMANCE-AI-FUSION.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-08-PERFORMANCE-AI-FUSION.md.ref_backup",
+      "size": 13439,
+      "size_readable": "13.1 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-09-SECURITY-BUILD-FUSION.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-09-SECURITY-BUILD-FUSION.md.ref_backup",
+      "size": 14156,
+      "size_readable": "13.8 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-10-KNOWLEDGE-EVOLUTION-ENGINE.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-10-KNOWLEDGE-EVOLUTION-ENGINE.md.ref_backup",
+      "size": 13290,
+      "size_readable": "13.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-11-UNIVERSAL-ORCHESTRATION-PRIME.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-11-UNIVERSAL-ORCHESTRATION-PRIME.md.ref_backup",
+      "size": 12912,
+      "size_readable": "12.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-12-PMCS-024.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-12-PMCS-024.md.ref_backup",
+      "size": 15929,
+      "size_readable": "15.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-13-PAES.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-13-PAES.md.ref_backup",
+      "size": 14650,
+      "size_readable": "14.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-14-DPI.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-14-DPI.md.ref_backup",
+      "size": 30899,
+      "size_readable": "30.2 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-15-PTODOS.md.ref_backup",
+      "path": "naming_convention_backups\\PROGRESSIVEPROJECT-SYSTEM-15-PTODOS.md.ref_backup",
+      "size": 31419,
+      "size_readable": "30.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "ProgressiveProject-System-20250818-UNKNOWN.md.backup",
+      "path": "naming_convention_backups\\ProgressiveProject-System-20250818-UNKNOWN.md.backup",
+      "size": 15070,
+      "size_readable": "14.7 KB",
+      "extension": ".backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_165333.md.ref_backup",
+      "path": "naming_convention_backups\\PSO-PRIME_LESSON_20250818_165333.md.ref_backup",
+      "size": 5595,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_165514.md.ref_backup",
+      "path": "naming_convention_backups\\PSO-PRIME_LESSON_20250818_165514.md.ref_backup",
+      "size": 5595,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_170627.md.ref_backup",
+      "path": "naming_convention_backups\\PSO-PRIME_LESSON_20250818_170627.md.ref_backup",
+      "size": 5595,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_172055.md.ref_backup",
+      "path": "naming_convention_backups\\PSO-PRIME_LESSON_20250818_172055.md.ref_backup",
+      "size": 5551,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_182550.md.ref_backup",
+      "path": "naming_convention_backups\\PSO-PRIME_LESSON_20250818_182550.md.ref_backup",
+      "size": 5595,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PSO-PRIME_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\PSO-PRIME_LESSON_20250818_200836.md.ref_backup",
+      "size": 5551,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_170351.md.ref_backup",
+      "path": "naming_convention_backups\\PTODOS_LESSON_20250818_170351.md.ref_backup",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_170356.md.ref_backup",
+      "path": "naming_convention_backups\\PTODOS_LESSON_20250818_170356.md.ref_backup",
+      "size": 5539,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_170434.md.ref_backup",
+      "path": "naming_convention_backups\\PTODOS_LESSON_20250818_170434.md.ref_backup",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_170651.md.ref_backup",
+      "path": "naming_convention_backups\\PTODOS_LESSON_20250818_170651.md.ref_backup",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_173456.md.ref_backup",
+      "path": "naming_convention_backups\\PTODOS_LESSON_20250818_173456.md.ref_backup",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_183252.md.ref_backup",
+      "path": "naming_convention_backups\\PTODOS_LESSON_20250818_183252.md.ref_backup",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTODOS_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\PTODOS_LESSON_20250818_200836.md.ref_backup",
+      "size": 5583,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_162938.md.ref_backup",
+      "path": "naming_convention_backups\\PTT-DOCS-FUSION_LESSON_20250818_162938.md.ref_backup",
+      "size": 5544,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_165333.md.ref_backup",
+      "path": "naming_convention_backups\\PTT-DOCS-FUSION_LESSON_20250818_165333.md.ref_backup",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_165455.md.ref_backup",
+      "path": "naming_convention_backups\\PTT-DOCS-FUSION_LESSON_20250818_165455.md.ref_backup",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_170629.md.ref_backup",
+      "path": "naming_convention_backups\\PTT-DOCS-FUSION_LESSON_20250818_170629.md.ref_backup",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_172207.md.ref_backup",
+      "path": "naming_convention_backups\\PTT-DOCS-FUSION_LESSON_20250818_172207.md.ref_backup",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_182625.md.ref_backup",
+      "path": "naming_convention_backups\\PTT-DOCS-FUSION_LESSON_20250818_182625.md.ref_backup",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\PTT-DOCS-FUSION_LESSON_20250818_200836.md.ref_backup",
+      "size": 5509,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_v2.1_SignalBased.md.ref_backup",
+      "path": "naming_convention_backups\\PTT-DOCS-FUSION_v2.1_SignalBased.md.ref_backup",
+      "size": 14950,
+      "size_readable": "14.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_165333.md.ref_backup",
+      "path": "naming_convention_backups\\PUXT-PLUS_LESSON_20250818_165333.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_165532.md.ref_backup",
+      "path": "naming_convention_backups\\PUXT-PLUS_LESSON_20250818_165532.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_165826.md.ref_backup",
+      "path": "naming_convention_backups\\PUXT-PLUS_LESSON_20250818_165826.md.ref_backup",
+      "size": 5547,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_170625.md.ref_backup",
+      "path": "naming_convention_backups\\PUXT-PLUS_LESSON_20250818_170625.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_171914.md.ref_backup",
+      "path": "naming_convention_backups\\PUXT-PLUS_LESSON_20250818_171914.md.ref_backup",
+      "size": 5547,
+      "size_readable": "5.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_182515.md.ref_backup",
+      "path": "naming_convention_backups\\PUXT-PLUS_LESSON_20250818_182515.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PUXT-PLUS_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\PUXT-PLUS_LESSON_20250818_200836.md.ref_backup",
+      "size": 5591,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "python_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\python_header_template.txt.ref_backup",
+      "size": 1373,
+      "size_readable": "1.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "README.md.ref_backup",
+      "path": "naming_convention_backups\\README.md.ref_backup",
+      "size": 1326,
+      "size_readable": "1.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_165333.md.ref_backup",
+      "path": "naming_convention_backups\\REQUIREMENTS-PRIME_LESSON_20250818_165333.md.ref_backup",
+      "size": 5649,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_165411.md.ref_backup",
+      "path": "naming_convention_backups\\REQUIREMENTS-PRIME_LESSON_20250818_165411.md.ref_backup",
+      "size": 5605,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_170632.md.ref_backup",
+      "path": "naming_convention_backups\\REQUIREMENTS-PRIME_LESSON_20250818_170632.md.ref_backup",
+      "size": 5649,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_172318.md.ref_backup",
+      "path": "naming_convention_backups\\REQUIREMENTS-PRIME_LESSON_20250818_172318.md.ref_backup",
+      "size": 5718,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_182700.md.ref_backup",
+      "path": "naming_convention_backups\\REQUIREMENTS-PRIME_LESSON_20250818_182700.md.ref_backup",
+      "size": 5649,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "REQUIREMENTS-PRIME_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\REQUIREMENTS-PRIME_LESSON_20250818_200836.md.ref_backup",
+      "size": 5605,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "robustness_test_report_20250819_044325.txt.ref_backup",
+      "path": "naming_convention_backups\\robustness_test_report_20250819_044325.txt.ref_backup",
+      "size": 3681,
+      "size_readable": "3.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Runtime_Ideas_Evolution_Architecture.md.ref_backup",
+      "path": "naming_convention_backups\\Runtime_Ideas_Evolution_Architecture.md.ref_backup",
+      "size": 15269,
+      "size_readable": "14.9 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "runtime_ideas_evolution_deployment.md.ref_backup",
+      "path": "naming_convention_backups\\runtime_ideas_evolution_deployment.md.ref_backup",
+      "size": 13801,
+      "size_readable": "13.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_165624.md.ref_backup",
+      "path": "naming_convention_backups\\SECURITY-BUILD-FUSION_LESSON_20250818_165624.md.ref_backup",
+      "size": 5619,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_165709.md.ref_backup",
+      "path": "naming_convention_backups\\SECURITY-BUILD-FUSION_LESSON_20250818_165709.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_170639.md.ref_backup",
+      "path": "naming_convention_backups\\SECURITY-BUILD-FUSION_LESSON_20250818_170639.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_172833.md.ref_backup",
+      "path": "naming_convention_backups\\SECURITY-BUILD-FUSION_LESSON_20250818_172833.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_182920.md.ref_backup",
+      "path": "naming_convention_backups\\SECURITY-BUILD-FUSION_LESSON_20250818_182920.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "SECURITY-BUILD-FUSION_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\SECURITY-BUILD-FUSION_LESSON_20250818_200836.md.ref_backup",
+      "size": 5663,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "shell_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\shell_header_template.txt.ref_backup",
+      "size": 589,
+      "size_readable": "589.0 B",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_diagnostic_report_20250819_103603.json.ref_backup",
+      "path": "naming_convention_backups\\signal_diagnostic_report_20250819_103603.json.ref_backup",
+      "size": 1523,
+      "size_readable": "1.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Signal_Generation_Layer_v1.1_Implementation.md.ref_backup",
+      "path": "naming_convention_backups\\Signal_Generation_Layer_v1.1_Implementation.md.ref_backup",
+      "size": 38661,
+      "size_readable": "37.8 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_validation_report_20250818_231312.json.ref_backup",
+      "path": "naming_convention_backups\\signal_validation_report_20250818_231312.json.ref_backup",
+      "size": 3603,
+      "size_readable": "3.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_validation_report_20250818_231341.json.ref_backup",
+      "path": "naming_convention_backups\\signal_validation_report_20250818_231341.json.ref_backup",
+      "size": 3195,
+      "size_readable": "3.1 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "specification_evolution_report_20250819_042241.json.ref_backup",
+      "path": "naming_convention_backups\\specification_evolution_report_20250819_042241.json.ref_backup",
+      "size": 7519,
+      "size_readable": "7.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "StartCommandOptons.txt.ref_backup",
+      "path": "naming_convention_backups\\StartCommandOptons.txt.ref_backup",
+      "size": 1306,
+      "size_readable": "1.3 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Student-Progress-Protection-Template.md.ref_backup",
+      "path": "naming_convention_backups\\Student-Progress-Protection-Template.md.ref_backup",
+      "size": 5157,
+      "size_readable": "5.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "system_identification_report.md.ref_backup",
+      "path": "naming_convention_backups\\system_identification_report.md.ref_backup",
+      "size": 52191,
+      "size_readable": "51.0 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "SYSTEMS 10-13 Complete Specifications.md.ref_backup",
+      "path": "naming_convention_backups\\SYSTEMS 10-13 Complete Specifications.md.ref_backup",
+      "size": 14061,
+      "size_readable": "13.7 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "SYSTEMS 14-15 Complete Specifications.md.ref_backup",
+      "path": "naming_convention_backups\\SYSTEMS 14-15 Complete Specifications.md.ref_backup",
+      "size": 15471,
+      "size_readable": "15.1 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "text_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\text_header_template.txt.ref_backup",
+      "size": 911,
+      "size_readable": "911.0 B",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_165955.md.ref_backup",
+      "path": "naming_convention_backups\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_165955.md.ref_backup",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170142.md.ref_backup",
+      "path": "naming_convention_backups\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170142.md.ref_backup",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170242.md.ref_backup",
+      "path": "naming_convention_backups\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170242.md.ref_backup",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170643.md.ref_backup",
+      "path": "naming_convention_backups\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_170643.md.ref_backup",
+      "size": 5678,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_173022.md.ref_backup",
+      "path": "naming_convention_backups\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_173022.md.ref_backup",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_183030.md.ref_backup",
+      "path": "naming_convention_backups\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_183030.md.ref_backup",
+      "size": 5717,
+      "size_readable": "5.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_200836.md.ref_backup",
+      "path": "naming_convention_backups\\UNIVERSAL-ORCHESTRATION-PRIME_LESSON_20250818_200836.md.ref_backup",
+      "size": 5678,
+      "size_readable": "5.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "universal_header_verification_report_20250819_062332.md.ref_backup",
+      "path": "naming_convention_backups\\universal_header_verification_report_20250819_062332.md.ref_backup",
+      "size": 20053,
+      "size_readable": "19.6 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "universal_header_verification_report_20250819_062710.md.ref_backup",
+      "path": "naming_convention_backups\\universal_header_verification_report_20250819_062710.md.ref_backup",
+      "size": 20929,
+      "size_readable": "20.4 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "xml_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\xml_header_template.txt.ref_backup",
+      "size": 1549,
+      "size_readable": "1.5 KB",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "yaml_header_template.txt.ref_backup",
+      "path": "naming_convention_backups\\yaml_header_template.txt.ref_backup",
+      "size": 913,
+      "size_readable": "913.0 B",
+      "extension": ".ref_backup",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "Scripts",
+      "path": "Scripts",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "1 pmcs_024_filename_corrector.py",
+      "path": "Scripts\\1 pmcs_024_filename_corrector.py",
+      "size": 12548,
+      "size_readable": "12.3 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "10 15 Chat Startup Commands - 615+ Test-to-Lesson Evolutionary Mapping.md",
+      "path": "Scripts\\10 15 Chat Startup Commands - 615+ Test-to-Lesson Evolutionary Mapping.md",
+      "size": 18147,
+      "size_readable": "17.7 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "11 615+ Test-to-Lesson Evolutionary Mapping Engine.md",
+      "path": "Scripts\\11 615+ Test-to-Lesson Evolutionary Mapping Engine.md",
+      "size": 13476,
+      "size_readable": "13.2 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "2 pmcs_024_filename_correction_report_20250818_142338.md",
+      "path": "Scripts\\2 pmcs_024_filename_correction_report_20250818_142338.md",
+      "size": 2349,
+      "size_readable": "2.3 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "3 PKM 5-Point Protocol XML Configuration.txt",
+      "path": "Scripts\\3 PKM 5-Point Protocol XML Configuration.txt",
+      "size": 905,
+      "size_readable": "905.0 B",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "4 Optimized Progressive Systems Configuration JSON v4.0.txt",
+      "path": "Scripts\\4 Optimized Progressive Systems Configuration JSON v4.0.txt",
+      "size": 1706,
+      "size_readable": "1.7 KB",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "5 missing_files_fix.py",
+      "path": "Scripts\\5 missing_files_fix.py",
+      "size": 35566,
+      "size_readable": "34.7 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "6 evolutionary_update_master.py",
+      "path": "Scripts\\6 evolutionary_update_master.py",
+      "size": 79634,
+      "size_readable": "77.8 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "7 evolutionary_mapping_update_report_20250818_160215.md",
+      "path": "Scripts\\7 evolutionary_mapping_update_report_20250818_160215.md",
+      "size": 6711,
+      "size_readable": "6.6 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "8 breathing_framework_automation.py",
+      "path": "Scripts\\8 breathing_framework_automation.py",
+      "size": 23372,
+      "size_readable": "22.8 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "9 automated_lesson_triggers.py",
+      "path": "Scripts\\9 automated_lesson_triggers.py",
+      "size": 31711,
+      "size_readable": "31.0 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "automated_header_applicator.py",
+      "path": "Scripts\\automated_header_applicator.py",
+      "size": 19208,
+      "size_readable": "18.8 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "automated_header_applicator_phase3.py",
+      "path": "Scripts\\automated_header_applicator_phase3.py",
+      "size": 22170,
+      "size_readable": "21.7 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "batch_test_processing_report_20250818_232525.json",
+      "path": "Scripts\\batch_test_processing_report_20250818_232525.json",
+      "size": 1590,
+      "size_readable": "1.6 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "batch_test_signal_trigger.py",
+      "path": "Scripts\\batch_test_signal_trigger.py",
+      "size": 15597,
+      "size_readable": "15.2 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_config_20250819_055926.py",
+      "path": "Scripts\\breathing_framework_config_20250819_055926.py",
+      "size": 508,
+      "size_readable": "508.0 B",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_diagnostic.py",
+      "path": "Scripts\\breathing_framework_diagnostic.py",
+      "size": 18342,
+      "size_readable": "17.9 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_header_manager.py",
+      "path": "Scripts\\breathing_framework_header_manager.py",
+      "size": 33606,
+      "size_readable": "32.8 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_integration_report_20250819_061054.md",
+      "path": "Scripts\\breathing_framework_integration_report_20250819_061054.md",
+      "size": 5122,
+      "size_readable": "5.0 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_integration_report_20250819_061743.md",
+      "path": "Scripts\\breathing_framework_integration_report_20250819_061743.md",
+      "size": 5262,
+      "size_readable": "5.1 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_integrator.py",
+      "path": "Scripts\\breathing_framework_integrator.py",
+      "size": 38967,
+      "size_readable": "38.1 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "breathing_framework_integrator_fixed.py",
+      "path": "Scripts\\breathing_framework_integrator_fixed.py",
+      "size": 39857,
+      "size_readable": "38.9 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Chat004_Directory-Lister-Script_20250818_143500.py",
+      "path": "Scripts\\Chat004_Directory-Lister-Script_20250818_143500.py",
+      "size": 11199,
+      "size_readable": "10.9 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "complete_framework_finalization.py",
+      "path": "Scripts\\complete_framework_finalization.py",
+      "size": 12308,
+      "size_readable": "12.0 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "complete_script_inventory_20250819_112404.md",
+      "path": "Scripts\\complete_script_inventory_20250819_112404.md",
+      "size": 39908,
+      "size_readable": "39.0 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "content_modification_trigger.py",
+      "path": "Scripts\\content_modification_trigger.py",
+      "size": 9238,
+      "size_readable": "9.0 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "cross_system_inheritance_engine.py",
+      "path": "Scripts\\cross_system_inheritance_engine.py",
+      "size": 2440,
+      "size_readable": "2.4 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "deployment_validation_checklist.md",
+      "path": "Scripts\\deployment_validation_checklist.md",
+      "size": 11884,
+      "size_readable": "11.6 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "evolutionary_mapping_engine.py",
+      "path": "Scripts\\evolutionary_mapping_engine.py",
+      "size": 3366,
+      "size_readable": "3.3 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "File_Header_Specification_v2.1_SignalBased.md",
+      "path": "Scripts\\File_Header_Specification_v2.1_SignalBased.md",
+      "size": 9996,
+      "size_readable": "9.8 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "final_header_fix.py",
+      "path": "Scripts\\final_header_fix.py",
+      "size": 5452,
+      "size_readable": "5.3 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "integrated_progressive_framework_header_system.py",
+      "path": "Scripts\\integrated_progressive_framework_header_system.py",
+      "size": 18031,
+      "size_readable": "17.6 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "lesson_lifecycle_manager.py",
+      "path": "Scripts\\lesson_lifecycle_manager.py",
+      "size": 2656,
+      "size_readable": "2.6 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "lesson_monitor.py",
+      "path": "Scripts\\lesson_monitor.py",
+      "size": 479,
+      "size_readable": "479.0 B",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "part1_existing_files_header_fix.py",
+      "path": "Scripts\\part1_existing_files_header_fix.py",
+      "size": 25396,
+      "size_readable": "24.8 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "part1_existing_files_header_report_20250819_053049.json",
+      "path": "Scripts\\part1_existing_files_header_report_20250819_053049.json",
+      "size": 20130,
+      "size_readable": "19.7 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "part2_clean.py",
+      "path": "Scripts\\part2_clean.py",
+      "size": 18491,
+      "size_readable": "18.1 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "part2_minimal.py",
+      "path": "Scripts\\part2_minimal.py",
+      "size": 5648,
+      "size_readable": "5.5 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "part2_template_generation_fix.py",
+      "path": "Scripts\\part2_template_generation_fix.py",
+      "size": 37171,
+      "size_readable": "36.3 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "part2_template_generation_fix_corrected.py",
+      "path": "Scripts\\part2_template_generation_fix_corrected.py",
+      "size": 21514,
+      "size_readable": "21.0 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "phase4_final_push.py",
+      "path": "Scripts\\phase4_final_push.py",
+      "size": 13541,
+      "size_readable": "13.2 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "phase4_final_push_fixed.py",
+      "path": "Scripts\\phase4_final_push_fixed.py",
+      "size": 7455,
+      "size_readable": "7.3 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "phase5_legendary.py",
+      "path": "Scripts\\phase5_legendary.py",
+      "size": 15736,
+      "size_readable": "15.4 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "piping_compatible_header_applicator.py",
+      "path": "Scripts\\piping_compatible_header_applicator.py",
+      "size": 19515,
+      "size_readable": "19.1 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKM 5-Point Protocol XML Configuration.txt",
+      "path": "Scripts\\PKM 5-Point Protocol XML Configuration.txt",
+      "size": 16086,
+      "size_readable": "15.7 KB",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "progressive_framework_system_identifier.py",
+      "path": "Scripts\\progressive_framework_system_identifier.py",
+      "size": 19425,
+      "size_readable": "19.0 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "python final_header_fix.py",
+      "path": "Scripts\\python final_header_fix.py",
+      "size": 5298,
+      "size_readable": "5.2 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "quick_full_test.py",
+      "path": "Scripts\\quick_full_test.py",
+      "size": 6443,
+      "size_readable": "6.3 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "reathing_framework_diagnostic.py",
+      "path": "Scripts\\reathing_framework_diagnostic.py",
+      "size": 18341,
+      "size_readable": "17.9 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "robustness_test_report_20250819_044325.txt",
+      "path": "Scripts\\robustness_test_report_20250819_044325.txt",
+      "size": 3681,
+      "size_readable": "3.6 KB",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "robustness_tester.py",
+      "path": "Scripts\\robustness_tester.py",
+      "size": 18159,
+      "size_readable": "17.7 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Runtime_Ideas_Evolution_Architecture.md",
+      "path": "Scripts\\Runtime_Ideas_Evolution_Architecture.md",
+      "size": 15269,
+      "size_readable": "14.9 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "runtime_ideas_evolution_deployment.md",
+      "path": "Scripts\\runtime_ideas_evolution_deployment.md",
+      "size": 13801,
+      "size_readable": "13.5 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "script_inventory.py",
+      "path": "Scripts\\script_inventory.py",
+      "size": 16371,
+      "size_readable": "16.0 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "show_non_system_files.py",
+      "path": "Scripts\\show_non_system_files.py",
+      "size": 3663,
+      "size_readable": "3.6 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_diagnostic_report_20250819_103603.json",
+      "path": "Scripts\\signal_diagnostic_report_20250819_103603.json",
+      "size": 1523,
+      "size_readable": "1.5 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_diagnostic_tool.py",
+      "path": "Scripts\\signal_diagnostic_tool.py",
+      "size": 17805,
+      "size_readable": "17.4 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Signal_Generation_Layer_v1.1_Implementation.md",
+      "path": "Scripts\\Signal_Generation_Layer_v1.1_Implementation.md",
+      "size": 38661,
+      "size_readable": "37.8 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_hooks_implementation.py",
+      "path": "Scripts\\signal_hooks_implementation.py",
+      "size": 22312,
+      "size_readable": "21.8 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_performance_validator.py",
+      "path": "Scripts\\signal_performance_validator.py",
+      "size": 22183,
+      "size_readable": "21.7 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_validation_report_20250818_231312.json",
+      "path": "Scripts\\signal_validation_report_20250818_231312.json",
+      "size": 3603,
+      "size_readable": "3.5 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signal_validation_report_20250818_231341.json",
+      "path": "Scripts\\signal_validation_report_20250818_231341.json",
+      "size": 3195,
+      "size_readable": "3.1 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "signals_fix.py",
+      "path": "Scripts\\signals_fix.py",
+      "size": 2761,
+      "size_readable": "2.7 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "spec_evolution_automation.py",
+      "path": "Scripts\\spec_evolution_automation.py",
+      "size": 31688,
+      "size_readable": "30.9 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "specification_evolution_report_20250819_042241.json",
+      "path": "Scripts\\specification_evolution_report_20250819_042241.json",
+      "size": 7519,
+      "size_readable": "7.3 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "student_progress_protector.py",
+      "path": "Scripts\\student_progress_protector.py",
+      "size": 2775,
+      "size_readable": "2.7 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "system_identification_report.md",
+      "path": "Scripts\\system_identification_report.md",
+      "size": 52191,
+      "size_readable": "51.0 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "universal_file_header_verification.py",
+      "path": "Scripts\\universal_file_header_verification.py",
+      "size": 37039,
+      "size_readable": "36.2 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "universal_file_header_verification_fixed.py",
+      "path": "Scripts\\universal_file_header_verification_fixed.py",
+      "size": 37317,
+      "size_readable": "36.4 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "universal_header_verification_report_20250819_062332.md",
+      "path": "Scripts\\universal_header_verification_report_20250819_062332.md",
+      "size": 20053,
+      "size_readable": "19.6 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "universal_header_verification_report_20250819_062710.md",
+      "path": "Scripts\\universal_header_verification_report_20250819_062710.md",
+      "size": 20929,
+      "size_readable": "20.4 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "validation_test.py",
+      "path": "Scripts\\validation_test.py",
+      "size": 6245,
+      "size_readable": "6.1 KB",
+      "extension": ".py",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "signals",
+      "path": "signals",
+      "level": 0
+    },
+    {
+      "type": "folder",
+      "name": "coordination",
+      "path": "signals\\coordination",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\coordination\\README.md",
+      "size": 1326,
+      "size_readable": "1.3 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "courses",
+      "path": "signals\\courses",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\courses\\README.md",
+      "size": 1275,
+      "size_readable": "1.2 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "debug",
+      "path": "signals\\debug",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "atlas",
+      "path": "signals\\debug\\atlas",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\debug\\atlas\\README.md",
+      "size": 1581,
+      "size_readable": "1.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "crud",
+      "path": "signals\\debug\\crud",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\debug\\crud\\README.md",
+      "size": 1567,
+      "size_readable": "1.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "nexus",
+      "path": "signals\\debug\\nexus",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\debug\\nexus\\README.md",
+      "size": 1575,
+      "size_readable": "1.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "folder",
+      "name": "prism",
+      "path": "signals\\debug\\prism",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\debug\\prism\\README.md",
+      "size": 1567,
+      "size_readable": "1.5 KB",
+      "extension": ".md",
+      "level": 3
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\debug\\README.md",
+      "size": 682,
+      "size_readable": "682.0 B",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "education",
+      "path": "signals\\education",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\education\\README.md",
+      "size": 1282,
+      "size_readable": "1.3 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "ideas",
+      "path": "signals\\ideas",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\ideas\\README.md",
+      "size": 1284,
+      "size_readable": "1.3 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "lessons",
+      "path": "signals\\lessons",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\lessons\\README.md",
+      "size": 692,
+      "size_readable": "692.0 B",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "test_signal_103542.signal",
+      "path": "signals\\lessons\\test_signal_103542.signal",
+      "size": 243,
+      "size_readable": "243.0 B",
+      "extension": ".signal",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "systems",
+      "path": "signals\\systems",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "logic_test_20250819_103558.signal",
+      "path": "signals\\systems\\logic_test_20250819_103558.signal",
+      "size": 387,
+      "size_readable": "387.0 B",
+      "extension": ".signal",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\systems\\README.md",
+      "size": 686,
+      "size_readable": "686.0 B",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "test_cases",
+      "path": "signals\\test_cases",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "diagnostic_test_20250819_103553.signal",
+      "path": "signals\\test_cases\\diagnostic_test_20250819_103553.signal",
+      "size": 348,
+      "size_readable": "348.0 B",
+      "extension": ".signal",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\test_cases\\README.md",
+      "size": 704,
+      "size_readable": "704.0 B",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "todos",
+      "path": "signals\\todos",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "README.md",
+      "path": "signals\\todos\\README.md",
+      "size": 678,
+      "size_readable": "678.0 B",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "processing.log",
+      "path": "signals\\processing.log",
+      "size": 126,
+      "size_readable": "126.0 B",
+      "extension": ".log",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "SIMPLE USER GUIDE",
+      "path": "SIMPLE USER GUIDE",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "1 PROGRESSIVE_FRAMEWORK-Set-2  QUICK START GUIDE.md",
+      "path": "SIMPLE USER GUIDE\\1 PROGRESSIVE_FRAMEWORK-Set-2  QUICK START GUIDE.md",
+      "size": 7508,
+      "size_readable": "7.3 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "2 PKM PROGRESSIVE.md",
+      "path": "SIMPLE USER GUIDE\\2 PKM PROGRESSIVE.md",
+      "size": 17881,
+      "size_readable": "17.5 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "System Logic Testing Framework",
+      "path": "System Logic Testing Framework",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Chat004_Framework-Set-2-Implementation-Roadmap_20250818_143500.md",
+      "path": "System Logic Testing Framework\\Chat004_Framework-Set-2-Implementation-Roadmap_20250818_143500.md",
+      "size": 18455,
+      "size_readable": "18.0 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Chat004_Unified-Testing-Strategy-Framework-Set-2_20250818_143500.md",
+      "path": "System Logic Testing Framework\\Chat004_Unified-Testing-Strategy-Framework-Set-2_20250818_143500.md",
+      "size": 18349,
+      "size_readable": "17.9 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "System_Specs",
+      "path": "System_Specs",
+      "level": 0
+    },
+    {
+      "type": "folder",
+      "name": "Breathing_Framework",
+      "path": "System_Specs\\Breathing_Framework",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Breathing-Framework-Complete-Architecture.md",
+      "path": "System_Specs\\Breathing_Framework\\Breathing-Framework-Complete-Architecture.md",
+      "size": 42997,
+      "size_readable": "42.0 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "COMPLETE_TESTING_SUITE",
+      "path": "System_Specs\\COMPLETE_TESTING_SUITE",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "progressive_framework_testing_suite.html",
+      "path": "System_Specs\\COMPLETE_TESTING_SUITE\\progressive_framework_testing_suite.html",
+      "size": 60118,
+      "size_readable": "58.7 KB",
+      "extension": ".html",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "Docs",
+      "path": "System_Specs\\Docs",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Chat_nspecified Document Upload.md",
+      "path": "System_Specs\\Docs\\Chat_nspecified Document Upload.md",
+      "size": 143612,
+      "size_readable": "140.2 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "FIE-7.2-Breathing-Framework-XML-Latest.xml",
+      "path": "System_Specs\\Docs\\FIE-7.2-Breathing-Framework-XML-Latest.xml",
+      "size": 8177,
+      "size_readable": "8.0 KB",
+      "extension": ".xml",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "fie_specification.md",
+      "path": "System_Specs\\Docs\\fie_specification.md",
+      "size": 3803,
+      "size_readable": "3.7 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "framework_set_2_readme.md",
+      "path": "System_Specs\\Docs\\framework_set_2_readme.md",
+      "size": 23912,
+      "size_readable": "23.4 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "framework_set_2_readme1To6.md",
+      "path": "System_Specs\\Docs\\framework_set_2_readme1To6.md",
+      "size": 18184,
+      "size_readable": "17.8 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "framework_set_2_readme7 to12.md",
+      "path": "System_Specs\\Docs\\framework_set_2_readme7 to12.md",
+      "size": 14543,
+      "size_readable": "14.2 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "NEXUS_Engine_v2.1_SignalDetection.m",
+      "path": "System_Specs\\Docs\\NEXUS_Engine_v2.1_SignalDetection.m",
+      "size": 19163,
+      "size_readable": "18.7 KB",
+      "extension": ".m",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "NEXUS_Engine_v2.1_SignalDetection.md",
+      "path": "System_Specs\\Docs\\NEXUS_Engine_v2.1_SignalDetection.md",
+      "size": 22484,
+      "size_readable": "22.0 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PDT-PLUS_v2.1_SignalBased.md",
+      "path": "System_Specs\\Docs\\PDT-PLUS_v2.1_SignalBased.md",
+      "size": 17422,
+      "size_readable": "17.0 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "pkm_generator_enhanced.html",
+      "path": "System_Specs\\Docs\\pkm_generator_enhanced.html",
+      "size": 31170,
+      "size_readable": "30.4 KB",
+      "extension": ".html",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "pkm_system_spec_generator.md",
+      "path": "System_Specs\\Docs\\pkm_system_spec_generator.md",
+      "size": 6175,
+      "size_readable": "6.0 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "ProgressiveProject-System-02-PUXT-PLUS.md",
+      "path": "System_Specs\\Docs\\ProgressiveProject-System-02-PUXT-PLUS.md",
+      "size": 22054,
+      "size_readable": "21.5 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "ProgressiveProject-System-20250818-UNKNOWN.md",
+      "path": "System_Specs\\Docs\\ProgressiveProject-System-20250818-UNKNOWN.md",
+      "size": 15070,
+      "size_readable": "14.7 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PTT-DOCS-FUSION_v2.1_SignalBased.md",
+      "path": "System_Specs\\Docs\\PTT-DOCS-FUSION_v2.1_SignalBased.md",
+      "size": 14950,
+      "size_readable": "14.6 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "SYSTEMS 10-13 Complete Specifications.md",
+      "path": "System_Specs\\Docs\\SYSTEMS 10-13 Complete Specifications.md",
+      "size": 14061,
+      "size_readable": "13.7 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "SYSTEMS 14-15 Complete Specifications.md",
+      "path": "System_Specs\\Docs\\SYSTEMS 14-15 Complete Specifications.md",
+      "size": 15471,
+      "size_readable": "15.1 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "Education_Platform",
+      "path": "System_Specs\\Education_Platform",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Progressive-Framework-Academy-Complete-Specification.md",
+      "path": "System_Specs\\Education_Platform\\Progressive-Framework-Academy-Complete-Specification.md",
+      "size": 18155,
+      "size_readable": "17.7 KB",
+      "extension": ".md",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "debugging_engines_specs.md",
+      "path": "System_Specs\\debugging_engines_specs.md",
+      "size": 20127,
+      "size_readable": "19.7 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKM-5Point-Protocol-v5.0.xml",
+      "path": "System_Specs\\PKM-5Point-Protocol-v5.0.xml",
+      "size": 7660,
+      "size_readable": "7.5 KB",
+      "extension": ".xml",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Progressive-Systems-Config-v2.3-SignalBased.json",
+      "path": "System_Specs\\Progressive-Systems-Config-v2.3-SignalBased.json",
+      "size": 7660,
+      "size_readable": "7.5 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-01-PDT-PLUS.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-01-PDT-PLUS.md",
+      "size": 25644,
+      "size_readable": "25.0 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-02-PUXT-PLUS.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-02-PUXT-PLUS.md",
+      "size": 12668,
+      "size_readable": "12.4 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-03-PSO-PRIME.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-03-PSO-PRIME.md",
+      "size": 23084,
+      "size_readable": "22.5 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-04-PTT-DOCS-FUSION.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-04-PTT-DOCS-FUSION.md",
+      "size": 20774,
+      "size_readable": "20.3 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-05-REQUIREMENTS-PRIME.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-05-REQUIREMENTS-PRIME.md",
+      "size": 22449,
+      "size_readable": "21.9 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-06-BUSINESS-OPS-FUSION.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-06-BUSINESS-OPS-FUSION.md",
+      "size": 22615,
+      "size_readable": "22.1 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-07-CONTEXT-EVOLUTION-ENGINE.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-07-CONTEXT-EVOLUTION-ENGINE.md",
+      "size": 13049,
+      "size_readable": "12.7 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-08-PERFORMANCE-AI-FUSION.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-08-PERFORMANCE-AI-FUSION.md",
+      "size": 13439,
+      "size_readable": "13.1 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-09-SECURITY-BUILD-FUSION.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-09-SECURITY-BUILD-FUSION.md",
+      "size": 14156,
+      "size_readable": "13.8 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-10-KNOWLEDGE-EVOLUTION-ENGINE.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-10-KNOWLEDGE-EVOLUTION-ENGINE.md",
+      "size": 13290,
+      "size_readable": "13.0 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-11-UNIVERSAL-ORCHESTRATION-PRIME.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-11-UNIVERSAL-ORCHESTRATION-PRIME.md",
+      "size": 12912,
+      "size_readable": "12.6 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-12-PMCS-024.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-12-PMCS-024.md",
+      "size": 15929,
+      "size_readable": "15.6 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-13-PAES.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-13-PAES.md",
+      "size": 14650,
+      "size_readable": "14.3 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-14-DPI.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-14-DPI.md",
+      "size": 30899,
+      "size_readable": "30.2 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PROGRESSIVEPROJECT-SYSTEM-15-PTODOS.md",
+      "path": "System_Specs\\PROGRESSIVEPROJECT-SYSTEM-15-PTODOS.md",
+      "size": 31419,
+      "size_readable": "30.7 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "StartCommandOptons.txt",
+      "path": "System_Specs\\StartCommandOptons.txt",
+      "size": 1306,
+      "size_readable": "1.3 KB",
+      "extension": ".txt",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "Templates",
+      "path": "Templates",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Cross-System-Inheritance-Template.md",
+      "path": "Templates\\Cross-System-Inheritance-Template.md",
+      "size": 3233,
+      "size_readable": "3.2 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Evolutionary-Lesson-Template-Foundation.md",
+      "path": "Templates\\Evolutionary-Lesson-Template-Foundation.md",
+      "size": 3563,
+      "size_readable": "3.5 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Student-Progress-Protection-Template.md",
+      "path": "Templates\\Student-Progress-Protection-Template.md",
+      "size": 5157,
+      "size_readable": "5.0 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Coherent-Naming-Convention-Report.md",
+      "path": "Coherent-Naming-Convention-Report.md",
+      "size": 1991,
+      "size_readable": "1.9 KB",
+      "extension": ".md",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "coherent_naming_script.py",
+      "path": "coherent_naming_script.py",
+      "size": 13898,
+      "size_readable": "13.6 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "consistency_report_20250819_163922.txt",
+      "path": "consistency_report_20250819_163922.txt",
+      "size": 615570,
+      "size_readable": "601.1 KB",
+      "extension": ".txt",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "framework_consistency_fixer.py",
+      "path": "framework_consistency_fixer.py",
+      "size": 14245,
+      "size_readable": "13.9 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "pkm_command_generator.html",
+      "path": "pkm_command_generator.html",
+      "size": 17995,
+      "size_readable": "17.6 KB",
+      "extension": ".html",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "pkm_test_results_20250819_173723.json",
+      "path": "pkm_test_results_20250819_173723.json",
+      "size": 12555,
+      "size_readable": "12.3 KB",
+      "extension": ".json",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "pkm_testing_framework.py",
+      "path": "pkm_testing_framework.py",
+      "size": 18223,
+      "size_readable": "17.8 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "recursive_file_lister.py",
+      "path": "recursive_file_lister.py",
+      "size": 9933,
+      "size_readable": "9.7 KB",
+      "extension": ".py",
+      "level": 0
+    }
+  ]
+}
