@@ -1,9 +1,50 @@
 
 ACTIVATE: Progressive Framework Session-Aware PKM v5.2 with Complete System Transition
 
+
+SETUP: Activate Session-Aware PKM v5.2 for existing project
+
 Working Directory: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025
-Current Session Baseline: Chat047 (established session)
-Transition Mode: Upgrade to session-aware from Chat048 onward
+Current Chat: Chat047
+Next Chat: Chat048 (brief status only)
+
+Activate session-aware PKM with:
+- Progressive disclosure enabled
+- Sequential chat numbering from Chat048
+- Brief status for all future conversations  
+- No more full protocol displays
+- All 15 systems operational
+
+
+OR 
+
+
+SETUP: Initialize Progressive Framework Session-Aware PKM for new project
+
+Working Directory: [YOUR_PROJECT_PATH_HERE]
+Project Name: [YOUR_PROJECT_NAME_HERE]  
+Session Baseline: Chat001 (new project)
+
+Please configure session-aware PKM 5-Point Protocol with:
+- Progressive disclosure enabled
+- Sequential chat numbering from Chat001
+- All 15 systems integration
+- Breathing framework with 615+ triggers active
+- Ultra-brief status format for continuing conversations
+- Working directory detection for this specific project
+
+
+
+First conversation: Full PKM protocol (Chat001)
+All subsequent conversations: Ultra-brief format:
+🟢 **PKM: Active (Chat002)**
+The setup guide shows templates ranging from full protocol down to single-line status. By including "ultra-brief status format" in your setup command, you'll get the minimal single-line version for all continuing conversations.
+
+
+
+--Working Directory: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025
+--Current Session Baseline: Chat047 (established session)
+--Transition Mode: Upgrade to session-aware from Chat048 onward
 
 Configuration Files to Activate:
 ✅ PKM-5Point-Protocol-v5.2-SessionAware.json (enhanced session management)
