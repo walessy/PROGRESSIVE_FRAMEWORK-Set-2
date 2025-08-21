@@ -1,11 +1,11 @@
 {
-  "analysis_timestamp": "2025-08-20T16:31:38.479766",
+  "analysis_timestamp": "2025-08-21T08:42:18.986902",
   "base_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025",
   "summary": {
-    "total_folders": 52,
-    "total_files": 460,
-    "total_size_bytes": 7866884,
-    "total_size_readable": "7.5 MB"
+    "total_folders": 59,
+    "total_files": 487,
+    "total_size_bytes": 8328979,
+    "total_size_readable": "7.9 MB"
   },
   "all_items": [
     {
@@ -46,6 +46,63 @@
       "size_readable": "1.5 KB",
       "extension": ".yaml",
       "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "config-backups",
+      "path": "config-backups",
+      "level": 0
+    },
+    {
+      "type": "folder",
+      "name": "backup_20250820_193647",
+      "path": "config-backups\\backup_20250820_193647",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "backup_20250820_193724",
+      "path": "config-backups\\backup_20250820_193724",
+      "level": 1
+    },
+    {
+      "type": "folder",
+      "name": "backup_20250820_194106",
+      "path": "config-backups\\backup_20250820_194106",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKM-5Point-Protocol-v5.0.xml",
+      "path": "config-backups\\backup_20250820_194106\\PKM-5Point-Protocol-v5.0.xml",
+      "size": 12803,
+      "size_readable": "12.5 KB",
+      "extension": ".xml",
+      "level": 2
+    },
+    {
+      "type": "folder",
+      "name": "backup_20250820_201901",
+      "path": "config-backups\\backup_20250820_201901",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKM-5Point-Protocol-v5.0.xml",
+      "path": "config-backups\\backup_20250820_201901\\PKM-5Point-Protocol-v5.0.xml",
+      "size": 13143,
+      "size_readable": "12.8 KB",
+      "extension": ".xml",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "Progressive-Systems-Config-v2.3-SignalBased.json",
+      "path": "config-backups\\backup_20250820_201901\\Progressive-Systems-Config-v2.3-SignalBased.json",
+      "size": 8908,
+      "size_readable": "8.7 KB",
+      "extension": ".json",
+      "level": 2
     },
     {
       "type": "folder",
@@ -3046,6 +3103,21 @@
     },
     {
       "type": "folder",
+      "name": "progressive-config",
+      "path": "progressive-config",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "PKM-5Point-Protocol-v5.1-StateAware.json",
+      "path": "progressive-config\\PKM-5Point-Protocol-v5.1-StateAware.json",
+      "size": 4550,
+      "size_readable": "4.4 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "folder",
       "name": "Scripts",
       "path": "Scripts",
       "level": 0
@@ -4185,6 +4257,39 @@
       "level": 2
     },
     {
+      "type": "folder",
+      "name": "progressive-config",
+      "path": "System_Specs\\progressive-config",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKM-5Point-Protocol-v5.2-SessionAware.json",
+      "path": "System_Specs\\progressive-config\\PKM-5Point-Protocol-v5.2-SessionAware.json",
+      "size": 8394,
+      "size_readable": "8.2 KB",
+      "extension": ".json",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "PKM-Display-Templates.json",
+      "path": "System_Specs\\progressive-config\\PKM-Display-Templates.json",
+      "size": 9767,
+      "size_readable": "9.5 KB",
+      "extension": ".json",
+      "level": 2
+    },
+    {
+      "type": "file",
+      "name": "Claude-Session-Management-Instructions.md",
+      "path": "System_Specs\\Claude-Session-Management-Instructions.md",
+      "size": 8423,
+      "size_readable": "8.2 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
       "type": "file",
       "name": "debugging_engines_specs.md",
       "path": "System_Specs\\debugging_engines_specs.md",
@@ -4197,17 +4302,53 @@
       "type": "file",
       "name": "PKM-5Point-Protocol-v5.0.xml",
       "path": "System_Specs\\PKM-5Point-Protocol-v5.0.xml",
-      "size": 7660,
-      "size_readable": "7.5 KB",
+      "size": 13143,
+      "size_readable": "12.8 KB",
       "extension": ".xml",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKM-Session-State-Architecture.md",
+      "path": "System_Specs\\PKM-Session-State-Architecture.md",
+      "size": 10954,
+      "size_readable": "10.7 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "PKMSessionStateManager.cs",
+      "path": "System_Specs\\PKMSessionStateManager.cs",
+      "size": 20594,
+      "size_readable": "20.1 KB",
+      "extension": ".cs",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Progressive-Framework-New-Project-Setup-Guide.md",
+      "path": "System_Specs\\Progressive-Framework-New-Project-Setup-Guide.md",
+      "size": 14759,
+      "size_readable": "14.4 KB",
+      "extension": ".md",
       "level": 1
     },
     {
       "type": "file",
       "name": "Progressive-Systems-Config-v2.3-SignalBased.json",
       "path": "System_Specs\\Progressive-Systems-Config-v2.3-SignalBased.json",
-      "size": 7660,
-      "size_readable": "7.5 KB",
+      "size": 9640,
+      "size_readable": "9.4 KB",
+      "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "Progressive-Systems-Config-v2.4-SessionEnhanced.json",
+      "path": "System_Specs\\Progressive-Systems-Config-v2.4-SessionEnhanced.json",
+      "size": 12853,
+      "size_readable": "12.6 KB",
       "extension": ".json",
       "level": 1
     },
@@ -4348,6 +4489,15 @@
     },
     {
       "type": "file",
+      "name": "Session-Aware-PKM-Implementation.md",
+      "path": "System_Specs\\Session-Aware-PKM-Implementation.md",
+      "size": 12372,
+      "size_readable": "12.1 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
       "name": "StartCommandOptons.txt",
       "path": "System_Specs\\StartCommandOptons.txt",
       "size": 1306,
@@ -4417,10 +4567,91 @@
     },
     {
       "type": "file",
+      "name": "create_progressive_systems_config.py",
+      "path": "create_progressive_systems_config.py",
+      "size": 13746,
+      "size_readable": "13.4 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Directory-Analysis-Report.md",
+      "path": "Directory-Analysis-Report.md",
+      "size": 19356,
+      "size_readable": "18.9 KB",
+      "extension": ".md",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "directory_analysis.json",
+      "path": "directory_analysis.json",
+      "size": 147055,
+      "size_readable": "143.6 KB",
+      "extension": ".json",
+      "level": 0
+    },
+    {
+      "type": "file",
       "name": "framework_consistency_fixer.py",
       "path": "framework_consistency_fixer.py",
       "size": 14245,
       "size_readable": "13.9 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Hello 5.md",
+      "path": "Hello 5.md",
+      "size": 4185,
+      "size_readable": "4.1 KB",
+      "extension": ".md",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Hello Another.md",
+      "path": "Hello Another.md",
+      "size": 4355,
+      "size_readable": "4.3 KB",
+      "extension": ".md",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Hello test.md",
+      "path": "Hello test.md",
+      "size": 5280,
+      "size_readable": "5.2 KB",
+      "extension": ".md",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Hello yet another.md",
+      "path": "Hello yet another.md",
+      "size": 6006,
+      "size_readable": "5.9 KB",
+      "extension": ".md",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Hello4 Greeting.md",
+      "path": "Hello4 Greeting.md",
+      "size": 4410,
+      "size_readable": "4.3 KB",
+      "extension": ".md",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "pdate_pkm_cross_references_fixed.py",
+      "path": "pdate_pkm_cross_references_fixed.py",
+      "size": 20882,
+      "size_readable": "20.4 KB",
       "extension": ".py",
       "level": 0
     },
@@ -4435,8 +4666,44 @@
     },
     {
       "type": "file",
+      "name": "pkm_csproj_integration.txt",
+      "path": "pkm_csproj_integration.txt",
+      "size": 5699,
+      "size_readable": "5.6 KB",
+      "extension": ".txt",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "pkm_protocol_checker.py",
+      "path": "pkm_protocol_checker.py",
+      "size": 16802,
+      "size_readable": "16.4 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
       "name": "pkm_test_results_20250819_173723.json",
       "path": "pkm_test_results_20250819_173723.json",
+      "size": 12555,
+      "size_readable": "12.3 KB",
+      "extension": ".json",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "pkm_test_results_20250820_172716.json",
+      "path": "pkm_test_results_20250820_172716.json",
+      "size": 12555,
+      "size_readable": "12.3 KB",
+      "extension": ".json",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "pkm_test_results_20250820_172724.json",
+      "path": "pkm_test_results_20250820_172724.json",
       "size": 12555,
       "size_readable": "12.3 KB",
       "extension": ".json",
@@ -4457,6 +4724,24 @@
       "path": "recursive_file_lister.py",
       "size": 9933,
       "size_readable": "9.7 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "update_pkm_cross_references.py",
+      "path": "update_pkm_cross_references.py",
+      "size": 20802,
+      "size_readable": "20.3 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "update_pkm_cross_references_system_specs.py",
+      "path": "update_pkm_cross_references_system_specs.py",
+      "size": 23424,
+      "size_readable": "22.9 KB",
       "extension": ".py",
       "level": 0
     }

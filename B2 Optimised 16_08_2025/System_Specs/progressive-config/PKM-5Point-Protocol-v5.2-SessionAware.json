@@ -1,0 +1,189 @@
+/*
+FILE: PKM-5Point-Protocol-v5.2-SessionAware.json
+WORKING_DIRECTORY: System_Specs/progressive-config
+PURPOSE: PKM 5-Point Protocol with active session state management and progressive disclosure
+CREATOR: Amos Wales - Progressive Framework Pioneer
+UPDATED: 20250821_Session-Aware-Implementation
+STATUS: READY - Session State Management Implementation
+BREATHING_FRAMEWORK: 15 Systems | 615+ Tests | Complete Integration
+PROGRESSIVE_ACADEMY: Foundation | Professional | Universal | Legendary Ecosystem
+PHASE_5_ACHIEVEMENT: Session Management | Chat Numbering | Progressive Disclosure
+*/
+
+{
+  "pkm_protocol": {
+    "version": "5.2_session_aware",
+    "description": "PKM 5-Point Protocol with active session state management and progressive disclosure",
+    "working_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\",
+    "session_file_location": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\.pkm_session_state.json",
+    
+    "session_management": {
+      "enabled": true,
+      "track_initialization": true,
+      "persistent_chat_numbering": true,
+      "progressive_disclosure": true,
+      "state_persistence": "file_based",
+      "auto_detect_session": true,
+      "current_chat_baseline": 47
+    },
+    
+    "chat_numbering": {
+      "format": "Chat{###}",
+      "increment_rule": "per_conversation",
+      "validation": "ensure_sequential_numbering",
+      "current_counter": 47,
+      "next_chat": "Chat048",
+      "padding": 3,
+      "reset_policy": "never_unless_new_session"
+    },
+    
+    "display_modes": {
+      "first_time": {
+        "template_id": "full_protocol",
+        "description": "Complete 15-system initialization display",
+        "trigger": "no_session_file_exists",
+        "action": "create_session_file",
+        "content": "full_pkm_protocol_template"
+      },
+      "continuation": {
+        "template_id": "brief_status", 
+        "description": "Abbreviated status for ongoing sessions",
+        "trigger": "session_file_exists_and_recent",
+        "action": "update_session_file",
+        "content": "brief_status_template"
+      },
+      "resume": {
+        "template_id": "session_resume",
+        "description": "Resume status after conversation gap",
+        "trigger": "session_file_exists_but_stale",
+        "action": "refresh_session_file",
+        "content": "resume_status_template"
+      },
+      "silent": {
+        "template_id": "no_display",
+        "description": "Silent operation, counter increment only",
+        "trigger": "explicit_override",
+        "action": "update_counter_only",
+        "content": "none"
+      }
+    },
+    
+    "templates": {
+      "full_protocol": {
+        "title": "🚀✨ PKM 5-POINT PROTOCOL v7.1 - AUTONOMOUS ACTIVATION",
+        "sections": [
+          "working_directory_detection",
+          "chat_numbering_initialization", 
+          "objectives_definition",
+          "timestamp_generation",
+          "framework_integration",
+          "system_verification"
+        ],
+        "variables": {
+          "chat_number": "{current_chat}",
+          "timestamp": "{current_timestamp}",
+          "working_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025",
+          "session_status": "NEW - Autonomous multi-system coordination initialized"
+        }
+      },
+      "brief_status": {
+        "format": "🟢 **PKM STATUS: Active ({chat_number})**\n📁 **Working Directory**: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\n⚡ **All 15 Systems**: Operational | 🌬️ **Breathing Framework**: Active with 615+ triggers\n💰 **Value**: $800,000+/month operational | 🧠 **Intelligence**: Autonomous coordination ready\n✅ **Ready for**: ProgressiveProject coordination and advanced operations\n\nHow can I assist with your ProgressiveProject work today?",
+        "variables": {
+          "chat_number": "{current_chat}",
+          "working_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025"
+        }
+      },
+      "session_resume": {
+        "format": "↻ **PKM RESUMED: Session Restored ({chat_number})**\n📁 **Working Directory**: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\n⚡ **All 15 Systems**: Operational | 🌬️ **Breathing Framework**: Active\n📅 **Last Session**: {last_access_time}\n✅ **Status**: Session continuity maintained - All systems ready\n\nHow can I assist with your ProgressiveProject work today?",
+        "variables": {
+          "chat_number": "{current_chat}",
+          "last_access_time": "{last_session_time}",
+          "working_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025"
+        }
+      }
+    },
+    
+    "session_detection_logic": {
+      "startup_sequence": [
+        "detect_working_directory",
+        "check_session_file_exists", 
+        "load_or_create_session_state",
+        "determine_display_mode",
+        "generate_appropriate_content",
+        "update_session_state",
+        "persist_changes"
+      ],
+      "session_file_checks": {
+        "file_exists": "check_for_.pkm_session_state.json",
+        "file_readable": "validate_json_structure",
+        "timestamp_check": "verify_last_access_time",
+        "counter_validation": "ensure_sequential_numbering"
+      },
+      "fallback_behavior": {
+        "missing_file": "treat_as_first_time",
+        "corrupted_file": "recreate_with_estimated_counter",
+        "invalid_counter": "reset_to_safe_baseline"
+      }
+    },
+    
+    "progressive_systems": {
+      "count": 15,
+      "total_business_value": "$800,000+/month",
+      "foundation_tier": [
+        {"id": 1, "name": "PDT-PLUS", "value": "$57,400+/month"},
+        {"id": 2, "name": "PUXT-PLUS", "value": "$31,500/month"},
+        {"id": 3, "name": "PSO-PRIME", "value": "$74,800+/month"},
+        {"id": 4, "name": "PTT-DOCS-FUSION", "value": "$76,700+/month"},
+        {"id": 5, "name": "REQUIREMENTS-PRIME", "value": "$59,400+/month"}
+      ],
+      "professional_tier": [
+        {"id": 6, "name": "BUSINESS-OPS-FUSION", "value": "$87,300+/month"},
+        {"id": 7, "name": "CONTEXT-EVOLUTION-ENGINE", "value": "$38,600/month"},
+        {"id": 8, "name": "PERFORMANCE-AI-FUSION", "value": "$45,200/month"},
+        {"id": 9, "name": "SECURITY-BUILD-FUSION", "value": "$41,800/month"}
+      ],
+      "universal_tier": [
+        {"id": 10, "name": "KNOWLEDGE-EVOLUTION-ENGINE", "value": "$36,700/month"},
+        {"id": 11, "name": "UNIVERSAL-ORCHESTRATION-PRIME", "value": "$48,200/month"},
+        {"id": 12, "name": "PMCS-024", "value": "$67,300/month"},
+        {"id": 13, "name": "PAES", "value": "$52,700/month"}
+      ],
+      "integration_tier": [
+        {"id": 14, "name": "DPI", "value": "$25,000+/month"},
+        {"id": 15, "name": "PTODOS", "value": "$30,000+/month"}
+      ]
+    },
+    
+    "breathing_framework": {
+      "educational_triggers": 615,
+      "real_time_lessons": true,
+      "cross_system_coordination": true,
+      "signal_based_architecture": true,
+      "lesson_generation": "active"
+    },
+    
+    "debug_engines": {
+      "ATLAS": "Analytics & Learning - Pattern recognition + educational scenarios",
+      "PRISM": "Prevention & Risk - Risk management + educational prevention", 
+      "NEXUS": "Network & Execution - Coordination + educational management",
+      "CRUD": "Correction & Recovery - Solutions + educational automation"
+    },
+    
+    "activation_instructions": {
+      "claude_behavior": {
+        "conversation_start": "automatically_execute_session_detection",
+        "session_detection": "check_for_session_file_before_any_display",
+        "display_logic": "use_progressive_disclosure_based_on_session_state",
+        "counter_management": "increment_sequentially_and_persist",
+        "never_show": "full_protocol_if_session_exists",
+        "always_show": "appropriate_template_for_session_state"
+      },
+      "error_handling": {
+        "missing_session_file": "treat_as_first_time_conversation",
+        "corrupted_session_file": "recreate_with_current_baseline",
+        "invalid_data": "fallback_to_safe_defaults",
+        "file_permission_error": "continue_with_memory_only_session"
+      }
+    }
+  }
+}
