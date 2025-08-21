@@ -1,11 +1,11 @@
 {
-  "analysis_timestamp": "2025-08-21T08:42:18.986902",
+  "analysis_timestamp": "2025-08-21T14:33:49.181178",
   "base_directory": "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025",
   "summary": {
     "total_folders": 59,
-    "total_files": 487,
-    "total_size_bytes": 8328979,
-    "total_size_readable": "7.9 MB"
+    "total_files": 494,
+    "total_size_bytes": 8382738,
+    "total_size_readable": "8.0 MB"
   },
   "all_items": [
     {
@@ -4282,10 +4282,28 @@
     },
     {
       "type": "file",
+      "name": "48.1 Testing Session Initialization.md",
+      "path": "System_Specs\\48.1 Testing Session Initialization.md",
+      "size": 3127,
+      "size_readable": "3.1 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "48.2 Testing Project Protocol.md",
+      "path": "System_Specs\\48.2 Testing Project Protocol.md",
+      "size": 3253,
+      "size_readable": "3.2 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
       "name": "Claude-Session-Management-Instructions.md",
       "path": "System_Specs\\Claude-Session-Management-Instructions.md",
-      "size": 8423,
-      "size_readable": "8.2 KB",
+      "size": 13110,
+      "size_readable": "12.8 KB",
       "extension": ".md",
       "level": 1
     },
@@ -4313,6 +4331,15 @@
       "path": "System_Specs\\PKM-Session-State-Architecture.md",
       "size": 10954,
       "size_readable": "10.7 KB",
+      "extension": ".md",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "pkm_auto_activation_instructions.md",
+      "path": "System_Specs\\pkm_auto_activation_instructions.md",
+      "size": 10421,
+      "size_readable": "10.2 KB",
       "extension": ".md",
       "level": 1
     },
@@ -4350,6 +4377,15 @@
       "size": 12853,
       "size_readable": "12.6 KB",
       "extension": ".json",
+      "level": 1
+    },
+    {
+      "type": "file",
+      "name": "ProgressiveProject-Framework-Enhanced-Set-2_CHAT_COUNTER.md",
+      "path": "System_Specs\\ProgressiveProject-Framework-Enhanced-Set-2_CHAT_COUNTER.md",
+      "size": 0,
+      "size_readable": "0.0 B",
+      "extension": ".md",
       "level": 1
     },
     {
@@ -4500,8 +4536,8 @@
       "type": "file",
       "name": "StartCommandOptons.txt",
       "path": "System_Specs\\StartCommandOptons.txt",
-      "size": 1306,
-      "size_readable": "1.3 KB",
+      "size": 4258,
+      "size_readable": "4.2 KB",
       "extension": ".txt",
       "level": 1
     },
@@ -4567,6 +4603,15 @@
     },
     {
       "type": "file",
+      "name": "create_instructions.py",
+      "path": "create_instructions.py",
+      "size": 14562,
+      "size_readable": "14.2 KB",
+      "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
       "name": "create_progressive_systems_config.py",
       "path": "create_progressive_systems_config.py",
       "size": 13746,
@@ -4578,8 +4623,8 @@
       "type": "file",
       "name": "Directory-Analysis-Report.md",
       "path": "Directory-Analysis-Report.md",
-      "size": 19356,
-      "size_readable": "18.9 KB",
+      "size": 19558,
+      "size_readable": "19.1 KB",
       "extension": ".md",
       "level": 0
     },
@@ -4587,8 +4632,8 @@
       "type": "file",
       "name": "directory_analysis.json",
       "path": "directory_analysis.json",
-      "size": 147055,
-      "size_readable": "143.6 KB",
+      "size": 147605,
+      "size_readable": "144.1 KB",
       "extension": ".json",
       "level": 0
     },
@@ -4643,6 +4688,15 @@
       "path": "Hello4 Greeting.md",
       "size": 4410,
       "size_readable": "4.3 KB",
+      "extension": ".md",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "Hierarchical-PKM-Initialization-Instructions.md",
+      "path": "Hierarchical-PKM-Initialization-Instructions.md",
+      "size": 11596,
+      "size_readable": "11.3 KB",
       "extension": ".md",
       "level": 0
     },
@@ -4716,6 +4770,15 @@
       "size": 18223,
       "size_readable": "17.8 KB",
       "extension": ".py",
+      "level": 0
+    },
+    {
+      "type": "file",
+      "name": "ProgressiveProject-Framework-Enhanced-Set-2_CHAT_COUNTER.md",
+      "path": "ProgressiveProject-Framework-Enhanced-Set-2_CHAT_COUNTER.md",
+      "size": 2409,
+      "size_readable": "2.4 KB",
+      "extension": ".md",
       "level": 0
     },
     {
