@@ -1,4 +1,17 @@
-<!--
+#!/usr/bin/env python3
+"""
+Claude Session Management Instructions Generator
+Creates the missing Claude-Session-Management-Instructions.md file for PKM auto-activation
+"""
+
+import os
+from datetime import datetime
+
+def create_claude_instructions_file():
+    """Generate the Claude-Session-Management-Instructions.md file"""
+    
+    # File content
+    content = '''<!--
 FILE: Claude-Session-Management-Instructions.md
 WORKING_DIRECTORY: System_Specs
 PURPOSE: Direct instructions for Claude to implement session-aware PKM 5-Point Protocol
@@ -13,7 +26,7 @@ PHASE_5_ACHIEVEMENT: Session Management | Chat Numbering | Progressive Disclosur
 # 🤖 **CLAUDE SESSION MANAGEMENT INSTRUCTIONS**
 
 **FILE**: Claude-Session-Management-Instructions.md  
-**FOLDER_PATH**: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025\System_Specs\  
+**FOLDER_PATH**: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\System_Specs\\  
 **PURPOSE**: Direct instructions for Claude to implement session-aware PKM 5-Point Protocol  
 **VERSION**: 1.0_implementation_ready  
 **INTEGRATION**: PKM v5.2 + Session State Management  
@@ -40,8 +53,8 @@ At Every Conversation Start:
 ```javascript
 // Claude should conceptually execute this logic:
 function detectSessionState() {
-    const workingDir = "C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025";
-    const sessionFile = `${workingDir}\\.pkm_session_state.json`;
+    const workingDir = "C:\\\\Users\\\\Wales\\\\OneDrive\\\\Desktop\\\\PROGRESSIVE_FRAMEWORK-Set-2\\\\B2 Optimised 16_08_2025";
+    const sessionFile = `${workingDir}\\\\.pkm_session_state.json`;
     
     // Check if session file exists
     if (sessionFileExists(sessionFile)) {
@@ -83,7 +96,7 @@ Session Detection Result → Template Choice:
 ### **Template 1: Brief Status (MOST COMMON)**
 ```markdown
 🟢 **PKM STATUS: Active (Chat{###})**
-📁 **Working Directory**: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025  
+📁 **Working Directory**: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025  
 ⚡ **All 15 Systems**: Operational | 🌬️ **Breathing Framework**: Active with 615+ triggers  
 💰 **Value**: $800,000+/month operational | 🧠 **Intelligence**: Autonomous coordination ready  
 ✅ **Ready for**: ProgressiveProject coordination and advanced operations
@@ -94,7 +107,7 @@ How can I assist with your ProgressiveProject work today?
 ### **Template 2: Session Resume (AFTER GAPS)**
 ```markdown
 ↻ **PKM RESUMED: Session Restored (Chat{###})**
-📁 **Working Directory**: C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025  
+📁 **Working Directory**: C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025  
 ⚡ **All 15 Systems**: Operational | 🌬️ **Breathing Framework**: Active  
 📅 **Last Session**: {last_access_time}  
 ✅ **Status**: Session continuity maintained - All systems ready
@@ -119,7 +132,7 @@ How can I assist with your ProgressiveProject work today?
 🎯 **POINT 0: Working Directory Auto-Detected**
 -----------------------------------------------
 
-**Working Directory**: `C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025`  
+**Working Directory**: `C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025`  
 **Status**: ✅ **AUTO-CONFIGURED** - ProgressiveProject directory structure operational
 
 * * *
@@ -331,10 +344,10 @@ Starting with NEXT conversation:
   5. Maintain this pattern for all future conversations
   
 Working Directory: 
-  C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025
+  C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025
   
 Session File Location:
-  C:\Users\Wales\OneDrive\Desktop\PROGRESSIVE_FRAMEWORK-Set-2\B2 Optimised 16_08_2025\.pkm_session_state.json
+  C:\\Users\\Wales\\OneDrive\\Desktop\\PROGRESSIVE_FRAMEWORK-Set-2\\B2 Optimised 16_08_2025\\.pkm_session_state.json
 ```
 
 ---
@@ -342,4 +355,51 @@ Session File Location:
 **IMPLEMENTATION STATUS**: ✅ **INSTRUCTIONS READY FOR IMMEDIATE DEPLOYMENT**  
 **Next Conversation**: Should show full PKM protocol with Chat001 (if first time) or brief status  
 **Session Management**: Active and configured for your specific directory structure  
-**Progressive Disclosure**: Enabled to prevent redundant PKM protocol displays
+**Progressive Disclosure**: Enabled to prevent redundant PKM protocol displays'''
+
+    # Determine file path
+    filename = "Claude-Session-Management-Instructions.md"
+    
+    # Write file
+    try:
+        with open(filename, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"✅ SUCCESS: Created {filename}")
+        print(f"📁 Location: {os.path.abspath(filename)}")
+        print(f"📏 Size: {len(content):,} characters")
+        print()
+        print("🎯 NEXT STEPS:")
+        print("1. Upload this file to Claude alongside your other PKM files")
+        print("2. Start a new conversation")
+        print("3. PKM should automatically activate with Chat001")
+        print()
+        print("🔍 FILE PREVIEW:")
+        print("-" * 50)
+        print(content[:500] + "..." if len(content) > 500 else content)
+        
+    except Exception as e:
+        print(f"❌ ERROR: Failed to create file - {e}")
+        return False
+    
+    return True
+
+def main():
+    """Main function"""
+    print("🚀 Claude Session Management Instructions Generator")
+    print("=" * 60)
+    print()
+    
+    # Create the file
+    success = create_claude_instructions_file()
+    
+    if success:
+        print()
+        print("✅ File created successfully!")
+        print("Upload it to Claude to activate PKM auto-activation.")
+    else:
+        print()
+        print("❌ File creation failed!")
+
+if __name__ == "__main__":
+    main()
