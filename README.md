@@ -2,6 +2,8 @@
   <img src="./assets/breath-it-logo.svg" alt="Breath IT - Living Systems Technology" width="300"/>
 </div>
 
+DUE TO A BIG RELIABILTY ISSUE WITH CLAUDE AI 21.08.2025 I AM SWICHING AI MODELS.
+
 # Progressive Framework Set 2 - Complete 15 System Breathing Architecture
 
 *Powered by Breath IT - Living Systems Technology*
