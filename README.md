@@ -2,7 +2,8 @@
   <img src="./assets/breath-it-logo.svg" alt="Breath IT - Living Systems Technology" width="300"/>
 </div>
 
-DUE TO A BIG RELIABILTY ISSUE WITH CLAUDE AI 21.08.2025 I AM SWICHING AI MODELS.
+ACTUALLY I STUCK WITH CLAUDE AND NOW HAVE A NEW SYSTEM. ABOUT 80% SMALLER. MORE EFFECIENT.
+BUT THIS ONE IS FREE! USE AI TO AUGMENT IT.
 
 # Progressive Framework Set 2 - Complete 15 System Breathing Architecture
 
